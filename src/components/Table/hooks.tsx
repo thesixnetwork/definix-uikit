@@ -21,7 +21,8 @@ const sortByColumn = <T extends DataType>(
   sortColumn: string,
   columns: ColumnStateType<T>[]
 ): RowType<T>[] => {
-  let isAscending = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let isAscending: any = null;
   let sortedRows: RowType<T>[] = [...data];
 
   columns.forEach((column) => {
@@ -68,13 +69,14 @@ const getColumnsByName = <T extends DataType>(columns: ColumnType<T>[]): ColumnB
 };
 
 const createReducer = <T extends DataType>() => (state: TableState<T>, action: TableAction<T>): TableState<T> => {
-  let rows = [];
+  let rows: RowType<T>[] = [];
   let nextPage = 0;
   let prevPage = 0;
-  let isAscending = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let isAscending: any = null;
   let sortedRows: RowType<T>[] = [];
-  let columnCopy = [];
-  let filteredRows = [];
+  let columnCopy: any[] = [];
+  let filteredRows: any[] = [];
   let selectedRowsById: { [key: number]: boolean } = {};
   let stateCopy: TableState<T> = { ...state };
   const rowIds: { [key: number]: boolean } = {};
