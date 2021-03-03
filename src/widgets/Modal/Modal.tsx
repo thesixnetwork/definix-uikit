@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import Flex from '../../components/Box/Flex'
-import { IconButton } from '../../components/Button'
-import Heading from '../../components/Heading/Heading'
-import { ArrowBackIcon, CloseIcon } from '../../components/Svg'
-import colorStroke from '../../images/Color-stroke.png'
-import { InjectedProps } from './types'
+import React from "react";
+import styled from "styled-components";
+import Flex from "../../components/Box/Flex";
+import { IconButton } from "../../components/Button";
+import Heading from "../../components/Heading/Heading";
+import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
+import colorStroke from "../../images/Color-stroke.png";
+import { InjectedProps } from "./types";
 
 interface Props extends InjectedProps {
-  title: string
-  hideCloseButton?: boolean
-  onBack?: () => void
-  bodyPadding?: string
-  isRainbow?: boolean
+  title: string;
+  hideCloseButton?: boolean;
+  onBack?: () => void;
+  bodyPadding?: string;
+  isRainbow?: boolean;
 }
 
 const StyledModal = styled.div`
@@ -37,19 +37,19 @@ const StyledModal = styled.div`
     height: 4px;
     width: 100%;
   }
-`
+`;
 
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
   align-items: center;
   padding: 12px 12px 0 24px;
-`
+`;
 
 const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
-`
+`;
 
 const Modal: React.FC<Props> = ({
   title,
@@ -57,7 +57,7 @@ const Modal: React.FC<Props> = ({
   onBack,
   children,
   hideCloseButton = false,
-  bodyPadding = '24px',
+  bodyPadding = "24px",
   isRainbow = true,
 }) => (
   <StyledModal>
@@ -81,6 +81,6 @@ const Modal: React.FC<Props> = ({
     </Flex>
     {isRainbow && <img className="color-stroke" alt="" src={colorStroke} />}
   </StyledModal>
-)
+);
 
-export default Modal
+export default Modal;

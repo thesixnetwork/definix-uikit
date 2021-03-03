@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import Flex from '../../components/Box/Flex'
-import logoMobile from '../../images/64x64.png'
-import logoDesktop from '../../images/Definix-advance-crypto-assets.png'
-import { HamburgerCloseIcon, HamburgerIcon } from './icons'
-import MenuButton from './MenuButton'
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Flex from "../../components/Box/Flex";
+import logoMobile from "../../images/64x64.png";
+import logoDesktop from "../../images/Definix-advance-crypto-assets.png";
+import { HamburgerCloseIcon, HamburgerIcon } from "./icons";
+import MenuButton from "./MenuButton";
 
 interface Props {
-  isPushed: boolean
-  isDark: boolean
-  togglePush: () => void
-  href: string
+  isPushed: boolean;
+  isDark: boolean;
+  togglePush: () => void;
+  href: string;
 }
 
 const StyledLink = styled(Link)`
@@ -30,16 +30,16 @@ const StyledLink = styled(Link)`
       display: block;
     }
   }
-`
+`;
 
 const Logo: React.FC<Props> = ({ isPushed, togglePush, href }) => {
-  const isAbsoluteUrl = href.startsWith('http')
+  const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
       <img src={logoMobile} alt="" className="mobile-icon" />
       <img src={logoDesktop} alt="" className="desktop-icon" />
     </>
-  )
+  );
 
   return (
     <Flex>
@@ -60,7 +60,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, href }) => {
         </StyledLink>
       )}
     </Flex>
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

@@ -1,23 +1,23 @@
-import React, { useState, useEffect, useRef } from 'react'
-import throttle from 'lodash/throttle'
-import styled from 'styled-components'
-import Footer from '../../components/Footer'
-import Button from '../../components/Button/Button'
-import Dropdown from '../../components/Dropdown/Dropdown'
-import { Flex } from '../../components/Flex'
-import Overlay from '../../components/Overlay/Overlay'
-import { SvgProps } from '../../components/Svg'
-import Text from '../../components/Text/Text'
-import { useMatchBreakpoints } from '../../hooks'
-import en from '../../images/en.png'
-import th from '../../images/th.png'
-import { MENU_HEIGHT, SIDEBAR_WIDTH_FULL, SIDEBAR_WIDTH_REDUCED } from './config'
-import * as IconModule from './icons'
-import Logo from './Logo'
-import MenuButton from './MenuButton'
-import Panel from './Panel'
-import { NavProps } from './types'
-import UserBlock from './UserBlock'
+import React, { useState, useEffect, useRef } from "react";
+import throttle from "lodash/throttle";
+import styled from "styled-components";
+import Footer from "../../components/Footer";
+import Button from "../../components/Button/Button";
+import Dropdown from "../../components/Dropdown/Dropdown";
+import { Flex } from "../../components/Flex";
+import Overlay from "../../components/Overlay/Overlay";
+import { SvgProps } from "../../components/Svg";
+import Text from "../../components/Text/Text";
+import { useMatchBreakpoints } from "../../hooks";
+import en from "../../images/en.png";
+import th from "../../images/th.png";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_FULL, SIDEBAR_WIDTH_REDUCED } from "./config";
+import * as IconModule from "./icons";
+import Logo from "./Logo";
+import MenuButton from "./MenuButton";
+import Panel from "./Panel";
+import { NavProps } from "./types";
+import UserBlock from "./UserBlock";
 
 const Wrapper = styled.div`
   position: relative;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-`
+`;
 
 const StyledNav = styled.nav<{ showMenu: boolean }>`
   flex-shrink: 0;
@@ -41,14 +41,14 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   background-color: ${({ theme }) => theme.nav.background};
   border-bottom: solid 1px ${({ theme }) => theme.colors.border};
   transform: translate3d(0, 0, 0);
-`
+`;
 
 const BodyWrapper = styled.div`
   position: relative;
   display: flex;
   flex-shrink: 0;
   min-height: calc(100vh - 64px);
-`
+`;
 
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
@@ -61,7 +61,7 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   //   margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
   //   max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
   // }
-`
+`;
 
 const MobileOnlyOverlay = styled(Overlay)`
   position: fixed;
@@ -70,13 +70,13 @@ const MobileOnlyOverlay = styled(Overlay)`
   ${({ theme }) => theme.mediaQueries.nav} {
     display: none;
   }
-`
+`;
 
 const Flag = styled.img`
   width: 24px;
   height: auto;
   margin-right: 0.5rem;
-`
+`;
 
 const Menu: React.FC<NavProps> = ({
   account,
@@ -92,62 +92,62 @@ const Menu: React.FC<NavProps> = ({
   children,
   // profile,
 }) => {
-  const { isXl } = useMatchBreakpoints()
-  const isMobile = isXl === false
-  const [isPushed, setIsPushed] = useState(!isMobile)
-  const [showMenu, setShowMenu] = useState(true)
-  const refPrevOffset = useRef(window.pageYOffset)
-  const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> }
-  const { LanguageIcon } = Icons
+  const { isXl } = useMatchBreakpoints();
+  const isMobile = isXl === false;
+  const [isPushed, setIsPushed] = useState(!isMobile);
+  const [showMenu, setShowMenu] = useState(true);
+  const refPrevOffset = useRef(window.pageYOffset);
+  const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+  const { LanguageIcon } = Icons;
   const IconFlag = () => {
-    if (currentLang === 'en') {
-      return <Flag src={en} alt="" />
+    if (currentLang === "en") {
+      return <Flag src={en} alt="" />;
     }
 
-    if (currentLang === 'th') {
-      return <Flag src={th} alt="" />
+    if (currentLang === "th") {
+      return <Flag src={th} alt="" />;
     }
 
-    return <LanguageIcon color="textSubtle" width="24px" />
-  }
+    return <LanguageIcon color="textSubtle" width="24px" />;
+  };
 
   const getLanguageName = (lang) => {
     return langs.find((l) => {
-      return l.code === lang
-    })?.language
-  }
+      return l.code === lang;
+    })?.language;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentOffset = window.pageYOffset
-      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight
-      const isTopOfPage = currentOffset === 0
+      const currentOffset = window.pageYOffset;
+      const isBottomOfPage = window.document.body.clientHeight === currentOffset + window.innerHeight;
+      const isTopOfPage = currentOffset === 0;
       // Always show the menu when user reach the top
       if (isTopOfPage) {
-        setShowMenu(true)
+        setShowMenu(true);
       }
       // Avoid triggering anything at the bottom because of layout shift
       else if (!isBottomOfPage) {
         if (currentOffset < refPrevOffset.current) {
           // Has scroll up
-          setShowMenu(true)
+          setShowMenu(true);
         } else {
           // Has scroll down
-          setShowMenu(false)
+          setShowMenu(false);
         }
       }
-      refPrevOffset.current = currentOffset
-    }
-    const throttledHandleScroll = throttle(handleScroll, 200)
+      refPrevOffset.current = currentOffset;
+    };
+    const throttledHandleScroll = throttle(handleScroll, 200);
 
-    window.addEventListener('scroll', throttledHandleScroll)
+    window.addEventListener("scroll", throttledHandleScroll);
     return () => {
-      window.removeEventListener('scroll', throttledHandleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", throttledHandleScroll);
+    };
+  }, []);
 
   // Find the home link if provided
-  const homeLink = links.find((link) => link.label === 'Home')
+  const homeLink = links.find((link) => link.label === "Home");
 
   return (
     <Wrapper>
@@ -156,7 +156,7 @@ const Menu: React.FC<NavProps> = ({
           isPushed={isPushed}
           togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
           isDark={isDark}
-          href={homeLink?.href ?? '/'}
+          href={homeLink?.href ?? "/"}
         />
         <Flex alignItems="center">
           <Dropdown
@@ -173,7 +173,7 @@ const Menu: React.FC<NavProps> = ({
                 fullWidth
                 onClick={() => setLang(lang)}
                 // Safari fix
-                style={{ minHeight: '32px', height: 'auto' }}
+                style={{ minHeight: "32px", height: "auto" }}
               >
                 {lang.language}
               </MenuButton>
@@ -204,7 +204,7 @@ const Menu: React.FC<NavProps> = ({
       </BodyWrapper>
       <Footer />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

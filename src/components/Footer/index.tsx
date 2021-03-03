@@ -4,17 +4,17 @@
  *
  */
 
-import React from 'react'
-import styled from 'styled-components'
-import colorStrokeLong from '../../images/Color-stroke-long.png'
-import definixBlackLogo from '../../images/Definix-advance-crypto-assets.png'
-import facebookNormal from '../../images/Footer-Icon/Facebook-Normal.png'
-import githubNormal from '../../images/Footer-Icon/Github-Normal.png'
-import kakaoNormal from '../../images/Footer-Icon/Kakao-Normal.png'
-import poweredbySIX from '../../images/Footer-Icon/Powered-by-SIX.png'
-import redditNormal from '../../images/Footer-Icon/Reddit-Normal.png'
-import telegramNormal from '../../images/Footer-Icon/Telegram-Normal.png'
-import twitterNormal from '../../images/Footer-Icon/Twitter-Normal.png'
+import React from "react";
+import styled from "styled-components";
+import colorStrokeLong from "../../images/Color-stroke-long.png";
+import definixBlackLogo from "../../images/Definix-advance-crypto-assets.png";
+import facebookNormal from "../../images/Footer-Icon/Facebook-Normal.png";
+import githubNormal from "../../images/Footer-Icon/Github-Normal.png";
+import kakaoNormal from "../../images/Footer-Icon/Kakao-Normal.png";
+import poweredbySIX from "../../images/Footer-Icon/Powered-by-SIX.png";
+import redditNormal from "../../images/Footer-Icon/Reddit-Normal.png";
+import telegramNormal from "../../images/Footer-Icon/Telegram-Normal.png";
+import twitterNormal from "../../images/Footer-Icon/Twitter-Normal.png";
 
 const FooterStyled = styled.footer`
   position: relative;
@@ -67,7 +67,7 @@ const FooterStyled = styled.footer`
       justify-content: space-between;
     }
   }
-`
+`;
 function Footer() {
   return (
     <FooterStyled>
@@ -103,9 +103,9 @@ function Footer() {
         </div>
       </div>
     </FooterStyled>
-  )
+  );
 }
 
-Footer.propTypes = {}
+Footer.propTypes = {};
 
-export default Footer
+export default Footer;

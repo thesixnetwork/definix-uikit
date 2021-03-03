@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const ResetCSS = createGlobalStyle`
   /* prettier-ignore */
@@ -80,6 +80,6 @@ const ResetCSS = createGlobalStyle`
     box-shadow: inset 0 0 5px ${({ theme }) => theme.colors.input}; 
     border-radius: ${({ theme }) => theme.radii.default};
   }
-`
+`;
 
-export default ResetCSS
+export default ResetCSS;
