@@ -1,23 +1,24 @@
-import React from "react";
-import styled from "styled-components";
-import Heading from "../../components/Heading/Heading";
-import Flex from "../../components/Box/Flex";
-import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
-import { IconButton } from "../../components/Button";
-import { InjectedProps } from "./types";
+import React from 'react'
+import styled from 'styled-components'
+import Flex from '../../components/Box/Flex'
+import { IconButton } from '../../components/Button'
+import Heading from '../../components/Heading/Heading'
+import { ArrowBackIcon, CloseIcon } from '../../components/Svg'
+import colorStroke from '../../images/Color-stroke.png'
+import { InjectedProps } from './types'
 
 interface Props extends InjectedProps {
-  title: string;
-  hideCloseButton?: boolean;
-  onBack?: () => void;
-  bodyPadding?: string;
+  title: string
+  hideCloseButton?: boolean
+  onBack?: () => void
+  bodyPadding?: string
+  isRainbow?: boolean
 }
 
 const StyledModal = styled.div`
   background: ${({ theme }) => theme.modal.background};
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  border-radius: 32px;
+  border-radius: ${({ theme }) => theme.radii.default};
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
@@ -26,20 +27,29 @@ const StyledModal = styled.div`
     min-width: 360px;
     max-width: 100%;
   }
-`;
+  position: relative;
+
+  .color-stroke {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 4px;
+    width: 100%;
+  }
+`
 
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e9eaeb;
   align-items: center;
-  padding: 12px 24px;
-`;
+  padding: 12px 12px 0 24px;
+`
 
 const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
-`;
+`
 
 const Modal: React.FC<Props> = ({
   title,
@@ -47,7 +57,8 @@ const Modal: React.FC<Props> = ({
   onBack,
   children,
   hideCloseButton = false,
-  bodyPadding = "24px",
+  bodyPadding = '24px',
+  isRainbow = true,
 }) => (
   <StyledModal>
     <ModalHeader>
@@ -68,7 +79,8 @@ const Modal: React.FC<Props> = ({
     <Flex flexDirection="column" p={bodyPadding}>
       {children}
     </Flex>
+    {isRainbow && <img className="color-stroke" alt="" src={colorStroke} />}
   </StyledModal>
-);
+)
 
-export default Modal;
+export default Modal
