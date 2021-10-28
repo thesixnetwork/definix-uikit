@@ -5,11 +5,11 @@ export const links = [
     href: "/",
   },
   {
-    label: "Trade",
+    label: "ExChange",
     icon: "TradeIcon",
     items: [
       {
-        label: "Exchange",
+        label: "Swap",
         href: "https://exchange.pancakeswap.finance",
       },
       {
@@ -19,95 +19,40 @@ export const links = [
     ],
   },
   {
-    label: "Farms",
+    label: "Yield Farming",
     icon: "FarmIcon",
-    href: "/farms",
+    items: [
+      {
+        label: "Farm",
+        href: "/farm",
+      },
+      {
+        label: "Pool",
+        href: "/pool",
+      },
+    ],
   },
   {
-    label: "Pools",
+    label: "Rebalancing",
     icon: "PoolIcon",
-    href: "/syrup",
+    href: "/rebalancing",
   },
   {
-    label: "Lottery",
+    label: "Bridge",
     icon: "TicketIcon",
-    href: "/lottery",
-  },
-  {
-    label: "NFT",
-    icon: "NftIcon",
-    href: "/nft",
-  },
-  {
-    label: "Profile & Teams",
-    icon: "GroupsIcon",
-    items: [
-      {
-        label: "Leaderboard",
-        href: "/teams",
-      },
-      {
-        label: "YourProfile",
-        href: "/",
-      },
-    ],
-    calloutClass: "rainbow",
-  },
-  {
-    label: "Info",
-    icon: "InfoIcon",
-    items: [
-      {
-        label: "Overview",
-        href: "https://pancakeswap.info",
-      },
-      {
-        label: "Tokens",
-        href: "https://pancakeswap.info/tokens",
-      },
-      {
-        label: "Pairs",
-        href: "https://pancakeswap.info/pairs",
-      },
-      {
-        label: "Accounts",
-        href: "https://pancakeswap.info/accounts",
-      },
-    ],
-  },
-  {
-    label: "IFO",
-    icon: "IfoIcon",
-    items: [
-      {
-        label: "Next",
-        href: "/ifo",
-      },
-      {
-        label: "History",
-        href: "/ifo/history",
-      },
-    ],
+    href: "/bridge",
   },
   {
     label: "More",
-    icon: "MoreIcon",
+    icon: "GroupsIcon",
     items: [
       {
-        label: "Voting",
-        href: "https://voting.pancakeswap.finance",
+        label: "GitBook",
+        href: "https://sixnetwork.gitbook.io/definix-on-klaytn-en/",
       },
       {
-        label: "Github",
-        href: "https://github.com/pancakeswap",
-      },
-      {
-        label: "Docs",
-        href: "https://docs.pancakeswap.finance",
-      },
-      {
-        label: "Blog",
-        href: "https://pancakeswap.medium.com",
+        label: "Partnership",
+        href: "https://docs.google.com/forms/d/e/1FAIpQLScQcrUmV53N5y-ita6zD4Do8nQ6zdI_Al795jMUK--HSbHU5Q/viewform",
       },
     ],
   },
@@ -181,5 +126,5 @@ export const socials = [
 
 export const MENU_HEIGHT = 64;
 export const MENU_ENTRY_HEIGHT = 48;
-export const SIDEBAR_WIDTH_FULL = 240;
+export const SIDEBAR_WIDTH_FULL = 200;
 export const SIDEBAR_WIDTH_REDUCED = 56;

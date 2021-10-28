@@ -26,7 +26,6 @@ const Separator = styled.div`
 
 const StyledBreadcrumbs = styled.ul`
   align-items: center;
-  color: ${({ theme }) => theme.colors.textDisabled};
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;

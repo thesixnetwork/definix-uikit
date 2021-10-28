@@ -32,31 +32,30 @@ export type Gradients = {
 };
 
 export type Colors = {
-  primary: string;
-  primaryBright: string;
-  primaryDark: string;
-  secondary: string;
-  tertiary: string;
-  success: string;
-  failure: string;
-  warning: string;
-  contrast: string;
-  invertedContrast: string;
-  input: string;
-  inputSecondary: string;
-  background: string;
-  backgroundDisabled: string;
-  text: string;
-  textDisabled: string;
-  textSubtle: string;
-  borderColor: string;
-  card: string;
-
-  // Gradients
-  gradients: Gradients;
-
-  // Brand colors
-  binance: string;
+  main: {
+    red: string;
+  },
+  sub: {
+    orange: string;
+    yellow: string;
+    green: string;
+  },
+  brownscale: {
+    pale: string;
+    lightbrown: string;
+    brown: string;
+    deepbrown: string;
+  },
+  greyscale: {
+    white: string;
+    lightgrey: string;
+    mediumgrey: string;
+    deepgrey: string;
+    black: string;
+  },
+  bg: {
+    yellow: string[];
+  }
 };
 
 export type ZIndices = {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { BaseLayout, CardsLayout } from ".";
+import GlobalStyle from "../../style/global";
+import { BaseLayout, CardsLayout, ContainerLayout } from ".";
 
 export default {
   title: "Components/Layouts",
@@ -10,16 +11,29 @@ export default {
 const Stub = styled.div`
   width: 100%;
   background: #1fc7d4;
-  height: 300px;
+  height: 600px;
 `;
+
+export const Container: React.FC = () => {
+  return (
+    <ContainerLayout>
+      {[...Array(12)].map((value) => (
+        <Stub key={value} />
+      ))}
+    </ContainerLayout>
+  );
+};
 
 export const Base: React.FC = () => {
   return (
-    <BaseLayout>
-      {[...Array(24)].map((value) => (
-        <Stub key={value} />
-      ))}
-    </BaseLayout>
+    <>
+      <GlobalStyle />
+      <BaseLayout>
+        {[...Array(12)].map((value) => (
+          <Stub key={value} />
+        ))}
+      </BaseLayout>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const ResetCSS = createGlobalStyle`
+export const ResetCSSStyle = `
   /* prettier-ignore */
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -73,11 +73,9 @@ const ResetCSS = createGlobalStyle`
     width: 8px;
   }
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.textSubtle}; 
     border-radius: 8px;
   }
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px ${({ theme }) => theme.colors.input}; 
     border-radius: 10px;
   }
 
@@ -101,6 +99,8 @@ const ResetCSS = createGlobalStyle`
     border-color: transparent;
     color: transparent;
   }  
-`;
+`
+
+const ResetCSS = createGlobalStyle`${ResetCSSStyle}`;
 
 export default ResetCSS;

@@ -18,15 +18,15 @@ interface ThemedIconLabel {
 
 const getThemeColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
   switch (variant) {
-    case variants.DANGER:
-      return theme.colors.failure;
-    case variants.WARNING:
-      return theme.colors.warning;
-    case variants.SUCCESS:
-      return theme.colors.success;
-    case variants.INFO:
+    // case variants.DANGER:
+    //   return theme.colors.failure;
+    // case variants.WARNING:
+    //   return theme.colors.warning;
+    // case variants.SUCCESS:
+    //   return theme.colors.success;
+    // case variants.INFO:
     default:
-      return theme.colors.secondary;
+      return theme.colors.main.red;
   }
 };
 

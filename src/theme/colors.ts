@@ -1,57 +1,53 @@
-import { Colors } from "./types";
-
+/*
+:root {
+  --01-main-red: #ff5532;
+  --02-sub-orange: #ff6828;
+  --02-sub-yellow: #fea948;
+  --02-sub-green: #02a1a1;
+  --03-brownscale-brownscale-01-pale: #dad0c5;
+  --03-brownscale-brownscale-02-lightbrown: #b4a9a8;
+  --03-brownscale-brownscale-03-brown: #5e515f;
+  --03-brownscale-brownscale-04-deepbrown: #413343;
+  --04-greyscale-greyscale-01-white: #fff;
+  --04-greyscale-greyscale-02-lightgrey: #e0e0e0;
+  --04-greyscale-greyscale-03-mediumgrey: #999;
+  --04-greyscale-greyscale-04-deepgrey: #666;
+  --04-greyscale-greyscale-05-black: #222;
+  --05-bg-bg-yellow-02: #ffedcb;
+  --05-bg-bg-yellow-01: #fffbf5;
+}
+*/
 export const baseColors = {
-  failure: "#ED4B9E",
-  primary: "#1FC7D4",
-  primaryBright: "#53DEE9",
-  primaryDark: "#0098A1",
-  secondary: "#7645D9",
-  success: "#31D0AA",
-  warning: "#FFB237",
-};
-
-export const brandColors = {
-  binance: "#F0B90B",
-};
-
-export const lightColors: Colors = {
-  ...baseColors,
-  ...brandColors,
-  background: "#FAF9FA",
-  backgroundDisabled: "#E9EAEB",
-  contrast: "#191326",
-  invertedContrast: "#FFFFFF",
-  input: "#eeeaf4",
-  inputSecondary: "#d7caec",
-  tertiary: "#EFF4F5",
-  text: "#452A7A",
-  textDisabled: "#BDC2C4",
-  textSubtle: "#8f80ba",
-  borderColor: "#E9EAEB",
-  card: "#FFFFFF",
-  gradients: {
-    bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
+  main: {
+    red: '#ff5532',
   },
+  sub: {
+    orange: '#ff6828',
+    yellow: '#fea948',
+    green: '#02a1a1',
+  },
+  brownscale: {
+    pale: '#dad0c5',
+    lightbrown: '#b4a9a8',
+    brown: '#5e515f',
+    deepbrown: '#413343',
+  },
+  greyscale: {
+    white: '#fff',
+    lightgrey: '#e0e0e0',
+    mediumgrey: '#999',
+    deepgrey: '#666',
+    black: '#222',
+  },
+  bg: {
+    yellow: ['#fffbf5', '#ffedcb']
+  }
 };
 
-export const darkColors: Colors = {
+export const lightColors = {
   ...baseColors,
-  ...brandColors,
-  secondary: "#9A6AFF",
-  background: "#100C18",
-  backgroundDisabled: "#3c3742",
-  contrast: "#FFFFFF",
-  invertedContrast: "#191326",
-  input: "#483f5a",
-  inputSecondary: "#66578D",
-  primaryDark: "#0098A1",
-  tertiary: "#353547",
-  text: "#EAE2FC",
-  textDisabled: "#666171",
-  textSubtle: "#A28BD4",
-  borderColor: "#524B63",
-  card: "#27262c",
-  gradients: {
-    bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
-  },
 };
+export const darkColors = {
+  ...baseColors,
+};
+export default {}
