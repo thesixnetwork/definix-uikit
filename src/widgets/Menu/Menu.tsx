@@ -1,60 +1,42 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import throttle from "lodash/throttle";
-import Overlay from "../../components/Overlay/Overlay";
-import Flex from "../../components/Box/Flex";
 import { useMatchBreakpoints } from "../../hooks";
-import Logo from "./components/Logo";
+// import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
-import Avatar from "./components/Avatar";
-import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
-import { ContainerLayout } from "../..";
+// import Avatar from "./components/Avatar";
+import { MENU_HEIGHT, SIDEBAR_WIDTH_FULL, links as defaultLinks, MENU_ZINDEX } from "./config";
+import { Box, ContainerLayout } from "../..";
+import { pxToRem } from "../../style/mixin";
+import Chain from "./components/Chain";
+import Footer from "./components/Footer";
 
-const BodyWrapper = styled.div`
-  position: relative;
-  display: flex;
+const Inner = styled.div`
+  padding: ${MENU_HEIGHT}px ${pxToRem(60)} 0;
 `;
 
-const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
-  flex-grow: 1;
-  margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
-  transition: margin-top 0.2s;
-  transform: translate3d(0, 0, 0);
-  max-width: 100%;
+// const MobileOnlyOverlay = styled(Overlay)`
+//   position: fixed;
+//   height: 100%;
 
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
-`;
+//   ${({ theme }) => theme.mediaQueries.nav} {
+//     display: none;
+//   }
+// `;
 
-const MobileOnlyOverlay = styled(Overlay)`
+const StyledNav = styled.nav`
   position: fixed;
-  height: 100%;
-
-  ${({ theme }) => theme.mediaQueries.nav} {
-    display: none;
-  }
-`;
-
-const StyledNav = styled.nav<{ showMenu: boolean }>`
-  position: fixed;
-  top: ${({ showMenu }) => (showMenu ? 0 : `-${MENU_HEIGHT}px`)};
-  left: 0;
-  transition: top 0.2s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 16px;
-  width: 100%;
+  top: 0;
+  left: ${SIDEBAR_WIDTH_FULL}px;
+  width: calc(100% - ${SIDEBAR_WIDTH_FULL}px);
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
-  z-index: 20;
-  transform: translate3d(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 ${pxToRem(60)};
+  z-index: ${MENU_ZINDEX};
 `;
 
 const Menu: React.FC<NavProps> = ({
@@ -66,9 +48,9 @@ const Menu: React.FC<NavProps> = ({
   langs,
   setLang,
   currentLang,
-  cakePriceUsd,
+  finixPriceUsd,
   links,
-  profile,
+  // profile,
   children,
 }) => {
   const { isXl } = useMatchBreakpoints();
@@ -111,32 +93,31 @@ const Menu: React.FC<NavProps> = ({
 
   return (
     <ContainerLayout>
-      <StyledNav showMenu={showMenu}>
-        <Logo />
-        <Flex>
+      <StyledNav>
+        <Chain />
+        <Box position="absolute" right={pxToRem(60)}>
           <UserBlock account={account} login={login} logout={logout} />
-          {profile && <Avatar profile={profile} />}
-        </Flex>
+        </Box>
+        {/* {profile && <Avatar profile={profile} />} */}
       </StyledNav>
-      <BodyWrapper>
-        <Panel
-          isPushed={isPushed}
-          isMobile={isMobile}
-          showMenu={showMenu}
-          isDark={isDark}
-          toggleTheme={toggleTheme}
-          langs={langs}
-          setLang={setLang}
-          currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
-          pushNav={setIsPushed}
-          links={links}
-        />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
-          {children}
-        </Inner>
-        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
-      </BodyWrapper>
+      <Panel
+        isPushed={isPushed}
+        isMobile={isMobile}
+        showMenu={showMenu}
+        isDark={isDark}
+        toggleTheme={toggleTheme}
+        langs={langs}
+        setLang={setLang}
+        currentLang={currentLang}
+        finixPriceUsd={finixPriceUsd}
+        pushNav={setIsPushed}
+        links={links || defaultLinks}
+      />
+      <Inner>
+        {children}
+        {/* <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" /> */}
+      </Inner>
+      <Footer />
     </ContainerLayout>
   );
 };

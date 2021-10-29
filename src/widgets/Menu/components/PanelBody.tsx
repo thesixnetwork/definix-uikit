@@ -10,6 +10,7 @@ import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
+  
 }
 
 const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };

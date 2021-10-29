@@ -7,3 +7,7 @@ export const hexToRGB = (hex: string, alpha?: number): string => {
 
   return alpha ? `rgba(${r}, ${g}, ${b}, ${alpha})` : `rgba(${r}, ${g}, ${b})`;
 }
+export const rmUnit = (str: string): number => {
+  const matchNum = str.match(/\d+/gi);
+  return matchNum && matchNum.length > 0 ? +matchNum[0] : 0;
+};

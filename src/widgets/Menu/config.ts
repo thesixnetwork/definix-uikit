@@ -10,11 +10,11 @@ export const links = [
     items: [
       {
         label: "Swap",
-        href: "https://exchange.pancakeswap.finance",
+        href: "https://exchange.definix.com/#/swap",
       },
       {
         label: "Liquidity",
-        href: "https://exchange.pancakeswap.finance/#/pool",
+        href: "https://exchange.definix.com/#/liquidity",
       },
     ],
   },
@@ -60,71 +60,45 @@ export const links = [
 
 export const socials = [
   {
-    label: "Telegram",
-    icon: "TelegramIcon",
-    items: [
-      {
-        label: "English",
-        href: "https://t.me/pancakeswap",
-      },
-      {
-        label: "Bahasa Indonesia",
-        href: "https://t.me/PancakeSwapIndonesia",
-      },
-      {
-        label: "中文",
-        href: "https://t.me/PancakeSwap_CN",
-      },
-      {
-        label: "Tiếng Việt",
-        href: "https://t.me/PancakeSwapVN",
-      },
-      {
-        label: "Italiano",
-        href: "https://t.me/pancakeswap_ita",
-      },
-      {
-        label: "русский",
-        href: "https://t.me/pancakeswap_ru",
-      },
-      {
-        label: "Türkiye",
-        href: "https://t.me/pancakeswapturkiye",
-      },
-      {
-        label: "Português",
-        href: "https://t.me/PancakeSwapPortuguese",
-      },
-      {
-        label: "Español",
-        href: "https://t.me/PancakeswapEs",
-      },
-      {
-        label: "日本語",
-        href: "https://t.me/pancakeswapjp",
-      },
-      {
-        label: "Français",
-        href: "https://t.me/pancakeswapfr",
-      },
-      {
-        label: "Announcements",
-        href: "https://t.me/PancakeSwapAnn",
-      },
-      {
-        label: "Whale Alert",
-        href: "https://t.me/PancakeSwapWhales",
-      },
-    ],
+    label: "facebook",
+    icon: "Ico24FooterFacebook",
+    href: "https://www.facebook.com/thesixnetwork",
   },
   {
     label: "Twitter",
-    icon: "TwitterIcon",
-    href: "https://twitter.com/pancakeswap",
+    icon: "Ico24FooterTwitter",
+    href: "https://twitter.com/DefinixOfficial",
+  },
+  {
+    label: "telegram",
+    icon: "Ico24FooterTelegram",
+    href: "https://t.me/SIXNetwork",
+  },
+  {
+    label: "kakao",
+    icon: "Ico24FooterKakaotalk",
+    href: "https://open.kakao.com/o/gQNRT5K",
+  },
+  {
+    label: "gitbook",
+    icon: "Ico24FooterGitbook",
+    href: "https://sixnetwork.gitbook.io/definix-on-klaytn-en/",
+  },
+  {
+    label: "github",
+    icon: "Ico24FooterGithub",
+    href: "https://github.com/thesixnetwork",
+  },
+  {
+    label: "reddit",
+    icon: "Ico24FooterReddit",
+    href: "https://www.reddit.com/r/sixnetwork",
   },
 ];
 
-export const MENU_HEIGHT = 64;
+export const MENU_HEIGHT = 80;
 export const MENU_ENTRY_HEIGHT = 48;
 export const SIDEBAR_WIDTH_FULL = 200;
 export const SIDEBAR_WIDTH_REDUCED = 56;
+export const MENU_ZINDEX = 90;
+export const SIDEBAR_ZINDEX = 91;

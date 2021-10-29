@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GlobalStyle from "../../style/global";
+import GlobalStyle from "../../GlobalStyle";
 import { BaseLayout, CardsLayout, ContainerLayout } from ".";
 
 export default {

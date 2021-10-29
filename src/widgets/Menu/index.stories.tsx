@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import noop from "lodash/noop";
 import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import Flex from "../../components/Box/Flex";
@@ -15,6 +16,10 @@ export default {
   argTypes: {},
 };
 
+const Stub = styled.div`
+  grid-column: 1/13;
+`;
+
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
 // This hook is used to simulate a props change, and force a re rendering
@@ -28,7 +33,7 @@ const useProps = () => {
     langs,
     setLang: noop,
     currentLang: "EN",
-    cakePriceUsd: 0.023158668932877668,
+    finixPriceUsd: 0.023158668932877668,
     links,
     profile: null,
   });
@@ -44,7 +49,7 @@ const useProps = () => {
         langs,
         setLang: noop,
         currentLang: "EN",
-        cakePriceUsd: 0.023158668932877668,
+        finixPriceUsd: 0.023158668932877668,
         links,
         profile: null,
       });
@@ -62,24 +67,17 @@ export const Connected: React.FC = () => {
   return (
     <BrowserRouter>
       <Menu {...props}>
-        <div>
-          <Heading as="h1" mb="8px">
-            Page body
-          </Heading>
-          <Text as="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut
-          </Text>
-        </div>
+        <Stub>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </Stub>
       </Menu>
     </BrowserRouter>
   );
@@ -128,7 +126,7 @@ export const WithNoProfile: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        finixPriceUsd={0.23158668932877668}
         links={links}
         profile={{
           profileLink: "/profile",
@@ -170,7 +168,7 @@ export const WithProfile: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        finixPriceUsd={0.23158668932877668}
         links={links}
         profile={{
           username: "pancakeswap",
@@ -224,7 +222,7 @@ export const WithSubmenuSelected: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        cakePriceUsd={0.23158668932877668}
+        finixPriceUsd={0.23158668932877668}
         links={links}
         profile={{
           username: "pancakeswap",

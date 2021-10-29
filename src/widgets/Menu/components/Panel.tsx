@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
-import { SIDEBAR_WIDTH_FULL } from "../config";
+import { SIDEBAR_WIDTH_FULL, SIDEBAR_ZINDEX } from "../config";
 import { PanelProps, PushedProps } from "../types";
 import { hexToRGB } from "../../../style/mixin";
-import Logo from "./Logo";
+import LogoDefinix from "./LogoDefinix";
 
 interface Props extends PanelProps, PushedProps {
   showMenu: boolean;
@@ -26,7 +26,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   height: 100vh;
   transition: width 0.2s;
   border-right: ${({ isPushed, theme }) => (isPushed ? `1px solid ${ hexToRGB(theme.colors.brownscale.pale, 0.3) }` : 0)};
-  z-index: 11;
+  z-index: ${SIDEBAR_ZINDEX};
   overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
   transform: translate3d(0, 0, 0);
 `;
@@ -35,7 +35,7 @@ const Panel: React.FC<Props> = (props) => {
   const { isPushed, showMenu } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
-      <Logo />
+      <LogoDefinix />
       <PanelBody {...props} />
       <PanelFooter {...props} />
     </StyledPanel>

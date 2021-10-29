@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import { pxToRem } from '../../style/mixin';
-import { BREAKPOINTS } from '../../style/variables';
+import { breakpointMap } from '../../theme/base';
+import { SIDEBAR_WIDTH_FULL } from '../../widgets/Menu/config';
 
 const Wrapper = styled.div`
   position: relative;
@@ -10,11 +11,14 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: relative;
-  margin-left: ${pxToRem(260)};
-  margin-right: ${pxToRem(60)};
+  margin-left: ${pxToRem(SIDEBAR_WIDTH_FULL)};
 
-  @media (min-width: ${BREAKPOINTS.MIDDLE}) {
-    width: ${BREAKPOINTS.MIDDLE};
+  @media (min-width: ${breakpointMap.lg}px) {
+    width: ${breakpointMap.lg - SIDEBAR_WIDTH_FULL}px;
+    max-width: ${breakpointMap.lg - SIDEBAR_WIDTH_FULL}px;
+  }
+  @media (min-width: ${breakpointMap.lg + SIDEBAR_WIDTH_FULL}px) {
+    margin: 0 auto;
   }
 `
 

@@ -26,7 +26,7 @@ export * from "./components/Toggle";
 export * from "./components/Table";
 
 // Hooks
-// export * from "./hooks";
+export * from "./hooks";
 
 // Widgets
 export * from "./widgets/Modal";
@@ -35,5 +35,6 @@ export * from "./widgets/Toast";
 export * from "./widgets/WalletModal";
 
 // Theme
+export { default as GlobalStyle } from "./GlobalStyle";
 export { default as ResetCSS } from "./ResetCSS";
 export * from "./theme";

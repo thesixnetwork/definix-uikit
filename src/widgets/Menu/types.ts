@@ -41,16 +41,17 @@ export interface MenuEntry {
 export interface PanelProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
-  cakePriceUsd?: number;
+  finixPriceUsd?: number;
   currentLang: string;
   langs: LangType[];
   setLang: (lang: LangType) => void;
   links: Array<MenuEntry>;
 }
 
-export interface NavProps extends PanelProps {
+export interface NavProps extends Omit<PanelProps, 'links'> {
   account?: string;
   login: Login;
   profile?: Profile;
   logout: () => void;
+  links?: Array<MenuEntry>;
 }

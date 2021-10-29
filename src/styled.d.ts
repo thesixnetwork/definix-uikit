@@ -5,3 +5,8 @@ declare module "styled-components" {
   /* eslint-disable @typescript-eslint/no-empty-interface */
   export interface DefaultTheme extends PancakeTheme {}
 }
+
+declare module '*.svg' {
+  const value: React.StatelessComponent<React.SVGAttributes<SVGElement>>;
+  export default value;
+}
