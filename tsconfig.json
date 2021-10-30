@@ -13,8 +13,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/styled.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/types/index.d.ts"],
   "exclude": ["node_modules", "src/**/*.stories.tsx", "src/__tests__/**/*"]
 }
