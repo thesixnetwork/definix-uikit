@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Flex, Text } from "../../..";
 import { pxToRem } from "../../../style/mixin";
-import LogoSix from "./LogoSix";
+import { LogoFooterSixIcon } from "../icons";
 import SocialLinks from "./SocialLinks";
 
 const StyledNav = styled.div`
@@ -19,16 +19,21 @@ const Inner = styled.div`
   padding: 30px 0 60px;
 `
 
+const StyledFlex = styled(Flex)`
+  flex-direction: column;
+  margin-left: ${pxToRem(24)};
+`
+
 const Footer: React.FC = () => {
   return (
     <StyledNav>
       <Inner>
         <Flex>
-          <LogoSix />
-          <Flex flexDirection="column">
+          <LogoFooterSixIcon />
+          <StyledFlex>
             <Text>Copyright © 2021 SIX Network. All Right Reserved</Text>
             <Text>Audited By Certik</Text>
-          </Flex>
+          </StyledFlex>
         </Flex>
         <SocialLinks />
       </Inner>

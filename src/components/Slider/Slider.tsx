@@ -28,7 +28,7 @@ const Slider: React.FC<SliderProps> = ({ min, max, value, onValueChanged, valueL
           max={max}
           value={value}
           onChange={handleChange}
-          isCurrentValueMaxValue={isCurrentValueMaxValue}
+          // isCurrentValueMaxValue={isCurrentValueMaxValue}
         />
       </BunnySlider>
       {valueLabel && <SliderLabel progress={labelOffset}>{valueLabel}</SliderLabel>}

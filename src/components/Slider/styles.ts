@@ -1,8 +1,8 @@
 import { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 import { Box } from "../Box";
-import bunnyHeadMain from "./svg/bunnyhead-main.svg";
-import bunnyHeadMax from "./svg/bunnyhead-max.svg";
+// import bunnyHeadMain from "./svg/bunnyhead-main.svg";
+// import bunnyHeadMax from "./svg/bunnyhead-max.svg";
 
 export const SliderContainer = styled(Box)`
   position: relative;
@@ -29,18 +29,17 @@ export const BunnySlider = styled.div`
   width: 100%;
 `;
 
-interface StyledInputProps extends InputHTMLAttributes<HTMLInputElement> {
-  isCurrentValueMaxValue: boolean;
-}
+// interface StyledInputProps extends InputHTMLAttributes<HTMLInputElement> {
+//   isCurrentValueMaxValue: boolean;
+// }
 
-export const StyledInput = styled.input<StyledInputProps>`
+export const StyledInput = styled.input<InputHTMLAttributes<HTMLInputElement>>`
   height: 32px;
   position: relative;
   cursor: pointer;
 
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-image: url(${({ isCurrentValueMaxValue }) => (isCurrentValueMaxValue ? bunnyHeadMax : bunnyHeadMain)});
     width: 24px;
     height: 32px;
     cursor: pointer;
@@ -53,7 +52,6 @@ export const StyledInput = styled.input<StyledInputProps>`
   }
   ::-moz-range-thumb {
     -webkit-appearance: none;
-    background-image: url(${({ isCurrentValueMaxValue }) => (isCurrentValueMaxValue ? bunnyHeadMax : bunnyHeadMain)});
     width: 24px;
     height: 32px;
     cursor: pointer;
@@ -69,7 +67,6 @@ export const StyledInput = styled.input<StyledInputProps>`
   }
   ::-ms-thumb {
     -webkit-appearance: none;
-    background-image: url(${({ isCurrentValueMaxValue }) => (isCurrentValueMaxValue ? bunnyHeadMax : bunnyHeadMain)});
     width: 24px;
     height: 32px;
     cursor: pointer;

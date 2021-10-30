@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { hexToRGB } from "../../../style/mixin";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
 import { SIDEBAR_WIDTH_FULL, SIDEBAR_ZINDEX } from "../config";
 import { PanelProps, PushedProps } from "../types";
-import { hexToRGB } from "../../../style/mixin";
-import LogoDefinix from "./LogoDefinix";
+import { LogoMainFinixIcon } from "../icons";
+import { Flex } from "../../..";
 
 interface Props extends PanelProps, PushedProps {
   showMenu: boolean;
@@ -35,7 +36,9 @@ const Panel: React.FC<Props> = (props) => {
   const { isPushed, showMenu } = props;
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
-      <LogoDefinix />
+      <Flex alignItems="center" justifyContent="center">
+        <LogoMainFinixIcon />
+      </Flex>
       <PanelBody {...props} />
       <PanelFooter {...props} />
     </StyledPanel>

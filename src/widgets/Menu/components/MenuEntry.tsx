@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { keyframes, DefaultTheme } from "styled-components";
+import { space } from "styled-system";
 import { MENU_ENTRY_HEIGHT } from "../config";
 
 export interface Props {
@@ -21,6 +22,7 @@ const rainbowAnimation = keyframes`
 const LinkLabel = styled.div<{ isPushed: boolean }>`
   transition: color 0.4s;
   flex-grow: 1;
+  ${space}
 `;
 
 const MenuEntry = styled.div<Props>`
@@ -30,6 +32,8 @@ const MenuEntry = styled.div<Props>`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: ${({ secondary }) => (secondary ? "0 32px" : "0 16px")};
   font-size: ${({ secondary }) => (secondary ? "14px" : "16px")};
+  border-radius: 8px;
+  background-color: ${({ isActive, theme }) => isActive ? theme.colors.main.red : 'transparent'};
 
   a {
     display: flex;

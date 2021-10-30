@@ -1,12 +1,14 @@
 export const links = [
   {
     label: "Home",
-    icon: "HomeIcon",
+    icon: "GnbHomeNIcon",
+    activeIcon: "GnbHomeSIcon",
     href: "/",
   },
   {
     label: "ExChange",
-    icon: "TradeIcon",
+    icon: "GnbExchangeNIcon",
+    activeIcon: "GnbExchangeSIcon",
     items: [
       {
         label: "Swap",
@@ -20,7 +22,8 @@ export const links = [
   },
   {
     label: "Yield Farming",
-    icon: "FarmIcon",
+    icon: "GnbFarmingNIcon",
+    activeIcon: "GnbFarmingSIcon",
     items: [
       {
         label: "Farm",
@@ -34,17 +37,20 @@ export const links = [
   },
   {
     label: "Rebalancing",
-    icon: "PoolIcon",
+    icon: "GnbRebalancingNIcon",
+    activeIcon: "GnbRebalancingSIcon",
     href: "/rebalancing",
   },
   {
     label: "Bridge",
-    icon: "TicketIcon",
+    icon: "GnbBridgeNIcon",
+    activeIcon: "GnbBridgeSIcon",
     href: "/bridge",
   },
   {
     label: "More",
-    icon: "GroupsIcon",
+    icon: "GnbMoreNIcon",
+    activeIcon: "GnbMoreSIcon",
     items: [
       {
         label: "GitBook",
@@ -61,37 +67,37 @@ export const links = [
 export const socials = [
   {
     label: "facebook",
-    icon: "Ico24FooterFacebook",
+    icon: "FooterFacebookIcon",
     href: "https://www.facebook.com/thesixnetwork",
   },
   {
     label: "Twitter",
-    icon: "Ico24FooterTwitter",
+    icon: "FooterTwitterIcon",
     href: "https://twitter.com/DefinixOfficial",
   },
   {
     label: "telegram",
-    icon: "Ico24FooterTelegram",
+    icon: "FooterTelegramIcon",
     href: "https://t.me/SIXNetwork",
   },
   {
     label: "kakao",
-    icon: "Ico24FooterKakaotalk",
+    icon: "FooterKakaotalkIcon",
     href: "https://open.kakao.com/o/gQNRT5K",
   },
   {
     label: "gitbook",
-    icon: "Ico24FooterGitbook",
+    icon: "FooterGitbookIcon",
     href: "https://sixnetwork.gitbook.io/definix-on-klaytn-en/",
   },
   {
     label: "github",
-    icon: "Ico24FooterGithub",
+    icon: "FooterGithubIcon",
     href: "https://github.com/thesixnetwork",
   },
   {
     label: "reddit",
-    icon: "Ico24FooterReddit",
+    icon: "FooterRedditIcon",
     href: "https://www.reddit.com/r/sixnetwork",
   },
 ];
