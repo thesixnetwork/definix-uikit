@@ -4,13 +4,14 @@ import { BrowserRouter, Link } from "react-router-dom";
 import styled from "styled-components";
 import Box from "../Box/Box";
 import Flex from "../Box/Flex";
-import { AddIcon, AutoRenewIcon, LogoIcon } from "../Svg";
-import IconButton from "./IconButton";
 import Button from "./Button";
 import { scales, variants } from "./types";
 
+const viewScales = [scales.S_32, scales.S_36, scales.S_40];
+const viewVariants = [variants.RED, variants.BROWN, variants.LIGHT_BROWN, variants.LINE];
+
 export default {
-  title: "Components/Button",
+  title: "Components/Button[NEW]",
   component: Button,
   argTypes: {},
 };
@@ -30,10 +31,10 @@ export const Default: React.FC = () => {
         <button type="button">Unstyled Button</button>
       </Box>
       <Box mb="32px">
-        {Object.values(variants).map((variant) => {
+        {viewVariants.map((variant) => {
           return (
             <Box key={variant} mb="32px">
-              {Object.values(scales).map((scale) => {
+              {viewScales.map((scale) => {
                 return (
                   <Button key={scale} variant={variant} scale={scale} mr="8px">
                     {`${capitalize(variant)} ${scale.toUpperCase()}`}
@@ -48,7 +49,7 @@ export const Default: React.FC = () => {
         <Button mr="8px" disabled>
           Disabled
         </Button>
-        <Button variant="secondary" disabled>
+        <Button variant="line" disabled>
           Disabled
         </Button>
       </Box>
@@ -56,50 +57,50 @@ export const Default: React.FC = () => {
   );
 };
 
-export const Anchors: React.FC = () => {
-  return (
-    <>
-      <Box mb="32px">
-        {Object.values(variants).map((variant) => {
-          return (
-            <Box key={variant} mb="32px">
-              {Object.values(scales).map((scale) => {
-                return (
-                  <Button
-                    as="a"
-                    href="https://pancakeswap.finance"
-                    key={scale}
-                    variant={variant}
-                    scale={scale}
-                    external
-                    mr="8px"
-                  >
-                    {`${capitalize(variant)} anchor ${scale.toUpperCase()}`}
-                  </Button>
-                );
-              })}
-            </Box>
-          );
-        })}
-      </Box>
-      <Box>
-        <Button as="a" href="https://pancakeswap.finance" mr="8px" external disabled>
-          Disabled
-        </Button>
-        <Button as="a" href="https://pancakeswap.finance" variant="secondary" external disabled>
-          Disabled
-        </Button>
-      </Box>
-    </>
-  );
-};
+// export const Anchors: React.FC = () => {
+//   return (
+//     <>
+//       <Box mb="32px">
+//         {Object.values(variants).map((variant) => {
+//           return (
+//             <Box key={variant} mb="32px">
+//               {Object.values(scales).map((scale) => {
+//                 return (
+//                   <Button
+//                     as="a"
+//                     href="https://pancakeswap.finance"
+//                     key={scale}
+//                     variant={variant}
+//                     scale={scale}
+//                     external
+//                     mr="8px"
+//                   >
+//                     {`${capitalize(variant)} anchor ${scale.toUpperCase()}`}
+//                   </Button>
+//                 );
+//               })}
+//             </Box>
+//           );
+//         })}
+//       </Box>
+//       <Box>
+//         <Button as="a" href="https://pancakeswap.finance" mr="8px" external disabled>
+//           Disabled
+//         </Button>
+//         <Button as="a" href="https://pancakeswap.finance" variant="secondary" external disabled>
+//           Disabled
+//         </Button>
+//       </Box>
+//     </>
+//   );
+// };
 
 export const Variants: React.FC = () => {
   return (
     <Box width="640px">
       <BrowserRouter>
         <Row>
-          <Button as={Link} to="/router-link" variant="secondary">
+          <Button as={Link} to="/router-link" variant="red">
             As an React Router link
           </Button>
         </Row>
@@ -107,36 +108,30 @@ export const Variants: React.FC = () => {
           <Button width="100%">Full size</Button>
         </Row>
         <Row>
-          <Button isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
-            Approving
-          </Button>
-          <Button isLoading variant="success">
-            Approving
+          <Button variant="red" isLoading>
+            Loading
           </Button>
         </Row>
-        <Row>
-          <Button startIcon={<LogoIcon />}>Start Icon</Button>
-          <Button endIcon={<LogoIcon />}>End Icon</Button>
-          <Button startIcon={<LogoIcon />} endIcon={<LogoIcon />}>
+        {/* <Row>
+          <Button startIcon={<GnbHomeNIcon />}>Start Icon</Button>
+          <Button endIcon={<GnbHomeNIcon />}>End Icon</Button>
+          <Button startIcon={<GnbHomeNIcon />} endIcon={<GnbHomeNIcon />}>
             Start & End Icon
           </Button>
         </Row>
         <Row>
           <IconButton>
-            <LogoIcon />
+            <GnbHomeNIcon />
           </IconButton>
           <IconButton variant="secondary">
-            <AddIcon />
+            <GnbHomeNIcon />
           </IconButton>
         </Row>
         <Row>
           <IconButton scale="sm" variant="danger">
-            <LogoIcon />
+            <GnbHomeNIcon />
           </IconButton>
-          <IconButton scale="sm" variant="success">
-            <AddIcon color="currentColor" />
-          </IconButton>
-        </Row>
+        </Row> */}
       </BrowserRouter>
     </Box>
   );

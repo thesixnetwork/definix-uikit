@@ -36,6 +36,8 @@ export const styleVariants = {
     borderStyle: "solid",
     borderColor: "greyscale.lightgrey"
   },
+
+
   [variants.PRIMARY]: {
     backgroundColor: "primary",
     color: "white",
@@ -73,3 +75,4 @@ export const styleVariants = {
     boxShadow: "none",
   },
 };
+

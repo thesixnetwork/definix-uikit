@@ -3,16 +3,25 @@ import { Link } from "react-router-dom";
 import { LayoutProps, SpaceProps } from "styled-system";
 
 export const scales = {
-  MD: "md",
-  SM: "sm",
-  XS: "xs",
-
+  // new
   S_32: "32",
   S_36: "36",
   S_40: "40",
+
+  // old
+  MD: "md",
+  SM: "sm",
+  XS: "xs",
 } as const;
 
 export const variants = {
+  // new
+  RED: "red",
+  BROWN: "brown",
+  LIGHT_BROWN: "light-brown",
+  LINE: "line",
+
+  // old
   PRIMARY: "primary",
   SECONDARY: "secondary",
   TERTIARY: "tertiary",
@@ -20,11 +29,6 @@ export const variants = {
   DANGER: "danger",
   SUBTLE: "subtle",
   SUCCESS: "success",
-  
-  RED: "red",
-  BROWN: "brown",
-  LIGHT_BROWN: "light-brown",
-  LINE: "line"
 } as const;
 
 export type Scale = typeof scales[keyof typeof scales];
