@@ -33,11 +33,11 @@ export const baseColors = {
     deepbrown: '#413343',
   },
   greyscale: {
-    white: '#fff',
+    white: '#ffffff',
     lightgrey: '#e0e0e0',
-    mediumgrey: '#999',
-    deepgrey: '#666',
-    black: '#222',
+    mediumgrey: '#999999',
+    deepgrey: '#666666',
+    black: '#222222',
   },
   bg: {
     yellow: ['#fffbf5', '#ffedcb']

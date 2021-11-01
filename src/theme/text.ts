@@ -1,6 +1,6 @@
 export default {}
-export const typoStyle = {
-  'R_32-B': {
+export const textStyle = {
+  'R_32B': {
     fontFamily: 'Roboto',
     fontSize: '32px',
     fontWeight: 'bold',
@@ -10,7 +10,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_28-B': {
+  'R_28B': {
     fontFamily: 'Roboto',
     fontSize: '28px',
     fontWeight: 'bold',
@@ -20,7 +20,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_28-M': {
+  'R_28M': {
     fontFamily: 'Roboto',
     fontSize: '28px',
     fontWeight: 500,
@@ -30,7 +30,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_26-B': {
+  'R_26B': {
     fontFamily: 'Roboto',
     fontSize: '26px',
     fontWeight: 'bold',
@@ -40,7 +40,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_23-M': {
+  'R_23M': {
     fontFamily: 'Roboto',
     fontSize: '23px',
     fontWeight: 500,
@@ -50,7 +50,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_20-B': {
+  'R_20B': {
     fontFamily: 'Roboto',
     fontSize: '20px',
     fontWeight: 'bold',
@@ -60,7 +60,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_20-M': {
+  'R_20M': {
     fontFamily: 'Roboto',
     fontSize: '20px',
     fontWeight: 500,
@@ -70,7 +70,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_20-R': {
+  'R_20R': {
     fontFamily: 'Roboto',
     fontSize: '20px',
     fontWeight: 'normal',
@@ -80,7 +80,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_18-B': {
+  'R_18B': {
     fontFamily: 'Roboto',
     fontSize: '18px',
     fontWeight: 'bold',
@@ -90,7 +90,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_18-M': {
+  'R_18M': {
     fontFamily: 'Roboto',
     fontSize: '18px',
     fontWeight: 500,
@@ -100,7 +100,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_18-R': {
+  'R_18R': {
     fontFamily: 'Roboto',
     fontSize: '18px',
     fontWeight: 'normal',
@@ -110,7 +110,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_16-B': {
+  'R_16B': {
     fontFamily: 'Roboto',
     fontSize: '16px',
     fontWeight: 'bold',
@@ -120,7 +120,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_16-M': {
+  'R_16M': {
     fontFamily: 'Roboto',
     fontSize: '16px',
     fontWeight: 500,
@@ -130,7 +130,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_16-R': {
+  'R_16R': {
     fontFamily: 'Roboto',
     fontSize: '16px',
     fontWeight: 'normal',
@@ -140,7 +140,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_14-B': {
+  'R_14B': {
     fontFamily: 'Roboto',
     fontSize: '14px',
     fontWeight: 'bold',
@@ -150,7 +150,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_14-M': {
+  'R_14M': {
     fontFamily: 'Roboto',
     fontSize: '14px',
     fontWeight: 500,
@@ -160,7 +160,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_14-R': {
+  'R_14R': {
     fontFamily: 'Roboto',
     fontSize: '14px',
     fontWeight: 'normal',
@@ -170,7 +170,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_12-B': {
+  'R_12B': {
     fontFamily: 'Roboto',
     fontSize: '12px',
     fontWeight: 'bold',
@@ -180,7 +180,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_12-M': {
+  'R_12M': {
     fontFamily: 'Roboto',
     fontSize: '12px',
     fontWeight: 500,
@@ -190,7 +190,7 @@ export const typoStyle = {
     letterSpacing: 'normal',
   },
 
-  'R_12-R': {
+  'R_12R': {
     fontFamily: 'Roboto',
     fontSize: '12px',
     fontWeight: 'normal',

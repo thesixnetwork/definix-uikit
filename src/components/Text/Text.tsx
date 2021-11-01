@@ -1,6 +1,6 @@
-import { typoStyle } from "../../theme/typo";
 import styled from "styled-components";
 import { variant, space, typography } from "styled-system";
+import { textStyle } from "../../theme/text";
 import { TextProps } from "./types";
 
 const Text = styled.div<TextProps>`
@@ -9,7 +9,7 @@ const Text = styled.div<TextProps>`
   ${typography}
   ${variant({
     prop: 'textStyle',
-    variants: typoStyle,
+    variants: textStyle,
   })}
 `;
 
