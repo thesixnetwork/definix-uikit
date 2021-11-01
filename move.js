@@ -22,7 +22,7 @@ try {
     stdio: 'inherit'
   });
 } catch (e) {
-  console.error('buile failed.');
+  console.error('build failed.');
   process.exit(-1);
 }
 
