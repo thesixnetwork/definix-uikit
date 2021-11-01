@@ -31,7 +31,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
       />
     ))}
     <HelpLink
-      href="https://docs.pancakeswap.finance/guides/faq#how-do-i-set-up-my-wallet-on-binance-smart-chain"
+      href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix"
       external
     >
       <HelpIcon color="primary" mr="6px" />
