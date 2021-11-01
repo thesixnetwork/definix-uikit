@@ -17,19 +17,23 @@ const StyledPanel = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   padding-top: 30px;
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors.greyscale.white};
-  width: ${({ isPushed }) => (isPushed ? `${SIDEBAR_WIDTH_FULL}px` : 0)};
+  width: ${SIDEBAR_WIDTH_FULL}px;
   height: 100vh;
   transition: width 0.2s;
-  border-right: ${({ isPushed, theme }) => (isPushed ? `1px solid ${ hexToRGB(theme.colors.brownscale.pale, 0.3) }` : 0)};
+  border-right: ${({ theme }) => `1px solid ${ hexToRGB(theme.colors.brownscale.pale, 0.3) }`};
   z-index: ${SIDEBAR_ZINDEX};
-  overflow: ${({ isPushed }) => (isPushed ? "initial" : "hidden")};
+  overflow: initial;
   transform: translate3d(0, 0, 0);
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    display: flex;
+  }
 `;
 
 const Panel: React.FC<Props> = (props) => {

@@ -2,11 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import throttle from "lodash/throttle";
 import { useMatchBreakpoints } from "../../hooks";
-// import Logo from "./components/Logo";
 import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
-// import Avatar from "./components/Avatar";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_FULL, links as defaultLinks, MENU_ZINDEX, MENU_MOBILE_HEIGHT } from "./config";
 import { Box, ContainerLayout } from "../..";
 import { hexToRGB, pxToRem } from "../../style/mixin";
@@ -32,7 +30,7 @@ const MobileNav = styled.nav`
   background-color: ${({ theme }) => theme.colors.greyscale.white};
   z-index: ${MENU_ZINDEX};
 
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${({ theme }) => theme.mediaQueries.lg} {
     display: none;
   }
 `;
@@ -49,7 +47,7 @@ const StyledNav = styled.nav`
   padding: 0 ${pxToRem(60)};
   z-index: ${MENU_ZINDEX};
 
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${({ theme }) => theme.mediaQueries.lg} {
     display: flex;
   }
 `;
