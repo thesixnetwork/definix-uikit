@@ -36,40 +36,40 @@ export const styleVariants = {
     borderStyle: "solid",
     borderColor: "greyscale.lightgrey"
   },
-  // [variants.PRIMARY]: {
-  //   backgroundColor: "primary",
-  //   color: "white",
-  // },
-  // [variants.SECONDARY]: {
-  //   backgroundColor: "transparent",
-  //   border: "2px solid",
-  //   borderColor: "primary",
-  //   boxShadow: "none",
-  //   color: "primary",
-  //   ":disabled": {
-  //     backgroundColor: "transparent",
-  //   },
-  // },
-  // [variants.TERTIARY]: {
-  //   backgroundColor: "tertiary",
-  //   boxShadow: "none",
-  //   color: "primary",
-  // },
-  // [variants.SUBTLE]: {
-  //   backgroundColor: "textSubtle",
-  //   color: "white",
-  // },
-  // [variants.DANGER]: {
-  //   backgroundColor: "failure",
-  //   color: "white",
-  // },
-  // [variants.SUCCESS]: {
-  //   backgroundColor: "success",
-  //   color: "white",
-  // },
-  // [variants.TEXT]: {
-  //   backgroundColor: "transparent",
-  //   color: "primary",
-  //   boxShadow: "none",
-  // },
+  [variants.PRIMARY]: {
+    backgroundColor: "primary",
+    color: "white",
+  },
+  [variants.SECONDARY]: {
+    backgroundColor: "transparent",
+    border: "2px solid",
+    borderColor: "primary",
+    boxShadow: "none",
+    color: "primary",
+    ":disabled": {
+      backgroundColor: "transparent",
+    },
+  },
+  [variants.TERTIARY]: {
+    backgroundColor: "tertiary",
+    boxShadow: "none",
+    color: "primary",
+  },
+  [variants.SUBTLE]: {
+    backgroundColor: "textSubtle",
+    color: "white",
+  },
+  [variants.DANGER]: {
+    backgroundColor: "failure",
+    color: "white",
+  },
+  [variants.SUCCESS]: {
+    backgroundColor: "success",
+    color: "white",
+  },
+  [variants.TEXT]: {
+    backgroundColor: "transparent",
+    color: "primary",
+    boxShadow: "none",
+  },
 };
