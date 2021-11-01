@@ -1,5 +1,5 @@
 import React from "react";
-import { typoStyle } from "../../theme/typo";
+import { textStyle } from "../../theme/text";
 import Text from "./Text";
 
 export default {
@@ -44,7 +44,7 @@ export const Default: React.FC = () => {
     <div>
       <Text>Default</Text>
       {
-        Object.keys(typoStyle).map((key) => <Text key={key} textStyle={key}>{key}</Text>)
+        Object.keys(textStyle).map((key) => <Text key={key} textStyle={key}>{key}</Text>)
       }
       <Text bold>Bold text</Text>
       <Text small>Small text</Text>
