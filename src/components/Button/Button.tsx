@@ -10,11 +10,11 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
   const classNames = className ? [className] : [];
 
   if (isLoading) {
-    classNames.push("pancake-button--loading");
+    classNames.push("definix-button--loading");
   }
 
   if (isDisabled && !isLoading) {
-    classNames.push("pancake-button--disabled");
+    classNames.push("definix-button--disabled");
   }
 
   return (
@@ -43,8 +43,8 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
 Button.defaultProps = {
   isLoading: false,
   external: false,
-  variant: variants.PRIMARY,
-  scale: scales.MD,
+  variant: variants.RED,
+  scale: scales.S_40,
   disabled: false,
 };
 
