@@ -1,6 +1,8 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
 import { CardProps } from "./types";
+import { pxToRem } from "@/style/mixin";
+import { spacing } from "@/theme/base";
 
 interface StyledCardProps extends CardProps {
   theme: DefaultTheme;
@@ -28,7 +30,7 @@ const getBoxShadow = ({ isActive, isSuccess, isWarning, theme }: StyledCardProps
 const StyledCard = styled.div<StyledCardProps>`
   background-color: ${({ theme }) => theme.card.background};
   border: ${({ theme }) => theme.card.boxShadow};
-  border-radius: 32px;
+  border-radius: ${pxToRem(spacing.S_16)};
   box-shadow: ${getBoxShadow};
   overflow: hidden;
   position: relative;

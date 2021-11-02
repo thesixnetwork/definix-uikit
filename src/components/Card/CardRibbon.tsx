@@ -1,51 +1,30 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
 import { CardRibbonProps } from "./types";
+import { spacing } from "@/theme/base";
+import { textStyle } from "@/theme/text";
+import { pxToRem } from "@/style/mixin";
 
 interface StyledCardRibbonProps extends CardRibbonProps {
   theme: DefaultTheme;
 }
 
+// background-color: ${({ variantColor = "yellow", theme }) => theme.colors[variantColor]};
 const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
-  color: white;
-  margin: 0;
-  padding: 0;
-  padding: 8px 0;
+  background-color: ${({ theme }) => theme.colors.yellow};
+  padding: ${pxToRem(5)} ${pxToRem(spacing.S_20)};
   position: absolute;
-  right: 0;
-  top: 0;
-  text-align: center;
-  transform: translateX(30%) translateY(0%) rotate(45deg);
-  transform-origin: top left;
-  width: 96px;
-
-  &:before,
-  &:after {
-    content: "";
-    height: 100%;
-    margin: 0 -1px; /* Removes tiny gap */
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  &:before {
-    right: 100%;
-  }
-
-  &:after {
-    left: 100%;
-  }
-
-  & > div {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 96px;
-  }
+  left: unset;
+  text-transform: uppercase;
+  top: 17px;
+  border-top-right-radius: ${pxToRem(spacing.S_8)};
+  border-bottom-right-radius: ${pxToRem(spacing.S_8)};
+  z-index: 1;
+  ${textStyle.R_12B}
+  color: white;
 `;
 
-const CardRibbon: React.FC<CardRibbonProps> = ({ variantColor, text }) => {
+const CardRibbon: React.FC<CardRibbonProps> = ({ variantColor = "yellow", text }) => {
   return (
     <StyledCardRibbon variantColor={variantColor}>
       <div title={text}>{text}</div>
