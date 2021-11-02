@@ -2,14 +2,16 @@ import React, { cloneElement, Children, ReactElement } from "react";
 import styled from "styled-components";
 import { ChainToggleProps } from "./types";
 
-const scalesValues = {
+export const scalesValues = {
   sm: {
     height: '28px',
     fullWidth: '201px',
+    minWidth: '86px',
   },
   md: {
     height: '32px',
     fullWidth: '310px',
+    minWidth: '146px',
   }
 };
 

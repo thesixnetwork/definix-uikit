@@ -4,8 +4,13 @@ import { Text } from "../Text";
 import Button from "../Button/Button";
 import { BaseButtonProps, PolymorphicComponent } from "../Button/types";
 import { ChainToggleItemProps } from "./types";
+import { scalesValues } from "./ChainToggle";
 
-interface InactiveButtonProps extends BaseButtonProps {
+interface ActiveButtonProps extends BaseButtonProps {
+  scale?: 'sm' | 'md';
+}
+
+interface InactiveButtonProps extends ActiveButtonProps {
   forwardedAs: BaseButtonProps["as"];
 }
 
@@ -15,9 +20,10 @@ const InactiveButton: PolymorphicComponent<InactiveButtonProps, "button"> = styl
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: ${({ scale }) => scalesValues[scale || 'md'].minWidth};
 `;
 
-const ActiveButton = styled(Button)<BaseButtonProps>`
+const ActiveButton = styled(Button)<ActiveButtonProps>`
   flex: auto;
   display: flex;
   align-items: center;
@@ -25,6 +31,7 @@ const ActiveButton = styled(Button)<BaseButtonProps>`
   height: 100%;
   border-radius: 16px;
   background-color: ${({ theme }) => theme.colors.brownscale.brown};
+  min-width: ${({ scale }) => scalesValues[scale || 'md'].minWidth};
 `;
 
 const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({

@@ -70,11 +70,19 @@ export const Default: React.FC = () => {
 export const ChainButtonMenuNEW: React.FC = () => {
   const [index, setIndex] = useState(0);
   return (
-    <Row>
-      <ChainToggle activeIndex={index} onItemClick={setIndex}>
-        <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />} label="Binance smart chain" />
+    <>
+      <Row>
+        <ChainToggle activeIndex={index} onItemClick={setIndex}>
+          <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />} label="Binance smart chain" />
+          <ChainToggleItem as="a" href="#a" startIcon={<ChainKlaytnIcon />} label="Klaytn chain" />
+        </ChainToggle>
+      </Row>
+      <Row>
+      <ChainToggle activeIndex={index} onItemClick={setIndex} scale="sm">
+        <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />} label="BSC" />
         <ChainToggleItem as="a" href="#a" startIcon={<ChainKlaytnIcon />} label="Klaytn chain" />
       </ChainToggle>
     </Row>
+    </>
   );
 };
