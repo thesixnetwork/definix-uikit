@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { space, layout, variant as styledVariant } from "styled-system";
 import { hexToRGB } from "../../style/mixin";
-import { getVariantTextStyle } from "../../theme/text";
+import { getVariantTextStyle } from "@/theme/text";
 import { scaleVariants, styleVariants } from "./theme";
 import { BaseButtonProps, variants } from "./types";
 

@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Panel from "./components/Panel";
-import { MenuProps, NavProps } from "./types";
+import { MenuProps } from "./types";
 import { MENU_HEIGHT, links as defaultLinks } from "./config";
 import { ContainerLayout } from "../..";
 import { pxToRem } from "../../style/mixin";
