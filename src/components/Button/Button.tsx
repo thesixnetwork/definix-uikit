@@ -64,9 +64,7 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
           cloneElement(startIcon, {
             mr: "0.5rem",
           })}
-        <Text textStyle="R_14B">
-          {children}
-        </Text>
+        {children}
         {isValidElement(endIcon) &&
           cloneElement(endIcon, {
             ml: "0.5rem",

@@ -7,6 +7,8 @@ export interface BoxProps
     LayoutProps,
     PositionProps,
     SpaceProps,
-    HTMLAttributes<HTMLDivElement> {}
+    HTMLAttributes<HTMLDivElement> {
+      textStyle?: string;
+  }
 
 export interface FlexProps extends BoxProps, FlexboxProps {}

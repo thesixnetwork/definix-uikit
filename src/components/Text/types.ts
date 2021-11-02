@@ -6,5 +6,6 @@ export interface TextProps extends SpaceProps, TypographyProps {
   bold?: boolean;
   small?: boolean;
   textStyle?: string;
+  textColor?: string;
   textTransform?: "uppercase" | "lowercase" | "capitalize";
 }

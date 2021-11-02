@@ -1,4 +1,5 @@
-export default {}
+import { variant } from "styled-system";
+
 export const textStyle = {
   'R_32B': {
     fontFamily: 'Roboto',
@@ -200,3 +201,12 @@ export const textStyle = {
     letterSpacing: 'normal',
   },
 }
+
+export type textStyleType = typeof textStyle[keyof typeof textStyle];
+// export type textStyleType = 'R_32B' | 'R_28B' | 'R_28M' | 'R_26B' | 'R_23M' | 'R_20B' | 'R_20M' | 'R_20R' | 'R_18B' | 'R_18M' | 'R_18R' | 'R_16B' | 'R_16M' | 'R_16R' | 'R_14B' | 'R_14M' | 'R_14R' | 'R_12B' | 'R_12M' | 'R_12R';
+
+export const getVariantTextStyle = () => variant({
+  prop: 'textStyle',
+  variants: textStyle,
+})
+
