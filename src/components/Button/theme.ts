@@ -1,15 +1,15 @@
 import { scales, variants } from "./types";
 
 export const scaleVariants = {
-  [scales.S_32]: {
+  [scales.S32]: {
     height: "32px",
     padding: "7px 20px",
   },
-  [scales.S_36]: {
+  [scales.S36]: {
     height: "36px",
     padding: "0 16px",
   },
-  [scales.S_40]: {
+  [scales.S40]: {
     height: "40px",
     padding: "10px 20px",
     minWidth: "186px",

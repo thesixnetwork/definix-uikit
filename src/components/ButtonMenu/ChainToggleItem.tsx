@@ -7,7 +7,7 @@ import { ChainToggleItemProps } from "./types";
 import { scalesValues } from "./ChainToggle";
 
 interface ActiveButtonProps extends BaseButtonProps {
-  scale?: 'sm' | 'md';
+  toggleScale?: 'sm' | 'md';
 }
 
 interface InactiveButtonProps extends ActiveButtonProps {
@@ -19,26 +19,33 @@ const InactiveButton: PolymorphicComponent<InactiveButtonProps, "button"> = styl
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-width: ${({ scale }) => scalesValues[scale || 'md'].minWidth};
+  justify-content: flex-start;
+  padding-left: ${({ toggleScale }) => toggleScale === 'md' ? '7px' : '5px'};
+  min-width: ${({ toggleScale }) => scalesValues[toggleScale || 'md'].minWidth};
 `;
 
-const ActiveButton = styled(Button)<ActiveButtonProps>`
+const ActiveButton: PolymorphicComponent<ActiveButtonProps, "button"> = styled(Button)<ActiveButtonProps>`
   flex: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 100%;
+  justify-content: flex-start;
+  padding-left: ${({ toggleScale }) => toggleScale === 'md' ? '7px' : '5px'};
+  min-width: ${({ toggleScale }) => scalesValues[toggleScale || 'md'].minWidth};
   border-radius: 16px;
   background-color: ${({ theme }) => theme.colors.brownscale.brown};
-  min-width: ${({ scale }) => scalesValues[scale || 'md'].minWidth};
 `;
+
+const StyledText = styled(Text)`
+  flex: 1;
+`
 
 const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
   isActive = false,
   as,
   label,
   startIcon,
+  toggleScale,
   ...props
 }: ChainToggleItemProps) => {
   if (!isActive) {
@@ -46,23 +53,30 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
       <InactiveButton
         variant="brown"
         forwardedAs={as}
+        toggleScale={toggleScale}
         {...props}
       >
         {isValidElement(startIcon) &&
           cloneElement(startIcon, {
+            width: toggleScale === 'md' ? '22px' : '20px',
+            height: toggleScale === 'md' ? '22px' : '20px',
+            viewBox: '0 0 22 22',
             mr: "0.5rem",
           })}
-        <Text ml="7px" color="greyscale.deepgrey" textStyle="R_12M">{label}</Text>
+        <StyledText ml="7px" color="greyscale.deepgrey" textStyle="R_12M">{label}</StyledText>
       </InactiveButton>
     );
   }
 
-  return <ActiveButton as={as} variant="brown" {...props}>
+  return <ActiveButton as={as} variant="brown" toggleScale={toggleScale} {...props}>
     {isValidElement(startIcon) &&
       cloneElement(startIcon, {
+        width: toggleScale === 'md' ? '22px' : '20px',
+        height: toggleScale === 'md' ? '22px' : '20px',
+        viewBox: '0 0 22 22',
         mr: "0.5rem",
       })}
-    <Text ml="7px" color="greyscale.white" textStyle="R_12B">{label}</Text>
+    <StyledText ml="7px" color="greyscale.white" textStyle="R_12B">{label}</StyledText>
   </ActiveButton>;
 };
 

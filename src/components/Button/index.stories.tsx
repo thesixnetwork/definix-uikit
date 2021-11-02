@@ -7,7 +7,7 @@ import Flex from "../Box/Flex";
 import Button from "./Button";
 import { scales, variants } from "./types";
 
-const viewScales = [scales.S_32, scales.S_36, scales.S_40];
+const viewScales = [scales.S32, scales.S36, scales.S40];
 const viewVariants = [variants.RED, variants.BROWN, variants.LIGHT_BROWN, variants.LINE];
 
 export default {

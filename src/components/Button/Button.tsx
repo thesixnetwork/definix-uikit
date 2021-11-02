@@ -1,7 +1,6 @@
 import React, { cloneElement, ElementType, isValidElement } from "react";
 import styled, { keyframes } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
-import { Text } from "../Text";
 import StyledButton from "./StyledButton";
 import { ButtonProps, scales, variants } from "./types";
 
@@ -79,7 +78,6 @@ Button.defaultProps = {
   isLoading: false,
   external: false,
   variant: variants.RED,
-  scale: scales.S_40,
   disabled: false,
 };
 

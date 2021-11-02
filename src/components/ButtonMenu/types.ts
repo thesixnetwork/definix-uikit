@@ -15,7 +15,7 @@ export interface ButtonMenuProps {
 export interface ChainToggleProps {
   activeIndex?: number;
   onItemClick?: (index: number) => void;
-  scale?: 'sm' | 'md';
+  toggleScale?: 'sm' | 'md';
   children: React.ReactElement[];
 }
 
@@ -23,4 +23,5 @@ export interface ChainToggleItemProps extends BaseButtonProps {
   isActive?: boolean;
   startIcon: React.ReactNode;
   label: string;
+  toggleScale?: 'sm' | 'md';
 }

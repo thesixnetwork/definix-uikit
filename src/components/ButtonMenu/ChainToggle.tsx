@@ -20,8 +20,8 @@ const StyledChainToggle = styled.div<ChainToggleProps>`
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  width: ${({ scale }) => scalesValues[scale || 'md'].fullWidth};
-  height: ${({ scale }) => scalesValues[scale || 'md'].height};
+  width: ${({ toggleScale }) => scalesValues[toggleScale || 'md'].fullWidth};
+  height: ${({ toggleScale }) => scalesValues[toggleScale || 'md'].height};
   border-radius: 16px;
   border: solid 1px ${({ theme }) => theme.colors.greyscale.lightgrey};
   background-color: ${({ theme }) => theme.colors.greyscale.white};
@@ -29,17 +29,17 @@ const StyledChainToggle = styled.div<ChainToggleProps>`
 
 const ChainToggle: React.FC<ChainToggleProps> = ({
   activeIndex = 0,
-  scale = 'md',
+  toggleScale = 'md',
   onItemClick,
   children,
 }) => {
   return (
-    <StyledChainToggle scale={scale}>
+    <StyledChainToggle toggleScale={toggleScale}>
       {Children.map(children, (child: ReactElement, index) => {
         return cloneElement(child, {
           isActive: activeIndex === index,
           onClick: onItemClick ? () => onItemClick(index) : undefined,
-          scale,
+          toggleScale,
         });
       })}
     </StyledChainToggle>

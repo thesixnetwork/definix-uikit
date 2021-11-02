@@ -78,7 +78,7 @@ export const ChainButtonMenuNEW: React.FC = () => {
         </ChainToggle>
       </Row>
       <Row>
-      <ChainToggle activeIndex={index} onItemClick={setIndex} scale="sm">
+      <ChainToggle activeIndex={index} onItemClick={setIndex} toggleScale="sm">
         <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />} label="BSC" />
         <ChainToggleItem as="a" href="#a" startIcon={<ChainKlaytnIcon />} label="Klaytn chain" />
       </ChainToggle>
