@@ -2,7 +2,7 @@ import React, { cloneElement, ElementType, isValidElement } from "react";
 import styled, { keyframes } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
-import { ButtonProps, scales, variants } from "./types";
+import { ButtonProps, variants } from "./types";
 
 interface LoadingDot {
   index: number;

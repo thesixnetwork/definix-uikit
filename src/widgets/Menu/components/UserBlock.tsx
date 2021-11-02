@@ -1,7 +1,10 @@
 import React from "react";
+import { Text } from "../../../components/Text";
+import { Flex } from "../../../components/Box";
 import Button from "../../../components/Button/Button";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
+import { GnbMySIcon } from "../../../components/Icon";
 
 interface Props {
   account?: string;
@@ -15,18 +18,35 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   return (
     <div>
       {account ? (
-        <Button
-          scale="sm"
-          variant="tertiary"
-          onClick={() => {
-            onPresentAccountModal();
-          }}
-        >
-          {accountEllipsis}
-        </Button>
+        <Flex>
+          <Button
+            scale="32"
+            variant="light-brown"
+            textStyle="R_12B"
+            onClick={() => {
+              onPresentAccountModal();
+            }}
+          >
+            {accountEllipsis}
+          </Button>
+          <Button
+            ml="8px"
+            scale="32_icon"
+            minWidth="auto"
+            variant="deep-brown"
+            startIcon={<GnbMySIcon />}
+            onClick={() => {
+              onPresentAccountModal();
+            }}
+          >
+            <Text textStyle="R_12B" ml="6px">MY</Text>
+          </Button>
+        </Flex>
       ) : (
         <Button
-          scale="sm"
+          scale="32"
+          variant="red"
+          textStyle="R_12B"
           onClick={() => {
             onPresentConnectModal();
           }}

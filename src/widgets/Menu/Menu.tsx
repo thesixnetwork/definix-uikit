@@ -6,11 +6,12 @@ import Panel from "./components/Panel";
 import UserBlock from "./components/UserBlock";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_FULL, links as defaultLinks, MENU_ZINDEX, MENU_MOBILE_HEIGHT } from "./config";
-import { Box, ContainerLayout } from "../..";
+import { Box, Flex, ContainerLayout } from "../..";
 import { hexToRGB, pxToRem } from "../../style/mixin";
 import Chain from "./components/Chain";
 import Footer from "./components/Footer";
 import { LogoMainFinixIcon, SettingIcon } from "../../components/Icon";
+import { IconButton } from "../../components/Button";
 
 const Inner = styled.div`
   padding: ${MENU_HEIGHT}px ${pxToRem(60)} 0;
@@ -108,9 +109,10 @@ const Menu: React.FC<NavProps> = ({
     <ContainerLayout>
       <StyledNav>
         <Chain />
-        <Box position="absolute" right={pxToRem(60)}>
+        <Flex position="absolute" right={pxToRem(60)}>
+          <IconButton mr="16px" startIcon={<SettingIcon />} />
           <UserBlock account={account} login={login} logout={logout} />
-        </Box>
+        </Flex>
         {/* {profile && <Avatar profile={profile} />} */}
       </StyledNav>
       <MobileNav>

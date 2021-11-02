@@ -4,6 +4,11 @@ export const scaleVariants = {
   [scales.S32]: {
     height: "32px",
     padding: "7px 20px",
+    minWidth: "142px"
+  },
+  [scales.S32_ICON]: {
+    height: "32px",
+    padding: "0 8px",
   },
   [scales.S36]: {
     height: "36px",
@@ -25,6 +30,10 @@ export const styleVariants = {
     backgroundColor: "brownscale.brown",
     color: "greyscale.white",
   },
+  [variants.DEEP_BROWN]: {
+    backgroundColor: "brownscale.deepbrown",
+    color: "greyscale.white",
+  },
   [variants.LIGHT_BROWN]: {
     backgroundColor: "brownscale.lightbrown",
     color: "greyscale.white",
@@ -35,6 +44,9 @@ export const styleVariants = {
     borderWidth: "1px",
     borderStyle: "solid",
     borderColor: "greyscale.lightgrey"
+  },
+  [variants.TRANSPARENT]: {
+    backgroundColor: "transparent",
   },
 
 

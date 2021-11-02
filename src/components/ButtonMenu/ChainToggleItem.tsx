@@ -8,6 +8,7 @@ import { scalesValues } from "./ChainToggle";
 
 interface ActiveButtonProps extends BaseButtonProps {
   toggleScale?: 'sm' | 'md';
+  forwardedAs: BaseButtonProps["as"];
 }
 
 interface InactiveButtonProps extends ActiveButtonProps {
@@ -54,28 +55,25 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
         variant="brown"
         forwardedAs={as}
         toggleScale={toggleScale}
+        startIcon={isValidElement(startIcon) && cloneElement(startIcon, {
+          width: toggleScale === 'md' ? '22px' : '20px',
+          height: toggleScale === 'md' ? '22px' : '20px',
+          viewBox: '0 0 22 22',
+          mr: "0.5rem",
+        })}
         {...props}
       >
-        {isValidElement(startIcon) &&
-          cloneElement(startIcon, {
-            width: toggleScale === 'md' ? '22px' : '20px',
-            height: toggleScale === 'md' ? '22px' : '20px',
-            viewBox: '0 0 22 22',
-            mr: "0.5rem",
-          })}
         <StyledText ml="7px" color="greyscale.deepgrey" textStyle="R_12M">{label}</StyledText>
       </InactiveButton>
     );
   }
 
-  return <ActiveButton as={as} variant="brown" toggleScale={toggleScale} {...props}>
-    {isValidElement(startIcon) &&
-      cloneElement(startIcon, {
-        width: toggleScale === 'md' ? '22px' : '20px',
-        height: toggleScale === 'md' ? '22px' : '20px',
-        viewBox: '0 0 22 22',
-        mr: "0.5rem",
-      })}
+  return <ActiveButton forwardedAs={as} startIcon={isValidElement(startIcon) && cloneElement(startIcon, {
+    width: toggleScale === 'md' ? '22px' : '20px',
+    height: toggleScale === 'md' ? '22px' : '20px',
+    viewBox: '0 0 22 22',
+    mr: "0.5rem",
+  })} variant="brown" toggleScale={toggleScale} {...props}>
     <StyledText ml="7px" color="greyscale.white" textStyle="R_12B">{label}</StyledText>
   </ActiveButton>;
 };

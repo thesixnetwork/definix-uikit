@@ -5,8 +5,10 @@ import { LayoutProps, SpaceProps } from "styled-system";
 export const scales = {
   // new
   S32: "32",
+  S32_ICON: "32_icon",
   S36: "36",
   S40: "40",
+
 
   // old
   MD: "md",
@@ -19,7 +21,10 @@ export const variants = {
   RED: "red",
   BROWN: "brown",
   LIGHT_BROWN: "light-brown",
+  DEEP_BROWN: "deep-brown",
   LINE: "line",
+  TRANSPARENT: "transparent",
+
 
   // old
   PRIMARY: "primary",
@@ -58,6 +63,7 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   disabled?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
+  textStyle?: string; 
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

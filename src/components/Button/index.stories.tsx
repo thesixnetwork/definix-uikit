@@ -2,8 +2,10 @@ import { capitalize } from "lodash";
 import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import styled from "styled-components";
+import { IconButton } from ".";
 import Box from "../Box/Box";
 import Flex from "../Box/Flex";
+import { SettingIcon } from "../Icon";
 import Button from "./Button";
 import { scales, variants } from "./types";
 
@@ -95,20 +97,31 @@ export const Default: React.FC = () => {
 //   );
 // };
 
+export const Icons: React.FC = () => {
+  return (
+    <Box width="640px">
+      <Row>
+        <IconButton variant="transparent" startIcon={<SettingIcon />} />
+      </Row>
+    </Box>
+  );
+};
+
+
 export const Variants: React.FC = () => {
   return (
     <Box width="640px">
       <BrowserRouter>
         <Row>
-          <Button as={Link} to="/router-link" variant="red">
+          <Button as={Link} to="/router-link" variant="red" scale="40">
             As an React Router link
           </Button>
         </Row>
         <Row>
-          <Button width="100%">Full size</Button>
+          <Button width="100%" scale="40">Full size</Button>
         </Row>
         <Row>
-          <Button variant="red" isLoading>
+          <Button variant="red" isLoading scale="40">
             Loading
           </Button>
         </Row>
