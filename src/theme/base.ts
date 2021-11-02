@@ -28,7 +28,19 @@ export const shadows = {
   inset: "inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1)",
 };
 
-const spacing: Spacing = [0, 4, 8, 16, 24, 32, 48, 64];
+export const spacing: Spacing = {
+  S_6: 6,
+  S_8: 8,
+  S_12: 12,
+  S_16: 16,
+  S_20: 20,
+  S_24: 24,
+  S_28: 28,
+  S_32: 32,
+  S_40: 40,
+  S_60: 60,
+  S_80: 80,
+};
 
 const radii = {
   small: "4px",

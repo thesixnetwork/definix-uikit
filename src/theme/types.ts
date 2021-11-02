@@ -9,7 +9,9 @@ export type MediaQueries = {
   nav: string;
 };
 
-export type Spacing = number[];
+export type Spacing = {
+  [key: string]: number
+};
 
 export type Radii = {
   small: string;
@@ -56,6 +58,10 @@ export type Colors = {
   bg: {
     yellow: string[];
   }
+
+  // temp
+  red: string;
+  yellow: string;
 };
 
 export type ZIndices = {

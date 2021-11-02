@@ -41,7 +41,9 @@ export const baseColors = {
   },
   bg: {
     yellow: ['#fffbf5', '#ffedcb']
-  }
+  },
+  red: '#ff5532',
+  yellow: '#fea948',
 };
 
 export const lightColors = {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Toggle from "./Toggle";
 
 export default {
-  title: "Components/Toggle",
+  title: "Components/Toggle[NEW]",
   component: Toggle,
 };
 
@@ -17,7 +17,7 @@ export const Default: React.FC = () => {
         <Toggle checked={isChecked} onChange={toggle} />
       </div>
       <div>
-        <Toggle checked={isChecked} onChange={toggle} scale="sm" />
+        <Toggle checked={isChecked} onChange={toggle} scale="md" />
       </div>
     </>
   );
