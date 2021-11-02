@@ -78,7 +78,10 @@ const useMatchBreakpoints = (): State => {
     };
   }, [setState]);
 
-  return state;
+  return {
+    ...state,
+    isMobile: !(state.isLg === true || state.isXl === true)
+  };
 };
 
 export default useMatchBreakpoints;

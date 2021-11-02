@@ -35,7 +35,6 @@ const StyledMenuLink = styled(MenuLink)`
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
-  location.pathname = '/farm'
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -53,12 +52,11 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         if (entry.items) {
           const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);
           const initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
-          console.log(entry.items, itemsMatchIndex, initialOpenState, isPushed)
 
           return (
             <Accordion
               key={entry.label}
-              isPushed={isPushed}
+              isPushed={true}
               pushNav={pushNav}
               icon={iconElement}
               activeIcon={activeIconElement}
@@ -67,12 +65,11 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               className={calloutClass}
               isActive={entry.items.some((item) => item.href === location.pathname)}
             >
-              {isPushed &&
-                entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={isActive} onClick={handleClick}>
-                    <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
-                  </MenuEntry>
-                ))}
+              {entry.items.map((item) => (
+                <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                  <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
+                </MenuEntry>
+              ))}
             </Accordion>
           );
         }

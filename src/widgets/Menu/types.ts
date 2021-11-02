@@ -40,19 +40,25 @@ export interface MenuEntry {
 }
 
 export interface PanelProps {
-  isDark: boolean;
-  toggleTheme: (isDark: boolean) => void;
-  finixPriceUsd?: number;
+  isMobile: boolean;
+  // isDark: boolean;
+  // toggleTheme: (isDark: boolean) => void;
   currentLang: string;
   langs: LangType[];
   setLang: (lang: LangType) => void;
   links: Array<MenuEntry>;
 }
 
-export interface NavProps extends Omit<PanelProps, 'links'> {
+export interface UserProps {
   account?: string;
   login: Login;
   profile?: Profile;
   logout: () => void;
+}
+
+export interface NavProps extends UserProps {
+  isMobile: boolean;
   links?: Array<MenuEntry>;
 }
+
+export interface MenuProps extends Pick<PanelProps, 'langs' | 'setLang' | 'currentLang'>, NavProps {}

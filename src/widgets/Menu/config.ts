@@ -23,7 +23,7 @@ export const links = [
   {
     label: "Yield Farming",
     icon: "GnbFarmingNIcon",
-    activeIcon: "GnbFarmingSIcon",
+    activeIcon: "GnbFarmingNIcon",
     items: [
       {
         label: "Farm",
@@ -50,7 +50,7 @@ export const links = [
   {
     label: "More",
     icon: "GnbMoreNIcon",
-    activeIcon: "GnbMoreSIcon",
+    activeIcon: "GnbMoreNIcon",
     items: [
       {
         label: "GitBook",
