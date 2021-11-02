@@ -22,11 +22,20 @@ const Container = styled.div`
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
+  padding: 0 16px;
 
+  > div {
+    margin-bottom: 8px;
+  }
 `;
+
+const StyledMenuLink = styled(MenuLink)`
+  padding-left: 30px;
+`
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
+  location.pathname = '/farm'
 
   // Close the menu when a user clicks a link on mobile
   const handleClick = isMobile ? () => pushNav(false) : undefined;
@@ -34,6 +43,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   return (
     <Container>
       {links.map((entry) => {
+        const isActive = entry.href === location.pathname;
         const Icon = Icons[entry.icon];
         const ActiveIcon = Icons[entry.activeIcon];
         const iconElement = <Icon width="24px" />;
@@ -43,6 +53,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         if (entry.items) {
           const itemsMatchIndex = entry.items.findIndex((item) => item.href === location.pathname);
           const initialOpenState = entry.initialOpenState === true ? entry.initialOpenState : itemsMatchIndex >= 0;
+          console.log(entry.items, itemsMatchIndex, initialOpenState, isPushed)
 
           return (
             <Accordion
@@ -58,17 +69,17 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             >
               {isPushed &&
                 entry.items.map((item) => (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <MenuLink href={item.href}>{item.label}</MenuLink>
+                  <MenuEntry key={item.href} secondary isActive={isActive} onClick={handleClick}>
+                    <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
                   </MenuEntry>
                 ))}
             </Accordion>
           );
         }
         return (
-          <MenuEntry key={entry.label} isActive={entry.href === location.pathname} className={calloutClass}>
+          <MenuEntry key={entry.label} isActive={isActive} className={calloutClass}>
             <MenuLink href={entry.href} onClick={handleClick}>
-              {entry.href === location.pathname ? activeIconElement : iconElement}
+              {isActive ? activeIconElement : iconElement}
               <LinkLabel isPushed={isPushed} ml="6px">{entry.label}</LinkLabel>
             </MenuLink>
           </MenuEntry>

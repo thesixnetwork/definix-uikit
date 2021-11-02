@@ -1,6 +1,7 @@
+import { kebabCase } from "lodash";
 import { variant } from "styled-system";
 
-export const textStyle = {
+export const textStyle: Record<string, Record<string, string | number>> = {
   'R_32B': {
     fontFamily: 'Roboto',
     fontSize: '32px',
@@ -204,6 +205,12 @@ export const textStyle = {
 
 export type textStyleType = typeof textStyle[keyof typeof textStyle];
 // export type textStyleType = 'R_32B' | 'R_28B' | 'R_28M' | 'R_26B' | 'R_23M' | 'R_20B' | 'R_20M' | 'R_20R' | 'R_18B' | 'R_18M' | 'R_18R' | 'R_16B' | 'R_16M' | 'R_16R' | 'R_14B' | 'R_14M' | 'R_14R' | 'R_12B' | 'R_12M' | 'R_12R';
+
+export const getTextStyle = (textKey: string): string => {
+  if (!textStyle[textKey]) return '';
+  const result = Object.entries(textStyle[textKey]).map(([key, value]) => `${kebabCase(key)}: ${value};`);
+  return `${result.join('')}`
+}
 
 export const getVariantTextStyle = () => variant({
   prop: 'textStyle',

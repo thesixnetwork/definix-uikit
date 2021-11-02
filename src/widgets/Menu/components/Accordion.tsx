@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { LinkLabel, MenuEntry } from "./MenuEntry";
 import { PushedProps } from "../types";
-import { ArrowDropDownIcon, ArrowDropUpIcon } from "../../../components/Svg";
+import { ArrowBottomGIcon, ArrowTopGIcon } from "../../../components/Icon";
 
 interface Props extends PushedProps {
   label: string;
@@ -26,9 +26,6 @@ const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHei
   max-height: ${({ isOpen, maxHeight }) => (isOpen ? `${maxHeight}px` : 0)};
   transition: max-height 0.3s ease-out;
   overflow: hidden;
-  border-color: ${({ isOpen, isPushed }) => (isOpen && isPushed ? "rgba(133, 133, 133, 0.1)" : "transparent")};
-  border-style: solid;
-  border-width: 1px 0;
 `;
 
 const Accordion: React.FC<Props> = ({
@@ -58,7 +55,7 @@ const Accordion: React.FC<Props> = ({
       <MenuEntry onClick={handleClick} className={className} isActive={isActive}>
         {isActive ? activeIcon : icon}
         <LinkLabel isPushed={isPushed} ml="6px">{label}</LinkLabel>
-        {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
+        {isOpen ? <ArrowTopGIcon /> : <ArrowBottomGIcon />}
       </MenuEntry>
       <AccordionContent
         isOpen={isOpen}
