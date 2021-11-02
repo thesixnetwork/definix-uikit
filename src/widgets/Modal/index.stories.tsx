@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 import Heading from "../../components/Heading/Heading";
 
 export default {
-  title: "Widgets/Modal",
+  title: "Widgets/Modal[Ing]",
   component: Modal,
   argTypes: {},
 };
