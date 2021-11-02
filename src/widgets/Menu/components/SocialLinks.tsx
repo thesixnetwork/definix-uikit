@@ -2,7 +2,7 @@ import React from "react";
 import Flex from "../../../components/Box/Flex";
 import Link from "../../../components/Link/Link";
 import { pxToRem } from "../../../style/mixin";
-import * as IconModule from "../icons";
+import * as IconModule from "../../../components/Icon";
 import { socials } from "../config";
 
 const Icons = (IconModule as unknown) as { [key: string]: React.StatelessComponent<React.SVGAttributes<SVGElement>> };

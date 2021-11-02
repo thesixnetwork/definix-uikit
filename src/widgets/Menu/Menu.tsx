@@ -10,7 +10,7 @@ import { Box, ContainerLayout } from "../..";
 import { hexToRGB, pxToRem } from "../../style/mixin";
 import Chain from "./components/Chain";
 import Footer from "./components/Footer";
-import { LogoMainFinixIcon, SettingIcon } from "./icons";
+import { LogoMainFinixIcon, SettingIcon } from "../../components/Icon";
 
 const Inner = styled.div`
   padding: ${MENU_HEIGHT}px ${pxToRem(60)} 0;

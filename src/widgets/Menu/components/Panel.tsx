@@ -5,7 +5,7 @@ import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
 import { SIDEBAR_WIDTH_FULL, SIDEBAR_ZINDEX } from "../config";
 import { PanelProps, PushedProps } from "../types";
-import { LogoMainFinixIcon } from "../icons";
+import { LogoMainFinixIcon } from "../../../components/Icon";
 import { Flex } from "../../..";
 
 interface Props extends PanelProps, PushedProps {

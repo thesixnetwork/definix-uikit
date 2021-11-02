@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Flex, Text } from "../../..";
 import { pxToRem } from "../../../style/mixin";
-import { LogoFooterSixIcon } from "../icons";
+import { LogoFooterSixIcon } from "../../../components/Icon";
 import SocialLinks from "./SocialLinks";
 
 const StyledNav = styled.div`

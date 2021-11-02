@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { SvgProps } from "../../../components/Svg";
-import * as IconModule from "../icons";
+import * as IconModule from "../../../components/Icon";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
