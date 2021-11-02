@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 /* eslint-disable import/no-unresolved */
 import { Meta } from "@storybook/react/types-6-0";
+import ChainToggle from "./ChainToggle";
+import ChainToggleItem from "./ChainToggleItem";
 import ButtonMenu from "./ButtonMenu";
 import ButtonMenuItem from "./ButtonMenuItem";
+import { ChainBscIcon, ChainKlaytnIcon } from "../Icon";
 
 const Row = styled.div`
   margin-bottom: 32px;
@@ -14,7 +17,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/Button Menu",
+  title: "Components/Button Menu[NEW]",
   component: ButtonMenu,
   argTypes: {},
 } as Meta;
@@ -64,20 +67,14 @@ export const Default: React.FC = () => {
   );
 };
 
-export const AsLinks: React.FC = () => {
+export const ChainButtonMenuNEW: React.FC = () => {
+  const [index, setIndex] = useState(0);
   return (
     <Row>
-      <ButtonMenu activeIndex={0}>
-        <ButtonMenuItem as="a" href="https://pancakeswap.finance">
-          Link 1
-        </ButtonMenuItem>
-        <ButtonMenuItem as="a" href="https://pancakeswap.finance">
-          Link 2
-        </ButtonMenuItem>
-        <ButtonMenuItem as="a" href="https://pancakeswap.finance">
-          Link 3
-        </ButtonMenuItem>
-      </ButtonMenu>
+      <ChainToggle activeIndex={index} onItemClick={setIndex}>
+        <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />} label="Binance smart chain" />
+        <ChainToggleItem as="a" href="#a" startIcon={<ChainKlaytnIcon />} label="Klaytn chain" />
+      </ChainToggle>
     </Row>
   );
 };
