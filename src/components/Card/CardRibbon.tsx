@@ -10,9 +10,9 @@ interface StyledCardRibbonProps extends CardRibbonProps {
   theme: DefaultTheme;
 }
 
-// background-color: ${({ variantColor = "yellow", theme }) => theme.colors[variantColor]};
+// background-color: ${({ theme }) => theme.colors[ColorStyles.YELLOWBG1]};
 const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
-  background-color: ${({ theme }) => theme.colors[ColorStyles.YELLOWBG1]};
+  background-color: ${({ variantColor = "yellow", theme }) => theme.colors[variantColor]};
   padding: ${pxToRem(5)} ${pxToRem(spacing.S_20)};
   position: absolute;
   left: unset;
