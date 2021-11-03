@@ -1,22 +1,22 @@
 import { ColorStyles } from "@/theme";
 import { textStyle } from "@/theme/text";
-import { scales, variants } from "./types";
+import { ButtonScales, ButtonVariants } from "./types";
 
 export const scaleVariants = {
-  [scales.S32]: {
+  [ButtonScales.S32]: {
     height: "32px",
     padding: "7px 20px",
     minWidth: "142px"
   },
-  [scales.S32_ICON]: {
+  [ButtonScales.S32ICON]: {
     height: "32px",
     padding: "0 8px",
   },
-  [scales.S36]: {
+  [ButtonScales.S36]: {
     height: "36px",
     padding: "0 16px",
   },
-  [scales.S40]: {
+  [ButtonScales.S40]: {
     height: "40px",
     padding: "10px 20px",
     minWidth: "186px",
@@ -24,39 +24,39 @@ export const scaleVariants = {
   },
 };
 export const styleVariants = {
-  [variants.RED]: {
+  [ButtonVariants.RED]: {
     backgroundColor: ColorStyles.RED,
     color: ColorStyles.WHITE,
   },
-  [variants.BROWN]: {
+  [ButtonVariants.BROWN]: {
     backgroundColor: ColorStyles.BROWN,
     color: ColorStyles.WHITE,
   },
-  [variants.DEEPBROWN]: {
+  [ButtonVariants.DEEPBROWN]: {
     backgroundColor: ColorStyles.DEEPBROWN,
     color: ColorStyles.WHITE,
   },
-  [variants.LIGHTBROWN]: {
+  [ButtonVariants.LIGHTBROWN]: {
     backgroundColor: ColorStyles.LIGHTBROWN,
     color: ColorStyles.WHITE,
   },
-  [variants.LINE]: {
+  [ButtonVariants.LINE]: {
     backgroundColor: ColorStyles.WHITE,
     color: ColorStyles.DEEPGREY,
     borderWidth: "1px",
     borderStyle: "solid",
     borderColor: ColorStyles.LIGHTGREY
   },
-  [variants.TRANSPARENT]: {
+  [ButtonVariants.TRANSPARENT]: {
     backgroundColor: "transparent",
   },
 
 
-  [variants.PRIMARY]: {
+  [ButtonVariants.PRIMARY]: {
     backgroundColor: "primary",
     color: "white",
   },
-  [variants.SECONDARY]: {
+  [ButtonVariants.SECONDARY]: {
     backgroundColor: "transparent",
     border: "2px solid",
     borderColor: "primary",
@@ -66,24 +66,24 @@ export const styleVariants = {
       backgroundColor: "transparent",
     },
   },
-  [variants.TERTIARY]: {
+  [ButtonVariants.TERTIARY]: {
     backgroundColor: "tertiary",
     boxShadow: "none",
     color: "primary",
   },
-  [variants.SUBTLE]: {
+  [ButtonVariants.SUBTLE]: {
     backgroundColor: "textSubtle",
     color: "white",
   },
-  [variants.DANGER]: {
+  [ButtonVariants.DANGER]: {
     backgroundColor: "failure",
     color: "white",
   },
-  [variants.SUCCESS]: {
+  [ButtonVariants.SUCCESS]: {
     backgroundColor: "success",
     color: "white",
   },
-  [variants.TEXT]: {
+  [ButtonVariants.TEXT]: {
     backgroundColor: "transparent",
     color: "primary",
     boxShadow: "none",

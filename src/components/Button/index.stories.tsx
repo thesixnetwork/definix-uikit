@@ -8,10 +8,10 @@ import Flex from "../Box/Flex";
 import { Text } from "../Text";
 import { SettingIcon } from "../Icon";
 import Button from "./Button";
-import { scales, variants } from "./types";
+import { ButtonScales, ButtonVariants } from "./types";
 
-const viewScales = [scales.S32, scales.S36, scales.S40];
-const viewVariants = [variants.RED, variants.BROWN, variants.LIGHTBROWN, variants.LINE];
+const viewScales = [ButtonScales.S32, ButtonScales.S36, ButtonScales.S40];
+const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
 
 export default {
   title: "Components/Button[NEW]",
@@ -49,7 +49,7 @@ export const Default: React.FC = () => {
         })}
       </Box>
       <Box>
-        <Button scale="40" mr="8px" variant="red" disabled>
+        <Button scale={ButtonScales.S32} mr="8px" variant="red" disabled>
           Disabled
         </Button>
         <Button scale="40" variant="line" disabled>
@@ -109,7 +109,7 @@ export const Icons: React.FC = () => {
 };
 
 
-export const Variants: React.FC = () => {
+export const Extends: React.FC = () => {
   return (
     <Box width="640px">
       <BrowserRouter>
