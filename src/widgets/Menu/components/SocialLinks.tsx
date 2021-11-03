@@ -5,7 +5,7 @@ import { pxToRem } from "../../../style/mixin";
 import * as IconModule from "../../../components/Icon";
 import { socials } from "../config";
 
-const Icons = IconModule as unknown as { [key: string]: React.StatelessComponent<React.SVGAttributes<SVGElement>> };
+const Icons = (IconModule as unknown) as { [key: string]: React.StatelessComponent<React.SVGAttributes<SVGElement>> };
 
 interface Props {
   isMobile: boolean;
