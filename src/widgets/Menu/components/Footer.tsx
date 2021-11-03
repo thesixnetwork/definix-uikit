@@ -25,15 +25,17 @@ const Inner = styled.div<{ isMobile: boolean }>`
   justify-content: space-between;
   padding: 30px 0 60px;
 
-  ${({ isMobile }) => isMobile && `
+  ${({ isMobile }) =>
+    isMobile &&
+    `
     
   `}
-`
+`;
 
 const StyledFlex = styled(Flex)`
   flex-direction: column;
   margin-left: ${pxToRem(24)};
-`
+`;
 const Footer: React.FC<Props> = (props) => {
   return (
     <StyledNav>

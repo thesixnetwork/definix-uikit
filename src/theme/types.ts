@@ -12,7 +12,7 @@ export type MediaQueries = {
 };
 
 export type Spacing = {
-  [key: string]: number
+  [key: string]: number;
 };
 
 export type Radii = {

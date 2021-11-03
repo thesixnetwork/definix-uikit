@@ -5,9 +5,9 @@ import TrustWallet from "./icons/TrustWallet";
 import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
 import SafePalWallet from "./icons/SafePalWallet";
-import Kaikas from './icons/Kaikas'
-import Dcent from './icons/Dcent'
-import KlipConnect from './icons/KlipConnect'
+import Kaikas from "./icons/Kaikas";
+import Dcent from "./icons/Dcent";
+import KlipConnect from "./icons/KlipConnect";
 import { Config, ConnectorNames } from "./types";
 
 const connectors: Config[] = [
@@ -47,17 +47,17 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: 'Kaikas',
+    title: "Kaikas",
     icon: Kaikas,
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: 'D`CENT',
+    title: "D`CENT",
     icon: Dcent,
     connectorId: ConnectorNames.Injected,
   },
   {
-    title: 'Klip',
+    title: "Klip",
     icon: KlipConnect,
     connectorId: ConnectorNames.Klip,
   },

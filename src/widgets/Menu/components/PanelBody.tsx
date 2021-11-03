@@ -10,10 +10,9 @@ import { PanelProps, PushedProps } from "../types";
 
 interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
-  
 }
 
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div<{ isMobile: boolean }>`
   display: flex;
@@ -24,7 +23,9 @@ const Container = styled.div<{ isMobile: boolean }>`
   margin-top: 47px;
   padding: 0 16px;
 
-  ${({ isMobile }) => isMobile && `
+  ${({ isMobile }) =>
+    isMobile &&
+    `
     margin-top: 32px;
     padding: 0 20px;
   `}
@@ -36,7 +37,7 @@ const Container = styled.div<{ isMobile: boolean }>`
 
 const StyledMenuLink = styled(MenuLink)`
   padding-left: 30px;
-`
+`;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
@@ -70,11 +71,12 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
               isActive={entry.items.some((item) => item.href === location.pathname)}
             >
               {entry.items.map((item) => {
-                return <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                  <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
-                </MenuEntry>
-              }
-              )}
+                return (
+                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
+                    <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
+                  </MenuEntry>
+                );
+              })}
             </Accordion>
           );
         }
@@ -82,7 +84,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
           <MenuEntry key={entry.label} isActive={isActive}>
             <MenuLink href={entry.href} onClick={handleClick}>
               {isActive ? activeIconElement : iconElement}
-              <LinkLabel isPushed={isPushed} ml="6px">{entry.label}</LinkLabel>
+              <LinkLabel isPushed={isPushed} ml="6px">
+                {entry.label}
+              </LinkLabel>
             </MenuLink>
           </MenuEntry>
         );

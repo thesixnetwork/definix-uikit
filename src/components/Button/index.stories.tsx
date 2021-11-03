@@ -108,7 +108,6 @@ export const Icons: React.FC = () => {
   );
 };
 
-
 export const Extends: React.FC = () => {
   return (
     <Box width="640px">
@@ -119,7 +118,9 @@ export const Extends: React.FC = () => {
           </Button>
         </Row>
         <Row>
-          <Button width="100%" scale="40">Full size</Button>
+          <Button width="100%" scale="40">
+            Full size
+          </Button>
         </Row>
         <Row>
           <Button variant="red" isLoading scale="40">

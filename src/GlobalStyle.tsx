@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components";
 import { ResetCSSStyle } from "./ResetCSS";
 import { ColorStyles } from "./theme/colors";
 import { TypoStyle } from "./TypoStyle";
@@ -139,10 +139,12 @@ const GlobalStyle = createGlobalStyle`
   .bd-r { border-right: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
   .bd-b { border-bottom: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
   .bd-l { border-left: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
-  .bd-x { border-right: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; border-left: 1px solid ${({ theme }) =>
-  theme.colors[ColorStyles.LIGHTGREY]}; }
-  .bd-y { border-top: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; border-bottom: 1px solid ${({ theme }) =>
-  theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-x { border-right: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; border-left: 1px solid ${({
+  theme,
+}) => theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-y { border-top: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; border-bottom: 1px solid ${({
+  theme,
+}) => theme.colors[ColorStyles.LIGHTGREY]}; }
   .bd-t-n { border-top: none !important; }
   .bd-r-n { border-right: none !important; }
   .bd-b-n { border-bottom: none !important; }
@@ -760,6 +762,6 @@ const GlobalStyle = createGlobalStyle`
   }
   
   /*# sourceMappingURL=s.css.map */
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

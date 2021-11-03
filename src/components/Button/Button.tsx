@@ -19,21 +19,21 @@ const bounce = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 const StyledLoadingDot = styled.div<LoadingDot>`
   width: 5px;
   height: 5px;
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   border-radius: 5px;
-  animation: ${bounce} 1.5s ${({ index }) => (index * 0.2)}s infinite;
-`
+  animation: ${bounce} 1.5s ${({ index }) => index * 0.2}s infinite;
+`;
 
 const StyledLoading = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 4px;
-`
+`;
 
 const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.Element => {
   const { startIcon, endIcon, external, className, isLoading, disabled, children, ...rest } = props;
@@ -57,20 +57,27 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
       {...internalProps}
       {...rest}
     >
-      {
-        isLoading ? <StyledLoading>{Array(4).fill(0).map((val, index) => <StyledLoadingDot index={index} />)}
-        </StyledLoading> : <>
+      {isLoading ? (
+        <StyledLoading>
+          {Array(4)
+            .fill(0)
+            .map((val, index) => (
+              <StyledLoadingDot index={index} />
+            ))}
+        </StyledLoading>
+      ) : (
+        <>
           {isValidElement(startIcon) &&
-          cloneElement(startIcon, {
-            mr: "0.5rem",
-          })}
-        {children}
-        {isValidElement(endIcon) &&
-          cloneElement(endIcon, {
-            ml: "0.5rem",
-          })}
+            cloneElement(startIcon, {
+              mr: "0.5rem",
+            })}
+          {children}
+          {isValidElement(endIcon) &&
+            cloneElement(endIcon, {
+              ml: "0.5rem",
+            })}
         </>
-      }
+      )}
     </StyledButton>
   );
 };

@@ -26,9 +26,11 @@ const scaleKeyValues = {
   },
 };
 
-const getScale = (property: ScaleKeys) => ({ scale = scales.SM }: ToggleProps) => {
-  return scaleKeyValues[scale][property];
-};
+const getScale =
+  (property: ScaleKeys) =>
+  ({ scale = scales.SM }: ToggleProps) => {
+    return scaleKeyValues[scale][property];
+  };
 
 export const Handle = styled.div<HandleProps>`
   background-color: ${({ theme }) => theme.toggle.handleBackground};
@@ -65,7 +67,8 @@ const StyledToggle = styled.div<ToggleProps>`
   position: relative;
   transition: background-color 200ms;
   width: ${getScale("toggleWidth")};
-  background-color: ${({ checked, theme }) => (checked ? theme.colors[ColorStyles.RED] : theme.colors[ColorStyles.PALE])};
+  background-color: ${({ checked, theme }) =>
+    checked ? theme.colors[ColorStyles.RED] : theme.colors[ColorStyles.PALE]};
 `;
 
 export default StyledToggle;

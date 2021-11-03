@@ -9,12 +9,11 @@ export enum ButtonScales {
   S36 = "36",
   S40 = "40",
 
-
   // old
   MD = "md",
   SM = "sm",
   XS = "xs",
-};
+}
 
 export enum ButtonVariants {
   // new
@@ -33,7 +32,7 @@ export enum ButtonVariants {
   DANGER = "danger",
   SUBTLE = "subtle",
   SUCCESS = "success",
-};
+}
 
 /**
  * @see https://www.benmvp.com/blog/polymorphic-react-components-typescript/
@@ -59,7 +58,7 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   disabled?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-  textStyle?: string; 
+  textStyle?: string;
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

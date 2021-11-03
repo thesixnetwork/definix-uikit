@@ -3,7 +3,13 @@ import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Panel from "./components/Panel";
 import { MenuProps } from "./types";
-import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, INNER_MARGIN_PC, INNER_MARGIN_MOBILE, links as defaultLinks } from "./config";
+import {
+  NAV_HEIGHT_PC,
+  NAV_HEIGHT_MOBILE,
+  INNER_MARGIN_PC,
+  INNER_MARGIN_MOBILE,
+  links as defaultLinks,
+} from "./config";
 import { ContainerLayout } from "../..";
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
@@ -13,13 +19,14 @@ const Inner = styled.div<{ isMobile: boolean }>`
   padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
 
   outline: 1px solid blue;
-  background-color: rgba(255, 255, 0 ,.3);
+  background-color: rgba(255, 255, 0, 0.3);
 
-  ${({ isMobile }) => isMobile && `
+  ${({ isMobile }) =>
+    isMobile &&
+    `
     padding: ${NAV_HEIGHT_MOBILE}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
   `}
 `;
-
 
 const Menu: React.FC<MenuProps> = ({
   account,
@@ -60,9 +67,7 @@ const Menu: React.FC<MenuProps> = ({
         account={account}
         logout={logout}
       />
-      <Inner isMobile={isMobile}>
-        {children}
-      </Inner>
+      <Inner isMobile={isMobile}>{children}</Inner>
       <Footer isMobile={isMobile} />
     </ContainerLayout>
   );

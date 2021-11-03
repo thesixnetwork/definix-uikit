@@ -6,7 +6,7 @@ export const scaleVariants = {
   [ButtonScales.S32]: {
     height: "32px",
     padding: "7px 20px",
-    minWidth: "142px"
+    minWidth: "142px",
   },
   [ButtonScales.S32ICON]: {
     height: "32px",
@@ -20,7 +20,7 @@ export const scaleVariants = {
     height: "40px",
     padding: "10px 20px",
     minWidth: "186px",
-    ...textStyle.R_14B
+    ...textStyle.R_14B,
   },
 };
 export const styleVariants = {
@@ -45,12 +45,11 @@ export const styleVariants = {
     color: ColorStyles.DEEPGREY,
     borderWidth: "1px",
     borderStyle: "solid",
-    borderColor: ColorStyles.LIGHTGREY
+    borderColor: ColorStyles.LIGHTGREY,
   },
   [ButtonVariants.TRANSPARENT]: {
     backgroundColor: "transparent",
   },
-
 
   [ButtonVariants.PRIMARY]: {
     backgroundColor: "primary",
@@ -89,4 +88,3 @@ export const styleVariants = {
     boxShadow: "none",
   },
 };
-

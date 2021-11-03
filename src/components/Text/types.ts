@@ -8,5 +8,4 @@ export interface TextProps extends SpaceProps, TypographyProps, LayoutProps {
   textStyle?: string;
   textColor?: string;
   textTransform?: "uppercase" | "lowercase" | "capitalize";
-
 }
