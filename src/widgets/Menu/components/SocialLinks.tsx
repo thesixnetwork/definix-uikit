@@ -12,7 +12,7 @@ interface Props {
 }
 
 const SocialLinks: React.FC<Props> = ({ isMobile }) => (
-  <Flex alignItems="center" justifyContent="center">
+  <Flex alignItems="center" justifyContent={isMobile ? "space-between" : "center"} px={isMobile ? pxToRem(40) : 0}>
     {socials.map((social, index) => {
       const Icon = Icons[social.icon];
       const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
