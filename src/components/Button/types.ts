@@ -2,42 +2,38 @@ import { ComponentProps, ElementType, ReactElement, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { LayoutProps, SpaceProps } from "styled-system";
 
-export const scales = {
+export enum ButtonScales {
   // new
-  S32: "32",
-  S32_ICON: "32_icon",
-  S36: "36",
-  S40: "40",
+  S32 = "32",
+  S32ICON = "32_icon",
+  S36 = "36",
+  S40 = "40",
 
 
   // old
-  MD: "md",
-  SM: "sm",
-  XS: "xs",
-} as const;
+  MD = "md",
+  SM = "sm",
+  XS = "xs",
+};
 
-export const variants = {
+export enum ButtonVariants {
   // new
-  RED: "red",
-  BROWN: "brown",
-  LIGHTBROWN: "lightbrown",
-  DEEPBROWN: "deepbrown",
-  LINE: "line",
-  TRANSPARENT: "transparent",
-
+  RED = "red",
+  BROWN = "brown",
+  LIGHTBROWN = "lightbrown",
+  DEEPBROWN = "deepbrown",
+  LINE = "line",
+  TRANSPARENT = "transparent",
 
   // old
-  PRIMARY: "primary",
-  SECONDARY: "secondary",
-  TERTIARY: "tertiary",
-  TEXT: "text",
-  DANGER: "danger",
-  SUBTLE: "subtle",
-  SUCCESS: "success",
-} as const;
-
-export type Scale = typeof scales[keyof typeof scales];
-export type Variant = typeof variants[keyof typeof variants];
+  PRIMARY = "primary",
+  SECONDARY = "secondary",
+  TERTIARY = "tertiary",
+  TEXT = "text",
+  DANGER = "danger",
+  SUBTLE = "subtle",
+  SUCCESS = "success",
+};
 
 /**
  * @see https://www.benmvp.com/blog/polymorphic-react-components-typescript/
@@ -58,8 +54,8 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   as?: "a" | "button" | typeof Link;
   external?: boolean;
   isLoading?: boolean;
-  scale?: Scale;
-  variant?: Variant;
+  scale?: ButtonScales | string;
+  variant?: ButtonVariants | string;
   disabled?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;

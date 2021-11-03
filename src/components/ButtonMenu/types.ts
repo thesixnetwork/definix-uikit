@@ -1,14 +1,14 @@
-import { BaseButtonProps, Scale, variants } from "../Button/types";
+import { BaseButtonProps, ButtonScales, ButtonVariants } from "../Button/types";
 
 export interface ButtonMenuItemProps extends BaseButtonProps {
   isActive?: boolean;
 }
 
 export interface ButtonMenuProps {
-  variant?: typeof variants.PRIMARY | typeof variants.SUBTLE;
+  variant?: typeof ButtonVariants.PRIMARY | typeof ButtonVariants.SUBTLE;
   activeIndex?: number;
   onItemClick?: (index: number) => void;
-  scale?: Scale;
+  scale?: ButtonScales;
   children: React.ReactElement[];
 }
 
