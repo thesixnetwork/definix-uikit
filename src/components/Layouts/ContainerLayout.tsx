@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { pxToRem } from "../../style/mixin";
 import { breakpointMap } from "../../theme/base";
 import { SIDEBAR_WIDTH_FULL } from "../../widgets/Menu/config";
-import Flex from "../Box/Flex";
-import Box from "../Box/Box";
+import Footer from "../../widgets/Menu/components/Footer";
+import { useMatchBreakpoints } from "@/hooks";
 
 const Wrapper = styled.div`
   position: relative;
@@ -13,7 +13,13 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 0 ${pxToRem(20)};
+
+  border: 1px solid red;
+  background-color: ${({ theme }) => theme.colors.yellowBg2};
+  overflow: hidden;
 
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-left: ${SIDEBAR_WIDTH_FULL}px;
@@ -29,28 +35,23 @@ const Container = styled.div`
 `;
 
 const TopBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 370px;
   background-color: ${({ theme }) => theme.colors.yellowBg1};
 `;
 
-const BottomBackground = styled.div`
-  width: 100%;
-  flex: 1 1 0;
-  background-color: ${({ theme }) => theme.colors.yellowBg2};
-`;
-
 const ContainerLayout: React.FC = ({ children }) => {
+  const { isMobile } = useMatchBreakpoints();
   return (
     <Wrapper>
       <Container>
-        <Flex position="relative" flexDirection="column" alignItems="flex-start" maxWidth="1280px" height="100%">
-          <Flex position="absolute" flexDirection="column" width="100%" height="100%">
-            <TopBackground />
-            <BottomBackground />
-          </Flex>
+        <TopBackground />
+        <div style={{position: 'relative'}}>
           {children}
-        </Flex>
+        </div>
       </Container>
     </Wrapper>
   );

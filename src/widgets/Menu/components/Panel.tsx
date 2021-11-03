@@ -11,10 +11,15 @@ import { ColorStyles } from "@/theme";
 interface Props extends PanelProps, PushedProps, UserProps {}
 
 const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
-  position: fixed;
+  /* position: fixed;
   top: 0;
-  left: 0;
+  left: 0; */
   /* display: none; */
+  
+  
+  // temp min-width
+  min-width: 200px;
+
   padding-top: 30px;
   flex-direction: column;
   justify-content: space-between;
