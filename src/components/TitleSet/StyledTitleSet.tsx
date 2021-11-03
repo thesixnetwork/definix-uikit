@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { space } from "styled-system";
+// import { space } from "styled-system";
 
 interface StyledTitleSet {
   theme: DefaultTheme;
@@ -7,7 +7,6 @@ interface StyledTitleSet {
 
 export const StyledTitleSet = styled.div`
   width: 100%;
-  ${space}
 `;
 export const StyledLink = styled.a`
   text-decoration: underline;

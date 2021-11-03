@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import GlobalStyle from "../../GlobalStyle";
 import { BaseLayout, CardsLayout, ContainerLayout } from ".";
-import Flex from "../Box/Flex";
 
 export default {
   title: "Components/Layouts",
@@ -11,18 +10,16 @@ export default {
 
 const Stub = styled.div`
   width: 100%;
-  height: 50px;
-  background: #1fc7d4;
+  /* background: #1fc7d4; */
+  height: 600px;
 `;
 
 export const Container: React.FC = () => {
   return (
     <ContainerLayout>
-      <Flex flexDirection="column">
-        {[...Array(12)].map((value) => (
-          <Stub key={value}>Dummy</Stub>
-        ))}
-      </Flex>
+      {[...Array(12)].map((value) => (
+        <Stub key={value} />
+      ))}
     </ContainerLayout>
   );
 };
