@@ -15,7 +15,7 @@ const Container = styled.div`
   position: fixed;
   bottom: 20px;
   height: 40px;
-  background-color: rgba(255, 255, 0, .3);
+  background-color: rgba(255, 255, 0, 0.3);
   width: 100%;
   z-index: 1;
 `;

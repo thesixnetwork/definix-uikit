@@ -28,7 +28,8 @@ const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
   overflow: initial;
 
   ${({ isMobile, isPushed }) =>
-    isMobile && `
+    isMobile &&
+    `
     padding-top: 16px;
 
     width: 300px;
