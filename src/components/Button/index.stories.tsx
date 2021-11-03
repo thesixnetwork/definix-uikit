@@ -10,8 +10,8 @@ import { SettingIcon } from "../Icon";
 import Button from "./Button";
 import { ButtonScales, ButtonVariants } from "./types";
 
-const viewScales = [Scales.S32, Scales.S36, Scales.S40];
-const viewVariants = [Variants.RED, Variants.BROWN, Variants.LIGHTBROWN, Variants.LINE];
+const viewScales = [ButtonScales.S32, ButtonScales.S36, ButtonScales.S40];
+const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
 
 export default {
   title: "Components/Button[NEW]",
@@ -49,7 +49,7 @@ export const Default: React.FC = () => {
         })}
       </Box>
       <Box>
-        <Button scale={Scales.S32} mr="8px" variant="red" disabled>
+        <Button scale={ButtonScales.S32} mr="8px" variant="red" disabled>
           Disabled
         </Button>
         <Button scale="40" variant="line" disabled>
