@@ -1,4 +1,4 @@
-import { hexToRGB } from "@/style/mixin";
+import { hexToRGB } from "../style/mixin";
 /*
 :root {
   --01-main-red: #ff5532;

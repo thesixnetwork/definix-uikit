@@ -1,5 +1,6 @@
 import React from "react";
 import { textStyle } from "../../theme/text";
+import { ColorStyles } from "../../theme";
 import Text from "./Text";
 
 export default {
@@ -38,7 +39,7 @@ export const Default: React.FC = () => {
           {key}
         </Text>
       ))}
-      <Text bold>Bold text</Text>
+      <Text backgroundColor={ColorStyles.RED} bold>Bold text</Text>
       <Text small>Small text</Text>
       <Text fontSize="24px">Custom fontsize</Text>
       <Text color="main.red">Custom color</Text>

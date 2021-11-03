@@ -1,7 +1,7 @@
+import { ExtendColorProps } from "../../theme/types";
 import { LayoutProps, SpaceProps, TypographyProps } from "styled-system";
 
-export interface TextProps extends SpaceProps, TypographyProps, LayoutProps {
-  color?: string;
+export interface TextProps extends SpaceProps, TypographyProps, LayoutProps, ExtendColorProps {
   fontSize?: string;
   bold?: boolean;
   small?: boolean;

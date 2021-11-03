@@ -43,3 +43,9 @@ export type ZIndices = {
   dropdown: number;
   modal: number;
 };
+
+export interface ExtendColorProps {
+  color?: ColorStyles | string;
+  backgroundColor?: ColorStyles | string; 
+  bg?: ColorStyles | string; 
+}

@@ -35,6 +35,10 @@ const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
 
     width: 300px;
     transform: translateX(${isPushed ? "0" : "-100%"});
+
+    & ::-webkit-scrollbar {
+      display: none;
+    }
   `}
 `;
 
