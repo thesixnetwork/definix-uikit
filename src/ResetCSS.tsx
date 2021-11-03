@@ -64,7 +64,7 @@ export const ResetCSSStyle = `
     box-sizing: border-box;
   }
   * {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Roboto', 'Kanit', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
