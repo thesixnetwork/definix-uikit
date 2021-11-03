@@ -29,7 +29,7 @@ export const StyledBorderBottom = styled.div<{isSelected: boolean;}>`
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: ${({isSelected, theme}) => isSelected ? theme.colors.greyscale.black : theme.colors.greyscale.lightgrey};
+  background-color: ${({isSelected, theme}) => isSelected ? theme.colors.black : theme.colors.lightgrey};
 `;
 
 export const StyledTab = styled.div<{isSelected: boolean;}>`
@@ -40,7 +40,7 @@ export const StyledTab = styled.div<{isSelected: boolean;}>`
   line-height: 1.5;
   text-align: center;
   cursor: pointer;
-  color: ${({isSelected, theme}) => isSelected ? theme.colors.greyscale.black : theme.colors.greyscale.lightgrey};
+  color: ${({isSelected, theme}) => isSelected ? theme.colors.black : theme.colors.lightgrey};
 
   padding: 13px 26px;
   ${({ theme }) => theme.mediaQueries.xl} {
