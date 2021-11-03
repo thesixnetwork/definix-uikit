@@ -49,14 +49,14 @@ const Footer: React.FC<Props> = (props) => {
   return (
     <StyledNav {...props}>
       <Inner {...props}>
-        <Flex>
+        <Flex mt="40px">
           <LogoFooterSixIcon />
           <StyledFlex>
             <Text>Copyright © 2021 SIX Network. All Right Reserved</Text>
             <Text>Audited By Certik</Text>
           </StyledFlex>
         </Flex>
-        <SocialLinks />
+        <SocialLinks {...props} />
       </Inner>
     </StyledNav>
   );
