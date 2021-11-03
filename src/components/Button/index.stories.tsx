@@ -11,7 +11,7 @@ import Button from "./Button";
 import { scales, variants } from "./types";
 
 const viewScales = [scales.S32, scales.S36, scales.S40];
-const viewVariants = [variants.RED, variants.BROWN, variants.LIGHT_BROWN, variants.LINE];
+const viewVariants = [variants.RED, variants.BROWN, variants.LIGHTBROWN, variants.LINE];
 
 export default {
   title: "Components/Button[NEW]",

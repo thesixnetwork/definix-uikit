@@ -1,3 +1,4 @@
+import { ColorStyles } from "@/theme";
 import { textStyle } from "@/theme/text";
 import { scales, variants } from "./types";
 
@@ -24,27 +25,27 @@ export const scaleVariants = {
 };
 export const styleVariants = {
   [variants.RED]: {
-    backgroundColor: "main.red",
-    color: "greyscale.white",
+    backgroundColor: ColorStyles.RED,
+    color: ColorStyles.WHITE,
   },
   [variants.BROWN]: {
-    backgroundColor: "brownscale.brown",
-    color: "greyscale.white",
+    backgroundColor: ColorStyles.BROWN,
+    color: ColorStyles.WHITE,
   },
-  [variants.DEEP_BROWN]: {
-    backgroundColor: "brownscale.deepbrown",
-    color: "greyscale.white",
+  [variants.DEEPBROWN]: {
+    backgroundColor: ColorStyles.DEEPBROWN,
+    color: ColorStyles.WHITE,
   },
-  [variants.LIGHT_BROWN]: {
-    backgroundColor: "brownscale.lightbrown",
-    color: "greyscale.white",
+  [variants.LIGHTBROWN]: {
+    backgroundColor: ColorStyles.LIGHTBROWN,
+    color: ColorStyles.WHITE,
   },
   [variants.LINE]: {
-    backgroundColor: "white",
-    color: "greyscale.deepgrey",
+    backgroundColor: ColorStyles.WHITE,
+    color: ColorStyles.DEEPGREY,
     borderWidth: "1px",
     borderStyle: "solid",
-    borderColor: "greyscale.lightgrey"
+    borderColor: ColorStyles.LIGHTGREY
   },
   [variants.TRANSPARENT]: {
     backgroundColor: "transparent",
