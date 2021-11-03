@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Box, Flex } from "@/components/Box";
 import { IconButton } from "@/components/Button";
-import { MENU_HEIGHT, MENU_MOBILE_HEIGHT, MENU_ZINDEX, SIDEBAR_WIDTH_FULL } from "../config";
-import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "../../../components/Icon";
-import { hexToRGB, pxToRem } from "../../../style/mixin";
+import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, NAV_ZINDEX, SIDEBAR_WIDTH_FULL } from "../config";
+import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "@/components/Icon";
+import { hexToRGB, pxToRem } from "@/style/mixin";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
 import { NavProps, PushedProps } from "../types";
@@ -20,13 +20,13 @@ const MobileNav = styled.nav`
   top: 0;
   width: 100%;
   padding: 0 ${pxToRem(20)};
-  height: ${MENU_MOBILE_HEIGHT}px;
+  height: ${NAV_HEIGHT_MOBILE}px;
   border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors[ColorStyles.PALE], 0.3)};
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
-  z-index: ${MENU_ZINDEX};
+  z-index: ${NAV_ZINDEX};
 
   /* ${({ theme }) => theme.mediaQueries.lg} {
     display: none;
@@ -39,11 +39,11 @@ const StyledNav = styled.nav`
   display: flex;
   left: ${SIDEBAR_WIDTH_FULL}px;
   width: calc(100% - ${SIDEBAR_WIDTH_FULL}px);
-  height: ${MENU_HEIGHT}px;
+  height: ${NAV_HEIGHT_PC}px;
   justify-content: center;
   align-items: center;
   padding: 0 ${pxToRem(60)};
-  z-index: ${MENU_ZINDEX};
+  z-index: ${NAV_ZINDEX};
 `;
 
 const Nav: React.FC<Props> = ({

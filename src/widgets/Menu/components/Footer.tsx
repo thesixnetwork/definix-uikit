@@ -7,6 +7,7 @@ import SocialLinks from "./SocialLinks";
 import { ColorStyles } from "@/theme";
 
 const StyledNav = styled.div`
+  overflow: hidden;
   position: relative;
   width: 100%;
   padding: 0 ${pxToRem(60)};
