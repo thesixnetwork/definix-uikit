@@ -18,7 +18,9 @@ import Nav from "./components/Nav";
 const Inner = styled.div<{ isMobile: boolean }>`
   padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
   outline: 1px solid blue;
-  ${({ isMobile }) => isMobile && `
+  ${({ isMobile }) =>
+    isMobile &&
+    `
     padding: ${NAV_HEIGHT_MOBILE}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
   `}
 `;

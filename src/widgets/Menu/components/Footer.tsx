@@ -11,12 +11,17 @@ interface Props {
   isMobile: boolean;
 }
 
-const StyledNav = styled.div`
+const StyledNav = styled.div<{ isMobile: boolean }>`
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding: 0 ${pxToRem(60)};
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
+  padding: 0 ${pxToRem(60)};
+  ${({ isMobile }) =>
+    isMobile &&
+    `
+      padding: 0 ${pxToRem(20)};
+  `}
 `;
 
 const Inner = styled.div<{ isMobile: boolean }>`
@@ -24,11 +29,15 @@ const Inner = styled.div<{ isMobile: boolean }>`
   align-items: center;
   justify-content: space-between;
   padding: 30px 0 60px;
+  flex-wrap: wrap-reverse;
 
   ${({ isMobile }) =>
     isMobile &&
     `
-    
+    padding: 20px 0 40px;
+    > div {
+      width: 100%;
+    }
   `}
 `;
 
@@ -38,7 +47,7 @@ const StyledFlex = styled(Flex)`
 `;
 const Footer: React.FC<Props> = (props) => {
   return (
-    <StyledNav>
+    <StyledNav {...props}>
       <Inner {...props}>
         <Flex>
           <LogoFooterSixIcon />
