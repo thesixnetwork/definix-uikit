@@ -1,22 +1,22 @@
 import { ColorStyles } from "@/theme";
 import { textStyle } from "@/theme/text";
-import { scales, variants } from "./types";
+import { Scales, Variants } from "./types";
 
 export const scaleVariants = {
-  [scales.S32]: {
+  [Scales.S32]: {
     height: "32px",
     padding: "7px 20px",
     minWidth: "142px"
   },
-  [scales.S32_ICON]: {
+  [Scales.S32ICON]: {
     height: "32px",
     padding: "0 8px",
   },
-  [scales.S36]: {
+  [Scales.S36]: {
     height: "36px",
     padding: "0 16px",
   },
-  [scales.S40]: {
+  [Scales.S40]: {
     height: "40px",
     padding: "10px 20px",
     minWidth: "186px",
@@ -24,39 +24,39 @@ export const scaleVariants = {
   },
 };
 export const styleVariants = {
-  [variants.RED]: {
+  [Variants.RED]: {
     backgroundColor: ColorStyles.RED,
     color: ColorStyles.WHITE,
   },
-  [variants.BROWN]: {
+  [Variants.BROWN]: {
     backgroundColor: ColorStyles.BROWN,
     color: ColorStyles.WHITE,
   },
-  [variants.DEEPBROWN]: {
+  [Variants.DEEPBROWN]: {
     backgroundColor: ColorStyles.DEEPBROWN,
     color: ColorStyles.WHITE,
   },
-  [variants.LIGHTBROWN]: {
+  [Variants.LIGHTBROWN]: {
     backgroundColor: ColorStyles.LIGHTBROWN,
     color: ColorStyles.WHITE,
   },
-  [variants.LINE]: {
+  [Variants.LINE]: {
     backgroundColor: ColorStyles.WHITE,
     color: ColorStyles.DEEPGREY,
     borderWidth: "1px",
     borderStyle: "solid",
     borderColor: ColorStyles.LIGHTGREY
   },
-  [variants.TRANSPARENT]: {
+  [Variants.TRANSPARENT]: {
     backgroundColor: "transparent",
   },
 
 
-  [variants.PRIMARY]: {
+  [Variants.PRIMARY]: {
     backgroundColor: "primary",
     color: "white",
   },
-  [variants.SECONDARY]: {
+  [Variants.SECONDARY]: {
     backgroundColor: "transparent",
     border: "2px solid",
     borderColor: "primary",
@@ -66,24 +66,24 @@ export const styleVariants = {
       backgroundColor: "transparent",
     },
   },
-  [variants.TERTIARY]: {
+  [Variants.TERTIARY]: {
     backgroundColor: "tertiary",
     boxShadow: "none",
     color: "primary",
   },
-  [variants.SUBTLE]: {
+  [Variants.SUBTLE]: {
     backgroundColor: "textSubtle",
     color: "white",
   },
-  [variants.DANGER]: {
+  [Variants.DANGER]: {
     backgroundColor: "failure",
     color: "white",
   },
-  [variants.SUCCESS]: {
+  [Variants.SUCCESS]: {
     backgroundColor: "success",
     color: "white",
   },
-  [variants.TEXT]: {
+  [Variants.TEXT]: {
     backgroundColor: "transparent",
     color: "primary",
     boxShadow: "none",

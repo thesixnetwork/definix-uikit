@@ -3,7 +3,7 @@ import React, { cloneElement, ElementType, isValidElement } from "react";
 import styled, { keyframes } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
-import { ButtonProps, variants } from "./types";
+import { ButtonProps, Variants } from "./types";
 
 interface LoadingDot {
   index: number;
@@ -78,7 +78,7 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
 Button.defaultProps = {
   isLoading: false,
   external: false,
-  variant: variants.RED,
+  variant: Variants.RED,
   disabled: false,
 };
 

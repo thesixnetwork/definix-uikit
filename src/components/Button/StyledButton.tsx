@@ -3,7 +3,7 @@ import { space, layout, variant as styledVariant } from "styled-system";
 import { hexToRGB } from "../../style/mixin";
 import { getVariantTextStyle } from "@/theme/text";
 import { scaleVariants, styleVariants } from "./theme";
-import { BaseButtonProps, variants } from "./types";
+import { BaseButtonProps, Variants } from "./types";
 import { ColorStyles } from "@/theme";
 
 // interface ThemedButtonProps extends BaseButtonProps {
@@ -60,7 +60,7 @@ const StyledButton = styled.button<BaseButtonProps>`
     &:after {
       content: "";
       border-radius: 8px;
-      background-color: ${({ theme, variant }) => variant === variants.LINE ? `rgba(0, 0, 0, 0.05)` : hexToRGB(theme.colors[ColorStyles.WHITE], 0.2)};
+      background-color: ${({ theme, variant }) => variant === Variants.LINE ? `rgba(0, 0, 0, 0.05)` : hexToRGB(theme.colors[ColorStyles.WHITE], 0.2)};
       position: absolute;
       width: 100%;
       height: 100%;
@@ -71,8 +71,8 @@ const StyledButton = styled.button<BaseButtonProps>`
 
   &:disabled:not(.definix-button--loading),
   &.definix-button--disabled:not(.definix-button--loading) {
-    background-color: ${({ theme, variant }) => hexToRGB(theme.colors[ColorStyles.LIGHTGREY], variant === variants.LINE ? 0.2 : 1)};
-    color: ${({ theme, variant }) => variant === variants.LINE ? hexToRGB(theme.colors[ColorStyles.MEDIUMGREY], 0.4) : hexToRGB(theme.colors[ColorStyles.WHITE], 0.5)};
+    background-color: ${({ theme, variant }) => hexToRGB(theme.colors[ColorStyles.LIGHTGREY], variant === Variants.LINE ? 0.2 : 1)};
+    color: ${({ theme, variant }) => variant === Variants.LINE ? hexToRGB(theme.colors[ColorStyles.MEDIUMGREY], 0.4) : hexToRGB(theme.colors[ColorStyles.WHITE], 0.5)};
     cursor: not-allowed;
   }
 
