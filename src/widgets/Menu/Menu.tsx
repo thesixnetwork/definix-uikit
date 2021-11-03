@@ -11,6 +11,8 @@ import Nav from "./components/Nav";
 
 const Inner = styled.div`
   padding: ${MENU_HEIGHT}px ${pxToRem(60)} 0;
+  outline: 1px solid blue;
+  background-color: rgba(255, 255, 0 ,.3);
 `;
 
 
@@ -29,7 +31,6 @@ const Menu: React.FC<MenuProps> = ({
 }) => {
   const { isMobile } = useMatchBreakpoints();
   const [isPushed, setIsPushed] = useState(!isMobile);
-
   return (
     <ContainerLayout>
       <Nav

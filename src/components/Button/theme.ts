@@ -1,3 +1,4 @@
+import { textStyle } from "@/theme/text";
 import { scales, variants } from "./types";
 
 export const scaleVariants = {
@@ -18,9 +19,9 @@ export const scaleVariants = {
     height: "40px",
     padding: "10px 20px",
     minWidth: "186px",
+    ...textStyle.R_14B
   },
 };
-
 export const styleVariants = {
   [variants.RED]: {
     backgroundColor: "main.red",

@@ -27,13 +27,11 @@ const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
   overflow: initial;
 
   ${({ isMobile, isPushed }) => isMobile && `
+    padding-top: 16px;
+
     width: 300px;
     transform: translateX(${isPushed ? '0' : '-100%'});
   `}
-
-  /* ${({ theme }) => theme.mediaQueries.lg} {
-    display: flex;
-  } */
 `;
 
 const Panel: React.FC<Props> = (props) => {

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { space, typography, color } from "styled-system";
+import { space, typography, color, layout } from "styled-system";
 import { getVariantTextStyle } from "../../theme/text";
 import { TextProps } from "./types";
 
@@ -9,6 +9,7 @@ const Text = styled.div<TextProps>`
   ${typography}
   ${getVariantTextStyle()}
   ${color}
+  ${layout}
 `;
 
 Text.defaultProps = {

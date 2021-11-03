@@ -24,6 +24,7 @@ const Container = styled.div`
 
 const AccordionContent = styled.div<{ isOpen: boolean; isPushed: boolean; maxHeight: number }>`
   max-height: ${({ isOpen, maxHeight }) => (isOpen ? `${maxHeight}px` : 0)};
+  margin-top: 8px;
   transition: max-height 0.3s ease-out;
   overflow: hidden;
 `;
@@ -68,4 +69,7 @@ const Accordion: React.FC<Props> = ({
   );
 };
 
-export default React.memo(Accordion, (prev, next) => prev.isPushed === next.isPushed);
+// export default React.memo(Accordion, (prev, next) => {
+//   return prev.isPushed === next.isPushed && prev.isActive === next.isActive;
+// });
+export default Accordion;

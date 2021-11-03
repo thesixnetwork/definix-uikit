@@ -28,6 +28,10 @@ import { ReactComponent as FooterGithubIcon } from './icons/ico_24_footer_github
 import { ReactComponent as FooterGitbookIcon } from './icons/ico_24_footer_gitbook.svg';
 import { ReactComponent as FooterFacebookIcon } from './icons/ico_24_footer_facebook.svg';
 import { ReactComponent as LogoFooterSixIcon } from './icons/logo_footer_six.svg';
+import { ReactComponent as MoreNIcon } from './icons/ico_24_more_n.svg';
+import { ReactComponent as ArrowRightGIcon } from './icons/ico_16_arrow_right_g.svg';
+import { ReactComponent as MenuIcon } from './icons/ico_24_menu.svg';
+import { ReactComponent as CloseIcon } from './icons/ico_24_close.svg';
 
 export {
   GnbMySIcon,
@@ -59,4 +63,8 @@ export {
   FooterGitbookIcon,
   FooterFacebookIcon,
   LogoFooterSixIcon,
+  MoreNIcon,
+  ArrowRightGIcon,
+  MenuIcon,
+  CloseIcon,
 }

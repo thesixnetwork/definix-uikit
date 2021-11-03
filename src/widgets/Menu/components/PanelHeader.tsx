@@ -3,17 +3,19 @@ import styled from "styled-components";
 import { IconButton } from "@/components/Button";
 import { Flex } from "@/components/Box";
 import { PanelProps, PushedProps, UserProps } from "../types";
-import { LogoMainFinixIcon, SettingIcon } from "../../../components/Icon";
+import { CloseIcon, LogoMainFinixIcon } from "@/components/Icon";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
+import { hexToRGB } from "@/style/mixin";
 
 interface Props extends PanelProps, PushedProps, UserProps {}
 
 const MobileHeader = styled(Flex)`
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    display: none;
-  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors.greyscale.lightgrey, 0.5)};
 `
 
 const StyledHeader = styled(Flex)`
@@ -21,20 +23,15 @@ const StyledHeader = styled(Flex)`
   align-items: center;
   justify-content: center;
 
-  ${({ theme }) => theme.mediaQueries.lg} {
-    display: flex;
-  }
 `
 
 const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
   return isMobile ? <MobileHeader>
-    <Flex>
+    <Flex pl="4px" width="100%" alignItems="center" justifyContent="space-between">
       <Chain toggleScale="sm" />
-      <IconButton startIcon={<SettingIcon />} onClick={() => pushNav(false)} />
+      <IconButton startIcon={<CloseIcon />} onClick={() => pushNav(false)} />
     </Flex>
-    <Flex>
-      <UserBlock {...props} />
-    </Flex>
+    <UserBlock isMobile={isMobile} {...props} />
     </MobileHeader> : 
     <StyledHeader>
       <LogoMainFinixIcon />

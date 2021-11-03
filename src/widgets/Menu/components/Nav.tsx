@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Box, Flex } from "@/components/Box";
 import { IconButton } from "@/components/Button";
 import { MENU_HEIGHT, MENU_MOBILE_HEIGHT, MENU_ZINDEX, SIDEBAR_WIDTH_FULL } from "../config";
-import { LogoMainFinixIcon, SettingIcon } from "../../../components/Icon";
+import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "../../../components/Icon";
 import { hexToRGB, pxToRem } from "../../../style/mixin";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
@@ -55,7 +55,7 @@ const Nav: React.FC<Props> = ({
 }) => {
   return isMobile ? <MobileNav>
     <Box position="absolute" left={pxToRem(20)}>
-      <IconButton startIcon={<SettingIcon />} onClick={() => pushNav(!isPushed)} />
+      <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
     </Box>
     <LogoMainFinixIcon />
     <Box position="absolute" right={pxToRem(20)}>
@@ -65,7 +65,7 @@ const Nav: React.FC<Props> = ({
     <Chain />
     <Flex position="absolute" right={pxToRem(60)}>
       <IconButton mr="16px" startIcon={<SettingIcon />} />
-      <UserBlock account={account} login={login} logout={logout} />
+      <UserBlock isMobile={isMobile} account={account} login={login} logout={logout} />
     </Flex>
     {/* {profile && <Avatar profile={profile} />} */}
   </StyledNav>;

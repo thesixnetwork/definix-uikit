@@ -1,6 +1,6 @@
-import { SpaceProps, TypographyProps } from "styled-system";
+import { LayoutProps, SpaceProps, TypographyProps } from "styled-system";
 
-export interface TextProps extends SpaceProps, TypographyProps {
+export interface TextProps extends SpaceProps, TypographyProps, LayoutProps {
   color?: string;
   fontSize?: string;
   bold?: boolean;
@@ -8,4 +8,5 @@ export interface TextProps extends SpaceProps, TypographyProps {
   textStyle?: string;
   textColor?: string;
   textTransform?: "uppercase" | "lowercase" | "capitalize";
+
 }

@@ -1,8 +1,30 @@
-import { kebabCase } from "lodash";
 import { variant } from "styled-system";
 
+export enum TextStyles {
+  R_32B = "R_32B",
+  R_28B = "R_28B",
+  R_28M = "R_28M",
+  R_26B = "R_26B",
+  R_23M = "R_23M",
+  R_20B = "R_20B",
+  R_20M = "R_20M",
+  R_20R = "R_20R",
+  R_18B = "R_18B",
+  R_18M = "R_18M",
+  R_18R = "R_18R",
+  R_16B = "R_16B",
+  R_16M = "R_16M",
+  R_16R = "R_16R",
+  R_14B = "R_14B",
+  R_14M = "R_14M",
+  R_14R = "R_14R",
+  R_12B = "R_12B",
+  R_12M = "R_12M",
+  R_12R = "R_12R",
+}
+
 export const textStyle: Record<string, Record<string, string | number>> = {
-  'R_32B': {
+  [TextStyles.R_32B]: {
     fontFamily: 'Roboto',
     fontSize: '32px',
     fontWeight: 'bold',
@@ -12,7 +34,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_28B': {
+  [TextStyles.R_28B]: {
     fontFamily: 'Roboto',
     fontSize: '28px',
     fontWeight: 'bold',
@@ -22,7 +44,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_28M': {
+  [TextStyles.R_28M]: {
     fontFamily: 'Roboto',
     fontSize: '28px',
     fontWeight: 500,
@@ -32,7 +54,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_26B': {
+  [TextStyles.R_26B]: {
     fontFamily: 'Roboto',
     fontSize: '26px',
     fontWeight: 'bold',
@@ -42,7 +64,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_23M': {
+  [TextStyles.R_23M]: {
     fontFamily: 'Roboto',
     fontSize: '23px',
     fontWeight: 500,
@@ -52,7 +74,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_20B': {
+  [TextStyles.R_20B]: {
     fontFamily: 'Roboto',
     fontSize: '20px',
     fontWeight: 'bold',
@@ -62,7 +84,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_20M': {
+  [TextStyles.R_20M]: {
     fontFamily: 'Roboto',
     fontSize: '20px',
     fontWeight: 500,
@@ -72,7 +94,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_20R': {
+  [TextStyles.R_20R]: {
     fontFamily: 'Roboto',
     fontSize: '20px',
     fontWeight: 'normal',
@@ -82,7 +104,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_18B': {
+  [TextStyles.R_18B]: {
     fontFamily: 'Roboto',
     fontSize: '18px',
     fontWeight: 'bold',
@@ -92,7 +114,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_18M': {
+  [TextStyles.R_18M]: {
     fontFamily: 'Roboto',
     fontSize: '18px',
     fontWeight: 500,
@@ -102,7 +124,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_18R': {
+  [TextStyles.R_18R]: {
     fontFamily: 'Roboto',
     fontSize: '18px',
     fontWeight: 'normal',
@@ -112,7 +134,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_16B': {
+  [TextStyles.R_16B]: {
     fontFamily: 'Roboto',
     fontSize: '16px',
     fontWeight: 'bold',
@@ -122,7 +144,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_16M': {
+  [TextStyles.R_16M]: {
     fontFamily: 'Roboto',
     fontSize: '16px',
     fontWeight: 500,
@@ -132,7 +154,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_16R': {
+  [TextStyles.R_16R]: {
     fontFamily: 'Roboto',
     fontSize: '16px',
     fontWeight: 'normal',
@@ -142,7 +164,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_14B': {
+  [TextStyles.R_14B]: {
     fontFamily: 'Roboto',
     fontSize: '14px',
     fontWeight: 'bold',
@@ -152,7 +174,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_14M': {
+  [TextStyles.R_14M]: {
     fontFamily: 'Roboto',
     fontSize: '14px',
     fontWeight: 500,
@@ -162,7 +184,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_14R': {
+  [TextStyles.R_14R]: {
     fontFamily: 'Roboto',
     fontSize: '14px',
     fontWeight: 'normal',
@@ -172,7 +194,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_12B': {
+  [TextStyles.R_12B]: {
     fontFamily: 'Roboto',
     fontSize: '12px',
     fontWeight: 'bold',
@@ -182,7 +204,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_12M': {
+  [TextStyles.R_12M]: {
     fontFamily: 'Roboto',
     fontSize: '12px',
     fontWeight: 500,
@@ -192,7 +214,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     letterSpacing: 'normal',
   },
 
-  'R_12R': {
+  [TextStyles.R_12R]: {
     fontFamily: 'Roboto',
     fontSize: '12px',
     fontWeight: 'normal',
@@ -203,13 +225,9 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 }
 
-export type textStyleType = typeof textStyle[keyof typeof textStyle];
-// export type textStyleType = 'R_32B' | 'R_28B' | 'R_28M' | 'R_26B' | 'R_23M' | 'R_20B' | 'R_20M' | 'R_20R' | 'R_18B' | 'R_18M' | 'R_18R' | 'R_16B' | 'R_16M' | 'R_16R' | 'R_14B' | 'R_14M' | 'R_14R' | 'R_12B' | 'R_12M' | 'R_12R';
-
-export const getTextStyle = (textKey: string): string => {
-  if (!textStyle[textKey]) return '';
-  const result = Object.entries(textStyle[textKey]).map(([key, value]) => `${kebabCase(key)}: ${value};`);
-  return `${result.join('')}`
+export type TextStyleType = typeof TextStyles;
+export interface TextStyleProps {
+  textStyle?: TextStyleType | string;
 }
 
 export const getVariantTextStyle = () => variant({

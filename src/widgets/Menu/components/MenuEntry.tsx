@@ -1,13 +1,13 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import styled, { DefaultTheme } from "styled-components";
 import { color, space } from "styled-system";
 import { MENU_ENTRY_HEIGHT } from "../config";
-import { getTextStyle, getVariantTextStyle } from "../../../theme/text";
+import { getVariantTextStyle, TextStyles, TextStyleProps } from "@/theme/text";
 
-export interface Props {
+export interface Props extends TextStyleProps, HTMLAttributes<HTMLDivElement> {
   secondary?: boolean;
   isActive?: boolean;
-  theme: DefaultTheme;
+  theme?: DefaultTheme;
 }
 
 const LinkLabel = styled.div<{ isPushed: boolean }>`
@@ -27,7 +27,6 @@ const MenuEntry = styled.div<Props>`
   background-color: ${({ isActive, theme }) => isActive ? theme.colors.main.red : 'transparent'};
 
   color: ${({ isActive, theme }) => isActive ? theme.colors.greyscale.white : theme.colors.greyscale.deepgrey};
-  ${({ isActive }) => getTextStyle(isActive ? 'R_14B' : 'R_14R')}
 
   a {
     display: flex;
@@ -45,6 +44,8 @@ const MenuEntry = styled.div<Props>`
   // Safari fix
   flex-shrink: 0;
 
+  ${getVariantTextStyle()}
+
 `;
 MenuEntry.defaultProps = {
   secondary: false,
@@ -54,4 +55,8 @@ MenuEntry.defaultProps = {
 
 const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed);
 
-export { MenuEntry, LinkLabelMemo as LinkLabel };
+const MenuEntryComponent: React.FC<Props> = ({ isActive, ...props }) => {
+  return <MenuEntry isActive={isActive} textStyle={isActive ? TextStyles.R_14B : TextStyles.R_14R} {...props}></MenuEntry>
+}
+
+export { MenuEntryComponent as MenuEntry, LinkLabelMemo as LinkLabel };

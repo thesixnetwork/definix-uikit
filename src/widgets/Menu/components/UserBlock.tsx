@@ -1,61 +1,94 @@
 import React from "react";
-import { Text } from "../../../components/Text";
-import { Flex } from "../../../components/Box";
-import Button from "../../../components/Button/Button";
+import { Text } from "@/components/Text";
+import { Flex } from "@/components/Box";
+import { IconButton } from "@/components/Button";
+import Button from "@/components/Button/Button";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
-import { GnbMySIcon } from "../../../components/Icon";
+import { ArrowRightGIcon, MoreNIcon } from "@/components/Icon";
+import styled from "styled-components";
 
 interface Props {
+  isMobile: boolean;
   account?: string;
   login: Login;
   logout: () => void;
 }
 
-const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
+const Wrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 188px;
+`
+
+const StyledButton = styled.a`
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  background-color: ${({ theme }) => theme.colors.brownscale.deepbrown}
+`
+
+const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
-  return (
-    <div>
-      {account ? (
-        <Flex>
-          <Button
-            scale="32"
-            variant="light-brown"
-            textStyle="R_12B"
-            onClick={() => {
-              onPresentAccountModal();
-            }}
-          >
-            {accountEllipsis}
-          </Button>
-          <Button
-            ml="8px"
-            scale="32_icon"
-            minWidth="auto"
-            variant="deep-brown"
-            startIcon={<GnbMySIcon />}
-            onClick={() => {
-              onPresentAccountModal();
-            }}
-          >
-            <Text textStyle="R_12B" ml="6px">MY</Text>
-          </Button>
+  return account ? (
+      <Wrapper>
+        <Flex pl="12px" flexDirection="column" alignItems="flex-start">
+          <Text mt="55px" textStyle="R_12R" color="greyscale.mediumgrey">Wallet Address</Text>
+          <Flex>
+            <Text mt="2px" mr="4px" textStyle="R_18M" color="greyscale.black">{accountEllipsis}</Text>
+            <IconButton startIcon={<MoreNIcon />}/>
+          </Flex>
         </Flex>
-      ) : (
-        <Button
+        <StyledButton href="/farm">
+          <Text textStyle="R_12M" color="greyscale.white">Net worth</Text>
+          <Flex ml="12px" alignItems="center">
+            <Text mr="7px" textStyle="R_12B" width="140px" color="greyscale.white">$132123123</Text>
+            <IconButton startIcon={<ArrowRightGIcon />} />
+          </Flex>
+        </StyledButton>
+        {/* <Button
           scale="32"
-          variant="red"
+          variant="light-brown"
           textStyle="R_12B"
+          onClick={() => {
+            onPresentAccountModal();
+          }}
+        >
+        </Button>
+        <Button
+          ml="8px"
+          scale="32_icon"
+          minWidth="auto"
+          variant="deep-brown"
+          startIcon={<GnbMySIcon />}
+          onClick={() => {
+            onPresentAccountModal();
+          }}
+        >
+          <Text textStyle="R_12B" ml="6px">MY</Text>
+        </Button> */}
+      </Wrapper>
+    ) : (
+      <Flex width="100%" height="188px" alignItems="center" justifyContent="center">
+        <Button
+          scale={isMobile ? '40' : '32'}
+          variant="red"
           onClick={() => {
             onPresentConnectModal();
           }}
         >
           Connect Wallet
         </Button>
-      )}
-    </div>
-  );
+      </Flex>
+    )
 };
 
 export default React.memo(UserBlock, (prevProps, nextProps) => prevProps.account === nextProps.account);

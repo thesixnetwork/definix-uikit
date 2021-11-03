@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { IconButton } from ".";
 import Box from "../Box/Box";
 import Flex from "../Box/Flex";
+import { Text } from "../Text";
 import { SettingIcon } from "../Icon";
 import Button from "./Button";
 import { scales, variants } from "./types";
@@ -48,10 +49,10 @@ export const Default: React.FC = () => {
         })}
       </Box>
       <Box>
-        <Button mr="8px" disabled>
+        <Button scale="40" mr="8px" variant="red" disabled>
           Disabled
         </Button>
-        <Button variant="line" disabled>
+        <Button scale="40" variant="line" disabled>
           Disabled
         </Button>
       </Box>
