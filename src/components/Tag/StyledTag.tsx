@@ -9,7 +9,6 @@ interface ThemedProps extends TagProps {
 
 const getOutlineStyles = ({ outline }: ThemedProps) => {
   if (outline) {
-
     return `
       background: transparent;
     `;

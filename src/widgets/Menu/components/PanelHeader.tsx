@@ -17,25 +17,28 @@ const MobileHeader = styled(Flex)`
   justify-content: flex-start;
   padding: 0 20px;
   border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors[ColorStyles.LIGHTGREY], 0.5)};
-`
+`;
 
 const StyledHeader = styled(Flex)`
   display: none;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
-  return isMobile ? <MobileHeader>
-    <Flex pl="4px" width="100%" alignItems="center" justifyContent="space-between">
-      <Chain toggleScale="sm" />
-      <IconButton startIcon={<CloseIcon />} onClick={() => pushNav(false)} />
-    </Flex>
-    <UserBlock isMobile={isMobile} {...props} />
-    </MobileHeader> : 
+  return isMobile ? (
+    <MobileHeader>
+      <Flex pl="4px" width="100%" alignItems="center" justifyContent="space-between">
+        <Chain toggleScale="sm" />
+        <IconButton startIcon={<CloseIcon />} onClick={() => pushNav(false)} />
+      </Flex>
+      <UserBlock isMobile={isMobile} {...props} />
+    </MobileHeader>
+  ) : (
     <StyledHeader>
       <LogoMainFinixIcon />
-    </StyledHeader>;
+    </StyledHeader>
+  );
 };
 
 export default PanelHeader;

@@ -25,9 +25,9 @@ const MenuEntry = styled.div<Props>`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 8px 12px;
   border-radius: 8px;
-  background-color: ${({ isActive, theme }) => isActive ? theme.colors[ColorStyles.RED] : 'transparent'};
+  background-color: ${({ isActive, theme }) => (isActive ? theme.colors[ColorStyles.RED] : "transparent")};
 
-  color: ${({ isActive, theme }) => isActive ? theme.colors[ColorStyles.WHITE] : theme.colors[ColorStyles.DEEPGREY]};
+  color: ${({ isActive, theme }) => (isActive ? theme.colors[ColorStyles.WHITE] : theme.colors[ColorStyles.DEEPGREY])};
 
   a {
     display: flex;
@@ -46,7 +46,6 @@ const MenuEntry = styled.div<Props>`
   flex-shrink: 0;
 
   ${getVariantTextStyle()}
-
 `;
 MenuEntry.defaultProps = {
   secondary: false,
@@ -57,7 +56,9 @@ MenuEntry.defaultProps = {
 const LinkLabelMemo = React.memo(LinkLabel, (prev, next) => prev.isPushed === next.isPushed);
 
 const MenuEntryComponent: React.FC<Props> = ({ isActive, ...props }) => {
-  return <MenuEntry isActive={isActive} textStyle={isActive ? TextStyles.R_14B : TextStyles.R_14R} {...props}></MenuEntry>
-}
+  return (
+    <MenuEntry isActive={isActive} textStyle={isActive ? TextStyles.R_14B : TextStyles.R_14R} {...props}></MenuEntry>
+  );
+};
 
 export { MenuEntryComponent as MenuEntry, LinkLabelMemo as LinkLabel };

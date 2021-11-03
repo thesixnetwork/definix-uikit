@@ -55,7 +55,9 @@ const Accordion: React.FC<Props> = ({
     <Container>
       <MenuEntry onClick={handleClick} className={className} isActive={false}>
         {isActive ? activeIcon : icon}
-        <LinkLabel isPushed={isPushed} ml="6px">{label}</LinkLabel>
+        <LinkLabel isPushed={isPushed} ml="6px">
+          {label}
+        </LinkLabel>
         {isOpen ? <ArrowTopGIcon /> : <ArrowBottomGIcon />}
       </MenuEntry>
       <AccordionContent

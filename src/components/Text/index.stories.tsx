@@ -33,9 +33,11 @@ export const Default: React.FC = () => {
   return (
     <div>
       <Text>Default</Text>
-      {
-        Object.keys(textStyle).map((key) => <Text key={key} textStyle={key}>{key}</Text>)
-      }
+      {Object.keys(textStyle).map((key) => (
+        <Text key={key} textStyle={key}>
+          {key}
+        </Text>
+      ))}
       <Text bold>Bold text</Text>
       <Text small>Small text</Text>
       <Text fontSize="24px">Custom fontsize</Text>

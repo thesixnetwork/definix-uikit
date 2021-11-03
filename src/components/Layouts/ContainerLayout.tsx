@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import { pxToRem } from '../../style/mixin';
-import { breakpointMap } from '../../theme/base';
-import { SIDEBAR_WIDTH_FULL } from '../../widgets/Menu/config';
+import { pxToRem } from "../../style/mixin";
+import { breakpointMap } from "../../theme/base";
+import { SIDEBAR_WIDTH_FULL } from "../../widgets/Menu/config";
 
 const Wrapper = styled.div`
   position: relative;
   width: 100vw;
-`
+`;
 
 const Container = styled.div`
   position: relative;
   margin: 0 ${pxToRem(20)};
-  
+
   ${({ theme }) => theme.mediaQueries.lg} {
     margin-left: ${pxToRem(SIDEBAR_WIDTH_FULL)};
   }
@@ -24,14 +24,14 @@ const Container = styled.div`
   @media (min-width: ${breakpointMap.xl + SIDEBAR_WIDTH_FULL}px) {
     margin: 0 auto;
   }
-`
+`;
 
 const ContainerLayout: React.FC = ({ children }) => {
-  return <Wrapper>
-    <Container>
-      {children}
-    </Container>
-  </Wrapper>;
-}
+  return (
+    <Wrapper>
+      <Container>{children}</Container>
+    </Wrapper>
+  );
+};
 
 export default ContainerLayout;

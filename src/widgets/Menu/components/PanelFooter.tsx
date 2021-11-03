@@ -34,13 +34,7 @@ const SettingsEntry = styled.div`
 //   padding: 0 16px;
 // `;
 
-const PanelFooter: React.FC<Props> = ({
-  isPushed,
-  pushNav,
-  currentLang,
-  langs,
-  setLang,
-}) => {
+const PanelFooter: React.FC<Props> = ({ isPushed, pushNav, currentLang, langs, setLang }) => {
   if (!isPushed) {
     return (
       <Container>

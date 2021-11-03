@@ -19,21 +19,21 @@
 */
 
 export enum ColorStyles {
-  RED = 'red',
-  ORANGE = 'orange',
-  YELLOW = 'yellow',
-  GREEN = 'green',
-  PALE = 'pale',
-  LIGHTBROWN = 'lightbrown',
-  BROWN = 'brown',
-  DEEPBROWN = 'deepbrown',
-  WHITE = 'white',
-  LIGHTGREY = 'lightgrey',
-  MEDIUMGREY = 'mediumgrey',
-  DEEPGREY = 'deepgrey',
-  BLACK = 'black',
-  YELLOWBG2 = 'yellowBg2',
-  YELLOWBG1 = 'yellowBg1',
+  RED = "red",
+  ORANGE = "orange",
+  YELLOW = "yellow",
+  GREEN = "green",
+  PALE = "pale",
+  LIGHTBROWN = "lightbrown",
+  BROWN = "brown",
+  DEEPBROWN = "deepbrown",
+  WHITE = "white",
+  LIGHTGREY = "lightgrey",
+  MEDIUMGREY = "mediumgrey",
+  DEEPGREY = "deepgrey",
+  BLACK = "black",
+  YELLOWBG2 = "yellowBg2",
+  YELLOWBG1 = "yellowBg1",
 }
 
 export const baseColors = {
@@ -52,7 +52,7 @@ export const baseColors = {
   [ColorStyles.BLACK]: "#222222",
   [ColorStyles.YELLOWBG2]: "#ffedcb",
   [ColorStyles.YELLOWBG1]: "#fffbf5",
-}
+};
 
 export const lightColors = {
   ...baseColors,
@@ -60,4 +60,4 @@ export const lightColors = {
 export const darkColors = {
   ...baseColors,
 };
-export default {}
+export default {};

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: 188px;
-`
+`;
 
 const StyledButton = styled.a`
   cursor: pointer;
@@ -33,64 +33,77 @@ const StyledButton = styled.a`
   justify-content: center;
   align-items: center;
   height: 56px;
-  background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]}
-`
+  background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
+`;
 
 const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
-  return account ? (isMobile ?
+  return account ? (
+    isMobile ? (
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
-          <Text mt="55px" textStyle="R_12R" color="greyscale.mediumgrey">Wallet Address</Text>
+          <Text mt="55px" textStyle="R_12R" color="greyscale.mediumgrey">
+            Wallet Address
+          </Text>
           <Flex>
-            <Text mt="2px" mr="4px" textStyle="R_18M" color="greyscale.black">{accountEllipsis}</Text>
-            <IconButton startIcon={<MoreNIcon />}/>
+            <Text mt="2px" mr="4px" textStyle="R_18M" color="greyscale.black">
+              {accountEllipsis}
+            </Text>
+            <IconButton startIcon={<MoreNIcon />} />
           </Flex>
         </Flex>
         <StyledButton href="/farm">
-          <Text textStyle="R_12M" color="greyscale.white">Net worth</Text>
+          <Text textStyle="R_12M" color="greyscale.white">
+            Net worth
+          </Text>
           <Flex ml="12px" alignItems="center">
-            <Text mr="7px" textStyle="R_12B" width="140px" color="greyscale.white">$132123123</Text>
+            <Text mr="7px" textStyle="R_12B" width="140px" color="greyscale.white">
+              $132123123
+            </Text>
             <IconButton startIcon={<ArrowRightGIcon />} />
           </Flex>
         </StyledButton>
-      </Wrapper> : <>
-        <Button
-            scale="32"
-            variant="light-brown"
-            textStyle="R_12B"
-            onClick={() => {
-              onPresentAccountModal();
-            }}
-          >
-          </Button>
-          <Button
-            ml="8px"
-            scale="32_icon"
-            minWidth="auto"
-            variant="deep-brown"
-            startIcon={<GnbMySIcon />}
-            onClick={() => {
-              onPresentAccountModal();
-            }}
-          >
-            <Text textStyle="R_12B" ml="6px">MY</Text>
-          </Button>
-      </>
+      </Wrapper>
     ) : (
-      <Flex width="100%" height="188px" alignItems="center" justifyContent="center">
+      <>
         <Button
-          scale={isMobile ? '40' : '32'}
-          variant="red"
+          scale="32"
+          variant="light-brown"
+          textStyle="R_12B"
           onClick={() => {
-            onPresentConnectModal();
+            onPresentAccountModal();
+          }}
+        ></Button>
+        <Button
+          ml="8px"
+          scale="32_icon"
+          minWidth="auto"
+          variant="deep-brown"
+          startIcon={<GnbMySIcon />}
+          onClick={() => {
+            onPresentAccountModal();
           }}
         >
-          Connect Wallet
+          <Text textStyle="R_12B" ml="6px">
+            MY
+          </Text>
         </Button>
-      </Flex>
+      </>
     )
+  ) : (
+    <Flex width="100%" height="188px" alignItems="center" justifyContent="center">
+      <Button
+        scale={isMobile ? "40" : "32"}
+        variant="red"
+        onClick={() => {
+          onPresentConnectModal();
+        }}
+      >
+        Connect Wallet
+      </Button>
+    </Flex>
+  );
 };
 
 export default React.memo(UserBlock, (prevProps, nextProps) => prevProps.account === nextProps.account);

@@ -91,5 +91,4 @@ export const BarProgress = styled.div<{ progress: number; isCurrentValueMaxValue
   width: ${({ progress, isCurrentValueMaxValue }) => (isCurrentValueMaxValue ? "calc(100% - 16px)" : `${progress}%`)};
   height: 10px;
   top: 18px;
-
 `;

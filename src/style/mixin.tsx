@@ -6,7 +6,7 @@ export const hexToRGB = (hex: string, alpha?: number): string => {
   const b = parseInt(hex.slice(5, 7), 16);
 
   return alpha ? `rgba(${r}, ${g}, ${b}, ${alpha})` : `rgba(${r}, ${g}, ${b})`;
-}
+};
 export const rmUnit = (str: string): number => {
   const matchNum = str.match(/\d+/gi);
   return matchNum && matchNum.length > 0 ? +matchNum[0] : 0;

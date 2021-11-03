@@ -10,9 +10,7 @@ import UserBlock from "./UserBlock";
 import { NavProps, PushedProps } from "../types";
 import { ColorStyles } from "@/theme";
 
-interface Props extends NavProps, PushedProps {
-
-}
+interface Props extends NavProps, PushedProps {}
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -46,30 +44,27 @@ const StyledNav = styled.nav`
   z-index: ${NAV_ZINDEX};
 `;
 
-const Nav: React.FC<Props> = ({
-  account,
-  login,
-  logout,
-  isMobile,
-  isPushed,
-  pushNav,
-}) => {
-  return isMobile ? <MobileNav>
-    <Box position="absolute" left={pxToRem(20)}>
-      <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
-    </Box>
-    <LogoMainFinixIcon />
-    <Box position="absolute" right={pxToRem(20)}>
-      <IconButton startIcon={<SettingIcon />} />
-    </Box>
-  </MobileNav> : <StyledNav>
-    <Chain />
-    <Flex position="absolute" right={pxToRem(60)}>
-      <IconButton mr="16px" startIcon={<SettingIcon />} />
-      <UserBlock isMobile={isMobile} account={account} login={login} logout={logout} />
-    </Flex>
-    {/* {profile && <Avatar profile={profile} />} */}
-  </StyledNav>;
+const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, pushNav }) => {
+  return isMobile ? (
+    <MobileNav>
+      <Box position="absolute" left={pxToRem(20)}>
+        <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
+      </Box>
+      <LogoMainFinixIcon />
+      <Box position="absolute" right={pxToRem(20)}>
+        <IconButton startIcon={<SettingIcon />} />
+      </Box>
+    </MobileNav>
+  ) : (
+    <StyledNav>
+      <Chain />
+      <Flex position="absolute" right={pxToRem(60)}>
+        <IconButton mr="16px" startIcon={<SettingIcon />} />
+        <UserBlock isMobile={isMobile} account={account} login={login} logout={logout} />
+      </Flex>
+      {/* {profile && <Avatar profile={profile} />} */}
+    </StyledNav>
+  );
 };
 
 export default Nav;

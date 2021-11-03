@@ -99,7 +99,7 @@ export const ResetCSSStyle = `
     border-color: transparent;
     color: transparent;
   }  
-`
+`;
 
 const ResetCSS = createGlobalStyle`${ResetCSSStyle}`;
 

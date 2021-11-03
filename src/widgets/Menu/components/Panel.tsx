@@ -23,25 +23,29 @@ const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
   width: ${SIDEBAR_WIDTH_FULL}px;
   height: 100vh;
   transition: transform 0.2s;
-  border-right: ${({ theme }) => `1px solid ${ hexToRGB(theme.colors[ColorStyles.PALE], 0.3) }`};
+  border-right: ${({ theme }) => `1px solid ${hexToRGB(theme.colors[ColorStyles.PALE], 0.3)}`};
   z-index: ${SIDEBAR_ZINDEX};
   overflow: initial;
 
-  ${({ isMobile, isPushed }) => isMobile && `
+  ${({ isMobile, isPushed }) =>
+    isMobile &&
+    `
     overflow-y: scroll;
     padding-top: 16px;
 
     width: 300px;
-    transform: translateX(${isPushed ? '0' : '-100%'});
+    transform: translateX(${isPushed ? "0" : "-100%"});
   `}
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  return <StyledPanel {...props}>
-    <PanelHeader {...props} />
-    <PanelBody {...props} />
-    <PanelFooter {...props} />
-  </StyledPanel>;
+  return (
+    <StyledPanel {...props}>
+      <PanelHeader {...props} />
+      <PanelBody {...props} />
+      <PanelFooter {...props} />
+    </StyledPanel>
+  );
 };
 
 export default Panel;

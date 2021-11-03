@@ -61,4 +61,4 @@ export interface NavProps extends UserProps {
   links?: Array<MenuEntry>;
 }
 
-export interface MenuProps extends Pick<PanelProps, 'langs' | 'setLang' | 'currentLang'>, Omit<NavProps, 'isMobile'> {}
+export interface MenuProps extends Pick<PanelProps, "langs" | "setLang" | "currentLang">, Omit<NavProps, "isMobile"> {}
