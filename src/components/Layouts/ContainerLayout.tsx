@@ -14,7 +14,7 @@ const Container = styled.div`
   margin: 0 ${pxToRem(20)};
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    margin-left: ${pxToRem(SIDEBAR_WIDTH_FULL)};
+    margin-left: ${SIDEBAR_WIDTH_FULL}px;
   }
   ${({ theme }) => theme.mediaQueries.xl} {
     width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL}px;
