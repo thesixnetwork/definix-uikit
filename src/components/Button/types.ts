@@ -2,7 +2,7 @@ import { ComponentProps, ElementType, ReactElement, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { LayoutProps, SpaceProps } from "styled-system";
 
-export enum Scales {
+export enum ButtonScales {
   // new
   S32 = "32",
   S32ICON = "32_icon",
@@ -16,7 +16,7 @@ export enum Scales {
   XS = "xs",
 };
 
-export enum Variants {
+export enum ButtonVariants {
   // new
   RED = "red",
   BROWN = "brown",
@@ -54,8 +54,8 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   as?: "a" | "button" | typeof Link;
   external?: boolean;
   isLoading?: boolean;
-  scale?: Scales | string;
-  variant?: Variants | string;
+  scale?: ButtonScales | string;
+  variant?: ButtonVariants | string;
   disabled?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;

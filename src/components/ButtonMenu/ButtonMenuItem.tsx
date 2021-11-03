@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
-import { BaseButtonProps, PolymorphicComponent, Variants } from "../Button/types";
+import { BaseButtonProps, PolymorphicComponent, ButtonVariants } from "../Button/types";
 import { ButtonMenuItemProps } from "./types";
 
 interface InactiveButtonProps extends BaseButtonProps {
@@ -18,7 +18,7 @@ const InactiveButton: PolymorphicComponent<InactiveButtonProps, "button"> = styl
 
 const ButtonMenuItem: PolymorphicComponent<ButtonMenuItemProps, "button"> = ({
   isActive = false,
-  variant = Variants.PRIMARY,
+  variant = ButtonVariants.PRIMARY,
   as,
   ...props
 }: ButtonMenuItemProps) => {
@@ -27,7 +27,7 @@ const ButtonMenuItem: PolymorphicComponent<ButtonMenuItemProps, "button"> = ({
       <InactiveButton
         forwardedAs={as}
         variant="tertiary"
-        colorKey={variant === Variants.PRIMARY ? "primary" : "textSubtle"}
+        colorKey={variant === ButtonVariants.PRIMARY ? "primary" : "textSubtle"}
         {...props}
       />
     );

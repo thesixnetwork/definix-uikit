@@ -8,7 +8,7 @@ import Flex from "../Box/Flex";
 import { Text } from "../Text";
 import { SettingIcon } from "../Icon";
 import Button from "./Button";
-import { Scales, Variants } from "./types";
+import { ButtonScales, ButtonVariants } from "./types";
 
 const viewScales = [Scales.S32, Scales.S36, Scales.S40];
 const viewVariants = [Variants.RED, Variants.BROWN, Variants.LIGHTBROWN, Variants.LINE];
