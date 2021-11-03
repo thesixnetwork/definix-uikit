@@ -74,7 +74,9 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
           onClick={() => {
             onPresentAccountModal();
           }}
-        >{accountEllipsis}</Button>
+        >
+          {accountEllipsis}
+        </Button>
         <Button
           ml="8px"
           scale={ButtonScales.S32ICON}
