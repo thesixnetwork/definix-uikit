@@ -15,8 +15,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
   top: 0;
   left: 0; */
   /* display: none; */
-  
-  
+
   // temp min-width
   min-width: 200px;
 

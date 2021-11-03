@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import GlobalStyle from "../../GlobalStyle";
 import { BaseLayout, CardsLayout, ContainerLayout } from ".";
-import Flex from '../Box/Flex'
+import Flex from "../Box/Flex";
 
 export default {
   title: "Components/Layouts",

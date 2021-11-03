@@ -37,7 +37,7 @@ const StyledNav = styled.nav`
   display: flex;
   /* left: ${SIDEBAR_WIDTH_FULL}px; */
   /* width: calc(100% - ${SIDEBAR_WIDTH_FULL}px); */
-  
+
   // temp max-width
   max-width: 1280px;
   width: 100%;

@@ -49,9 +49,7 @@ const ContainerLayout: React.FC = ({ children }) => {
     <Wrapper>
       <Container>
         <TopBackground />
-        <div style={{position: 'relative'}}>
-          {children}
-        </div>
+        <div style={{ position: "relative" }}>{children}</div>
       </Container>
     </Wrapper>
   );
