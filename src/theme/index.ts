@@ -31,3 +31,6 @@ export { default as light } from "./light";
 
 export { lightColors } from "./colors";
 export { darkColors } from "./colors";
+
+export { TextStyles, textStyle, getVariantTextStyle } from "./text";
+export type { TextStyleProps, TextStyleType } from "./text";

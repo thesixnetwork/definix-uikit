@@ -1,3 +1,5 @@
+import { ColorStyles } from "./colors";
+
 export type Breakpoints = string[];
 
 export type MediaQueries = {
@@ -32,6 +34,8 @@ export type Shadows = {
 export type Gradients = {
   bubblegum: string;
 };
+
+type ColorType = typeof ColorStyles;
 
 export type Colors = {
   main: {
