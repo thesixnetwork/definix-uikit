@@ -14,5 +14,5 @@ export const StyledLink = styled.a`
 export const StyledDescription = styled.p`
   font-size: 18px;
   line-height: 1.44;
-  color: ${({theme}) => theme.colors.mediumgrey};
+  color: ${({ theme }) => theme.colors.mediumgrey};
 `;

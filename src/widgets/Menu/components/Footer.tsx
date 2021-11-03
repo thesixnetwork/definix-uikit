@@ -19,7 +19,8 @@ const StyledNav = styled.div<{ isMobile: boolean }>`
   padding: 0 ${pxToRem(60)};
 
   ${({ isMobile }) =>
-    isMobile && `
+    isMobile &&
+    `
       padding: 0;
       margin: 0 -${pxToRem(20)};
       width: calc(100% + ${pxToRem(20 * 2)});
@@ -33,7 +34,8 @@ const Inner = styled.div<{ isMobile: boolean }>`
   padding: 30px 0 60px;
 
   ${({ isMobile }) =>
-    isMobile && `
+    isMobile &&
+    `
     padding: 20px 0 40px;
     flex-direction: column;
     flex-wrap: wrap-reverse;
@@ -52,7 +54,8 @@ const StyledFlex = styled(Flex)`
 const LeftFlex = styled(Flex)<{ isMobile: boolean }>`
   margin-top: 40px;
   ${({ isMobile, theme }) =>
-    isMobile && `
+    isMobile &&
+    `
     padding: 20px ${pxToRem(40)} 0;
     margin-top: 20px;
     border-top: 1px solid ${hexToRGB(theme.colors[ColorStyles.LIGHTGREY], 0.5)};
@@ -67,10 +70,22 @@ const Footer: React.FC<Props> = (props) => {
     <StyledNav {...props}>
       <Inner {...props}>
         <LeftFlex {...props}>
-          <LogoFooterSixIcon viewBox="0 0 86 48" width={props.isMobile ? '48' : '86'}  height={props.isMobile ? '27' : '48'} />
-          <StyledFlex ml={isMobile ? 0 : pxToRem(24)} mt={isMobile ? '9px' : 0}>
-            <Text textStyle={isMobile ? TextStyles.R_12R : TextStyles.R_14R} color={ColorStyles.MEDIUMGREY}>Copyright © 2021 <strong>SIX Network</strong>. All Right Reserved</Text>
-            <Text mt={isMobile ? '2px' : '6px'} textStyle={isMobile ? TextStyles.R_12R : TextStyles.R_14R} color={ColorStyles.MEDIUMGREY}>Audited By <strong>Certik</strong></Text>
+          <LogoFooterSixIcon
+            viewBox="0 0 86 48"
+            width={props.isMobile ? "48" : "86"}
+            height={props.isMobile ? "27" : "48"}
+          />
+          <StyledFlex ml={isMobile ? 0 : pxToRem(24)} mt={isMobile ? "9px" : 0}>
+            <Text textStyle={isMobile ? TextStyles.R_12R : TextStyles.R_14R} color={ColorStyles.MEDIUMGREY}>
+              Copyright © 2021 <strong>SIX Network</strong>. All Right Reserved
+            </Text>
+            <Text
+              mt={isMobile ? "2px" : "6px"}
+              textStyle={isMobile ? TextStyles.R_12R : TextStyles.R_14R}
+              color={ColorStyles.MEDIUMGREY}
+            >
+              Audited By <strong>Certik</strong>
+            </Text>
           </StyledFlex>
         </LeftFlex>
         <SocialLinks {...props} />
