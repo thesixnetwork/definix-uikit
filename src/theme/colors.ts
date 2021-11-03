@@ -56,7 +56,7 @@ export const baseColors = {
   [ColorStyles.YELLOWBG1]: "#fffbf5",
 };
 const customColors = {
-  [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 20),
+  [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 0.2),
 };
 
 export const lightColors = {
