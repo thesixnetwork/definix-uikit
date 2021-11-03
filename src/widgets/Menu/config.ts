@@ -104,11 +104,16 @@ export const socials = [
 
 export const MENU_HEIGHT = 80;
 export const MENU_ENTRY_HEIGHT = 40;
-export const MENU_MOBILE_HEIGHT = 56;
+
 export const SIDEBAR_WIDTH_FULL = 200;
 
+export const NAV_HEIGHT_PC = 80;
+export const NAV_HEIGHT_MOBILE = 56;
 
-export const MENU_ZINDEX = 90;
+export const INNER_MARGIN_PC = 60;
+export const INNER_MARGIN_MOBILE = 20;
+
+export const NAV_ZINDEX = 90;
 export const SIDEBAR_ZINDEX = 91;
 
 export const SIDEBAR_WIDTH_REDUCED = 56;
