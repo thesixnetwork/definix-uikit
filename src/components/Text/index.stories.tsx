@@ -39,7 +39,9 @@ export const Default: React.FC = () => {
           {key}
         </Text>
       ))}
-      <Text backgroundColor={ColorStyles.RED} bold>Bold text</Text>
+      <Text backgroundColor={ColorStyles.RED} bold>
+        Bold text
+      </Text>
       <Text small>Small text</Text>
       <Text fontSize="24px">Custom fontsize</Text>
       <Text color="main.red">Custom color</Text>

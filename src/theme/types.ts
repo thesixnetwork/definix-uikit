@@ -46,6 +46,6 @@ export type ZIndices = {
 
 export interface ExtendColorProps {
   color?: ColorStyles | string;
-  backgroundColor?: ColorStyles | string; 
-  bg?: ColorStyles | string; 
+  backgroundColor?: ColorStyles | string;
+  bg?: ColorStyles | string;
 }
