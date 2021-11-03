@@ -7,6 +7,7 @@ import { CloseIcon, LogoMainFinixIcon } from "@/components/Icon";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
 import { hexToRGB } from "@/style/mixin";
+import { ColorStyles } from "@/theme";
 
 interface Props extends PanelProps, PushedProps, UserProps {}
 
@@ -15,7 +16,7 @@ const MobileHeader = styled(Flex)`
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
-  border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors.greyscale.lightgrey, 0.5)};
+  border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors[ColorStyles.LIGHTGREY], 0.5)};
 `
 
 const StyledHeader = styled(Flex)`

@@ -8,6 +8,7 @@ import { hexToRGB, pxToRem } from "../../../style/mixin";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
 import { NavProps, PushedProps } from "../types";
+import { ColorStyles } from "@/theme";
 
 interface Props extends NavProps, PushedProps {
 
@@ -20,11 +21,11 @@ const MobileNav = styled.nav`
   width: 100%;
   padding: 0 ${pxToRem(20)};
   height: ${MENU_MOBILE_HEIGHT}px;
-  border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors.brownscale.pale, 0.3)};
+  border-bottom: 1px solid ${({ theme }) => hexToRGB(theme.colors[ColorStyles.PALE], 0.3)};
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.greyscale.white};
+  background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   z-index: ${MENU_ZINDEX};
 
   /* ${({ theme }) => theme.mediaQueries.lg} {

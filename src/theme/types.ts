@@ -35,38 +35,9 @@ export type Gradients = {
   bubblegum: string;
 };
 
-type ColorType = typeof ColorStyles;
-
 export type Colors = {
-  main: {
-    red: string;
-  },
-  sub: {
-    orange: string;
-    yellow: string;
-    green: string;
-  },
-  brownscale: {
-    pale: string;
-    lightbrown: string;
-    brown: string;
-    deepbrown: string;
-  },
-  greyscale: {
-    white: string;
-    lightgrey: string;
-    mediumgrey: string;
-    deepgrey: string;
-    black: string;
-  },
-  bg: {
-    yellow: string[];
-  }
-
-  // temp
-  red: string;
-  yellow: string;
-};
+  [key in ColorStyles]: string;
+} & Record<string, string>;
 
 export type ZIndices = {
   dropdown: number;

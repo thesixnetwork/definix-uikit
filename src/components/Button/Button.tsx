@@ -1,3 +1,4 @@
+import { ColorStyles } from "@/theme";
 import React, { cloneElement, ElementType, isValidElement } from "react";
 import styled, { keyframes } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
@@ -23,7 +24,7 @@ const bounce = keyframes`
 const StyledLoadingDot = styled.div<LoadingDot>`
   width: 5px;
   height: 5px;
-  background-color: ${({ theme }) => theme.colors.greyscale.white};
+  background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   border-radius: 5px;
   animation: ${bounce} 1.5s ${({ index }) => (index * 0.2)}s infinite;
 `

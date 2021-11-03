@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import { ResetCSSStyle } from "./ResetCSS";
+import { ColorStyles } from "./theme/colors";
 import { TypoStyle } from "./TypoStyle";
 
 const GlobalStyle = createGlobalStyle`
@@ -10,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.greyscale.white};
+    background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
     font-family: 'Roboto',sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,20 +23,20 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .btn-secondary-disable:disabled {
-    background: ${({ theme }) => theme.colors.greyscale.white};
-    border-color: ${({ theme }) => theme.colors.greyscale.white};
-    color: ${({ theme }) => theme.colors.main.red};
+    background: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
+    border-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
+    color: ${({ theme }) => theme.colors[ColorStyles.RED]};
 
-    svg { fill: ${({ theme }) => theme.colors.greyscale.white}; }
+    svg { fill: ${({ theme }) => theme.colors[ColorStyles.WHITE]}; }
   }
 
   .text-bold { font-weight: 600 !important; }
   .text-right { text-align: right; }
   .text-left { text-align: left; }
 
-  .color-primary { color: ${({ theme }) => theme.colors.main.red} !important; }
-  .color-text { color: ${({ theme }) => theme.colors.main.red} !important; }
-  .color-disable { color: ${({ theme }) => theme.colors.greyscale.white} !important; }
+  .color-primary { color: ${({ theme }) => theme.colors[ColorStyles.RED]} !important; }
+  .color-text { color: ${({ theme }) => theme.colors[ColorStyles.RED]} !important; }
+  .color-disable { color: ${({ theme }) => theme.colors[ColorStyles.WHITE]} !important; }
 
   .pos-relative { position: relative; }
   .pos-static { position: static; }
@@ -78,7 +79,7 @@ const GlobalStyle = createGlobalStyle`
           content: '';
           width: 8px;
           height: 8px;
-          background: ${({ theme }) => theme.colors.greyscale.white};
+          background: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
           border-radius: ${({ theme }) => theme.radii.circle};
         }
       }
@@ -133,15 +134,15 @@ const GlobalStyle = createGlobalStyle`
     .col-3 { width: 25%; }
   }
 
-  .bd { border: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; }
-  .bd-t { border-top: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; }
-  .bd-r { border-right: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; }
-  .bd-b { border-bottom: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; }
-  .bd-l { border-left: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; }
-  .bd-x { border-right: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; border-left: 1px solid ${({ theme }) =>
-  theme.colors.greyscale.lightgrey}; }
-  .bd-y { border-top: 1px solid ${({ theme }) => theme.colors.greyscale.lightgrey}; border-bottom: 1px solid ${({ theme }) =>
-  theme.colors.greyscale.lightgrey}; }
+  .bd { border: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-t { border-top: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-r { border-right: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-b { border-bottom: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-l { border-left: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-x { border-right: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; border-left: 1px solid ${({ theme }) =>
+  theme.colors[ColorStyles.LIGHTGREY]}; }
+  .bd-y { border-top: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]}; border-bottom: 1px solid ${({ theme }) =>
+  theme.colors[ColorStyles.LIGHTGREY]}; }
   .bd-t-n { border-top: none !important; }
   .bd-r-n { border-right: none !important; }
   .bd-b-n { border-bottom: none !important; }

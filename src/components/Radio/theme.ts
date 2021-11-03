@@ -1,10 +1,10 @@
-import { darkColors, lightColors } from "../../theme/colors";
+import { darkColors, lightColors, ColorStyles } from "../../theme/colors";
 import { RadioTheme } from "./types";
 
 export const light: RadioTheme = {
-  handleBackground: lightColors.greyscale.white,
+  handleBackground: lightColors[ColorStyles.WHITE],
 };
 
 export const dark: RadioTheme = {
-  handleBackground: darkColors.greyscale.white,
+  handleBackground: darkColors[ColorStyles.WHITE],
 };
