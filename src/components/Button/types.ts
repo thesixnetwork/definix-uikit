@@ -20,8 +20,8 @@ export const variants = {
   // new
   RED: "red",
   BROWN: "brown",
-  LIGHT_BROWN: "light-brown",
-  DEEP_BROWN: "deep-brown",
+  LIGHTBROWN: "lightbrown",
+  DEEPBROWN: "deepbrown",
   LINE: "line",
   TRANSPARENT: "transparent",
 
