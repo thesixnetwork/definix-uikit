@@ -20,22 +20,22 @@ import { hexToRGB } from "@/style/mixin";
 */
 
 export enum ColorStyles {
-  RED = 'red',
-  ORANGE = 'orange',
-  YELLOW = 'yellow',
-  GREEN = 'green',
-  PALE = 'pale',
-  LIGHTBROWN = 'lightbrown',
-  BROWN = 'brown',
-  DEEPBROWN = 'deepbrown',
-  WHITE = 'white',
-  LIGHTGREY = 'lightgrey',
-  MEDIUMGREY = 'mediumgrey',
-  DEEPGREY = 'deepgrey',
-  BLACK = 'black',
-  YELLOWBG2 = 'yellowBg2',
-  YELLOWBG1 = 'yellowBg1',
-  LIGHTGREY_20 = 'lightGrey20'
+  RED = "red",
+  ORANGE = "orange",
+  YELLOW = "yellow",
+  GREEN = "green",
+  PALE = "pale",
+  LIGHTBROWN = "lightbrown",
+  BROWN = "brown",
+  DEEPBROWN = "deepbrown",
+  WHITE = "white",
+  LIGHTGREY = "lightgrey",
+  MEDIUMGREY = "mediumgrey",
+  DEEPGREY = "deepgrey",
+  BLACK = "black",
+  YELLOWBG2 = "yellowBg2",
+  YELLOWBG1 = "yellowBg1",
+  LIGHTGREY_20 = "lightGrey20",
 }
 
 export const baseColors = {
@@ -54,10 +54,10 @@ export const baseColors = {
   [ColorStyles.BLACK]: "#222222",
   [ColorStyles.YELLOWBG2]: "#ffedcb",
   [ColorStyles.YELLOWBG1]: "#fffbf5",
-}
+};
 const customColors = {
-  [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 20)
-}
+  [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 20),
+};
 
 export const lightColors = {
   ...baseColors,
