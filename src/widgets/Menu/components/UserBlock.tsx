@@ -5,7 +5,7 @@ import { IconButton } from "@/components/Button";
 import Button from "@/components/Button/Button";
 import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
-import { ArrowRightGIcon, MoreNIcon } from "@/components/Icon";
+import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from "@/components/Icon";
 import styled from "styled-components";
 import { ColorStyles } from "@/theme";
 
@@ -39,7 +39,7 @@ const StyledButton = styled.a`
 const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
-  return account ? (
+  return account ? (isMobile ?
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
           <Text mt="55px" textStyle="R_12R" color="greyscale.mediumgrey">Wallet Address</Text>
@@ -55,28 +55,29 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
             <IconButton startIcon={<ArrowRightGIcon />} />
           </Flex>
         </StyledButton>
-        {/* <Button
-          scale="32"
-          variant="light-brown"
-          textStyle="R_12B"
-          onClick={() => {
-            onPresentAccountModal();
-          }}
-        >
-        </Button>
+      </Wrapper> : <>
         <Button
-          ml="8px"
-          scale="32_icon"
-          minWidth="auto"
-          variant="deep-brown"
-          startIcon={<GnbMySIcon />}
-          onClick={() => {
-            onPresentAccountModal();
-          }}
-        >
-          <Text textStyle="R_12B" ml="6px">MY</Text>
-        </Button> */}
-      </Wrapper>
+            scale="32"
+            variant="light-brown"
+            textStyle="R_12B"
+            onClick={() => {
+              onPresentAccountModal();
+            }}
+          >
+          </Button>
+          <Button
+            ml="8px"
+            scale="32_icon"
+            minWidth="auto"
+            variant="deep-brown"
+            startIcon={<GnbMySIcon />}
+            onClick={() => {
+              onPresentAccountModal();
+            }}
+          >
+            <Text textStyle="R_12B" ml="6px">MY</Text>
+          </Button>
+      </>
     ) : (
       <Flex width="100%" height="188px" alignItems="center" justifyContent="center">
         <Button

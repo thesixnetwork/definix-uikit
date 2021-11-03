@@ -23,7 +23,6 @@ const StyledHeader = styled(Flex)`
   display: none;
   align-items: center;
   justify-content: center;
-
 `
 
 const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
