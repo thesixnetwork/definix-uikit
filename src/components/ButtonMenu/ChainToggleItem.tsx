@@ -67,7 +67,7 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
         }
         {...props}
       >
-        <StyledText ml="7px" color="greyscale.deepgrey" textStyle="R_12M">
+        <StyledText ml="7px" color={ColorStyles.DEEPGREY} textStyle="R_12M">
           {label}
         </StyledText>
       </InactiveButton>
