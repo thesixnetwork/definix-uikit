@@ -8,6 +8,22 @@ const GlobalStyle = createGlobalStyle`
   ${TypoStyle}
   html {
     font-size: 16px;
+
+    ${({ theme }) => theme.mediaQueries.xs} {
+      font-size: 14px;
+    }
+
+    ${({ theme }) => theme.mediaQueries.sm} {
+      font-size: 16px;
+    }
+
+    ${({ theme }) => theme.mediaQueries.md} {
+      font-size: 12px;
+    }
+
+    ${({ theme }) => theme.mediaQueries.xl} {
+      font-size: 18px;
+    }
   }
 
   body {
