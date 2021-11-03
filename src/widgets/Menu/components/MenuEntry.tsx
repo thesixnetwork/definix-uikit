@@ -3,6 +3,7 @@ import styled, { DefaultTheme } from "styled-components";
 import { color, space } from "styled-system";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { getVariantTextStyle, TextStyles, TextStyleProps } from "@/theme/text";
+import { ColorStyles } from "@/theme";
 
 export interface Props extends TextStyleProps, HTMLAttributes<HTMLDivElement> {
   secondary?: boolean;
@@ -24,9 +25,9 @@ const MenuEntry = styled.div<Props>`
   height: ${MENU_ENTRY_HEIGHT}px;
   padding: 8px 12px;
   border-radius: 8px;
-  background-color: ${({ isActive, theme }) => isActive ? theme.colors.main.red : 'transparent'};
+  background-color: ${({ isActive, theme }) => isActive ? theme.colors[ColorStyles.RED] : 'transparent'};
 
-  color: ${({ isActive, theme }) => isActive ? theme.colors.greyscale.white : theme.colors.greyscale.deepgrey};
+  color: ${({ isActive, theme }) => isActive ? theme.colors[ColorStyles.WHITE] : theme.colors[ColorStyles.DEEPGREY]};
 
   a {
     display: flex;

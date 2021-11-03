@@ -1,3 +1,4 @@
+import { ColorStyles } from "@/theme";
 import styled, { DefaultTheme } from "styled-components";
 import { Variant } from "../Button/types";
 
@@ -7,7 +8,7 @@ type StyledButtonMenuProps = {
 };
 
 const getBackgroundColor = ({ theme }: StyledButtonMenuProps) => {
-  return theme.colors.greyscale.white;
+  return theme.colors[ColorStyles.WHITE];
 };
 
 const StyledButtonMenu = styled.div<{ variant: Variant }>`

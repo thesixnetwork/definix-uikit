@@ -9,6 +9,7 @@ import { IconButton } from "../Button";
 import { CloseIcon } from "../Svg";
 import Flex from "../Box/Flex";
 import { AlertProps, variants } from "./types";
+import { ColorStyles } from "@/theme";
 
 interface ThemedIconLabel {
   variant: AlertProps["variant"];
@@ -26,7 +27,7 @@ const getThemeColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
     //   return theme.colors.success;
     // case variants.INFO:
     default:
-      return theme.colors.greyscale.white;
+      return theme.colors[ColorStyles.WHITE];
   }
 };
 

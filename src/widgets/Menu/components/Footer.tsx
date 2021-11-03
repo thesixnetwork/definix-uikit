@@ -4,12 +4,13 @@ import { Flex, Text } from "../../..";
 import { pxToRem } from "../../../style/mixin";
 import { LogoFooterSixIcon } from "../../../components/Icon";
 import SocialLinks from "./SocialLinks";
+import { ColorStyles } from "@/theme";
 
 const StyledNav = styled.div`
   position: relative;
   width: 100%;
   padding: 0 ${pxToRem(60)};
-  background-color: ${({ theme }) => theme.colors.greyscale.white};
+  background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
 `;
 
 const Inner = styled.div`

@@ -17,34 +17,6 @@
   --05-bg-bg-yellow-01: #fffbf5;
 }
 */
-export const baseColors = {
-  main: {
-    red: '#ff5532',
-  },
-  sub: {
-    orange: '#ff6828',
-    yellow: '#fea948',
-    green: '#02a1a1',
-  },
-  brownscale: {
-    pale: '#dad0c5',
-    lightbrown: '#b4a9a8',
-    brown: '#5e515f',
-    deepbrown: '#413343',
-  },
-  greyscale: {
-    white: '#ffffff',
-    lightgrey: '#e0e0e0',
-    mediumgrey: '#999999',
-    deepgrey: '#666666',
-    black: '#222222',
-  },
-  bg: {
-    yellow: ['#fffbf5', '#ffedcb']
-  },
-  red: '#ff5532',
-  yellow: '#fea948',
-};
 
 export enum ColorStyles {
   RED = 'red',
@@ -64,7 +36,7 @@ export enum ColorStyles {
   YELLOWBG1 = 'yellowBg1',
 }
 
-export const colors = {
+export const baseColors = {
   [ColorStyles.RED]: "#ff5532",
   [ColorStyles.ORANGE]: "#ff6828",
   [ColorStyles.YELLOW]: "#fea948",
@@ -84,10 +56,8 @@ export const colors = {
 
 export const lightColors = {
   ...baseColors,
-  // ...colors,
 };
 export const darkColors = {
   ...baseColors,
-  // ...colors,
 };
 export default {}

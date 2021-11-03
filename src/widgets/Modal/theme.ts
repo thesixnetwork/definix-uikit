@@ -1,10 +1,10 @@
-import { darkColors, lightColors } from "../../theme/colors";
+import { darkColors, lightColors, ColorStyles } from "../../theme/colors";
 import { ModalTheme } from "./types";
 
 export const light: ModalTheme = {
-  background: lightColors.greyscale.white,
+  background: lightColors[ColorStyles.WHITE],
 };
 
 export const dark: ModalTheme = {
-  background: darkColors.greyscale.black,
+  background: darkColors[ColorStyles.WHITE],
 };

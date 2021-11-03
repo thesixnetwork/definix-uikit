@@ -4,6 +4,7 @@ import { CardRibbonProps } from "./types";
 import { spacing } from "@/theme/base";
 import { textStyle } from "@/theme/text";
 import { pxToRem } from "@/style/mixin";
+import { ColorStyles } from "@/theme";
 
 interface StyledCardRibbonProps extends CardRibbonProps {
   theme: DefaultTheme;
@@ -11,7 +12,7 @@ interface StyledCardRibbonProps extends CardRibbonProps {
 
 // background-color: ${({ variantColor = "yellow", theme }) => theme.colors[variantColor]};
 const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
-  background-color: ${({ theme }) => theme.colors.yellow};
+  background-color: ${({ theme }) => theme.colors[ColorStyles.YELLOWBG1]};
   padding: ${pxToRem(5)} ${pxToRem(spacing.S_20)};
   position: absolute;
   left: unset;

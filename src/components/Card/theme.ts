@@ -1,11 +1,10 @@
-import { darkColors, lightColors } from "../../theme/colors";
+import { darkColors, lightColors, ColorStyles } from "../../theme/colors";
 import { shadows } from "../../theme/base";
-import { baseColors } from "../../theme/colors";
 import { CardTheme } from "./types";
 
 export const light: CardTheme = {
-  background: lightColors.greyscale.white,
-  boxShadow: `0px 0px 0px 1px ${baseColors.bg.yellow[1]}, 0 12px 12px 0 rgba(254, 169, 72, 0.2)`,
+  background: lightColors[ColorStyles.WHITE],
+  boxShadow: `0px 0px 0px 1px ${lightColors[ColorStyles.YELLOWBG1]}, 0 12px 12px 0 rgba(254, 169, 72, 0.2)`,
   boxShadowActive: shadows.active,
   boxShadowSuccess: shadows.success,
   boxShadowWarning: shadows.warning,
@@ -14,7 +13,7 @@ export const light: CardTheme = {
 };
 
 export const dark: CardTheme = {
-  background: darkColors.greyscale.white,
+  background: darkColors[ColorStyles.WHITE],
   boxShadow: "0 12px 12px 0 rgba(254, 169, 72, 0.2)",
   boxShadowActive: shadows.active,
   boxShadowSuccess: shadows.success,

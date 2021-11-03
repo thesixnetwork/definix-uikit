@@ -7,6 +7,7 @@ import { useWalletModal } from "../../WalletModal";
 import { Login } from "../../WalletModal/types";
 import { ArrowRightGIcon, MoreNIcon } from "@/components/Icon";
 import styled from "styled-components";
+import { ColorStyles } from "@/theme";
 
 interface Props {
   isMobile: boolean;
@@ -32,7 +33,7 @@ const StyledButton = styled.a`
   justify-content: center;
   align-items: center;
   height: 56px;
-  background-color: ${({ theme }) => theme.colors.brownscale.deepbrown}
+  background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]}
 `
 
 const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {

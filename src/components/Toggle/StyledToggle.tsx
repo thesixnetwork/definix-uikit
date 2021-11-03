@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { scales } from "../Checkbox/types";
 import { ToggleProps, HandleProps, InputProps, ScaleKeys } from "./types";
-import { baseColors } from "@/theme/colors";
+import { ColorStyles } from "@/theme";
 
 const scaleKeyValues = {
   sm: {
@@ -65,7 +65,7 @@ const StyledToggle = styled.div<ToggleProps>`
   position: relative;
   transition: background-color 200ms;
   width: ${getScale("toggleWidth")};
-  background-color: ${({ checked }) => (checked ? baseColors.main.red : baseColors.brownscale.pale)};
+  background-color: ${({ checked, theme }) => (checked ? theme.colors[ColorStyles.RED] : theme.colors[ColorStyles.PALE])};
 `;
 
 export default StyledToggle;
