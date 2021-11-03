@@ -27,24 +27,12 @@ const getBoxShadow = ({ isActive, isSuccess, isWarning, theme }: StyledCardProps
   return theme.card.boxShadow;
 };
 
-const getBoxBG = ({ theme, bgColor }: {
-  theme: DefaultTheme;
-  bgColor?: string;
-}) => {
-  if (bgColor && !!bgColor.length) {
-    return bgColor;
-  }
-  return theme.card.background
-}
-
 const StyledCard = styled.div<StyledCardProps>`
-  background-color: ${getBoxBG};
-  border: ${({ theme }) => theme.card.boxShadow};
+  background-color: ${({ theme }) => theme.card.background};
   border-radius: ${pxToRem(spacing.S_16)};
   box-shadow: ${getBoxShadow};
   overflow: hidden;
   position: relative;
-
   ${space}
 `;
 
