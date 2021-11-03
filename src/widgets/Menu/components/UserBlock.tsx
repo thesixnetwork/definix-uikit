@@ -94,7 +94,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
       </>
     )
   ) : (
-    <Flex width="100%" height="188px" alignItems="center" justifyContent="center">
+    <Flex width="100%" height={isMobile ? "188px" : "auto"} alignItems="center" justifyContent="center">
       <Button
         scale={isMobile ? ButtonScales.S40 : ButtonScales.S32}
         variant={ButtonVariants.RED}

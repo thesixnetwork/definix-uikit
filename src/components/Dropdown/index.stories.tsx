@@ -4,7 +4,7 @@ import Flex from "../Box/Flex";
 import Dropdown from "./Dropdown";
 
 export default {
-  title: "Components/Dropdown",
+  title: "Components/Dropdown[NEW]",
   component: Dropdown,
   argTypes: {},
 };

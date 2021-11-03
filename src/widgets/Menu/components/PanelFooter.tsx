@@ -12,10 +12,12 @@ import { PanelProps, PushedProps } from "../types";
 interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
-  flex: none;
-  padding: 8px 4px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-top: solid 2px rgba(133, 133, 133, 0.1);
+  position: fixed;
+  bottom: 20px;
+  height: 40px;
+  background-color: rgba(255, 255, 0, .3);
+  width: 100%;
+  z-index: 1;
 `;
 
 const SettingsEntry = styled.div`
@@ -35,15 +37,15 @@ const SettingsEntry = styled.div`
 // `;
 
 const PanelFooter: React.FC<Props> = ({ isPushed, pushNav, currentLang, langs, setLang }) => {
-  if (!isPushed) {
-    return (
-      <Container>
-        <IconButton variant="text" onClick={() => pushNav(true)}>
-          <CogIcon />
-        </IconButton>
-      </Container>
-    );
-  }
+  // if (!isPushed) {
+  //   return (
+  //     <Container>
+  //       <IconButton variant="text" onClick={() => pushNav(true)}>
+  //         <CogIcon />
+  //       </IconButton>
+  //     </Container>
+  //   );
+  // }
 
   return (
     <Container>
