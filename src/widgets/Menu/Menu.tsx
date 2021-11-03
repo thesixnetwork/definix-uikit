@@ -14,10 +14,17 @@ import { ContainerLayout } from "../..";
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import Flex from "../../components/Box/Flex"
 
 const Inner = styled.div<{ isMobile: boolean }>`
-  padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
-  outline: 1px solid blue;
+  display: flex;
+  flex: 1 1 0;
+  justify-content: center;
+  width: 100%;
+  border: 1px solid blue;
+  padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)};
+  overflow: auto;
+
   ${({ isMobile }) =>
     isMobile &&
     `
@@ -50,22 +57,28 @@ const Menu: React.FC<MenuProps> = ({
         account={account}
         logout={logout}
       />
-      <Panel
-        isMobile={isMobile}
-        isPushed={isPushed}
-        // isDark={isDark}
-        // toggleTheme={toggleTheme}
-        langs={langs}
-        setLang={setLang}
-        currentLang={currentLang}
-        pushNav={setIsPushed}
-        links={links || defaultLinks}
-        login={login}
-        account={account}
-        logout={logout}
-      />
-      <Inner isMobile={isMobile}>{children}</Inner>
-      <Footer isMobile={isMobile} />
+      <Flex flex="1 1 0">
+        <Panel
+          isMobile={isMobile}
+          isPushed={isPushed}
+          // isDark={isDark}
+          // toggleTheme={toggleTheme}
+          langs={langs}
+          setLang={setLang}
+          currentLang={currentLang}
+          pushNav={setIsPushed}
+          links={links || defaultLinks}
+          login={login}
+          account={account}
+          logout={logout}
+        />
+        <Flex flexDirection="column" flex="1 1 0" alignItems="center">
+          <Inner isMobile={isMobile}>
+            {children}
+          </Inner>
+          <Footer isMobile={isMobile} />
+        </Flex>
+      </Flex>
     </ContainerLayout>
   );
 };
