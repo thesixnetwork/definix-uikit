@@ -6,7 +6,7 @@ import { hexToRGB, pxToRem } from "@/style/mixin";
 import { LogoFooterSixIcon } from "@/components/Icon";
 import SocialLinks from "./SocialLinks";
 import { ColorStyles, TextStyles } from "@/theme";
-import { SIDEBAR_WIDTH_FULL } from "../config";
+import { SIDEBAR_WIDTH_FULL_PC } from "../config";
 
 interface Props {
   isMobile: boolean;
@@ -15,8 +15,8 @@ interface Props {
 const StyledFooter = styled.div<{ isMobile: boolean }>`
   position: relative;
   overflow: hidden;
-  left: ${SIDEBAR_WIDTH_FULL}px;
-  width: calc(100% - ${SIDEBAR_WIDTH_FULL}px);
+  left: ${SIDEBAR_WIDTH_FULL_PC}px;
+  width: calc(100% - ${SIDEBAR_WIDTH_FULL_PC}px);
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
 
   ${({ isMobile }) =>
@@ -40,7 +40,7 @@ const Inner = styled.div<{ isMobile: boolean }>`
     flex-direction: column;
     flex-wrap: wrap-reverse;
     justify-content: stretch;
-
+ 
     > div {
       width: 100%;
     }

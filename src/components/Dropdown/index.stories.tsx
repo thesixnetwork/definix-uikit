@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button/Button";
 import Flex from "../Box/Flex";
 import Dropdown from "./Dropdown";
+import DropdownItem from "./DropdownItem";
+import { ButtonScales } from "../Button";
 
 export default {
   title: "Components/Dropdown[NEW]",
@@ -10,30 +12,35 @@ export default {
 };
 
 export const Default: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
-      <Dropdown target={<Button>Hover</Button>}>
-        {[...Array(30)].map(() => (
-          <div>Content</div>
+    <div style={{
+      display: 'flex'
+    }}>
+      <div style={{
+        position: 'relative',
+        left: '100px',
+        top: '500px',
+        marginLeft: '100px'
+      }}>
+      <Dropdown isOpen={isOpen} target={<Button onClick={() => setIsOpen(!isOpen)} scale={ButtonScales.S40}>Hover</Button>} position="top" onItemClick={(index) => console.log(index)}>
+        {[...Array(30)].map((value, index) => (
+          <DropdownItem key={index}>Content Content Content Content</DropdownItem>
         ))}
       </Dropdown>
+      </div>
+      <div style={{
+        position: 'relative',
+        left: '100px',
+        marginTop: '100px',
+        marginLeft: '100px'
+      }}>
+      <Dropdown defaultIndex={2} isOpen={isOpen} target={<Button onClick={() => setIsOpen(!isOpen)} scale={ButtonScales.S40}>Hover</Button>} position="bottom" onItemClick={(index) => console.log(index)}>
+        {[...Array(30)].map((value, index) => (
+          <DropdownItem key={index}>Content</DropdownItem>
+        ))}
+      </Dropdown>
+      </div>
     </div>
-  );
-};
-
-export const Top: React.FC = () => {
-  return (
-    <Flex justifyContent="space-between" style={{ marginTop: "400px" }}>
-      <Dropdown position="top-right" target={<Button>Top right</Button>}>
-        {[...Array(20)].map(() => (
-          <div>Content</div>
-        ))}
-      </Dropdown>
-      <Dropdown position="top" target={<Button>Top</Button>}>
-        {[...Array(20)].map(() => (
-          <div>Content</div>
-        ))}
-      </Dropdown>
-    </Flex>
   );
 };

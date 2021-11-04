@@ -15,11 +15,13 @@ const Container = styled.div`
   position: fixed;
   bottom: 20px;
   height: 40px;
-  background-color: rgba(255, 255, 0, 0.3);
+  background-color: ${({ theme }) => theme.colors.yellowBg1};
   width: ${SIDEBAR_WIDTH_FULL_PC}px;
   z-index: 1;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
+    position: relative;
+    bottom: 0;
     width: ${SIDEBAR_WIDTH_FULL_MOBILE}px;
   }
 `;

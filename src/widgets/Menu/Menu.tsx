@@ -9,7 +9,7 @@ import {
   INNER_MARGIN_PC,
   INNER_MARGIN_MOBILE,
   links as defaultLinks,
-  SIDEBAR_WIDTH_FULL,
+  SIDEBAR_WIDTH_FULL_PC,
 } from "./config";
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
@@ -27,14 +27,14 @@ const Container = styled.div`
   margin: 0 ${pxToRem(20)};
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    margin-left: ${SIDEBAR_WIDTH_FULL}px;
+    margin-left: ${SIDEBAR_WIDTH_FULL_PC}px;
   }
   ${({ theme }) => theme.mediaQueries.xl} {
-    width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL}px;
-    max-width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL}px;
+    width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL_PC}px;
+    max-width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL_PC}px;
   }
 
-  @media (min-width: ${breakpointMap.xl + SIDEBAR_WIDTH_FULL}px) {
+  @media (min-width: ${breakpointMap.xl + SIDEBAR_WIDTH_FULL_PC}px) {
     margin: 0 auto;
   }
 `;

@@ -28,10 +28,6 @@ const StyledHeader = styled(Flex)`
 const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
   return isMobile ? (
     <MobileHeader>
-      <Flex pl="4px" width="100%" alignItems="center" justifyContent="space-between">
-        <Chain toggleScale="sm" />
-        <IconButton startIcon={<CloseIcon />} onClick={() => pushNav(false)} />
-      </Flex>
       <UserBlock isMobile={isMobile} {...props} />
     </MobileHeader>
   ) : (

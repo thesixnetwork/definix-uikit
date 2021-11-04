@@ -1,50 +1,55 @@
-import React from "react";
+import React, { useState, Children, ReactElement, cloneElement } from "react";
 import styled from "styled-components";
 import { DropdownProps, PositionProps, Position } from "./types";
 
-const getLeft = ({ position }: PositionProps) => {
-  if (position === "top-right") {
-    return "100%";
-  }
-  return "50%";
-};
+const DropdownContent = styled.div<{ position: Position, isOpen: boolean }>`
+  display: ${({ isOpen }) => isOpen ? 'block' : 'none'};
 
-const getBottom = ({ position }: PositionProps) => {
-  if (position === "top" || position === "top-right") {
-    return "100%";
-  }
-  return "auto";
-};
+  border-radius: 8px;
+  box-shadow: 0 4px 4px 0 rgba(34, 34, 34, 0.1);
+  border: solid 1px ${({ theme }) => theme.colors.lightgrey};
+  background-color: ${({ theme }) => theme.colors.white};
 
-const DropdownContent = styled.div<{ position: Position }>`
-  width: max-content;
-  display: none;
+  min-width: 100%;
   flex-direction: column;
   position: absolute;
-  transform: translate(-50%, 0);
-  left: ${getLeft};
-  bottom: ${getBottom};
-  background-color: ${({ theme }) => theme.nav.background};
-  box-shadow: ${({ theme }) => theme.shadows.level1};
-  padding: 16px;
-  max-height: 500px;
+  left: 0;
+  max-height: 400px;
   overflow-y: auto;
   z-index: ${({ theme }) => theme.zIndices.dropdown};
-  border-radius: ${({ theme }) => theme.radii.small};
+
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  ${({ position }) => `
+    ${position === 'top' ? 'bottom' : 'top'}: 100%;
+    margin-${position === 'top' ? 'bottom' : 'top'}: 4px;
+  `}
 `;
 
 const Container = styled.div`
   position: relative;
-  &:hover ${DropdownContent}, &:focus-within ${DropdownContent} {
-    display: flex;
-  }
+  width: max-content;
+  height: max-content;
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ target, position = "bottom", children }) => {
+const Dropdown: React.FC<DropdownProps> = ({ defaultIndex, isOpen, target, position = "bottom", children, onItemClick }) => {
+  const [activeIndex, setActiveIndex] = useState(defaultIndex || 0);
   return (
     <Container>
       {target}
-      <DropdownContent position={position}>{children}</DropdownContent>
+      <DropdownContent position={position} isOpen={isOpen}>
+        {Children.map(children, (child: ReactElement, index) => {
+          return cloneElement(child, {
+            isActive: activeIndex === index,
+            onClick: () => {
+              setActiveIndex(index);
+              onItemClick && onItemClick(index);
+            },
+          });
+        })}
+      </DropdownContent>
     </Container>
   );
 };
