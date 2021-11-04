@@ -12,7 +12,7 @@ import { ButtonScales, ButtonVariants } from "./types";
 import { TextStyles } from "../../theme/text";
 import DropdownButton from "./DropdownButton";
 
-const viewScales = [ButtonScales.S32, ButtonScales.S36, ButtonScales.S40];
+const viewScales = [ButtonScales.S32, ButtonScales.S36, ButtonScales.S40, ButtonScales.S48];
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
 
 export default {

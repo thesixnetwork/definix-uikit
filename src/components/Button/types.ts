@@ -8,6 +8,7 @@ export enum ButtonScales {
   S32ICON = "32_icon",
   S36 = "36",
   S40 = "40",
+  S48 = "48",
 
   // old
   MD = "md",

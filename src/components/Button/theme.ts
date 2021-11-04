@@ -24,6 +24,12 @@ export const scaleVariants = {
     minWidth: "186px",
     ...textStyle.R_14B,
   },
+  [ButtonScales.S48]: {
+    height: "48px",
+    padding: "10px 12px",
+    minWidth: "186px",
+    ...textStyle.R_14B,
+  },
 };
 export const styleVariants = {
   [ButtonVariants.RED]: {
