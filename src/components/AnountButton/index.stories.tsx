@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 /* eslint-disable import/no-unresolved */
 import { Meta } from "@storybook/react/types-6-0";
-import AnountButton from './AnountButton';
+import AnountButton from "./AnountButton";
 
 const Row = styled.div`
   margin-bottom: 32px;
@@ -24,9 +24,7 @@ export const Default: React.FC = () => {
         <AnountButton onClick={() => {}} mr="5px">
           50%
         </AnountButton>
-        <AnountButton onClick={() => {}}>
-          MAX
-        </AnountButton>
+        <AnountButton onClick={() => {}}>MAX</AnountButton>
       </Row>
     </div>
   );

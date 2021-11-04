@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 /* eslint-disable import/no-unresolved */
 import { Meta } from "@storybook/react/types-6-0";
-import Label from './Label';
+import Label from "./Label";
 
 const Row = styled.div`
   margin-bottom: 32px;

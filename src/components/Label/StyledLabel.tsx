@@ -1,7 +1,7 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space, backgroundColor, color } from "styled-system";
 import { LabelProps, labelTypes } from "./types";
-import { get } from 'lodash'
+import { get } from "lodash";
 import { ColorStyles, lightColors } from "@/theme";
 
 interface StyledLabel {
@@ -14,7 +14,7 @@ interface TypeSet {
   fontWeight: string;
 }
 
-const dataPerType: {[key: string]: TypeSet} = {
+const dataPerType: { [key: string]: TypeSet } = {
   noti: {
     width: "72px",
     height: "24px",
@@ -29,7 +29,7 @@ const dataPerType: {[key: string]: TypeSet} = {
   },
 };
 
-const getTypeSet = (type: string = labelTypes.NOTI): TypeSet => get(dataPerType, type)
+const getTypeSet = (type: string = labelTypes.NOTI): TypeSet => get(dataPerType, type);
 const getData = (key: string) => ({ type }: LabelProps): string => {
   return get(getTypeSet(type), key);
 };
