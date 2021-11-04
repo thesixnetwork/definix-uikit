@@ -32,7 +32,7 @@ const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
     padding-top: 16px;
 
     width: ${SIDEBAR_WIDTH_FULL_MOBILE}px;
-    transform: translateX(${({ isPushed }) => isPushed ? "0" : "-100%"});
+    transform: translateX(${({ isPushed }) => (isPushed ? "0" : "-100%")});
   }
 `;
 
@@ -44,13 +44,13 @@ const WrapScrollPanel = styled.div`
 
   ${({ theme }) => theme.mediaQueries.mobile} {
   }
-`
+`;
 
 const ContainerScrollPanel = styled.div`
   position: relative;
   width: 100%;
   height: auto;
-`
+`;
 
 const Panel: React.FC<Props> = (props) => {
   const { isMobile } = props;

@@ -15,11 +15,15 @@ const Item = styled.div<{ isActive: boolean }>`
   ${({ isActive }) => css(textStyle[isActive ? TextStyles.R_14M : TextStyles.R_14R])}
   white-space: nowrap;
 
-  background-color: ${({ isActive, theme }) => isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white}
-`
+  background-color: ${({ isActive, theme }) => (isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white)};
+`;
 
 const DropdownItem: React.FC<DropdownItemProps> = ({ children, isActive = false, ...props }) => {
-  return <Item isActive={isActive} {...props}>{children}</Item>
-}
+  return (
+    <Item isActive={isActive} {...props}>
+      {children}
+    </Item>
+  );
+};
 
 export default DropdownItem;

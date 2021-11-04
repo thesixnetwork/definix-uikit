@@ -2,8 +2,8 @@ import React, { useState, Children, ReactElement, cloneElement } from "react";
 import styled from "styled-components";
 import { DropdownProps, PositionProps, Position } from "./types";
 
-const DropdownContent = styled.div<{ position: Position, isOpen: boolean }>`
-  display: ${({ isOpen }) => isOpen ? 'block' : 'none'};
+const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
+  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 
   border-radius: 8px;
   box-shadow: 0 4px 4px 0 rgba(34, 34, 34, 0.1);
@@ -23,8 +23,8 @@ const DropdownContent = styled.div<{ position: Position, isOpen: boolean }>`
   }
 
   ${({ position }) => `
-    ${position === 'top' ? 'bottom' : 'top'}: 100%;
-    margin-${position === 'top' ? 'bottom' : 'top'}: 4px;
+    ${position === "top" ? "bottom" : "top"}: 100%;
+    margin-${position === "top" ? "bottom" : "top"}: 4px;
   `}
 `;
 
@@ -34,7 +34,14 @@ const Container = styled.div`
   height: max-content;
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ defaultIndex, isOpen, target, position = "bottom", children, onItemClick }) => {
+const Dropdown: React.FC<DropdownProps> = ({
+  defaultIndex,
+  isOpen,
+  target,
+  position = "bottom",
+  children,
+  onItemClick,
+}) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex || 0);
   return (
     <Container>
