@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
-import Flex from "../Box/Flex";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
 import { ButtonScales } from "../Button";
+import { TextStyles } from "../../theme/text";
+import { ArrowBottomGIcon } from "../Icon";
 
 export default {
   title: "Components/Dropdown[NEW]",
@@ -30,7 +31,7 @@ export const Default: React.FC = () => {
         <Dropdown
           isOpen={isOpen}
           target={
-            <Button onClick={() => setIsOpen(!isOpen)} scale={ButtonScales.S40}>
+            <Button onClick={() => setIsOpen(!isOpen)} scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
               Hover
             </Button>
           }
@@ -54,7 +55,7 @@ export const Default: React.FC = () => {
           defaultIndex={2}
           isOpen={isOpen}
           target={
-            <Button onClick={() => setIsOpen(!isOpen)} scale={ButtonScales.S40}>
+            <Button onClick={() => setIsOpen(!isOpen)} scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
               Hover
             </Button>
           }

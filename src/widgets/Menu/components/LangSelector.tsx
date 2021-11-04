@@ -1,14 +1,10 @@
-import React from "react";
-import { SvgProps } from "../../../components/Svg";
-import Text from "../../../components/Text/Text";
+import React, { useState } from "react";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import Button from "../../../components/Button/Button";
-import * as IconModule from "../../../components/Icon";
+import { ArrowBottomGIcon } from "../../../components/Icon";
 import { LangType } from "../types";
-import MenuButton from "./MenuButton";
-
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
-const { LanguageIcon } = Icons;
+import { TextStyles } from "../../../theme";
+import DropdownItem from "../../../components/Dropdown/DropdownItem";
 
 interface Props {
   currentLang: string;
@@ -16,27 +12,21 @@ interface Props {
   setLang: (lang: LangType) => void;
 }
 
-const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => (
-  <Dropdown
-    position="top-right"
-    target={
-      <Button variant="text" startIcon={<LanguageIcon color="textSubtle" width="24px" />}>
-        <Text color="textSubtle">{currentLang?.toUpperCase()}</Text>
-      </Button>
-    }
-  >
-    {langs.map((lang) => (
-      <MenuButton
-        key={lang.code}
-        fullWidth
-        onClick={() => setLang(lang)}
-        // Safari fix
-        style={{ minHeight: "32px", height: "auto" }}
-      >
-        {lang.language}
-      </MenuButton>
-    ))}
-  </Dropdown>
-);
+const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return <Dropdown
+  isOpen={isOpen}
+  position="top"
+  target={
+    <Button onClick={() => setIsOpen(!isOpen)} scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
+      EN          
+    </Button>
+  }
+>
+  {langs.map((lang, index) => (
+    <DropdownItem key={index}>{lang.language}</DropdownItem>
+  ))}
+</Dropdown>
+};
 
 export default React.memo(LangSelector, (prev, next) => prev.currentLang === next.currentLang);

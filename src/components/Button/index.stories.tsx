@@ -6,9 +6,10 @@ import { IconButton } from ".";
 import Box from "../Box/Box";
 import Flex from "../Box/Flex";
 import { Text } from "../Text";
-import { SettingIcon } from "../Icon";
+import { ArrowBottomGIcon, SettingIcon } from "../Icon";
 import Button from "./Button";
 import { ButtonScales, ButtonVariants } from "./types";
+import { TextStyles } from "../../theme/text";
 
 const viewScales = [ButtonScales.S32, ButtonScales.S36, ButtonScales.S40];
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
@@ -54,6 +55,9 @@ export const Default: React.FC = () => {
         </Button>
         <Button scale="40" variant="line" disabled>
           Disabled
+        </Button>
+        <Button scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
+          Dropdown
         </Button>
       </Box>
     </>

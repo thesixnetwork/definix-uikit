@@ -49,10 +49,7 @@ const StyledButton = styled.button<BaseButtonProps>`
   border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1;
+  justify-content: ${({ startIcon, endIcon }) => startIcon || endIcon ? 'space-between' : 'center'};
   outline: 0;
 
   &:hover:not(:disabled):not(.definix-button--disabled):not(.definix-button--disabled):not(:active) {

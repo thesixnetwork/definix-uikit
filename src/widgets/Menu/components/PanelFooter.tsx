@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { CogIcon } from "../../../components/Svg";
-import IconButton from "../../../components/Button/IconButton";
-import { MENU_ENTRY_HEIGHT, SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
+import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
 import { PanelProps, PushedProps } from "../types";
-// import CakePrice from "./CakePrice";
-// import ThemeSwitcher from "./ThemeSwitcher";
-// import SocialLinks from "./SocialLinks";
-// import LangSelector from "./LangSelector";
+import LangSelector from "./LangSelector";
 
 interface Props extends PanelProps, PushedProps {}
 
@@ -15,9 +10,9 @@ const Container = styled.div`
   position: fixed;
   bottom: 20px;
   height: 40px;
-  background-color: ${({ theme }) => theme.colors.yellowBg1};
   width: ${SIDEBAR_WIDTH_FULL_PC}px;
   z-index: 1;
+  padding: 0 16px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     position: relative;
@@ -26,43 +21,10 @@ const Container = styled.div`
   }
 `;
 
-const SettingsEntry = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: ${MENU_ENTRY_HEIGHT}px;
-  padding: 0 8px;
-`;
-
-// const SocialEntry = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   height: ${MENU_ENTRY_HEIGHT}px;
-//   padding: 0 16px;
-// `;
-
 const PanelFooter: React.FC<Props> = ({ isPushed, pushNav, currentLang, langs, setLang }) => {
-  // if (!isPushed) {
-  //   return (
-  //     <Container>
-  //       <IconButton variant="text" onClick={() => pushNav(true)}>
-  //         <CogIcon />
-  //       </IconButton>
-  //     </Container>
-  //   );
-  // }
-
   return (
     <Container>
-      {/* <SocialEntry>
-        <CakePrice cakePriceUsd={finixPriceUsd} />
-        <SocialLinks />
-      </SocialEntry> */}
-      <SettingsEntry>
-        {/* <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} /> */}
-        {/* <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} /> */}
-      </SettingsEntry>
+      <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
     </Container>
   );
 };

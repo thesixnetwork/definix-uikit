@@ -5,8 +5,9 @@ import { ButtonScales, ButtonVariants } from "./types";
 export const scaleVariants = {
   [ButtonScales.S32]: {
     height: "32px",
-    padding: "7px 20px",
+    padding: "7px 12px",
     minWidth: "142px",
+    ...textStyle.R_12B,
   },
   [ButtonScales.S32ICON]: {
     height: "32px",
@@ -15,10 +16,11 @@ export const scaleVariants = {
   [ButtonScales.S36]: {
     height: "36px",
     padding: "0 16px",
+    ...textStyle.R_12B,
   },
   [ButtonScales.S40]: {
     height: "40px",
-    padding: "10px 20px",
+    padding: "10px 12px",
     minWidth: "186px",
     ...textStyle.R_14B,
   },
