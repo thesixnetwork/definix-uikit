@@ -85,12 +85,25 @@ export const Ribbon: React.FC = () => {
       <Row>
         <Card ribbon={<CardRibbon text="new" />}>
           <div style={{ height: "62px", backgroundColor: "#191326" }} />
-          <CardBody style={{ height: "150px" }}>Body</CardBody>
+          <CardBody>Body</CardBody>
+        </Card>
+      </Row>
+      <Row>
+        <Card ribbon={<CardRibbon text="New" upperCase />}>
+          <div style={{ height: "62px", backgroundColor: "#191326" }} />
+          <CardBody>UpperCase</CardBody>
         </Card>
       </Row>
       <Row>
         <Card ribbon={<CardRibbon variantColor="red" text="hot" />}>
-          <CardBody style={{ height: "150px" }}>Card</CardBody>
+          <div style={{ height: "62px", backgroundColor: "#191326" }} />
+          <CardBody>variantColor: red</CardBody>
+        </Card>
+      </Row>
+      <Row>
+        <Card ribbon={<CardRibbon variantColor="grey" text="Finished" />}>
+          <div style={{ height: "62px", backgroundColor: "#191326" }} />
+          <CardBody>variantColor: grey</CardBody>
         </Card>
       </Row>
     </div>

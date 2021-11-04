@@ -4,6 +4,7 @@ import { Colors } from "../../theme/types";
 
 export interface CardRibbonProps {
   variantColor?: keyof Colors;
+  upperCase?: boolean;
   text: string;
 }
 
