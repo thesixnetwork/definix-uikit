@@ -1,6 +1,8 @@
 import { createGlobalStyle, css } from "styled-components";
 import { ResetCSSStyle } from "./ResetCSS";
 import { ColorStyles } from "./theme/colors";
+import { spacing } from "./theme/base";
+import { pxToRem } from "@/style/mixin";
 
 /*
 // Safari for OS X and iOS (San Francisco)
@@ -53,8 +55,42 @@ function createSpacing() {
     )
     .join("");
 
+  const custom = Object.keys(spacing)
+    .flatMap((key) => {
+      const size = pxToRem(spacing[key]);
+      const i = key.toLowerCase().replace("_", "");
+      return props.map((prop) => {
+        const initial = prop.substr(0, 1);
+        return `
+          .${initial}a-${i} {
+            ${prop}: ${size} !important;
+          }
+          .${initial}t-${i} {
+            ${prop}-top: ${size} !important;
+          }
+          .${initial}b-${i} {
+            ${prop}-bottom: ${size} !important;
+          }
+          .${initial}l-${i} {
+            ${prop}-left: ${size} !important;
+          }
+          .${initial}r-${i} {
+            ${prop}-right: ${size} !important;
+          }
+          .${initial}x-${i} {
+            ${prop}-left: ${size} !important;
+            ${prop}-right: ${size} !important;
+          }
+          .${initial}y-${i} {
+            ${prop}-top: ${size} !important;
+            ${prop}-bottom: ${size} !important;
+          }`;
+      });
+    })
+    .join("");
   return css`
     ${styles}
+    ${custom}
   `;
 }
 
