@@ -12,7 +12,7 @@ interface Props extends PanelProps, PushedProps, TranslateProps {
   isMobile: boolean;
 }
 
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div<{ isMobile: boolean }>`
   display: flex;

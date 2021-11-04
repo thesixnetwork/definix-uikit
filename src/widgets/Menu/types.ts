@@ -70,5 +70,4 @@ export interface TranslateProps {
 export interface MenuProps
   extends Pick<PanelProps, "langs" | "setLang" | "currentLang">,
     Omit<NavProps, "isMobile">,
-    TranslateProps {
-    }
+    TranslateProps {}
