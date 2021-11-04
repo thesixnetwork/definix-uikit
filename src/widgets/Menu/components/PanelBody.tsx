@@ -6,9 +6,9 @@ import * as IconModule from "../../../components/Icon";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
-import { PanelProps, PushedProps } from "../types";
+import { PanelProps, PushedProps, TranslateProps } from "../types";
 
-interface Props extends PanelProps, PushedProps {
+interface Props extends PanelProps, PushedProps, TranslateProps {
   isMobile: boolean;
 }
 
@@ -39,7 +39,7 @@ const StyledMenuLink = styled(MenuLink)`
   padding-left: 30px;
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, t }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
@@ -85,7 +85,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
             <MenuLink href={entry.href} onClick={handleClick}>
               {isActive ? activeIconElement : iconElement}
               <LinkLabel isPushed={isPushed} ml="6px">
-                {entry.label}
+                {t(entry.label)}
               </LinkLabel>
             </MenuLink>
           </MenuEntry>

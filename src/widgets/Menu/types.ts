@@ -54,6 +54,8 @@ export interface UserProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
+  userBlock: React.ReactNode;
+  chain: React.ReactNode;
 }
 
 export interface NavProps extends UserProps {
@@ -68,4 +70,5 @@ export interface TranslateProps {
 export interface MenuProps
   extends Pick<PanelProps, "langs" | "setLang" | "currentLang">,
     Omit<NavProps, "isMobile">,
-    TranslateProps {}
+    TranslateProps {
+    }

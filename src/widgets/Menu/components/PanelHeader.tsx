@@ -25,10 +25,10 @@ const StyledHeader = styled(Flex)`
   justify-content: center;
 `;
 
-const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
+const PanelHeader: React.FC<Props> = ({ userBlock, isMobile, pushNav, ...props }) => {
   return isMobile ? (
     <MobileHeader>
-      <UserBlock isMobile={isMobile} {...props} />
+      {userBlock}
     </MobileHeader>
   ) : (
     <StyledHeader>
