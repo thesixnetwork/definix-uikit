@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text } from "@/components/Text";
 import { Flex } from "@/components/Box";
 import { IconButton, ButtonVariants, ButtonScales } from "@/components/Button";
@@ -8,6 +8,7 @@ import { Login } from "../../WalletModal/types";
 import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from "@/components/Icon";
 import styled from "styled-components";
 import { ColorStyles, TextStyles } from "@/theme";
+import { Dropdown, DropdownItem } from "@/components/Dropdown";
 
 interface Props {
   isMobile: boolean;
@@ -37,6 +38,7 @@ const StyledButton = styled.a`
 `;
 
 const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
   return account ? (
@@ -50,7 +52,18 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
               {accountEllipsis}
             </Text>
-            <IconButton startIcon={<MoreNIcon />} />
+            <Dropdown
+              scale="sm"
+              left="-105px"
+              isOpen={isDropdownOpen}
+              position="bottom"
+              target={<IconButton startIcon={<MoreNIcon />} onClick={() => setIsDropdownOpen(!isDropdownOpen)} />}
+              onItemClick={(index) => console.log(index)}
+            >
+              <DropdownItem>View on KlaytnscopeTH</DropdownItem>
+              <DropdownItem>Copy Address</DropdownItem>
+              <DropdownItem isDivide={true}>Disconnect</DropdownItem>
+            </Dropdown>
           </Flex>
         </Flex>
         <StyledButton href="/farm">
