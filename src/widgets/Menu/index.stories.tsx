@@ -26,7 +26,7 @@ const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, langua
 const useProps = () => {
   const [props, setProps] = useState({
     t: (key: string, replaceTxt: Record<string, string>) => {
-      console.log('!!translate', key)
+      console.log("!!translate", key);
     },
     account: "0xbdda50183d817c3289f895a4472eb475967dc980",
     login: noop,
@@ -45,7 +45,7 @@ const useProps = () => {
     const interval = setInterval(() => {
       setProps({
         t: (key: string, replaceTxt: Record<string, string>) => {
-          console.log('!!translate', key)
+          console.log("!!translate", key);
         },
         account: "0xbdda50183d817c3289f895a4472eb475967dc980",
         login: noop,

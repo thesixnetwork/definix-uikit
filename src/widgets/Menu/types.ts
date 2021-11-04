@@ -65,4 +65,7 @@ export interface TranslateProps {
   t: (key: string, replaceTxt?: Record<string, string>) => string;
 }
 
-export interface MenuProps extends Pick<PanelProps, "langs" | "setLang" | "currentLang">, Omit<NavProps, "isMobile">, TranslateProps {}
+export interface MenuProps
+  extends Pick<PanelProps, "langs" | "setLang" | "currentLang">,
+    Omit<NavProps, "isMobile">,
+    TranslateProps {}
