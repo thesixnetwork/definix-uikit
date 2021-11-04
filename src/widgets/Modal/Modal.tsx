@@ -5,19 +5,17 @@ import Flex from "../../components/Box/Flex";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { InjectedProps } from "./types";
-import { pxToRem } from "@/style/mixin";
-import { spacing } from "@/theme/base";
 
 interface Props extends InjectedProps {
   title: string;
   hideCloseButton?: boolean;
   onBack?: () => void;
-  bodyPadding?: string;
+  mobileFull?: boolean;
 }
 
-const StyledModal = styled.div`
+const StyledModal = styled.div<{ mobileFull: boolean }>`
   background: ${({ theme }) => theme.modal.background};
-  border-radius: ${pxToRem(spacing.S_16)};
+  border-radius: ${({ theme }) => theme.spacing.S_16}px;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
@@ -26,18 +24,40 @@ const StyledModal = styled.div`
     min-width: 300px;
     max-width: 100%;
   }
+
+  ${({ mobileFull, theme }) =>
+    mobileFull &&
+    `
+    border-radius: 0;
+    ${theme.mediaQueries.sm} {
+      border-radius: ${theme.spacing.S_16}px;
+    }
+  `}
 `;
 
 const ModalHeader = styled.div`
   display: flex;
   align-items: center;
   align-items: center;
-  padding: 22px 24px;
+  padding: 22px 20px;
+
+  ${({ theme }) => theme.mediaQueries.xs} {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 `;
 
 const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
+`;
+
+const StyledModalBody = styled(Flex)`
+  padding: 0px 20px 24px;
+  ${({ theme }) => theme.mediaQueries.xs} {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 `;
 
 const Modal: React.FC<Props> = ({
@@ -46,9 +66,9 @@ const Modal: React.FC<Props> = ({
   onBack,
   children,
   hideCloseButton = false,
-  bodyPadding = "24px",
+  mobileFull = false,
 }) => (
-  <StyledModal>
+  <StyledModal mobileFull={mobileFull}>
     <ModalHeader>
       <ModalTitle>
         {onBack && (
@@ -64,9 +84,7 @@ const Modal: React.FC<Props> = ({
         </IconButton>
       )}
     </ModalHeader>
-    <Flex flexDirection="column" p={bodyPadding}>
-      {children}
-    </Flex>
+    <StyledModalBody flexDirection="column">{children}</StyledModalBody>
   </StyledModal>
 );
 

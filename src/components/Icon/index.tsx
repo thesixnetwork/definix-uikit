@@ -32,6 +32,7 @@ import { ReactComponent as MoreNIcon } from "./icons/ico_24_more_n.svg";
 import { ReactComponent as ArrowRightGIcon } from "./icons/ico_16_arrow_right_g.svg";
 import { ReactComponent as MenuIcon } from "./icons/ico_24_menu.svg";
 import { ReactComponent as CloseIcon } from "./icons/ico_24_close.svg";
+import { ReactComponent as SmallDownIcon } from "./icons/ico_16_small_down.svg";
 
 export {
   GnbMySIcon,
@@ -67,4 +68,5 @@ export {
   ArrowRightGIcon,
   MenuIcon,
   CloseIcon,
+  SmallDownIcon,
 };

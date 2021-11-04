@@ -11,3 +11,9 @@ export interface CheckboxProps {
   scale?: Scales;
   variantColor?: keyof Colors;
 }
+
+export interface CheckboxLabelProps {
+  className?: string;
+  control: React.ReactNode;
+  children: React.ReactNode;
+}
