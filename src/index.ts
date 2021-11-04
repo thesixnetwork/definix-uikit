@@ -27,6 +27,7 @@ export * from "./components/Toggle";
 export * from "./components/Table";
 export * from "./components/TabBox";
 export * from "./components/TitleSet";
+export * from "./components/AnountButton";
 
 // Hooks
 export * from "./hooks";
