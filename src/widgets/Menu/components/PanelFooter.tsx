@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { CogIcon } from "../../../components/Svg";
 import IconButton from "../../../components/Button/IconButton";
-import { MENU_ENTRY_HEIGHT } from "../config";
+import { MENU_ENTRY_HEIGHT, SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
 import { PanelProps, PushedProps } from "../types";
 // import CakePrice from "./CakePrice";
 // import ThemeSwitcher from "./ThemeSwitcher";
@@ -16,8 +16,12 @@ const Container = styled.div`
   bottom: 20px;
   height: 40px;
   background-color: rgba(255, 255, 0, 0.3);
-  width: 100%;
+  width: ${SIDEBAR_WIDTH_FULL_PC}px;
   z-index: 1;
+
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    width: ${SIDEBAR_WIDTH_FULL_MOBILE}px;
+  }
 `;
 
 const SettingsEntry = styled.div`
