@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Dropdown from "../../../components/Dropdown/Dropdown";
-import Button from "../../../components/Button/Button";
-import { ArrowBottomGIcon } from "../../../components/Icon";
 import { LangType } from "../types";
-import { TextStyles } from "../../../theme";
 import DropdownItem from "../../../components/Dropdown/DropdownItem";
+import DropdownButton from "@/components/Button/DropdownButton";
 
 interface Props {
   currentLang: string;
@@ -19,16 +17,11 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
       isOpen={isOpen}
       position="top"
       target={
-        <Button
+        <DropdownButton
           onClick={() => setIsOpen(!isOpen)}
-          scale="40"
-          variant="line"
-          textStyle={TextStyles.R_14M}
-          minWidth={90}
-          endIcon={<ArrowBottomGIcon />}
         >
           EN
-        </Button>
+        </DropdownButton>
       }
     >
       {langs.map((lang, index) => (

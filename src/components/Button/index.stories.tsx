@@ -10,6 +10,7 @@ import { ArrowBottomGIcon, SettingIcon } from "../Icon";
 import Button from "./Button";
 import { ButtonScales, ButtonVariants } from "./types";
 import { TextStyles } from "../../theme/text";
+import DropdownButton from "./DropdownButton";
 
 const viewScales = [ButtonScales.S32, ButtonScales.S36, ButtonScales.S40];
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
@@ -56,9 +57,9 @@ export const Default: React.FC = () => {
         <Button scale="40" variant="line" disabled>
           Disabled
         </Button>
-        <Button scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
+        <DropdownButton>
           Dropdown
-        </Button>
+        </DropdownButton>
       </Box>
     </>
   );

@@ -1,12 +1,13 @@
 import { ArrowBottomGIcon } from "../Icon";
-import { TextStyles } from "@/theme";
+import { TextStyles } from "../../theme";
 import React from "react";
 import Button from "./Button";
-import { ButtonVariants, ButtonScales } from "./types";
+import { ButtonProps, ButtonVariants, ButtonScales } from "./types";
 
-const DropdownButton: React.FC = ({ children }) => {
+const DropdownButton: React.FC<ButtonProps> = (props) => {
+  const { children } = props;
   return (
-    <Button textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
+    <Button textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />} {...props}>
       {children}
     </Button>
   );

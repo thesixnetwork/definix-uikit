@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
+import DropdownButton from "../Button/DropdownButton";
 import Dropdown from "./Dropdown";
 import DropdownItem from "./DropdownItem";
 import { ButtonScales } from "../Button";
@@ -31,16 +32,11 @@ export const Default: React.FC = () => {
         <Dropdown
           isOpen={isOpen}
           target={
-            <Button
+            <DropdownButton
               onClick={() => setIsOpen(!isOpen)}
-              scale="40"
-              variant="line"
-              textStyle={TextStyles.R_14M}
-              minWidth={90}
-              endIcon={<ArrowBottomGIcon />}
             >
               Hover
-            </Button>
+            </DropdownButton>
           }
           position="top"
           onItemClick={(index) => console.log(index)}
@@ -62,16 +58,11 @@ export const Default: React.FC = () => {
           defaultIndex={2}
           isOpen={isOpen}
           target={
-            <Button
+            <DropdownButton
               onClick={() => setIsOpen(!isOpen)}
-              scale="40"
-              variant="line"
-              textStyle={TextStyles.R_14M}
-              minWidth={90}
-              endIcon={<ArrowBottomGIcon />}
             >
               Hover
-            </Button>
+            </DropdownButton>
           }
           position="bottom"
           onItemClick={(index) => console.log(index)}
