@@ -36,6 +36,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   border-radius: ${getR};
   background-color: ${({ theme }) => theme.colors.input};
   box-shadow: 0px 0px 0px 1px ${({ theme }) => theme.colors.lightgrey} inset;
+  margin: 0;
 
   &:after {
     content: "";
