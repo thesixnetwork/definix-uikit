@@ -1,11 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 import { ResetCSSStyle } from "./ResetCSS";
 import { ColorStyles } from "./theme/colors";
-import { TypoStyle } from "./TypoStyle";
+
+/*
+// Safari for OS X and iOS (San Francisco)
+-apple-system,
+// Chrome < 56 for OS X (San Francisco)
+BlinkMacSystemFont,
+// Windows
+"Segoe UI",
+// Android
+"Roboto",
+// Basic web fallback
+"Helvetica Neue", Arial, sans-serif,
+// Emoji fonts
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+*/
 
 const GlobalStyle = createGlobalStyle`
   ${ResetCSSStyle}
-  ${TypoStyle}
   html {
     font-size: 16px;
 
@@ -21,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
       font-size: 12px;
     }
 
+    ${({ theme }) => theme.mediaQueries.lg} {
+      font-size: 16px;
+    }
+
     ${({ theme }) => theme.mediaQueries.xl} {
       font-size: 18px;
     }
@@ -28,7 +45,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
