@@ -14,19 +14,28 @@ interface Props {
 
 const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
-  return <Dropdown
-  isOpen={isOpen}
-  position="top"
-  target={
-    <Button onClick={() => setIsOpen(!isOpen)} scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
-      EN          
-    </Button>
-  }
->
-  {langs.map((lang, index) => (
-    <DropdownItem key={index}>{lang.language}</DropdownItem>
-  ))}
-</Dropdown>
+  return (
+    <Dropdown
+      isOpen={isOpen}
+      position="top"
+      target={
+        <Button
+          onClick={() => setIsOpen(!isOpen)}
+          scale="40"
+          variant="line"
+          textStyle={TextStyles.R_14M}
+          minWidth={90}
+          endIcon={<ArrowBottomGIcon />}
+        >
+          EN
+        </Button>
+      }
+    >
+      {langs.map((lang, index) => (
+        <DropdownItem key={index}>{lang.language}</DropdownItem>
+      ))}
+    </Dropdown>
+  );
 };
 
 export default React.memo(LangSelector, (prev, next) => prev.currentLang === next.currentLang);

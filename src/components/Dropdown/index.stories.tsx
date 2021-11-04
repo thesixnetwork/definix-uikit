@@ -31,7 +31,14 @@ export const Default: React.FC = () => {
         <Dropdown
           isOpen={isOpen}
           target={
-            <Button onClick={() => setIsOpen(!isOpen)} scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
+            <Button
+              onClick={() => setIsOpen(!isOpen)}
+              scale="40"
+              variant="line"
+              textStyle={TextStyles.R_14M}
+              minWidth={90}
+              endIcon={<ArrowBottomGIcon />}
+            >
               Hover
             </Button>
           }
@@ -55,7 +62,14 @@ export const Default: React.FC = () => {
           defaultIndex={2}
           isOpen={isOpen}
           target={
-            <Button onClick={() => setIsOpen(!isOpen)} scale="40" variant="line" textStyle={TextStyles.R_14M} minWidth={90} endIcon={<ArrowBottomGIcon />}>
+            <Button
+              onClick={() => setIsOpen(!isOpen)}
+              scale="40"
+              variant="line"
+              textStyle={TextStyles.R_14M}
+              minWidth={90}
+              endIcon={<ArrowBottomGIcon />}
+            >
               Hover
             </Button>
           }
