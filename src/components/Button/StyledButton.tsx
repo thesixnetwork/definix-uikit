@@ -49,7 +49,6 @@ const StyledButton = styled.button<BaseButtonProps>`
   border-radius: 8px;
   cursor: pointer;
   display: inline-flex;
-  font-family: inherit;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;

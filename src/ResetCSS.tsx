@@ -63,11 +63,6 @@ export const ResetCSSStyle = `
   *::after {
     box-sizing: border-box;
   }
-  * {
-    font-family: 'Roboto', 'Kanit', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
