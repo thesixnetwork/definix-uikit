@@ -28,6 +28,7 @@ export * from "./components/Table";
 export * from "./components/TabBox";
 export * from "./components/TitleSet";
 export * from "./components/AnountButton";
+export * from "./components/Label";
 
 // Hooks
 export * from "./hooks";
