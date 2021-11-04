@@ -14,16 +14,6 @@ const Stub = styled.div`
   height: 600px;
 `;
 
-export const Container: React.FC = () => {
-  return (
-    <ContainerLayout>
-      {[...Array(12)].map((value) => (
-        <Stub key={value} />
-      ))}
-    </ContainerLayout>
-  );
-};
-
 export const Base: React.FC = () => {
   return (
     <>

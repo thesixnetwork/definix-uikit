@@ -9,11 +9,44 @@ import {
   INNER_MARGIN_PC,
   INNER_MARGIN_MOBILE,
   links as defaultLinks,
+  SIDEBAR_WIDTH_FULL,
 } from "./config";
-import { ContainerLayout } from "../..";
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import { breakpointMap } from "../../theme/base";
+
+const Wrapper = styled.div`
+  position: relative;
+  width: 100vw;
+  background-color: ${({ theme }) => theme.colors.yellowBg2};
+`;
+
+const Container = styled.div`
+  position: relative;
+  margin: 0 ${pxToRem(20)};
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    margin-left: ${SIDEBAR_WIDTH_FULL}px;
+  }
+  ${({ theme }) => theme.mediaQueries.xl} {
+    width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL}px;
+    max-width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL}px;
+  }
+
+  @media (min-width: ${breakpointMap.xl + SIDEBAR_WIDTH_FULL}px) {
+    margin: 0 auto;
+  }
+`;
+
+const TopBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 360px;
+  background-color: ${({ theme }) => theme.colors.yellowBg1};
+`;
 
 const Inner = styled.div<{ isMobile: boolean }>`
   padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
@@ -42,7 +75,8 @@ const Menu: React.FC<MenuProps> = ({
   const { isMobile } = useMatchBreakpoints();
   const [isPushed, setIsPushed] = useState(!isMobile);
   return (
-    <ContainerLayout>
+    <Wrapper>
+      <TopBackground />
       <Nav
         isMobile={isMobile}
         isPushed={isPushed}
@@ -65,9 +99,11 @@ const Menu: React.FC<MenuProps> = ({
         account={account}
         logout={logout}
       />
-      <Inner isMobile={isMobile}>{children}</Inner>
+      <Container>
+        <Inner isMobile={isMobile}>{children}</Inner>
+      </Container>
       <Footer isMobile={isMobile} />
-    </ContainerLayout>
+    </Wrapper>
   );
 };
 

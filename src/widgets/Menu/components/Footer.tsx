@@ -6,24 +6,24 @@ import { hexToRGB, pxToRem } from "@/style/mixin";
 import { LogoFooterSixIcon } from "@/components/Icon";
 import SocialLinks from "./SocialLinks";
 import { ColorStyles, TextStyles } from "@/theme";
+import { SIDEBAR_WIDTH_FULL } from "../config";
 
 interface Props {
   isMobile: boolean;
 }
 
-const StyledNav = styled.div<{ isMobile: boolean }>`
-  overflow: hidden;
+const StyledFooter = styled.div<{ isMobile: boolean }>`
   position: relative;
-  width: 100%;
+  overflow: hidden;
+  left: ${SIDEBAR_WIDTH_FULL}px;
+  width: calc(100% - ${SIDEBAR_WIDTH_FULL}px);
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
-  padding: 0 ${pxToRem(60)};
 
   ${({ isMobile }) =>
     isMobile &&
     `
-      padding: 0;
-      margin: 0 -${pxToRem(20)};
-      width: calc(100% + ${pxToRem(20 * 2)});
+      left: 0;
+      width: 100%;
   `}
 `;
 
@@ -31,7 +31,7 @@ const Inner = styled.div<{ isMobile: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0 60px;
+  padding: 30px ${pxToRem(60)} 60px;
 
   ${({ isMobile }) =>
     isMobile &&
@@ -67,7 +67,7 @@ const LeftFlex = styled(Flex)<{ isMobile: boolean }>`
 const Footer: React.FC<Props> = (props) => {
   const { isMobile } = props;
   return (
-    <StyledNav {...props}>
+    <StyledFooter {...props}>
       <Inner {...props}>
         <LeftFlex {...props}>
           <LogoFooterSixIcon
@@ -90,7 +90,7 @@ const Footer: React.FC<Props> = (props) => {
         </LeftFlex>
         <SocialLinks {...props} />
       </Inner>
-    </StyledNav>
+    </StyledFooter>
   );
 };
 
