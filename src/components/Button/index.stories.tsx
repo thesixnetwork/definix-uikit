@@ -57,9 +57,7 @@ export const Default: React.FC = () => {
         <Button scale="40" variant="line" disabled>
           Disabled
         </Button>
-        <DropdownButton>
-          Dropdown
-        </DropdownButton>
+        <DropdownButton>Dropdown</DropdownButton>
       </Box>
     </>
   );

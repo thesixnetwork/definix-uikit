@@ -72,5 +72,5 @@ export {
   CloseIcon,
   SmallDownIcon,
   PlusIcon,
-  MinusIcon
+  MinusIcon,
 };

@@ -16,13 +16,7 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
     <Dropdown
       isOpen={isOpen}
       position="top"
-      target={
-        <DropdownButton
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          EN
-        </DropdownButton>
-      }
+      target={<DropdownButton onClick={() => setIsOpen(!isOpen)}>EN</DropdownButton>}
     >
       {langs.map((lang, index) => (
         <DropdownItem key={index}>{lang.language}</DropdownItem>
