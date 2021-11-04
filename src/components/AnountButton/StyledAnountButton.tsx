@@ -15,6 +15,7 @@ export const StyledAnountButton = styled.button`
   text-align: center;
   color: ${({ theme }) => theme.colors.deepgrey};
   font-weight: 500;
+  cursor: pointer;
 
   ${space}
   ${color}
