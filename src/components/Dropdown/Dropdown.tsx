@@ -1,6 +1,7 @@
 import React, { useState, Children, ReactElement, cloneElement } from "react";
 import styled from "styled-components";
-import { DropdownProps, PositionProps, Position } from "./types";
+import { position as sPosition } from "styled-system";
+import { DropdownProps, Position } from "./types";
 
 const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
@@ -26,6 +27,7 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
     ${position === "top" ? "bottom" : "top"}: 100%;
     margin-${position === "top" ? "bottom" : "top"}: 4px;
   `}
+  ${sPosition}
 `;
 
 const Container = styled.div`
@@ -41,14 +43,17 @@ const Dropdown: React.FC<DropdownProps> = ({
   position = "bottom",
   children,
   onItemClick,
+  scale,
+  ...props
 }) => {
-  const [activeIndex, setActiveIndex] = useState(defaultIndex || 0);
+  const [activeIndex, setActiveIndex] = useState(defaultIndex || -1);
   return (
     <Container>
       {target}
-      <DropdownContent position={position} isOpen={isOpen}>
+      <DropdownContent position={position} isOpen={isOpen} {...props}>
         {Children.map(children, (child: ReactElement, index) => {
           return cloneElement(child, {
+            scale,
             isActive: activeIndex === index,
             onClick: () => {
               setActiveIndex(index);
@@ -62,6 +67,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 };
 Dropdown.defaultProps = {
   position: "bottom",
+  scale: "md",
 };
 
 export default Dropdown;
