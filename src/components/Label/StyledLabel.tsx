@@ -30,11 +30,9 @@ const dataPerType: { [key: string]: TypeSet } = {
 };
 
 const getTypeSet = (type: string = labelTypes.NOTI): TypeSet => get(dataPerType, type);
-const getData =
-  (key: string) =>
-  ({ type }: LabelProps): string => {
-    return get(getTypeSet(type), key);
-  };
+const getData = (key: string) => ({ type }: LabelProps): string => {
+  return get(getTypeSet(type), key);
+};
 
 export const StyledLabel = styled.div<LabelProps>`
   width: ${getData("width")};

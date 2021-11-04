@@ -37,6 +37,7 @@ export enum ColorStyles {
   YELLOWBG1 = "yellowBg1",
   LIGHTGREY_20 = "lightGrey20",
   GREY = "grey",
+  LIGHTBROWN_20 = "lightBrown20",
 }
 
 export const baseColors = {
@@ -59,6 +60,7 @@ export const baseColors = {
 };
 const customColors = {
   [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 0.2),
+  [ColorStyles.LIGHTBROWN_20]: hexToRGB(baseColors[ColorStyles.LIGHTBROWN], 0.2),
 };
 
 export const lightColors = {
