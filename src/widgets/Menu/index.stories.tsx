@@ -25,6 +25,9 @@ const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, langua
 // This hook is used to simulate a props change, and force a re rendering
 const useProps = () => {
   const [props, setProps] = useState({
+    t: (key: string, replaceTxt: Record<string, string>) => {
+      console.log('!!translate', key)
+    },
     account: "0xbdda50183d817c3289f895a4472eb475967dc980",
     login: noop,
     logout: noop,
@@ -41,6 +44,9 @@ const useProps = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setProps({
+        t: (key: string, replaceTxt: Record<string, string>) => {
+          console.log('!!translate', key)
+        },
         account: "0xbdda50183d817c3289f895a4472eb475967dc980",
         login: noop,
         logout: noop,

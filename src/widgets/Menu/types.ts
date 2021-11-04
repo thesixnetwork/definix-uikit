@@ -61,4 +61,8 @@ export interface NavProps extends UserProps {
   links?: Array<MenuEntry>;
 }
 
-export interface MenuProps extends Pick<PanelProps, "langs" | "setLang" | "currentLang">, Omit<NavProps, "isMobile"> {}
+export interface TranslateProps {
+  t: (key: string, replaceTxt?: Record<string, string>) => string;
+}
+
+export interface MenuProps extends Pick<PanelProps, "langs" | "setLang" | "currentLang">, Omit<NavProps, "isMobile">, TranslateProps {}

@@ -7,10 +7,10 @@ import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "@/components/Icon";
 import { hexToRGB, pxToRem } from "@/style/mixin";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
-import { NavProps, PushedProps } from "../types";
+import { NavProps, PushedProps, TranslateProps } from "../types";
 import { ColorStyles } from "@/theme";
 
-interface Props extends NavProps, PushedProps {}
+interface Props extends NavProps, PushedProps, TranslateProps {}
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -44,7 +44,7 @@ const StyledNav = styled.nav`
   z-index: ${NAV_ZINDEX};
 `;
 
-const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, pushNav }) => {
+const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, pushNav, t }) => {
   return isMobile ? (
     <MobileNav>
       <Box position="absolute" left={pxToRem(20)}>
@@ -60,7 +60,7 @@ const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, push
       <Chain />
       <Flex position="absolute" right={pxToRem(60)}>
         <IconButton mr="16px" startIcon={<SettingIcon />} />
-        <UserBlock isMobile={isMobile} account={account} login={login} logout={logout} />
+        <UserBlock isMobile={isMobile} account={account} login={login} logout={logout} t={t} />
       </Flex>
       {/* {profile && <Avatar profile={profile} />} */}
     </StyledNav>

@@ -9,8 +9,9 @@ import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from "@/components/Icon";
 import styled from "styled-components";
 import { ColorStyles, TextStyles } from "@/theme";
 import { Dropdown, DropdownItem } from "@/components/Dropdown";
+import { TranslateProps } from "../types";
 
-interface Props {
+interface Props extends TranslateProps {
   isMobile: boolean;
   account?: string;
   login: Login;
@@ -37,7 +38,7 @@ const StyledButton = styled.a`
   background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
 `;
 
-const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
+const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, t }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
@@ -46,7 +47,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
           <Text mt="55px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
-            Wallet Address
+            {t("Wallet Address")}
           </Text>
           <Flex>
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
@@ -68,7 +69,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
         </Flex>
         <StyledButton href="/farm">
           <Text textStyle={TextStyles.R_12M} color={ColorStyles.WHITE}>
-            Net worth
+            {t("Net Worth")}
           </Text>
           <Flex ml="12px" alignItems="center">
             <Text mr="7px" textStyle={TextStyles.R_12B} width="140px" color={ColorStyles.WHITE}>
@@ -101,6 +102,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
           }}
         >
           <Text textStyle={TextStyles.R_12B} ml="6px">
+            {t("MY")}
             MY
           </Text>
         </Button>

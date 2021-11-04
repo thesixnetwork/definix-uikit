@@ -63,6 +63,7 @@ const Menu: React.FC<MenuProps> = ({
   account,
   login,
   logout,
+  t,
   // isDark,
   // toggleTheme,
   langs,
@@ -78,6 +79,7 @@ const Menu: React.FC<MenuProps> = ({
     <Wrapper>
       <TopBackground />
       <Nav
+        t={t}
         isMobile={isMobile}
         isPushed={isPushed}
         pushNav={setIsPushed}
@@ -86,6 +88,7 @@ const Menu: React.FC<MenuProps> = ({
         logout={logout}
       />
       <Panel
+        t={t}
         isMobile={isMobile}
         isPushed={isPushed}
         // isDark={isDark}
