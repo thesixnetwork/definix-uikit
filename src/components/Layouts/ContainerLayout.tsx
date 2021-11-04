@@ -7,7 +7,7 @@ import { SIDEBAR_WIDTH_FULL } from "../../widgets/Menu/config";
 const Wrapper = styled.div`
   position: relative;
   width: 100vw;
-  background-color: ${({theme}) => theme.colors.yellowBg2};
+  background-color: ${({ theme }) => theme.colors.yellowBg2};
 `;
 
 const Container = styled.div`
@@ -33,16 +33,14 @@ const TopBackground = styled.div`
   left: 0;
   width: 100%;
   height: 360px;
-  background-color: ${({theme}) => theme.colors.yellowBg1};
-`; 
+  background-color: ${({ theme }) => theme.colors.yellowBg1};
+`;
 
 const ContainerLayout: React.FC = ({ children }) => {
   return (
     <Wrapper>
       <TopBackground />
-      <Container>
-        {children}
-      </Container>
+      <Container>{children}</Container>
     </Wrapper>
   );
 };

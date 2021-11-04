@@ -4,4 +4,4 @@ declare module "*.svg" {
   export default url;
 }
 
-declare module '*.png';
+declare module "*.png";
