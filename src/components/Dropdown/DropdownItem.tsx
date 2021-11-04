@@ -4,7 +4,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { DropdownItemProps, Scale, scales } from "./types";
 
-const Item = styled.div<{ isActive: boolean, scale: Scale, isDivide?: boolean }>`
+const Item = styled.div<{ isActive: boolean; scale: Scale; isDivide?: boolean }>`
   cursor: pointer;
   padding: 0 16px;
   min-width: 100%;
@@ -19,7 +19,7 @@ const Item = styled.div<{ isActive: boolean, scale: Scale, isDivide?: boolean }>
   background-color: ${({ isActive, theme }) => (isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white)};
 `;
 
-const DropdownItem: React.FC<DropdownItemProps> = ({ children, isActive = false, scale = 'md', ...props }) => {
+const DropdownItem: React.FC<DropdownItemProps> = ({ children, isActive = false, scale = "md", ...props }) => {
   return (
     <Item isActive={isActive} scale={scale} {...props}>
       {children}

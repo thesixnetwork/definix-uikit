@@ -52,7 +52,14 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout }) => {
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
               {accountEllipsis}
             </Text>
-            <Dropdown scale="sm" left="-105px" isOpen={isDropdownOpen} position="bottom" target={<IconButton startIcon={<MoreNIcon />} onClick={() => setIsDropdownOpen(!isDropdownOpen)} />} onItemClick={(index) => console.log(index)}>
+            <Dropdown
+              scale="sm"
+              left="-105px"
+              isOpen={isDropdownOpen}
+              position="bottom"
+              target={<IconButton startIcon={<MoreNIcon />} onClick={() => setIsDropdownOpen(!isDropdownOpen)} />}
+              onItemClick={(index) => console.log(index)}
+            >
               <DropdownItem>View on KlaytnscopeTH</DropdownItem>
               <DropdownItem>Copy Address</DropdownItem>
               <DropdownItem isDivide={true}>Disconnect</DropdownItem>

@@ -4,10 +4,13 @@ import { PositionProps as SPositionProps } from "styled-system";
 export type Position = "top" | "bottom";
 export type Scale = "sm" | "md";
 
-export const scales: Record<Scale, {
-  textStyle: string;
-  activeTextStyle: string;
-}> = {
+export const scales: Record<
+  Scale,
+  {
+    textStyle: string;
+    activeTextStyle: string;
+  }
+> = {
   sm: {
     textStyle: TextStyles.R_12R,
     activeTextStyle: TextStyles.R_12R,
@@ -15,14 +18,14 @@ export const scales: Record<Scale, {
   md: {
     textStyle: TextStyles.R_14R,
     activeTextStyle: TextStyles.R_14M,
-  }
-}
+  },
+};
 
 export interface PositionProps {
   position?: Position;
 }
 
-export interface DropdownProps extends PositionProps, Omit<SPositionProps, 'position'> {
+export interface DropdownProps extends PositionProps, Omit<SPositionProps, "position"> {
   scale?: Scale;
   isOpen: boolean;
   defaultIndex?: number;
