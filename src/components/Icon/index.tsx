@@ -76,5 +76,5 @@ export {
   PlusIcon,
   MinusIcon,
   CalculatorIcon,
-  BackIcon
+  BackIcon,
 };
