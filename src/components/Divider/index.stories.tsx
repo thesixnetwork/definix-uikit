@@ -17,7 +17,7 @@ export default {
 export const Default: React.FC = () => {
   return (
     <div style={{ padding: "32px", width: "800px" }}>
-      <Divider/>
+      <Divider />
     </div>
   );
 };
