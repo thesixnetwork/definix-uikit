@@ -10,9 +10,9 @@ import styled from "styled-components";
 import { ColorStyles, TextStyles } from "@/theme";
 import { Dropdown, DropdownItem } from "@/components/Dropdown";
 import { TranslateProps } from "../types";
+import { useMatchBreakpoints } from "@/hooks";
 
 interface Props extends TranslateProps {
-  isMobile: boolean;
   account?: string;
   login: Login;
   logout: () => void;
@@ -40,14 +40,14 @@ const StyledButton = styled.a`
 
 function copyToClipboard(val: string) {
   return new Promise((resolve, reject) => {
-    const element = document.createElement("textarea");
+    const element = document.createElement('textarea');
     element.value = val;
-    element.setAttribute("readonly", "");
-    element.style.position = "absolute";
-    element.style.left = "-9999px";
+    element.setAttribute('readonly', '');
+    element.style.position = 'absolute';
+    element.style.left = '-9999px';
     document.body.appendChild(element);
     element.select();
-    const returnValue = document.execCommand("copy");
+    const returnValue = document.execCommand('copy');
     document.body.removeChild(element);
     resolve(true);
     if (!returnValue) {
@@ -58,25 +58,23 @@ function copyToClipboard(val: string) {
 
 let timeout: any;
 
-const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans }) => {
+const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
+  const { isMobile } = useMatchBreakpoints();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
-  const onItemClick = useCallback(
-    (index: number) => {
-      if (index === 0) {
-        window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, "_blank");
-      } else if (index === 1) {
-        copyToClipboard(account as string);
-        setIsCopied(true);
-      } else {
-        logout();
-      }
-    },
-    [account]
-  );
+  const onItemClick = useCallback((index: number) => {
+    if (index === 0) {
+      window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, '_blank');
+    } else if (index === 1) {
+      copyToClipboard(account as string);
+      setIsCopied(true);
+    } else {
+      logout();
+    }
+  }, [account]);
 
   useEffect(() => {
     if (!isCopied) return;
@@ -88,6 +86,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
       timeout && clearTimeout(timeout);
       timeout = null;
     }, 3000);
+
   }, [isCopied]);
 
   return account ? (
@@ -95,7 +94,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
           <Text mt="55px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
-            <Trans label="Wallet Address" />
+            Wallet Address
           </Text>
           <Flex>
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
@@ -111,28 +110,26 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
               onItemClick={onItemClick}
             >
               <DropdownItem>
-                <Trans label="View on KlaytnscopeTH" />
+                View on KlaytnscopeTH
               </DropdownItem>
               <DropdownItem>
                 <Flex width="100%" alignItems="center" justifyContent="space-between">
-                  <Trans label="Copy Address" />
-                  {isCopied && (
-                    <Flex alignItems="center" color={ColorStyles.MEDIUMGREY}>
-                      <CheckBIcon />
-                      <Trans label="Copied" />
-                    </Flex>
-                  )}
+                  Copy Address
+                  {isCopied && <Flex alignItems="center" color={ColorStyles.MEDIUMGREY}>
+                    <CheckBIcon />
+                    Copied
+                  </Flex>}
                 </Flex>
               </DropdownItem>
               <DropdownItem isDivide={true}>
-                <Trans label="Disconnect" />
+              Disconnect
               </DropdownItem>
             </Dropdown>
           </Flex>
         </Flex>
         <StyledButton href="/farm">
           <Text textStyle={TextStyles.R_12M} color={ColorStyles.WHITE}>
-            <Trans label="Net Worth" />
+            Net Worth
           </Text>
           <Flex ml="12px" alignItems="center">
             <Text mr="7px" textStyle={TextStyles.R_12B} width="140px" color={ColorStyles.WHITE}>
@@ -165,7 +162,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
           }}
         >
           <Text textStyle={TextStyles.R_12B} ml="6px">
-            <Trans label="MY" />
+            MY
           </Text>
         </Button>
       </>
@@ -179,7 +176,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
           onPresentConnectModal();
         }}
       >
-        <Trans label="Connect Wallet" />
+        Connect Wallet
       </Button>
     </Flex>
   );

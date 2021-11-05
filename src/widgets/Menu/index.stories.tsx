@@ -9,6 +9,8 @@ import { MenuEntry } from "./components/MenuEntry";
 import Menu from "./Menu";
 import { LangType } from "./types";
 import { links } from "./config";
+import UserBlock from "./components/UserBlock";
+import Chain from "./components/Chain";
 
 export default {
   title: "Widgets/Menu[NEW]",
@@ -20,10 +22,6 @@ const Stub = styled.div`
   grid-column: 1/13;
 `;
 
-export const Trans: React.FC<Props> = ({ label }) => {
-  return <span>{label}</span>;
-};
-
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
 // This hook is used to simulate a props change, and force a re rendering
@@ -32,38 +30,37 @@ const useProps = () => {
     t: (key: string, replaceTxt: Record<string, string>) => {
       console.log("!!translate", key);
     },
-    account: "0xbdda50183d817c3289f895a4472eb475967dc980",
-    login: noop,
-    logout: noop,
-    isDark: false,
-    toggleTheme: noop,
+    userBlock: <UserBlock account="0xbdda50183d817c3289f895a4472eb475967dc980" login={noop} logout={noop} />,
+    chain: <Chain />,
+    // account: "0xbdda50183d817c3289f895a4472eb475967dc980",
+    // login: noop,
+    // logout: noop,
+    // isDark: false,
+    // toggleTheme: noop,
     langs,
     setLang: noop,
     currentLang: "EN",
     finixPriceUsd: 0.023158668932877668,
     links,
-    profile: null,
-    Trans,
+    // profile: null,
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProps({
-        t: (key: string, replaceTxt: Record<string, string>) => {
-          console.log("!!translate", key);
-        },
-        account: "0xbdda50183d817c3289f895a4472eb475967dc980",
-        login: noop,
-        logout: noop,
-        isDark: false,
-        toggleTheme: noop,
+        userBlock: <UserBlock account="0xbdda50183d817c3289f895a4472eb475967dc980" login={noop} logout={noop} />,
+        chain: <Chain />,
+        // account: "0xbdda50183d817c3289f895a4472eb475967dc980",
+        // login: noop,
+        // logout: noop,
+        // isDark: false,
+        // toggleTheme: noop,
         langs,
         setLang: noop,
         currentLang: "EN",
         finixPriceUsd: 0.023158668932877668,
         links,
-        profile: null,
-        Trans,
+        // profile: null,
       });
     }, 2000);
     return () => {

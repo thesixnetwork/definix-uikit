@@ -60,10 +60,12 @@ const Inner = styled.div<{ isMobile: boolean }>`
 `;
 
 const Menu: React.FC<MenuProps> = ({
-  account,
-  login,
-  logout,
-  Trans,
+  // account,
+  // login,
+  // logout,
+  // Trans,
+  userBlock,
+  chain,
   // isDark,
   // toggleTheme,
   langs,
@@ -79,16 +81,18 @@ const Menu: React.FC<MenuProps> = ({
     <Wrapper>
       <TopBackground />
       <Nav
-        Trans={Trans}
+        userBlock={userBlock}
+        chain={chain}
         isMobile={isMobile}
         isPushed={isPushed}
         pushNav={setIsPushed}
-        login={login}
-        account={account}
-        logout={logout}
+        // login={login}
+        // account={account}
+        // logout={logout}
       />
       <Panel
-        Trans={Trans}
+        userBlock={userBlock}
+        chain={chain}
         isMobile={isMobile}
         isPushed={isPushed}
         // isDark={isDark}
@@ -98,9 +102,9 @@ const Menu: React.FC<MenuProps> = ({
         currentLang={currentLang}
         pushNav={setIsPushed}
         links={links || defaultLinks}
-        login={login}
-        account={account}
-        logout={logout}
+        // login={login}
+        // account={account}
+        // logout={logout}
       />
       <Container>
         <Inner isMobile={isMobile}>{children}</Inner>

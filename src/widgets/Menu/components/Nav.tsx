@@ -44,7 +44,7 @@ const StyledNav = styled.nav`
   z-index: ${NAV_ZINDEX};
 `;
 
-const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, pushNav, Trans }) => {
+const Nav: React.FC<Props> = ({ userBlock, chain, isMobile, isPushed, pushNav }) => {
   return isMobile ? (
     <MobileNav>
       <Box position="absolute" left={pxToRem(20)}>
@@ -57,10 +57,10 @@ const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, push
     </MobileNav>
   ) : (
     <StyledNav>
-      <Chain Trans={Trans} />
+      {chain}
       <Flex position="absolute" right={pxToRem(60)}>
         <IconButton mr="16px" startIcon={<SettingIcon />} />
-        <UserBlock isMobile={isMobile} account={account} login={login} logout={logout} Trans={Trans} />
+        {userBlock}
       </Flex>
       {/* {profile && <Avatar profile={profile} />} */}
     </StyledNav>

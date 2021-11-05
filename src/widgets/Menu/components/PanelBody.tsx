@@ -39,7 +39,7 @@ const StyledMenuLink = styled(MenuLink)`
   padding-left: 30px;
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, Trans }) => {
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile
@@ -65,7 +65,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, Trans 
               pushNav={pushNav}
               icon={iconElement}
               activeIcon={activeIconElement}
-              label={<Trans label={entry.label} />}
+              label={entry.label}
               initialOpenState={initialOpenState}
               className={calloutClass}
               isActive={entry.items.some((item) => item.href === location.pathname)}
@@ -74,7 +74,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, Trans 
                 return (
                   <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
                     <StyledMenuLink href={item.href}>
-                      <Trans label={item.label} />
+                      {item.label}
                     </StyledMenuLink>
                   </MenuEntry>
                 );
@@ -87,7 +87,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links, Trans 
             <MenuLink href={entry.href} onClick={handleClick}>
               {isActive ? activeIconElement : iconElement}
               <LinkLabel isPushed={isPushed} ml="6px">
-                <Trans label={entry.label} />
+                {entry.label}
               </LinkLabel>
             </MenuLink>
           </MenuEntry>

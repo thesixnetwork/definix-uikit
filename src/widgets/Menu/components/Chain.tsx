@@ -1,3 +1,4 @@
+import { useMatchBreakpoints } from "@/hooks";
 import React, { useState } from "react";
 import { ChainToggle, ChainToggleItem } from "../../../components/ButtonMenu";
 import { ChainBscIcon, ChainKlaytnIcon } from "../../../components/Icon";
@@ -7,16 +8,17 @@ interface Props extends TranslateProps {
   toggleScale?: "sm" | "md";
 }
 
-const Chain: React.FC<Props> = ({ toggleScale, Trans }) => {
+const Chain: React.FC<Props> = ({ toggleScale }) => {
+  const { isMobile } = useMatchBreakpoints();
   const [chainIndex, setChainIndex] = useState(0);
   return (
     <div>
-      <ChainToggle toggleScale={toggleScale} activeIndex={chainIndex} onItemClick={setChainIndex}>
+      <ChainToggle toggleScale={isMobile ? "sm" : "md"} activeIndex={chainIndex} onItemClick={setChainIndex}>
         <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />}>
-          <Trans label={toggleScale === "sm" ? "bsc" : "Binance smart chain"} />
+          {toggleScale === "sm" ? "bsc" : "Binance smart chain"}
         </ChainToggleItem>
         <ChainToggleItem as="a" href="#a" startIcon={<ChainKlaytnIcon />}>
-          <Trans label="Klaytn chain" />
+          Klaytn chain
         </ChainToggleItem>
       </ChainToggle>
     </div>

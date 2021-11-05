@@ -50,10 +50,12 @@ export interface PanelProps {
 }
 
 export interface UserProps {
-  account?: string;
-  login: Login;
-  profile?: Profile;
-  logout: () => void;
+  userBlock: React.ReactNode;
+  chain: React.ReactNode;
+  // account?: string;
+  // login: Login;
+  // profile?: Profile;
+  // logout: () => void;
 }
 
 export interface NavProps extends UserProps {
@@ -62,9 +64,9 @@ export interface NavProps extends UserProps {
 }
 
 export interface TranslateProps {
-  Trans: React.FC<{
-    label: string;
-  }>;
+  // Trans: React.FC<{
+  //   label: string;
+  // }>;
 }
 
 export interface MenuProps
