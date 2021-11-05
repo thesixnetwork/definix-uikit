@@ -45,7 +45,7 @@ const StyledText = styled(Text)`
 const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
   isActive = false,
   as,
-  label,
+  children,
   startIcon,
   toggleScale,
   ...props
@@ -68,7 +68,7 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
         {...props}
       >
         <StyledText ml="7px" color={ColorStyles.DEEPGREY} textStyle="R_12M">
-          {label}
+          {children}
         </StyledText>
       </InactiveButton>
     );
@@ -91,7 +91,7 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
       {...props}
     >
       <StyledText ml="7px" color="greyscale.white" textStyle="R_12B">
-        {label}
+        {children}
       </StyledText>
     </ActiveButton>
   );

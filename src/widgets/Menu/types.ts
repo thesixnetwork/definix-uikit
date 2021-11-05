@@ -62,7 +62,9 @@ export interface NavProps extends UserProps {
 }
 
 export interface TranslateProps {
-  t: (key: string, replaceTxt?: Record<string, string>) => string;
+  Trans: React.FC<{
+    label: string;
+  }>;
 }
 
 export interface MenuProps

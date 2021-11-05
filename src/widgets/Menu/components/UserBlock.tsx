@@ -38,7 +38,7 @@ const StyledButton = styled.a`
   background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
 `;
 
-const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, t }) => {
+const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
@@ -47,7 +47,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, t }) => 
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
           <Text mt="55px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
-            {t("Wallet Address")}
+            <Trans label="Wallet Address" />
           </Text>
           <Flex>
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
@@ -61,15 +61,17 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, t }) => 
               target={<IconButton startIcon={<MoreNIcon />} onClick={() => setIsDropdownOpen(!isDropdownOpen)} />}
               onItemClick={(index) => console.log(index)}
             >
-              <DropdownItem>View on KlaytnscopeTH</DropdownItem>
-              <DropdownItem>Copy Address</DropdownItem>
-              <DropdownItem isDivide={true}>Disconnect</DropdownItem>
+              <DropdownItem>
+                <Trans label="View on KlaytnscopeTH" />
+                </DropdownItem>
+              <DropdownItem><Trans label="Copy Address" /></DropdownItem>
+              <DropdownItem isDivide={true}><Trans label="Disconnect" /></DropdownItem>
             </Dropdown>
           </Flex>
         </Flex>
         <StyledButton href="/farm">
           <Text textStyle={TextStyles.R_12M} color={ColorStyles.WHITE}>
-            {t("Net Worth")}
+            <Trans label="Net Worth" />
           </Text>
           <Flex ml="12px" alignItems="center">
             <Text mr="7px" textStyle={TextStyles.R_12B} width="140px" color={ColorStyles.WHITE}>
@@ -102,8 +104,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, t }) => 
           }}
         >
           <Text textStyle={TextStyles.R_12B} ml="6px">
-            {t("MY")}
-            MY
+            <Trans label="MY" />
           </Text>
         </Button>
       </>
@@ -117,7 +118,7 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, t }) => 
           onPresentConnectModal();
         }}
       >
-        Connect Wallet
+        <Trans label="Connect Wallet" />
       </Button>
     </Flex>
   );

@@ -22,6 +22,6 @@ export interface ChainToggleProps {
 export interface ChainToggleItemProps extends BaseButtonProps {
   isActive?: boolean;
   startIcon: React.ReactNode;
-  label: string;
   toggleScale?: "sm" | "md";
+  children: React.ReactNode;
 }

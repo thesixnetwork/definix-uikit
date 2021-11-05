@@ -6,7 +6,7 @@ import { PushedProps } from "../types";
 import { ArrowBottomGIcon, ArrowTopGIcon } from "../../../components/Icon";
 
 interface Props extends PushedProps {
-  label: string;
+  label: string | React.ReactNode;
   icon: React.ReactElement;
   activeIcon: React.ReactElement;
   initialOpenState?: boolean;
