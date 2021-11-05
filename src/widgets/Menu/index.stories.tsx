@@ -20,6 +20,10 @@ const Stub = styled.div`
   grid-column: 1/13;
 `;
 
+export const Trans: React.FC<Props> = ({ label }) => {
+  return <span>{label}</span>;
+};
+
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
 // This hook is used to simulate a props change, and force a re rendering
@@ -39,6 +43,7 @@ const useProps = () => {
     finixPriceUsd: 0.023158668932877668,
     links,
     profile: null,
+    Trans,
   });
 
   useEffect(() => {
@@ -58,6 +63,7 @@ const useProps = () => {
         finixPriceUsd: 0.023158668932877668,
         links,
         profile: null,
+        Trans,
       });
     }, 2000);
     return () => {

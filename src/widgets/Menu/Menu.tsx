@@ -78,7 +78,6 @@ const Menu: React.FC<MenuProps> = ({
   return (
     <Wrapper>
       <TopBackground />
-      <Trans label="Home" />
       <Nav
         Trans={Trans}
         isMobile={isMobile}

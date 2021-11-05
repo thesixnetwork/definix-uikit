@@ -1,6 +1,6 @@
 import { TextStyles } from "@/theme";
 import { HTMLAttributes } from "react";
-import { PositionProps as SPositionProps } from "styled-system";
+import { LayoutProps, PositionProps as SPositionProps } from "styled-system";
 export type Position = "top" | "bottom";
 export type Scale = "sm" | "md";
 
@@ -25,7 +25,7 @@ export interface PositionProps {
   position?: Position;
 }
 
-export interface DropdownProps extends PositionProps, Omit<SPositionProps, "position"> {
+export interface DropdownProps extends PositionProps, Omit<SPositionProps, "position">, LayoutProps {
   scale?: Scale;
   isOpen: boolean;
   defaultIndex?: number;
