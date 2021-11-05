@@ -44,7 +44,7 @@ const StyledNav = styled.nav`
   z-index: ${NAV_ZINDEX};
 `;
 
-const Nav: React.FC<Props> = ({ Trans, account, login, logout, isMobile, isPushed, pushNav, t }) => {
+const Nav: React.FC<Props> = ({ account, login, logout, isMobile, isPushed, pushNav, t }) => {
   return isMobile ? (
     <MobileNav>
       <Box position="absolute" left={pxToRem(20)}>

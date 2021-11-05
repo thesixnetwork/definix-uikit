@@ -53,7 +53,7 @@ const ContainerScrollPanel = styled.div`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isMobile, userBlock } = props;
+  const { isMobile } = props;
   return isMobile ? (
     <StyledPanel {...props}>
       <MobilePanelHeaderFixed {...props} />
