@@ -40,14 +40,14 @@ const StyledButton = styled.a`
 
 function copyToClipboard(val: string) {
   return new Promise((resolve, reject) => {
-    const element = document.createElement('textarea');
+    const element = document.createElement("textarea");
     element.value = val;
-    element.setAttribute('readonly', '');
-    element.style.position = 'absolute';
-    element.style.left = '-9999px';
+    element.setAttribute("readonly", "");
+    element.style.position = "absolute";
+    element.style.left = "-9999px";
     document.body.appendChild(element);
     element.select();
-    const returnValue = document.execCommand('copy');
+    const returnValue = document.execCommand("copy");
     document.body.removeChild(element);
     resolve(true);
     if (!returnValue) {
@@ -64,16 +64,19 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
-  const onItemClick = useCallback((index: number) => {
-    if (index === 0) {
-      window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, '_blank');
-    } else if (index === 1) {
-      copyToClipboard(account as string);
-      setIsCopied(true);
-    } else {
-      logout();
-    }
-  }, [account]);
+  const onItemClick = useCallback(
+    (index: number) => {
+      if (index === 0) {
+        window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, "_blank");
+      } else if (index === 1) {
+        copyToClipboard(account as string);
+        setIsCopied(true);
+      } else {
+        logout();
+      }
+    },
+    [account]
+  );
 
   useEffect(() => {
     if (!isCopied) return;
@@ -85,7 +88,6 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
       timeout && clearTimeout(timeout);
       timeout = null;
     }, 3000);
-
   }, [isCopied]);
 
   return account ? (
@@ -114,10 +116,12 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
               <DropdownItem>
                 <Flex width="100%" alignItems="center" justifyContent="space-between">
                   <Trans label="Copy Address" />
-                  {isCopied && <Flex alignItems="center" color={ColorStyles.MEDIUMGREY}>
-                    <CheckBIcon />
-                    <Trans label="Copied" />
-                  </Flex>}
+                  {isCopied && (
+                    <Flex alignItems="center" color={ColorStyles.MEDIUMGREY}>
+                      <CheckBIcon />
+                      <Trans label="Copied" />
+                    </Flex>
+                  )}
                 </Flex>
               </DropdownItem>
               <DropdownItem isDivide={true}>

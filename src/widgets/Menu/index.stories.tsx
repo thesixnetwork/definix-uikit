@@ -21,8 +21,8 @@ const Stub = styled.div`
 `;
 
 export const Trans: React.FC<Props> = ({ label }) => {
-  return <span>{label}</span>
-}
+  return <span>{label}</span>;
+};
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
@@ -43,7 +43,7 @@ const useProps = () => {
     finixPriceUsd: 0.023158668932877668,
     links,
     profile: null,
-    Trans 
+    Trans,
   });
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const useProps = () => {
         finixPriceUsd: 0.023158668932877668,
         links,
         profile: null,
-        Trans
+        Trans,
       });
     }, 2000);
     return () => {
