@@ -1,6 +1,6 @@
 import React from "react";
 import { DividerProps } from "./types";
-import { ColorStyles, lightColors } from "@/theme";
+import { ColorStyles } from "@/theme";
 import { Box } from "../Box";
 
 const Divider: React.FC<DividerProps> = ({ ...props }) => {
