@@ -27,9 +27,7 @@ const StyledHeader = styled(Flex)`
 
 const PanelHeader: React.FC<Props> = ({ userBlock, isMobile, pushNav, ...props }) => {
   return isMobile ? (
-    <MobileHeader>
-      {userBlock}
-    </MobileHeader>
+    <MobileHeader>{userBlock}</MobileHeader>
   ) : (
     <StyledHeader>
       <LogoMainFinixIcon />
