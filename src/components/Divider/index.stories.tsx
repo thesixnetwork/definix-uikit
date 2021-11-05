@@ -19,7 +19,7 @@ export const Default: React.FC = () => {
     <div style={{ padding: "32px", width: "800px" }}>
       <Divider />
 
-      <Divider className="mt-s40"/>
+      <Divider className="mt-s40" />
     </div>
   );
 };
