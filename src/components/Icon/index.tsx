@@ -35,6 +35,8 @@ import { ReactComponent as CloseIcon } from "./icons/ico_24_close.svg";
 import { ReactComponent as SmallDownIcon } from "./icons/ico_16_small_down.svg";
 import { ReactComponent as PlusIcon } from "./icons/ico_16_plus.svg";
 import { ReactComponent as MinusIcon } from "./icons/ico_16_minus.svg";
+import { ReactComponent as CalculatorIcon } from "./icons/ico_16_calculator.svg";
+import { ReactComponent as BackIcon } from "./icons/ico_24_back.svg";
 import { ReactComponent as CheckBIcon } from "./icons/ico_16_check_b.svg";
 
 export {
@@ -74,5 +76,7 @@ export {
   SmallDownIcon,
   PlusIcon,
   MinusIcon,
+  CalculatorIcon,
+  BackIcon,
   CheckBIcon,
 };

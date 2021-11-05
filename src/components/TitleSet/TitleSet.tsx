@@ -13,7 +13,7 @@ const TitleSet: React.FC<TitleSetProps> = ({ title, link, linkLabel, description
           <Heading size={sizes.XL} mr="16px">
             {title}
           </Heading>
-          <StyledLink href={link}>{linkLabel}</StyledLink>
+          {link && linkLabel && <StyledLink href={link}>{linkLabel}</StyledLink>}
         </Flex>
         <StyledDescription>{description}</StyledDescription>
       </Flex>
