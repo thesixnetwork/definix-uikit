@@ -1,6 +1,6 @@
 import React, { useState, Children, ReactElement, cloneElement } from "react";
 import styled from "styled-components";
-import { position as sPosition } from "styled-system";
+import { layout, position as sPosition } from "styled-system";
 import { DropdownProps, Position } from "./types";
 
 const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
@@ -28,6 +28,7 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
     margin-${position === "top" ? "bottom" : "top"}: 4px;
   `}
   ${sPosition}
+  ${layout}
 `;
 
 const Container = styled.div`
