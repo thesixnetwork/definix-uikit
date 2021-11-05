@@ -12,15 +12,11 @@ const Chain: React.FC<Props> = ({ toggleScale, Trans }) => {
   return (
     <div>
       <ChainToggle toggleScale={toggleScale} activeIndex={chainIndex} onItemClick={setChainIndex}>
-        <ChainToggleItem
-          as="a"
-          href="#d"
-          startIcon={<ChainBscIcon />}
-        >
+        <ChainToggleItem as="a" href="#d" startIcon={<ChainBscIcon />}>
           <Trans label={toggleScale === "sm" ? "bsc" : "Binance smart chain"} />
         </ChainToggleItem>
         <ChainToggleItem as="a" href="#a" startIcon={<ChainKlaytnIcon />}>
-        <Trans label="Klaytn chain" />
+          <Trans label="Klaytn chain" />
         </ChainToggleItem>
       </ChainToggle>
     </div>

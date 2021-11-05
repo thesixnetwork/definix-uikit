@@ -63,9 +63,13 @@ const UserBlock: React.FC<Props> = ({ isMobile, account, login, logout, Trans })
             >
               <DropdownItem>
                 <Trans label="View on KlaytnscopeTH" />
-                </DropdownItem>
-              <DropdownItem><Trans label="Copy Address" /></DropdownItem>
-              <DropdownItem isDivide={true}><Trans label="Disconnect" /></DropdownItem>
+              </DropdownItem>
+              <DropdownItem>
+                <Trans label="Copy Address" />
+              </DropdownItem>
+              <DropdownItem isDivide={true}>
+                <Trans label="Disconnect" />
+              </DropdownItem>
             </Dropdown>
           </Flex>
         </Flex>
