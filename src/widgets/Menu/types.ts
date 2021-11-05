@@ -54,8 +54,6 @@ export interface UserProps {
   login: Login;
   profile?: Profile;
   logout: () => void;
-  userBlock: React.ReactNode;
-  chain: React.ReactNode;
 }
 
 export interface NavProps extends UserProps {
