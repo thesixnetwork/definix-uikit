@@ -18,7 +18,18 @@ export const Default: React.FC = () => {
   return (
     <div style={{ padding: "32px", width: "800px" }}>
       <Row>
-        <TitleSet title="Swap" description="Trade tokens in an instant." linkLabel="Learn to swap." link="" />
+        <TitleSet
+          title="Swap"
+          description="Trade tokens in an instant."
+          linkLabel="Learn to swap."
+          link="http://www.naver.com"
+        />
+      </Row>
+      <Row>
+        <TitleSet
+          title="Deposit in the Pool"
+          description="By depositing a single token in the pool to get FINIX with high interest."
+        />
       </Row>
     </div>
   );
