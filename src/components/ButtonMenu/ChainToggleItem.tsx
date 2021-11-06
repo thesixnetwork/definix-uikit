@@ -59,9 +59,8 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
         startIcon={
           isValidElement(startIcon) &&
           cloneElement(startIcon, {
-            width: toggleScale === "md" ? "22px" : "20px",
-            height: toggleScale === "md" ? "22px" : "20px",
-            viewBox: "0 0 22 22",
+            width: toggleScale === "md" ? "22" : "20",
+            height: toggleScale === "md" ? "22" : "20",
             mr: "0.5rem",
           })
         }
@@ -80,9 +79,8 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
       startIcon={
         isValidElement(startIcon) &&
         cloneElement(startIcon, {
-          width: toggleScale === "md" ? "22px" : "20px",
-          height: toggleScale === "md" ? "22px" : "20px",
-          viewBox: "0 0 22 22",
+          width: toggleScale === "md" ? "22" : "20",
+          height: toggleScale === "md" ? "22" : "20",
           mr: "0.5rem",
         })
       }
