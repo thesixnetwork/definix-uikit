@@ -1,47 +1,20 @@
-import styled, { DefaultTheme } from "styled-components";
-import { InputProps, scales } from "./types";
+import React, { cloneElement, ElementType, isValidElement } from "react";
+import { textStyle, ColorStyles } from "../../theme";
+import styled, { css } from "styled-components";
+import { InputProps, BaseInputProps } from "./types";
+import { Flex } from "../Box";
+import { layout } from "styled-system";
 
-interface StyledInputProps extends InputProps {
-  theme: DefaultTheme;
-}
-
-/**
- * Priority: Warning --> Success
- */
-const getBoxShadow = ({ isSuccess = false, isWarning = false, theme }: StyledInputProps) => {
-  if (isWarning) {
-    return theme.shadows.warning;
-  }
-
-  if (isSuccess) {
-    return theme.shadows.success;
-  }
-
-  return theme.shadows.inset;
-};
-
-const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
-  switch (scale) {
-    case scales.SM:
-      return "32px";
-    case scales.LG:
-      return "48px";
-    case scales.MD:
-    default:
-      return "40px";
-  }
-};
-
-const Input = styled.input<InputProps>`
+const StyledInput = styled.input<BaseInputProps>`
   border: 0;
-  border-radius: 16px;
-  box-shadow: ${getBoxShadow};
   display: block;
-  font-size: 16px;
-  height: ${getHeight};
+  height: 100%;
+  ${css(textStyle.R_14B)}
+  color: ${({ theme }) => theme.colors[ColorStyles.MEDIUMGREY]};
   outline: 0;
-  padding: 0 16px;
+  padding: 10px 16px;
   width: 100%;
+  background-color: transparent;
 
   &::placeholder {
   }
@@ -51,15 +24,40 @@ const Input = styled.input<InputProps>`
     cursor: not-allowed;
   }
 
-  &:focus:not(:disabled) {
+  /* &:focus:not(:disabled) {
     box-shadow: ${({ theme }) => theme.shadows.focus};
-  }
+  } */
 `;
 
-Input.defaultProps = {
-  scale: scales.MD,
+const StyledFlex = styled(Flex)`
+  position: relative;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]};
+  border-radius: 8px;
+  padding-right: 16px;
+  ${layout}
+`;
+
+StyledInput.defaultProps = {
   isSuccess: false,
   isWarning: false,
+};
+
+const Input = <E extends ElementType = "input">(props: InputProps<E>): JSX.Element => {
+  const { endIcon, ...rest } = props;
+  return (
+    <StyledFlex {...rest}>
+      <StyledInput {...rest} />
+      {isValidElement(endIcon) &&
+        cloneElement(endIcon, {
+          ml: "0.5rem",
+        })}
+    </StyledFlex>
+  );
 };
 
 export default Input;

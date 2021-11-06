@@ -1,15 +1,12 @@
-import { SpaceProps } from "styled-system";
+import { ElementType } from "react";
+import { LayoutProps, SpaceProps } from "styled-system";
+import { PolymorphicComponentProps } from "../Button/types";
 
-export const scales = {
-  SM: "sm",
-  MD: "md",
-  LG: "lg",
-} as const;
-
-export type Scales = typeof scales[keyof typeof scales];
-
-export interface InputProps extends SpaceProps {
-  scale?: Scales;
+export interface BaseInputProps extends SpaceProps {
   isSuccess?: boolean;
   isWarning?: boolean;
+  endIcon?: React.ReactElement;
 }
+
+export interface WrapInputProps extends LayoutProps, BaseInputProps {}
+export type InputProps<P extends ElementType = "input"> = PolymorphicComponentProps<P, WrapInputProps>;
