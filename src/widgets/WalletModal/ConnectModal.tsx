@@ -31,7 +31,10 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
     ))}
     <Flex textStyle={TextStyles.R_14R} alignItems="center" justifyContent="center" py="S_20">
       <Text color={ColorStyles.DEEPGREY}>I’m new to this,</Text>
-      <HelpLink href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix"> How to set up</HelpLink>
+      <HelpLink href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix">
+        {" "}
+        How to set up
+      </HelpLink>
     </Flex>
   </Modal>
 );

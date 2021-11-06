@@ -18,7 +18,7 @@ const StyledButton = styled.div`
   display: flex;
   min-width: 320px;
   justify-content: space-between;
-`
+`;
 
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
   const { title, icon: Icon } = walletConfig;

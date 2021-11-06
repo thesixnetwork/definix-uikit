@@ -54,7 +54,9 @@ const ModalTitle = styled(Flex)`
 `;
 
 const StyledModalBody = styled(Flex)<{ noPadding: boolean }>`
-  ${({ noPadding, theme }) => !noPadding && `
+  ${({ noPadding, theme }) =>
+    !noPadding &&
+    `
     padding: 0px 20px 24px;
     ${theme.mediaQueries.xs} {
       padding-left: 24px;
@@ -88,7 +90,9 @@ const Modal: React.FC<Props> = ({
         </IconButton>
       )}
     </ModalHeader>
-    <StyledModalBody flexDirection="column" noPadding={noPadding}>{children}</StyledModalBody>
+    <StyledModalBody flexDirection="column" noPadding={noPadding}>
+      {children}
+    </StyledModalBody>
   </StyledModal>
 );
 
