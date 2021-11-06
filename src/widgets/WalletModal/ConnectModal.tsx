@@ -1,26 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "../../components/Link";
-import { HelpIcon } from "../../components/Svg";
+import { Flex } from "../../components/Box";
+import { Text } from "../../components/Text";
 import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
 import config from "./config";
 import { Login } from "./types";
+import { ColorStyles, TextStyles } from "@/theme";
 
 interface Props {
   login: Login;
   onDismiss?: () => void;
 }
 
-const HelpLink = styled(Link)`
-  display: flex;
-  align-self: center;
-  align-items: center;
-  margin-top: 24px;
+const HelpLink = styled.a`
+  text-decoration: underline;
+  color: ${({ theme }) => theme.colors[ColorStyles.BLACK]};
 `;
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
-  <Modal title="Connect to a wallet" onDismiss={onDismiss}>
+  <Modal title="Connect to a wallet" onDismiss={onDismiss} noPadding={true}>
     {config.map((entry, index) => (
       <WalletCard
         key={entry.title}
@@ -30,13 +29,10 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
         mb={index < config.length - 1 ? "8px" : "0"}
       />
     ))}
-    <HelpLink
-      href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix"
-      external
-    >
-      <HelpIcon color="primary" mr="6px" />
-      Learn how to connect
-    </HelpLink>
+    <Flex textStyle={TextStyles.R_14R} alignItems="center" justifyContent="center" py="S_20">
+      <Text color={ColorStyles.DEEPGREY}>I’m new to this,</Text>
+      <HelpLink href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix"> How to set up</HelpLink>
+    </Flex>
   </Modal>
 );
 

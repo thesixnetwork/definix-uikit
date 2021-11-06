@@ -11,6 +11,7 @@ interface Props extends InjectedProps {
   hideCloseButton?: boolean;
   onBack?: () => void;
   mobileFull?: boolean;
+  noPadding?: boolean;
 }
 
 const StyledModal = styled.div<{ mobileFull: boolean }>`
@@ -52,12 +53,14 @@ const ModalTitle = styled(Flex)`
   flex: 1;
 `;
 
-const StyledModalBody = styled(Flex)`
-  padding: 0px 20px 24px;
-  ${({ theme }) => theme.mediaQueries.xs} {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
+const StyledModalBody = styled(Flex)<{ noPadding: boolean }>`
+  ${({ noPadding, theme }) => !noPadding && `
+    padding: 0px 20px 24px;
+    ${theme.mediaQueries.xs} {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  `};
 `;
 
 const Modal: React.FC<Props> = ({
@@ -67,6 +70,7 @@ const Modal: React.FC<Props> = ({
   children,
   hideCloseButton = false,
   mobileFull = false,
+  noPadding = false,
 }) => (
   <StyledModal mobileFull={mobileFull}>
     <ModalHeader>
@@ -84,7 +88,7 @@ const Modal: React.FC<Props> = ({
         </IconButton>
       )}
     </ModalHeader>
-    <StyledModalBody flexDirection="column">{children}</StyledModalBody>
+    <StyledModalBody flexDirection="column" noPadding={noPadding}>{children}</StyledModalBody>
   </StyledModal>
 );
 
