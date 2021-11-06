@@ -9,10 +9,9 @@ import { ArrowRightGIcon, MoreNIcon, GnbMySIcon, CheckBIcon } from "@/components
 import styled from "styled-components";
 import { ColorStyles, TextStyles } from "@/theme";
 import { Dropdown, DropdownItem } from "@/components/Dropdown";
-import { TranslateProps } from "../types";
 import { useMatchBreakpoints } from "@/hooks";
 
-interface Props extends TranslateProps {
+interface Props {
   account?: string;
   login: Login;
   logout: () => void;
@@ -142,7 +141,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     ) : (
       <>
         <Button
-          scale={ButtonScales.S32}
+          scale={ButtonScales.S_32}
           variant={ButtonVariants.LIGHTBROWN}
           textStyle={TextStyles.R_12B}
           onClick={() => {
@@ -153,7 +152,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
         </Button>
         <Button
           ml="8px"
-          scale={ButtonScales.S32ICON}
+          scale={ButtonScales.S_32ICON}
           minWidth="auto"
           variant={ButtonVariants.DEEPBROWN}
           startIcon={<GnbMySIcon />}
@@ -170,7 +169,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   ) : (
     <Flex width="100%" height={isMobile ? "188px" : "auto"} alignItems="center" justifyContent="center">
       <Button
-        scale={isMobile ? ButtonScales.S40 : ButtonScales.S32}
+        scale={isMobile ? ButtonScales.S_40 : ButtonScales.S_32}
         variant={ButtonVariants.RED}
         onClick={() => {
           onPresentConnectModal();

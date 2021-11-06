@@ -2,45 +2,9 @@ import styled from "styled-components";
 import { space, layout, variant as styledVariant } from "styled-system";
 import { hexToRGB } from "../../style/mixin";
 import { getVariantTextStyle } from "@/theme/text";
-import { scaleVariants, styleVariants } from "./theme";
+import { scaleVariants, styleVariants, scaleMinWidthVariants } from "./theme";
 import { BaseButtonProps, ButtonVariants } from "./types";
 import { ColorStyles } from "@/theme";
-
-// interface ThemedButtonProps extends BaseButtonProps {
-//   theme: DefaultTheme;
-// }
-
-// const getDisabledStyles = ({ isLoading }: ThemedButtonProps) => {
-//   if (isLoading === true) {
-//     return `
-//       &:disabled,
-//       &.definix-button--disabled {
-//         cursor: not-allowed;
-//       }
-//     `;
-//   }
-
-//   return `
-//     &:disabled,
-//     &.definix-button--disabled {
-//       box-shadow: none;
-//       cursor: not-allowed;
-//     }
-//   `;
-// };
-
-/**
- * This is to get around an issue where if you use a Link component
- * React will throw a invalid DOM attribute error
- * @see https://github.com/styled-components/styled-components/issues/135
- */
-// interface TransientButtonProps extends ThemedButtonProps {
-//   $isLoading?: boolean;
-// }
-
-// const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
-//   return $isLoading ? ".5" : "1";
-// };
 
 const StyledButton = styled.button<BaseButtonProps>`
   position: relative;
@@ -91,6 +55,10 @@ const StyledButton = styled.button<BaseButtonProps>`
   ${getVariantTextStyle()}
   ${layout}
   ${space}
+  ${({ isAutoMinWidth }) => isAutoMinWidth && styledVariant({
+    prop: "scale",
+    variants: scaleMinWidthVariants,
+  })}
 `;
 
 export default StyledButton;
