@@ -55,10 +55,12 @@ const StyledButton = styled.button<BaseButtonProps>`
   ${getVariantTextStyle()}
   ${layout}
   ${space}
-  ${({ isAutoMinWidth }) => isAutoMinWidth && styledVariant({
-    prop: "scale",
-    variants: scaleMinWidthVariants,
-  })}
+  ${({ isAutoMinWidth }) =>
+    isAutoMinWidth &&
+    styledVariant({
+      prop: "scale",
+      variants: scaleMinWidthVariants,
+    })}
 `;
 
 export default StyledButton;

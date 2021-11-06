@@ -38,8 +38,7 @@ export type Gradients = {
 
 export type Colors = {
   [key in ColorStyles]: string;
-} &
-  Record<string, string>;
+} & Record<string, string>;
 
 export type ZIndices = {
   dropdown: number;
