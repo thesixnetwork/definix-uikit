@@ -6,13 +6,13 @@ import * as IconModule from "../../../components/Icon";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
-import { PanelProps, PushedProps, TranslateProps } from "../types";
+import { PanelProps, PushedProps } from "../types";
 
-interface Props extends PanelProps, PushedProps, TranslateProps {
+interface Props extends PanelProps, PushedProps {
   isMobile: boolean;
 }
 
-const Icons = (IconModule as unknown) as { [key: string]: React.FC<SvgProps> };
+const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
 const Container = styled.div<{ isMobile: boolean }>`
   display: flex;

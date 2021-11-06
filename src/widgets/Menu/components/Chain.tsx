@@ -2,9 +2,8 @@ import { useMatchBreakpoints } from "@/hooks";
 import React, { useState } from "react";
 import { ChainToggle, ChainToggleItem } from "../../../components/ButtonMenu";
 import { ChainBscIcon, ChainKlaytnIcon } from "../../../components/Icon";
-import { TranslateProps } from "../types";
 
-interface Props extends TranslateProps {
+interface Props {
   toggleScale?: "sm" | "md";
 }
 

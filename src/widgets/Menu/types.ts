@@ -58,18 +58,16 @@ export interface UserProps {
   // logout: () => void;
 }
 
+export interface SettingProps {
+  settingModal?: React.ReactElement;
+}
+
 export interface NavProps extends UserProps {
   isMobile: boolean;
   links?: Array<MenuEntry>;
 }
 
-export interface TranslateProps {
-  // Trans: React.FC<{
-  //   label: string;
-  // }>;
-}
-
 export interface MenuProps
   extends Pick<PanelProps, "langs" | "setLang" | "currentLang">,
     Omit<NavProps, "isMobile">,
-    TranslateProps {}
+    SettingProps {}

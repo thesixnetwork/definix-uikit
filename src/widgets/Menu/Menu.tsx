@@ -64,6 +64,7 @@ const Menu: React.FC<MenuProps> = ({
   // login,
   // logout,
   // Trans,
+  settingModal,
   userBlock,
   chain,
   // isDark,
@@ -81,6 +82,7 @@ const Menu: React.FC<MenuProps> = ({
     <Wrapper>
       <TopBackground />
       <Nav
+        settingModal={settingModal}
         userBlock={userBlock}
         chain={chain}
         isMobile={isMobile}

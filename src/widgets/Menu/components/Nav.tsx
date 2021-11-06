@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Box, Flex } from "@/components/Box";
-import { IconButton } from "@/components/Button";
+import { Box, Flex } from "../../../components/Box";
+import { IconButton } from "../../../components/Button";
 import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, NAV_ZINDEX, SIDEBAR_WIDTH_FULL_PC } from "../config";
-import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "@/components/Icon";
-import { hexToRGB, pxToRem } from "@/style/mixin";
-import Chain from "./Chain";
-import UserBlock from "./UserBlock";
-import { NavProps, PushedProps, TranslateProps } from "../types";
-import { ColorStyles } from "@/theme";
+import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "../../../components/Icon";
+import { hexToRGB, pxToRem } from "../../../style/mixin";
+import { NavProps, PushedProps, SettingProps } from "../types";
+import { ColorStyles } from "../../../theme";
+import { useModal } from "../../Modal";
 
-interface Props extends NavProps, PushedProps, TranslateProps {}
+interface Props extends NavProps, PushedProps, SettingProps {}
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -44,22 +43,31 @@ const StyledNav = styled.nav`
   z-index: ${NAV_ZINDEX};
 `;
 
-const Nav: React.FC<Props> = ({ userBlock, chain, isMobile, isPushed, pushNav }) => {
+const Nav: React.FC<Props> = ({ settingModal, userBlock, chain, isMobile, isPushed, pushNav }) => {
+  const [onPresentSettingModal] = useModal(settingModal, false);
   return isMobile ? (
     <MobileNav>
       <Box position="absolute" left={pxToRem(20)}>
         <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
       </Box>
       <LogoMainFinixIcon />
-      <Box position="absolute" right={pxToRem(20)}>
-        <IconButton startIcon={<SettingIcon />} />
-      </Box>
+      {settingModal ? (
+        <Box position="absolute" right={pxToRem(20)}>
+          <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        </Box>
+      ) : (
+        <></>
+      )}
     </MobileNav>
   ) : (
     <StyledNav>
       {chain}
       <Flex position="absolute" right={pxToRem(60)}>
-        <IconButton mr="16px" startIcon={<SettingIcon />} />
+        {settingModal ? (
+          <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        ) : (
+          <></>
+        )}
         {userBlock}
       </Flex>
       {/* {profile && <Avatar profile={profile} />} */}
