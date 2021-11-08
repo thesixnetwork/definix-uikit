@@ -30,6 +30,7 @@ export * from "./components/TitleSet";
 export * from "./components/AnountButton";
 export * from "./components/Label";
 export * from "./components/Divider";
+export * from "./components/BalanceInput";
 
 // Hooks
 export * from "./hooks";
