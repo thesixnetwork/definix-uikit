@@ -18,7 +18,7 @@ export const Default: React.FC = () => {
           width: "200px",
         }}
       >
-        <BalanceInput value="213434.32432"/>
+        <BalanceInput value="213434.32432" />
       </div>
       <div
         style={{
@@ -26,7 +26,7 @@ export const Default: React.FC = () => {
           width: "400px",
         }}
       >
-        <BalanceInput value="" placeholder="0"/>
+        <BalanceInput value="" placeholder="0" />
       </div>
     </>
   );

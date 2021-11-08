@@ -24,9 +24,7 @@ const StyledInput = styled.input`
 `;
 
 const BalanceInput = (props: BalanceInputProps): JSX.Element => {
-  return (
-    <StyledInput {...props}/>
-  );
+  return <StyledInput {...props} />;
 };
 
 export default BalanceInput;
