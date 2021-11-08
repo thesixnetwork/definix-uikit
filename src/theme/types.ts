@@ -21,6 +21,7 @@ export type Radii = {
   default: string;
   card: string;
   circle: string;
+  [key: string]: string;
 };
 
 export type Shadows = {
@@ -30,10 +31,16 @@ export type Shadows = {
   warning: string;
   focus: string;
   inset: string;
+  elevation: string;
+  elevation1: string;
+  elevation2: string;
+  elevation3: string;
+  [key: string]: string;
 };
 
 export type Gradients = {
   bubblegum: string;
+  [key: string]: string;
 };
 
 export type Colors = {
@@ -43,6 +50,7 @@ export type Colors = {
 export type ZIndices = {
   dropdown: number;
   modal: number;
+  [key: string]: number;
 };
 
 export interface ExtendColorProps {

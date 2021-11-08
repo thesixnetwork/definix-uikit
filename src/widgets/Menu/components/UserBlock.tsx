@@ -141,7 +141,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     ) : (
       <>
         <Button
-          scale={ButtonScales.S_32}
+          scale={ButtonScales.XS}
           variant={ButtonVariants.LIGHTBROWN}
           textStyle={TextStyles.R_12B}
           onClick={() => {
@@ -169,7 +169,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
   ) : (
     <Flex width="100%" height={isMobile ? "188px" : "auto"} alignItems="center" justifyContent="center">
       <Button
-        scale={isMobile ? ButtonScales.S_40 : ButtonScales.S_32}
+        scale={isMobile ? ButtonScales.MD : ButtonScales.XS}
         variant={ButtonVariants.RED}
         onClick={() => {
           onPresentConnectModal();

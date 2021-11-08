@@ -4,16 +4,12 @@ import { LayoutProps, SpaceProps } from "styled-system";
 
 export enum ButtonScales {
   // new
-  S_32 = "32",
   S_32ICON = "32_icon",
-  S_36 = "36",
-  S_40 = "40",
-  S_48 = "48",
 
-  // old
-  MD = "md",
-  SM = "sm",
-  XS = "xs",
+  LG = "lg",  // 48
+  MD = "md",  // 40
+  SM = "sm",  // 36
+  XS = "xs",  // 32
 }
 
 export enum ButtonVariants {
@@ -29,6 +25,7 @@ export enum ButtonVariants {
   PRIMARY = "primary",
   SECONDARY = "secondary",
   TERTIARY = "tertiary",
+
   TEXT = "text",
   DANGER = "danger",
   SUBTLE = "subtle",
@@ -61,6 +58,11 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   endIcon?: ReactNode;
   textStyle?: string;
   isAutoMinWidth?: boolean;
+
+  md?: boolean;
+  sm?: boolean;
+  xs?: boolean;
+  lg?: boolean;
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

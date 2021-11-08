@@ -14,7 +14,7 @@ const DropdownButton: React.FC<ButtonProps> = (props) => {
 };
 
 DropdownButton.defaultProps = {
-  scale: ButtonScales.S_40,
+  scale: ButtonScales.MD,
   variant: ButtonVariants.LINE,
 };
 

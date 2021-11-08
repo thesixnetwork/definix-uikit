@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { space, layout, variant as styledVariant } from "styled-system";
 import { hexToRGB } from "../../style/mixin";
 import { getVariantTextStyle } from "@/theme/text";
-import { scaleVariants, styleVariants, scaleMinWidthVariants } from "./theme";
+import { scaleVariants, styleVariants } from "./theme";
 import { BaseButtonProps, ButtonVariants } from "./types";
 import { ColorStyles } from "@/theme";
 
@@ -55,12 +55,6 @@ const StyledButton = styled.button<BaseButtonProps>`
   ${getVariantTextStyle()}
   ${layout}
   ${space}
-  ${({ isAutoMinWidth }) =>
-    isAutoMinWidth &&
-    styledVariant({
-      prop: "scale",
-      variants: scaleMinWidthVariants,
-    })}
 `;
 
 export default StyledButton;

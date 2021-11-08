@@ -12,7 +12,7 @@ import { ButtonScales, ButtonVariants } from "./types";
 import { TextStyles } from "../../theme/text";
 import DropdownButton from "./DropdownButton";
 
-const viewScales = [ButtonScales.S_32, ButtonScales.S_36, ButtonScales.S_40, ButtonScales.S_48];
+const viewScales = [ButtonScales.XS, ButtonScales.SM, ButtonScales.MD, ButtonScales.LG];
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
 
 export default {
@@ -51,11 +51,11 @@ export const Default: React.FC = () => {
         })}
       </Box>
       <Box>
-        <Button scale={ButtonScales.S_32} mr="8px" variant="red" disabled>
+        <Button scale={ButtonScales.SM} mr="8px" variant="red" disabled>
           Disabled
         </Button>
-        <Button scale="40" variant="line" disabled>
-          Disabled
+        <Button xs variant="line" disabled>
+          Attribute
         </Button>
         <DropdownButton>Dropdown</DropdownButton>
       </Box>

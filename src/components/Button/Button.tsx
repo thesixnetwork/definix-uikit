@@ -3,7 +3,7 @@ import React, { cloneElement, ElementType, isValidElement } from "react";
 import styled, { keyframes } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
-import { ButtonProps, ButtonVariants } from "./types";
+import { ButtonProps, ButtonVariants, ButtonScales } from "./types";
 
 interface LoadingDot {
   index: number;
@@ -37,6 +37,7 @@ const StyledLoading = styled.div`
 
 const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.Element => {
   const { startIcon, endIcon, external, className, isLoading, disabled, children, ...rest } = props;
+  const scaleAttr: ButtonScales = Object.values(ButtonScales).find((scale) => (rest as any)[scale]) || ButtonScales.MD;
   const internalProps = external ? getExternalLinkProps() : {};
   const isDisabled = isLoading || disabled;
   const classNames = className ? [className] : [];
@@ -57,6 +58,9 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
       className={classNames.join(" ")}
       disabled={isDisabled}
       {...internalProps}
+      {...{
+        scale: scaleAttr
+      }}
       {...rest}
     >
       {isLoading ? (

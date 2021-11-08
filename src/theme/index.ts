@@ -1,3 +1,4 @@
+import { ButtonScales, ButtonVariants } from "../components/Button";
 import { AlertTheme } from "../components/Alert/types";
 import { CardTheme } from "../components/Card/types";
 import { RadioTheme } from "../components/Radio/types";
@@ -21,6 +22,7 @@ export interface DefinixTheme {
   breakpoints: Breakpoints;
   mediaQueries: MediaQueries;
   spacing: Spacing;
+  space: Spacing;
   shadows: Shadows;
   radii: Radii;
   zIndices: ZIndices;

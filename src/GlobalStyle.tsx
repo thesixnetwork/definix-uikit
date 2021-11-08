@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 import { ResetCSSStyle } from "./ResetCSS";
 import { ColorStyles } from "./theme/colors";
-import { spacing } from "./theme/base";
+import { space } from "./theme/base";
 import { pxToRem } from "@/style/mixin";
 
 /*
@@ -55,9 +55,9 @@ function createSpacing() {
     )
     .join("");
 
-  const custom = Object.keys(spacing)
+  const custom = Object.keys(space)
     .flatMap((key) => {
-      const size = pxToRem(spacing[key]);
+      const size = pxToRem(space[key]);
       const i = key.toLowerCase().replace("_", "");
       return props.map((prop) => {
         const initial = prop.substr(0, 1);
