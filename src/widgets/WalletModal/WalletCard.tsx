@@ -25,8 +25,8 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
   return (
     <StyledButton
       onClick={() => {
-        login(walletConfig.connectorId)
-        window.localStorage.setItem(localStorageKey, '1')
+        login(walletConfig.connectorId);
+        window.localStorage.setItem(localStorageKey, "1");
         window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
       }}

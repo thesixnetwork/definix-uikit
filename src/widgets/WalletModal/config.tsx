@@ -64,5 +64,5 @@ const connectors: Config[] = [
 ];
 
 export default connectors;
-export const localStorageKey = 'accountStatus'
-export const connectorLocalStorageKey = 'connector';
+export const localStorageKey = "accountStatus";
+export const connectorLocalStorageKey = "connector";
