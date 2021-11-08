@@ -45,7 +45,7 @@ const StyledNav = styled.nav`
 `;
 
 const Nav: React.FC<NavProps> = (props) => {
-  const { isMobile, isPushed, pushNav } = props
+  const { isMobile, isPushed, pushNav } = props;
   const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
   return isMobile ? (
     <MobileNav>

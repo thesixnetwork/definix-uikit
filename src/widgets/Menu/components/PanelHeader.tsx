@@ -29,7 +29,7 @@ const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
   return isMobile ? (
     // <MobileHeader>{userBlock}</MobileHeader>
     <MobileHeader>
-      <UserBlock {...props}  />
+      <UserBlock {...props} />
     </MobileHeader>
   ) : (
     <StyledHeader>

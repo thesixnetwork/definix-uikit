@@ -1,29 +1,29 @@
 // import useUserSlippageTolerance from 'hooks/useUserSlippageTolerance'
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { Button } from '../../../components/Button'
-import { Flex } from '../../../components/Box'
-import { Input } from '../../../components/Input'
-import { SettingIcon } from '../../../components/Icon'
-import { Text } from '../../../components/Text'
-import { ColorStyles } from '../../../theme/colors'
-import { TextStyles } from '../../../theme/text'
-import { SlippageToleranceProps, TranslateProps } from '../types'
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { Button } from "../../../components/Button";
+import { Flex } from "../../../components/Box";
+import { Input } from "../../../components/Input";
+import { SettingIcon } from "../../../components/Icon";
+import { Text } from "../../../components/Text";
+import { ColorStyles } from "../../../theme/colors";
+import { TextStyles } from "../../../theme/text";
+import { SlippageToleranceProps, TranslateProps } from "../types";
 // import Helper from 'uikit-dev/components/Helper'
 
 interface Props extends SlippageToleranceProps, TranslateProps {}
 
-const MAX_SLIPPAGE = 5000
-const RISKY_SLIPPAGE_LOW = 50
-const RISKY_SLIPPAGE_HIGH = 500
+const MAX_SLIPPAGE = 5000;
+const RISKY_SLIPPAGE_LOW = 50;
+const RISKY_SLIPPAGE_HIGH = 500;
 
 const StyledSlippageToleranceSettings = styled.div`
   margin-bottom: 24px;
-`
+`;
 
 const Option = styled.div`
   padding: 0 4px;
-`
+`;
 
 const Options = styled.div`
   align-items: strech;
@@ -49,52 +49,52 @@ const Options = styled.div`
       padding-top: 0;
     }
   }
-`
+`;
 
 const Label = styled.div`
   align-items: center;
   display: flex;
   margin: 16px 0;
-`
+`;
 
 const predefinedValues = [
-  { label: '0.1%', value: 0.1 },
-  { label: '0.5%', value: 0.5 },
-  { label: '1%', value: 1 },
-]
+  { label: "0.1%", value: 0.1 },
+  { label: "0.5%", value: 0.5 },
+  { label: "1%", value: 1 },
+];
 
 const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageTolerance, setUserslippageTolerance }) => {
-  const [value, setValue] = useState(userSlippageTolerance / 100)
-  const [error, setError] = useState<string | null>(null)
+  const [value, setValue] = useState(userSlippageTolerance / 100);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const { value: inputValue } = evt.target
-    setValue(parseFloat(inputValue))
-  }
+    const { value: inputValue } = evt.target;
+    setValue(parseFloat(inputValue));
+  };
 
   // Updates local storage if value is valid
   useEffect(() => {
     try {
-      const rawValue = value * 100
+      const rawValue = value * 100;
       if (!Number.isNaN(rawValue) && rawValue > 0 && rawValue < MAX_SLIPPAGE) {
-        setUserslippageTolerance(rawValue)
-        setError(null)
+        setUserslippageTolerance(rawValue);
+        setError(null);
       } else {
-        setError('Enter a valid slippage percentage')
+        setError("Enter a valid slippage percentage");
       }
     } catch {
-      setError('Enter a valid slippage percentage')
+      setError("Enter a valid slippage percentage");
     }
-  }, [value, setError, setUserslippageTolerance])
+  }, [value, setError, setUserslippageTolerance]);
 
   // Notify user if slippage is risky
   useEffect(() => {
     if (userSlippageTolerance < RISKY_SLIPPAGE_LOW) {
-      setError('Your transaction may fail')
+      setError("Your transaction may fail");
     } else if (userSlippageTolerance > RISKY_SLIPPAGE_HIGH) {
-      setError('Your transaction may be frontrun')
+      setError("Your transaction may be frontrun");
     }
-  }, [userSlippageTolerance, setError])
+  }, [userSlippageTolerance, setError]);
 
   return (
     <StyledSlippageToleranceSettings>
@@ -107,22 +107,22 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         /> */}
       </Label>
       <Options>
-        <Flex mb={['8px', 0]} mr={[0, '8px']}>
+        <Flex mb={["8px", 0]} mr={[0, "8px"]}>
           {predefinedValues.map(({ label, value: predefinedValue }) => {
-            const handleClick = () => setValue(predefinedValue)
+            const handleClick = () => setValue(predefinedValue);
 
             return (
               <Option key={predefinedValue}>
                 <Button
                   width="88px"
                   md
-                  variant={value === predefinedValue ? 'red' : 'lightbrown'}
+                  variant={value === predefinedValue ? "red" : "lightbrown"}
                   onClick={handleClick}
                 >
                   {label}
                 </Button>
               </Option>
-            )
+            );
           })}
         </Flex>
         <Flex alignItems="center">
@@ -148,7 +148,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         </Flex>
       )}
     </StyledSlippageToleranceSettings>
-  )
-}
+  );
+};
 
-export default SlippageToleranceSettings
+export default SlippageToleranceSettings;

@@ -53,7 +53,6 @@ export interface LangProps {
   setLang: (lang: LangType) => void;
 }
 
-
 export interface UserProps {
   account?: string;
   login: Login;
@@ -79,13 +78,30 @@ export interface TransactionDeadLineProps {
 }
 
 export interface SettingsModalProps extends SlippageToleranceProps, TransactionDeadLineProps, TranslateProps {
-  onDismiss?: () => void
+  onDismiss?: () => void;
 }
 
-export interface PanelProps extends BreakPointProps, LangProps, UserProps, TranslateProps, MenuEntryConfigProps, PushedProps {}
+export interface PanelProps
+  extends BreakPointProps,
+    LangProps,
+    UserProps,
+    TranslateProps,
+    MenuEntryConfigProps,
+    PushedProps {}
 
-export interface NavProps extends BreakPointProps, UserProps, MenuEntryConfigProps, PushedProps, TranslateProps, SlippageToleranceProps, TransactionDeadLineProps {}
+export interface NavProps
+  extends BreakPointProps,
+    UserProps,
+    MenuEntryConfigProps,
+    PushedProps,
+    TranslateProps,
+    SlippageToleranceProps,
+    TransactionDeadLineProps {}
 
 export interface MenuProps
-  extends LangProps, UserProps, MenuEntryConfigProps,
-    TranslateProps, SlippageToleranceProps, TransactionDeadLineProps {}
+  extends LangProps,
+    UserProps,
+    MenuEntryConfigProps,
+    TranslateProps,
+    SlippageToleranceProps,
+    TransactionDeadLineProps {}

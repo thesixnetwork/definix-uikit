@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Text } from '../../../components/Text';
-import { Flex } from '../../../components/Box';
-import { Button, IconButton, ButtonVariants, ButtonScales } from '../../../components/Button';
-import { useWalletModal, Login } from '../../WalletModal';
-import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from '../../../components/Icon';
-import { ColorStyles } from '../../../theme/colors';
-import { TextStyles } from '../../../theme/text';
-import { useMatchBreakpoints } from '../../../hooks';
-import { TranslateProps, UserProps } from '../types';
-import WalletDropdown from './WalletDropdown'
+import React from "react";
+import styled from "styled-components";
+import { Text } from "../../../components/Text";
+import { Flex } from "../../../components/Box";
+import { Button, IconButton, ButtonVariants, ButtonScales } from "../../../components/Button";
+import { useWalletModal, Login } from "../../WalletModal";
+import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from "../../../components/Icon";
+import { ColorStyles } from "../../../theme/colors";
+import { TextStyles } from "../../../theme/text";
+import { useMatchBreakpoints } from "../../../hooks";
+import { TranslateProps, UserProps } from "../types";
+import WalletDropdown from "./WalletDropdown";
 // import { localStorageKey } from '../WalletModal/config'
 
 interface Props extends UserProps, TranslateProps {}
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: 188px;
-`
+`;
 
 const StyledButton = styled.a`
   cursor: pointer;
@@ -32,13 +32,13 @@ const StyledButton = styled.a`
   align-items: center;
   height: 56px;
   background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
-`
+`;
 
 const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth }) => {
   // const history = useHistory()
-  const { isMobile } = useMatchBreakpoints()
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account)
-  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null
+  const { isMobile } = useMatchBreakpoints();
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
+  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
   if (account) {
     return isMobile ? (
@@ -108,24 +108,22 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
           </Text>
         </Button>
       </>
-    )
+    );
   }
 
   return (
-    <Flex width="100%" height={isMobile ? '188px' : 'auto'} alignItems="center" justifyContent="center">
+    <Flex width="100%" height={isMobile ? "188px" : "auto"} alignItems="center" justifyContent="center">
       <Button
-        {
-          ...(isMobile ? { md: true } : { xs: true })
-        }
+        {...(isMobile ? { md: true } : { xs: true })}
         variant={ButtonVariants.RED}
         onClick={() => {
-          onPresentConnectModal()
+          onPresentConnectModal();
         }}
       >
         <Trans i18nKey="Connect Wallet" />
       </Button>
     </Flex>
-  )
-}
+  );
+};
 
-export default UserBlock
+export default UserBlock;
