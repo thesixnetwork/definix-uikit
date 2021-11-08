@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { IconButton } from "@/components/Button";
 import { Flex } from "@/components/Box";
-import { PanelProps, PushedProps, UserProps } from "../types";
+import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
 import { CloseIcon, LogoMainFinixIcon } from "@/components/Icon";
 import Chain from "./Chain";
 import UserBlock from "./UserBlock";
 import { hexToRGB } from "@/style/mixin";
 import { ColorStyles } from "@/theme";
 
-interface Props extends PanelProps, PushedProps, UserProps {}
+interface Props extends PanelProps, PushedProps, UserProps, TranslateProps {}
 
 const MobileHeader = styled(Flex)`
   flex-direction: column;
@@ -25,9 +25,12 @@ const StyledHeader = styled(Flex)`
   justify-content: center;
 `;
 
-const PanelHeader: React.FC<Props> = ({ userBlock, isMobile, pushNav, ...props }) => {
+const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
   return isMobile ? (
-    <MobileHeader>{userBlock}</MobileHeader>
+    // <MobileHeader>{userBlock}</MobileHeader>
+    <MobileHeader>
+      <UserBlock {...props}  />
+    </MobileHeader>
   ) : (
     <StyledHeader>
       <LogoMainFinixIcon />

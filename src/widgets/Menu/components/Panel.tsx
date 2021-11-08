@@ -4,12 +4,10 @@ import { hexToRGB } from "../../../style/mixin";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
 import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE, SIDEBAR_ZINDEX } from "../config";
-import { PanelProps, PushedProps, UserProps } from "../types";
+import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
 import PanelHeader from "./PanelHeader";
 import { ColorStyles } from "@/theme";
 import MobilePanelHeaderFixed from "./MobilePanelHeaderFixed";
-
-interface Props extends PanelProps, PushedProps, UserProps {}
 
 const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
   position: fixed;
@@ -52,7 +50,7 @@ const ContainerScrollPanel = styled.div`
   height: auto;
 `;
 
-const Panel: React.FC<Props> = (props) => {
+const Panel: React.FC<PanelProps> = (props) => {
   const { isMobile, pushNav } = props;
 
   useEffect(() => {

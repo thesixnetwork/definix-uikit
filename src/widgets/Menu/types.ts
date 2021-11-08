@@ -39,35 +39,53 @@ export interface MenuEntry {
   initialOpenState?: boolean;
 }
 
-export interface PanelProps {
-  isMobile: boolean;
-  // isDark: boolean;
-  // toggleTheme: (isDark: boolean) => void;
-  currentLang: string;
-  langs: LangType[];
-  setLang: (lang: LangType) => void;
+export interface MenuEntryConfigProps {
   links: Array<MenuEntry>;
 }
 
-export interface UserProps {
-  userBlock: React.ReactNode;
-  chain: React.ReactNode;
-  // account?: string;
-  // login: Login;
-  // profile?: Profile;
-  // logout: () => void;
-}
-
-export interface SettingProps {
-  settingModal?: React.ReactElement;
-}
-
-export interface NavProps extends UserProps {
+export interface BreakPointProps {
   isMobile: boolean;
-  links?: Array<MenuEntry>;
 }
+
+export interface LangProps {
+  currentLang: string;
+  langs: LangType[];
+  setLang: (lang: LangType) => void;
+}
+
+
+export interface UserProps {
+  account?: string;
+  login: Login;
+  // profile?: Profile;
+  logout: () => void;
+  netWorth?: React.ReactElement;
+}
+
+export interface TranslateProps {
+  Trans: React.FC<{
+    i18nKey: string;
+  }>;
+}
+
+export interface SlippageToleranceProps {
+  userSlippageTolerance: number;
+  setUserslippageTolerance: (value: number) => void;
+}
+
+export interface TransactionDeadLineProps {
+  deadline: number;
+  setDeadline: (value: number) => void;
+}
+
+export interface SettingsModalProps extends SlippageToleranceProps, TransactionDeadLineProps, TranslateProps {
+  onDismiss?: () => void
+}
+
+export interface PanelProps extends BreakPointProps, LangProps, UserProps, TranslateProps, MenuEntryConfigProps, PushedProps {}
+
+export interface NavProps extends BreakPointProps, UserProps, MenuEntryConfigProps, PushedProps, TranslateProps, SlippageToleranceProps, TransactionDeadLineProps {}
 
 export interface MenuProps
-  extends Pick<PanelProps, "langs" | "setLang" | "currentLang">,
-    Omit<NavProps, "isMobile">,
-    SettingProps {}
+  extends LangProps, UserProps, MenuEntryConfigProps,
+    TranslateProps, SlippageToleranceProps, TransactionDeadLineProps {}

@@ -1,27 +1,24 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { Text } from "@/components/Text";
-import { Flex } from "@/components/Box";
-import { IconButton, ButtonVariants, ButtonScales } from "@/components/Button";
-import Button from "@/components/Button/Button";
-import { useWalletModal } from "../../WalletModal";
-import { Login } from "../../WalletModal/types";
-import { ArrowRightGIcon, MoreNIcon, GnbMySIcon, CheckBIcon } from "@/components/Icon";
-import styled from "styled-components";
-import { ColorStyles, TextStyles } from "@/theme";
-import { Dropdown, DropdownItem } from "@/components/Dropdown";
-import { useMatchBreakpoints } from "@/hooks";
+import React from 'react'
+import styled from 'styled-components'
+import { Text } from '../../../components/Text';
+import { Flex } from '../../../components/Box';
+import { Button, IconButton, ButtonVariants, ButtonScales } from '../../../components/Button';
+import { useWalletModal, Login } from '../../WalletModal';
+import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from '../../../components/Icon';
+import { ColorStyles } from '../../../theme/colors';
+import { TextStyles } from '../../../theme/text';
+import { useMatchBreakpoints } from '../../../hooks';
+import { TranslateProps, UserProps } from '../types';
+import WalletDropdown from './WalletDropdown'
+// import { localStorageKey } from '../WalletModal/config'
 
-interface Props {
-  account?: string;
-  login: Login;
-  logout: () => void;
-}
+interface Props extends UserProps, TranslateProps {}
 
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: 188px;
-`;
+`
 
 const StyledButton = styled.a`
   cursor: pointer;
@@ -35,104 +32,47 @@ const StyledButton = styled.a`
   align-items: center;
   height: 56px;
   background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
-`;
+`
 
-function copyToClipboard(val: string) {
-  return new Promise((resolve, reject) => {
-    const element = document.createElement("textarea");
-    element.value = val;
-    element.setAttribute("readonly", "");
-    element.style.position = "absolute";
-    element.style.left = "-9999px";
-    document.body.appendChild(element);
-    element.select();
-    const returnValue = document.execCommand("copy");
-    document.body.removeChild(element);
-    resolve(true);
-    if (!returnValue) {
-      reject(false);
-    }
-  });
-}
+const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth }) => {
+  // const history = useHistory()
+  const { isMobile } = useMatchBreakpoints()
+  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account)
+  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null
 
-let timeout: any;
-
-const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
-  const { isMobile } = useMatchBreakpoints();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isCopied, setIsCopied] = useState(false);
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
-  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
-
-  const onItemClick = useCallback(
-    (index: number) => {
-      if (index === 0) {
-        window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, "_blank");
-      } else if (index === 1) {
-        copyToClipboard(account as string);
-        setIsCopied(true);
-      } else {
-        logout();
-      }
-    },
-    [account]
-  );
-
-  useEffect(() => {
-    if (!isCopied) return;
-
-    timeout && clearTimeout(timeout);
-    timeout = null;
-    timeout = setTimeout(() => {
-      setIsCopied(false);
-      timeout && clearTimeout(timeout);
-      timeout = null;
-    }, 3000);
-  }, [isCopied]);
-
-  return account ? (
-    isMobile ? (
+  if (account) {
+    return isMobile ? (
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
           <Text mt="55px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
-            Wallet Address
+            <Trans i18nKey="Wallet Address" />
           </Text>
           <Flex>
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
               {accountEllipsis}
             </Text>
-            <Dropdown
-              scale="sm"
+            <WalletDropdown
               width="188px"
               left="-105px"
-              isOpen={isDropdownOpen}
-              position="bottom"
-              target={<IconButton startIcon={<MoreNIcon />} onClick={() => setIsDropdownOpen(!isDropdownOpen)} />}
-              onItemClick={onItemClick}
-            >
-              <DropdownItem>View on KlaytnscopeTH</DropdownItem>
-              <DropdownItem>
-                <Flex width="100%" alignItems="center" justifyContent="space-between">
-                  Copy Address
-                  {isCopied && (
-                    <Flex alignItems="center" color={ColorStyles.MEDIUMGREY}>
-                      <CheckBIcon />
-                      Copied
-                    </Flex>
-                  )}
-                </Flex>
-              </DropdownItem>
-              <DropdownItem isDivide={true}>Disconnect</DropdownItem>
-            </Dropdown>
+              Trans={Trans}
+              target={<IconButton startIcon={<MoreNIcon />} />}
+              account={account}
+              logout={logout}
+            />
           </Flex>
         </Flex>
-        <StyledButton href="/farm">
+        <StyledButton
+          onClick={() => {
+            // history.push('/myinvestments')
+          }}
+        >
           <Text textStyle={TextStyles.R_12M} color={ColorStyles.WHITE}>
-            Net Worth
+            <Trans i18nKey="Net Worth" />
           </Text>
           <Flex ml="12px" alignItems="center">
             <Text mr="7px" textStyle={TextStyles.R_12B} width="140px" color={ColorStyles.WHITE}>
-              $132123123
+              {netWorth}
+              {/* <NetWorth /> */}
             </Text>
             <IconButton startIcon={<ArrowRightGIcon />} />
           </Flex>
@@ -140,16 +80,18 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
       </Wrapper>
     ) : (
       <>
-        <Button
-          scale={ButtonScales.XS}
-          variant={ButtonVariants.LIGHTBROWN}
-          textStyle={TextStyles.R_12B}
-          onClick={() => {
-            onPresentAccountModal();
-          }}
-        >
-          {accountEllipsis}
-        </Button>
+        <Flex>
+          <WalletDropdown
+            target={
+              <Button xs variant={ButtonVariants.LIGHTBROWN} textStyle={TextStyles.R_12B}>
+                {accountEllipsis}
+              </Button>
+            }
+            account={account}
+            logout={logout}
+            Trans={Trans}
+          />
+        </Flex>
         <Button
           ml="8px"
           scale={ButtonScales.S_32ICON}
@@ -157,28 +99,33 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
           variant={ButtonVariants.DEEPBROWN}
           startIcon={<GnbMySIcon />}
           onClick={() => {
-            onPresentAccountModal();
+            // onPresentAccountModal();
+            // history.push('/myinvestments')
           }}
         >
           <Text textStyle={TextStyles.R_12B} ml="6px">
-            MY
+            {/* {t('MY')} */}
           </Text>
         </Button>
       </>
     )
-  ) : (
-    <Flex width="100%" height={isMobile ? "188px" : "auto"} alignItems="center" justifyContent="center">
+  }
+
+  return (
+    <Flex width="100%" height={isMobile ? '188px' : 'auto'} alignItems="center" justifyContent="center">
       <Button
-        scale={isMobile ? ButtonScales.MD : ButtonScales.XS}
+        {
+          ...(isMobile ? { md: true } : { xs: true })
+        }
         variant={ButtonVariants.RED}
         onClick={() => {
-          onPresentConnectModal();
+          onPresentConnectModal()
         }}
       >
-        Connect Wallet
+        <Trans i18nKey="Connect Wallet" />
       </Button>
     </Flex>
-  );
-};
+  )
+}
 
-export default React.memo(UserBlock, (prevProps, nextProps) => prevProps.account === nextProps.account);
+export default UserBlock

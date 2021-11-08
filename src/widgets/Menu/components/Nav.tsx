@@ -5,11 +5,12 @@ import { IconButton } from "../../../components/Button";
 import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, NAV_ZINDEX, SIDEBAR_WIDTH_FULL_PC } from "../config";
 import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "../../../components/Icon";
 import { hexToRGB, pxToRem } from "../../../style/mixin";
-import { NavProps, PushedProps, SettingProps } from "../types";
+import { NavProps } from "../types";
 import { ColorStyles } from "../../../theme";
 import { useModal } from "../../Modal";
-
-interface Props extends NavProps, PushedProps, SettingProps {}
+import UserBlock from "./UserBlock";
+import Chain from "./Chain";
+import SettingsModal from "./SettingsModal";
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -43,34 +44,26 @@ const StyledNav = styled.nav`
   z-index: ${NAV_ZINDEX};
 `;
 
-const Nav: React.FC<Props> = ({ settingModal, userBlock, chain, isMobile, isPushed, pushNav }) => {
-  const [onPresentSettingModal] = useModal(settingModal, false);
+const Nav: React.FC<NavProps> = (props) => {
+  const { isMobile, isPushed, pushNav } = props
+  const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
   return isMobile ? (
     <MobileNav>
       <Box position="absolute" left={pxToRem(20)}>
         <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
       </Box>
       <LogoMainFinixIcon />
-      {settingModal ? (
-        <Box position="absolute" right={pxToRem(20)}>
-          <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-        </Box>
-      ) : (
-        <></>
-      )}
+      <Box position="absolute" right={pxToRem(20)}>
+        <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+      </Box>
     </MobileNav>
   ) : (
     <StyledNav>
-      {chain}
+      <Chain {...props} />
       <Flex position="absolute" right={pxToRem(60)}>
-        {settingModal ? (
-          <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-        ) : (
-          <></>
-        )}
-        {userBlock}
+        <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        <UserBlock {...props} />
       </Flex>
-      {/* {profile && <Avatar profile={profile} />} */}
     </StyledNav>
   );
 };

@@ -52,54 +52,54 @@ const Inner = styled.div<{ isMobile: boolean }>`
   `}
 `;
 
-const Menu: React.FC<MenuProps> = ({
-  // account,
-  // login,
-  // logout,
-  // Trans,
-  settingModal,
-  userBlock,
-  chain,
-  // isDark,
-  // toggleTheme,
-  langs,
-  setLang,
-  currentLang,
-  links,
-  // profile,
-  children,
-}) => {
+const Menu: React.FC<MenuProps> = (props) => {
+  const {
+    account,
+    login,
+    logout,
+    Trans,
+    langs,
+    setLang,
+    currentLang,
+    links,
+    // profile,
+    children,
+    netWorth,
+  } = props;
   const { isMobile } = useMatchBreakpoints();
   const [isPushed, setIsPushed] = useState(!isMobile);
   return (
     <Wrapper>
       <TopBackground />
       <Nav
-        settingModal={settingModal}
-        userBlock={userBlock}
-        chain={chain}
+        {...props}
         isMobile={isMobile}
         isPushed={isPushed}
         pushNav={setIsPushed}
+        // settingModal={settingModal}
+        // userBlock={userBlock}
+        // chain={chain}
         // login={login}
         // account={account}
         // logout={logout}
+        // Trans={Trans}
       />
       <Panel
-        userBlock={userBlock}
-        chain={chain}
+        {...props}
         isMobile={isMobile}
         isPushed={isPushed}
-        // isDark={isDark}
-        // toggleTheme={toggleTheme}
-        langs={langs}
-        setLang={setLang}
-        currentLang={currentLang}
         pushNav={setIsPushed}
         links={links || defaultLinks}
+        // userBlock={userBlock}
+        // chain={chain}
+        // langs={langs}
+        // setLang={setLang}
+        // currentLang={currentLang}
         // login={login}
         // account={account}
         // logout={logout}
+        // Trans={Trans}
+        // netWorth={netWorth}
       />
       <Container>
         <Inner isMobile={isMobile}>{children}</Inner>
