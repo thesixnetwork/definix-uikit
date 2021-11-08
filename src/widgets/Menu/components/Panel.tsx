@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { hexToRGB } from "../../../style/mixin";
 import PanelBody from "./PanelBody";
@@ -53,7 +53,14 @@ const ContainerScrollPanel = styled.div`
 `;
 
 const Panel: React.FC<Props> = (props) => {
-  const { isMobile } = props;
+  const { isMobile, pushNav } = props;
+
+  useEffect(() => {
+    if (isMobile) {
+      pushNav(false);
+    }
+  }, [isMobile]);
+
   return isMobile ? (
     <StyledPanel {...props}>
       <MobilePanelHeaderFixed {...props} />

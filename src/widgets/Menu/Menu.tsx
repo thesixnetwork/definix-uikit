@@ -25,17 +25,10 @@ const Wrapper = styled.div`
 const Container = styled.div`
   position: relative;
   margin: 0 ${pxToRem(20)};
-
-  ${({ theme }) => theme.mediaQueries.lg} {
-    margin-left: ${SIDEBAR_WIDTH_FULL_PC}px;
-  }
-  ${({ theme }) => theme.mediaQueries.xl} {
-    width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL_PC}px;
-    max-width: ${breakpointMap.xl - SIDEBAR_WIDTH_FULL_PC}px;
-  }
-
-  @media (min-width: ${breakpointMap.xl + SIDEBAR_WIDTH_FULL_PC}px) {
-    margin: 0 auto;
+  padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
+  
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    padding-left: 0;
   }
 `;
 
