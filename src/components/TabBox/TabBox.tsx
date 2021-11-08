@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { StyledContentArea, StyledTabArea, StyledTab, Wrap, StyledBorderBottom } from "./StyledTabBox";
 import { TabBoxProps, TabAreaProps, TabProps } from "./types";
 import Flex from "../Box/Flex";
-import { Card } from "../Card";
 
 const TabArea: React.FC<TabAreaProps> = ({ children }) => {
   return (
@@ -23,13 +22,19 @@ const Tab: React.FC<TabProps> = ({ onClick, isSelected, children }) => {
 };
 
 const TabBox: React.FC<TabBoxProps> = ({ tabs, children, ...props }) => {
-  const [curTab, setCurTab] = useState<string>();
+  const [curTab, setCurTab] = useState<string>(tabs[0]?.name);
+  const tabNames = useRef(tabs.map(({ name }) => name).join("|"));
 
   const onClickTab = (name: string) => {
     setCurTab(name);
   };
 
   useEffect(() => {
+    const names = tabs.map(({ name }) => name).join("|");
+    if (tabNames.current === names) {
+      return;
+    }
+    tabNames.current = names;
     setCurTab(tabs[0].name);
   }, [tabs]);
 
