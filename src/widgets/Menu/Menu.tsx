@@ -26,7 +26,7 @@ const Container = styled.div`
   position: relative;
   margin: 0 ${pxToRem(20)};
   padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
-  
+
   ${({ theme }) => theme.mediaQueries.mobile} {
     padding-left: 0;
   }
