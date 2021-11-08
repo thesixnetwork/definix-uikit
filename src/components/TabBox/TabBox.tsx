@@ -23,14 +23,14 @@ const Tab: React.FC<TabProps> = ({ onClick, isSelected, children }) => {
 
 const TabBox: React.FC<TabBoxProps> = ({ tabs, children, ...props }) => {
   const [curTab, setCurTab] = useState<string>(tabs[0]?.name);
-  const tabNames = useRef(tabs.map(({name}) => name).join('|'));
+  const tabNames = useRef(tabs.map(({ name }) => name).join("|"));
 
   const onClickTab = (name: string) => {
     setCurTab(name);
   };
 
   useEffect(() => {
-    const names = tabs.map(({name}) => name).join('|');
+    const names = tabs.map(({ name }) => name).join("|");
     if (tabNames.current === names) {
       return;
     }
