@@ -6,10 +6,10 @@ export enum ButtonScales {
   // new
   S_32ICON = "32_icon",
 
-  LG = "lg",  // 48
-  MD = "md",  // 40
-  SM = "sm",  // 36
-  XS = "xs",  // 32
+  LG = "lg", // 48
+  MD = "md", // 40
+  SM = "sm", // 36
+  XS = "xs", // 32
 }
 
 export enum ButtonVariants {

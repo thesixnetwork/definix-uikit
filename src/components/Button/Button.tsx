@@ -59,7 +59,7 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
       disabled={isDisabled}
       {...internalProps}
       {...{
-        scale: scaleAttr
+        scale: scaleAttr,
       }}
       {...rest}
     >
