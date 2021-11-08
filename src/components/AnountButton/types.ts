@@ -4,4 +4,5 @@ import { SpaceProps } from "styled-system";
 export interface AnountButtonProps extends SpaceProps, ExtendColorProps {
   onClick: (() => void) | undefined;
   children?: React.ReactNode;
+  className?: string;
 }
