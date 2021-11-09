@@ -80,7 +80,7 @@ const useMatchBreakpoints = (): State => {
 
   return {
     ...state,
-    isMobile: !(state.isXl === true || state.isXxl === true)
+    isMobile: !(state.isXl === true || state.isXxl === true),
     // isMobile: !(state.isXl === true),
   };
 };
