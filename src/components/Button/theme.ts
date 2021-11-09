@@ -28,7 +28,7 @@ export const scaleVariants = {
   },
   [ButtonScales.ICON]: {
     height: "32px",
-  }
+  },
 };
 export const styleVariants = {
   [ButtonVariants.RED]: {
@@ -70,7 +70,7 @@ export const styleVariants = {
     backgroundColor: ColorStyles.DEEPBROWN,
     color: ColorStyles.WHITE,
   },
-  
+
   [ButtonVariants.SUBTLE]: {
     backgroundColor: "textSubtle",
     color: "white",

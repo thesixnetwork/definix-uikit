@@ -88,7 +88,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         } else if (rawValue > RISKY_SLIPPAGE_HIGH) {
           setError("Your transaction may be frontrun");
         } else {
-          setError(null);  
+          setError(null);
         }
       } else {
         setError("Enter a valid slippage percentage");
