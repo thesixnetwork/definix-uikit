@@ -50,25 +50,15 @@ export const spacing: Spacing = {
   S_20: 20,
   S_24: 24,
   S_28: 28,
+  S_30: 30,
   S_32: 32,
   S_40: 40,
+  S_42: 42,
   S_60: 60,
   S_80: 80,
 };
 
-export const space: Spacing = {
-  S_6: 6,
-  S_8: 8,
-  S_12: 12,
-  S_16: 16,
-  S_20: 20,
-  S_24: 24,
-  S_28: 28,
-  S_32: 32,
-  S_40: 40,
-  S_60: 60,
-  S_80: 80,
-};
+export const space: Spacing = spacing;
 
 const radii = {
   small: "4px",

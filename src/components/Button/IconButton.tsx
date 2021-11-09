@@ -12,6 +12,6 @@ const StyledButton: PolymorphicComponent<BaseButtonProps, "button"> = styled(But
 `;
 
 const IconButton: React.FC<ButtonProps> = ({ ...props }) => {
-  return <StyledButton variant="transparent" {...props} />;
+  return <StyledButton icon variant="transparent" {...props} />;
 };
 export default IconButton;

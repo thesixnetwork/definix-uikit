@@ -4,7 +4,7 @@ import { LayoutProps, SpaceProps } from "styled-system";
 
 export enum ButtonScales {
   // new
-  S_32ICON = "32_icon",
+  ICON = "icon",
 
   LG = "lg", // 48
   MD = "md", // 40
@@ -63,6 +63,7 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   sm?: boolean;
   xs?: boolean;
   lg?: boolean;
+  icon?: boolean;
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

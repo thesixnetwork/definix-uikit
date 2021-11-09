@@ -1,3 +1,4 @@
+import { darken, lighten, rgba } from "polished";
 import { hexToRGB } from "../style/mixin";
 /*
 :root {
@@ -40,7 +41,7 @@ export enum ColorStyles {
   LIGHTBROWN_20 = "lightBrown20",
 }
 
-export const baseColors = {
+const colorHex = {
   [ColorStyles.RED]: "#ff5532",
   [ColorStyles.ORANGE]: "#ff6828",
   [ColorStyles.YELLOW]: "#fea948",
@@ -57,18 +58,62 @@ export const baseColors = {
   [ColorStyles.YELLOWBG2]: "#ffedcb",
   [ColorStyles.YELLOWBG1]: "#fffbf5",
   [ColorStyles.GREY]: "#cccccc",
+}
+
+export const baseColors = {
+  ...colorHex,
+  backgroundFooter: colorHex.white,
+  backgroundHeader: colorHex.white,
+  backgroundSideMenu: colorHex.white,
+  border: hexToRGB(colorHex.lightgrey, .5),
+  card: colorHex.white,
+  cardFooter: colorHex.white,
+  connectBtnBorder: colorHex.white,
+  failure: colorHex.red,
+  input: colorHex.white,
+  invertedContrast: colorHex.white,
+  networkBtnBorder: colorHex.white,
+  networkBtnInner: colorHex.white,
+  placeholder: colorHex.mediumgrey,
+  primary: colorHex.red,
+  primaryBright: lighten(0.1, colorHex.red),
+  primaryDark: darken(0.1, colorHex.red),
+  success: colorHex.green,
+  successAlpha: hexToRGB(colorHex.green, .1),
+  text: colorHex.deepgrey,
+  textInvert: colorHex.deepgrey,
+  textSubtle: colorHex.mediumgrey,
+  background: colorHex.yellowBg2,
+  backgroundBlueGradient: 'linear-gradient(#0D418E #349BE7)',
+  backgroundBox: rgba('#babfc7', .12),
+  backgroundDisabled: rgba(colorHex.lightgrey, .2),
+  connectBtnInner: '#8C90A5',
+  contrast: colorHex.black,
+  secondary: colorHex.green,
+  tertiary: colorHex.yellow,
+  textDisabled: colorHex.lightgrey,
+  warning: colorHex.red,
 };
-const customColors = {
+
+export const brandColors = {
+  binance: '#F0B90B',
+  klaytn: '#4F463C',
+}
+
+export const customColors = {
   [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 0.2),
   [ColorStyles.LIGHTBROWN_20]: hexToRGB(baseColors[ColorStyles.LIGHTBROWN], 0.2),
 };
 
 export const lightColors = {
   ...baseColors,
-  ...customColors,
+  ...brandColors,
+  ...customColors
 };
+
 export const darkColors = {
   ...baseColors,
-  ...customColors,
+  ...brandColors,
+  ...customColors
 };
 export default {};

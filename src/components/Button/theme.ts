@@ -26,6 +26,9 @@ export const scaleVariants = {
     // minWidth: "186px",
     ...textStyle.R_14B,
   },
+  [ButtonScales.ICON]: {
+    height: "32px",
+  },
 };
 export const styleVariants = {
   [ButtonVariants.RED]: {
@@ -56,24 +59,18 @@ export const styleVariants = {
   },
 
   [ButtonVariants.PRIMARY]: {
-    backgroundColor: "primary",
-    color: "white",
+    backgroundColor: ColorStyles.RED,
+    color: ColorStyles.WHITE,
   },
   [ButtonVariants.SECONDARY]: {
-    backgroundColor: "transparent",
-    border: "2px solid",
-    borderColor: "primary",
-    boxShadow: "none",
-    color: "primary",
-    ":disabled": {
-      backgroundColor: "transparent",
-    },
+    backgroundColor: ColorStyles.BROWN,
+    color: ColorStyles.WHITE,
   },
   [ButtonVariants.TERTIARY]: {
-    backgroundColor: "tertiary",
-    boxShadow: "none",
-    color: "primary",
+    backgroundColor: ColorStyles.DEEPBROWN,
+    color: ColorStyles.WHITE,
   },
+
   [ButtonVariants.SUBTLE]: {
     backgroundColor: "textSubtle",
     color: "white",

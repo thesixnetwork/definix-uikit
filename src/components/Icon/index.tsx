@@ -41,6 +41,7 @@ import { ReactComponent as CheckBIcon } from "./icons/ico_16_check_b.svg";
 import { ReactComponent as CheckCompleteIcon } from "./icons/ico_24_check_complete.svg";
 import { ReactComponent as CheckFailedIcon } from "./icons/ico_24_check_failed.svg";
 import { ReactComponent as SmallCloseIcon } from "./icons/ico_16_closed_g.svg";
+import { ReactComponent as ChangeIcon } from "./icons/ico_42_change.svg";
 
 export {
   GnbMySIcon,
@@ -85,4 +86,5 @@ export {
   CheckCompleteIcon,
   CheckFailedIcon,
   SmallCloseIcon,
+  ChangeIcon,
 };
