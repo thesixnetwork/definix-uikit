@@ -79,7 +79,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     fontStretch: "normal",
     fontStyle: "normal",
   },
-  
+
   [TextStyles.R_20B]: {
     fontFamily: "Roboto",
     fontSize: "20px",
