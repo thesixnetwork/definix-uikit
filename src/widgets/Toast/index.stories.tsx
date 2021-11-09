@@ -49,11 +49,7 @@ export const Default: React.FC = () => {
       <Button type="button" variant="secondary" mx="8px" onClick={() => handleFailToastClick()}>
         Fail Toast
       </Button>
-      <Button
-        type="button"
-        variant="secondary"
-        onClick={() => handleSuccessToastClick("custom content")}
-      >
+      <Button type="button" variant="secondary" onClick={() => handleSuccessToastClick("custom content")}>
         Random Toast with Description
       </Button>
       <ToastContainer toasts={toasts} onRemove={handleRemove} />
