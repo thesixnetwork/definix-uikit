@@ -18,14 +18,10 @@ export const Default: React.FC = () => {
   return (
     <div style={{ padding: "32px", width: "800px" }}>
       <Row>
-        <Noti type={NotiType.ALERT}>
-          Insufficient balance
-        </Noti>
+        <Noti type={NotiType.ALERT}>Insufficient balance</Noti>
       </Row>
       <Row>
-        <Noti type={NotiType.GUIDE}>
-          Insufficient balance
-        </Noti>
+        <Noti type={NotiType.GUIDE}>Insufficient balance</Noti>
       </Row>
     </div>
   );

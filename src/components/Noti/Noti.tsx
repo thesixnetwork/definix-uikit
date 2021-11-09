@@ -6,8 +6,8 @@ import { space, SpaceProps } from "styled-system";
 import { ColorStyles } from "@/theme";
 
 export enum NotiType {
-  ALERT = 'alert',
-  GUIDE = 'guide'
+  ALERT = "alert",
+  GUIDE = "guide",
 }
 
 interface NotiProps extends SpaceProps {
@@ -31,12 +31,12 @@ const StyledIcon = styled.div`
   text-align: center;
   font-size: 10px;
   &.alert {
-    background-color: ${({theme}) => theme.colors.red};
-    color: ${({theme}) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.red};
+    color: ${({ theme }) => theme.colors.white};
   }
   &.guide {
-    border: 1.2px solid ${({theme}) => theme.colors.mediumgrey};
-    color: ${({theme}) => theme.colors.mediumgrey};
+    border: 1.2px solid ${({ theme }) => theme.colors.mediumgrey};
+    color: ${({ theme }) => theme.colors.mediumgrey};
   }
 `;
 
@@ -45,8 +45,8 @@ const Noti: React.FC<NotiProps> = ({ type, children, ...props }) => {
     <StyledNoti {...props}>
       <Flex alignItems="center">
         <StyledIcon className={type}>!</StyledIcon>
-        <Text 
-          textStyle={type === NotiType.ALERT ? 'R_14R' : 'R_12R'}
+        <Text
+          textStyle={type === NotiType.ALERT ? "R_14R" : "R_12R"}
           color={type === NotiType.ALERT ? ColorStyles.RED : ColorStyles.MEDIUMGREY}
         >
           {children}
