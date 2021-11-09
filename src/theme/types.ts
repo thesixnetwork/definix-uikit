@@ -1,4 +1,4 @@
-import { ColorStyles } from "./colors";
+import { baseColors, brandColors, customColors, ColorStyles } from "./colors";
 
 export type Breakpoints = string[];
 
@@ -45,6 +45,12 @@ export type Gradients = {
 
 export type Colors = {
   [key in ColorStyles]: string;
+} & {
+  [key in keyof typeof baseColors]: string;
+} & {
+  [key in keyof typeof brandColors]: string;
+} & {
+  [key in keyof typeof customColors]: string;
 } & Record<string, string>;
 
 export type ZIndices = {

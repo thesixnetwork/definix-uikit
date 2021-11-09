@@ -38,6 +38,7 @@ import { ReactComponent as MinusIcon } from "./icons/ico_16_minus.svg";
 import { ReactComponent as CalculatorIcon } from "./icons/ico_16_calculator.svg";
 import { ReactComponent as BackIcon } from "./icons/ico_24_back.svg";
 import { ReactComponent as CheckBIcon } from "./icons/ico_16_check_b.svg";
+import { ReactComponent as ChangeIcon } from "./icons/ico_42_change.svg";
 
 export {
   GnbMySIcon,
@@ -79,4 +80,5 @@ export {
   CalculatorIcon,
   BackIcon,
   CheckBIcon,
+  ChangeIcon,
 };
