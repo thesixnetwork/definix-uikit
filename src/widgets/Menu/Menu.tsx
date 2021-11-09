@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: relative;
-  margin: 0 ${pxToRem(20)};
+  // margin: 0 ${pxToRem(20)};
   padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
@@ -32,7 +32,8 @@ const Container = styled.div`
 
   ${({ theme }) => theme.mediaQueries.xxl} {
     margin: 0 auto;
-    width: calc(1440px - ${SIDEBAR_WIDTH_FULL_PC}px);
+    padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
+    width: 1440px;
   }
 `;
 
