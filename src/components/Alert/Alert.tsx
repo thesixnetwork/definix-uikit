@@ -1,99 +1,61 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
-import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
-import ErrorIcon from "../Svg/Icons/Error";
-import BlockIcon from "../Svg/Icons/Block";
-import InfoIcon from "../Svg/Icons/Info";
+import { CheckCompleteIcon, CheckFailedIcon, SmallCloseIcon } from "../Icon";
 import { Text } from "../Text";
 import { IconButton } from "../Button";
-import { CloseIcon } from "../Svg";
+import Box from "../Box/Box";
 import Flex from "../Box/Flex";
 import { AlertProps, variants } from "./types";
 import { ColorStyles } from "@/theme";
 
-interface ThemedIconLabel {
-  variant: AlertProps["variant"];
-  theme: DefaultTheme;
-  hasDescription: boolean;
-}
-
-const getThemeColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
-  switch (variant) {
-    // case variants.DANGER:
-    //   return theme.colors.failure;
-    // case variants.WARNING:
-    //   return theme.colors.warning;
-    // case variants.SUCCESS:
-    //   return theme.colors.success;
-    // case variants.INFO:
-    default:
-      return theme.colors[ColorStyles.WHITE];
-  }
-};
-
 const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
   switch (variant) {
     case variants.DANGER:
-      return BlockIcon;
+      return CheckFailedIcon;
     case variants.WARNING:
-      return ErrorIcon;
+      return CheckFailedIcon;
     case variants.SUCCESS:
-      return CheckmarkCircleIcon;
+      return CheckCompleteIcon;
     case variants.INFO:
     default:
-      return InfoIcon;
+      return CheckCompleteIcon;
   }
 };
-
-const IconLabel = styled.div<ThemedIconLabel>`
-  background-color: ${getThemeColor};
-  border-radius: 16px 0 0 16px;
-  color: ${({ theme }) => theme.alert.background};
-  padding: 12px;
-`;
-
-const withHandlerSpacing = 32 + 12 + 8; // button size + inner spacing + handler position
-const Details = styled.div<{ hasHandler: boolean }>`
-  flex: 1;
-  padding-bottom: 12px;
-  padding-left: 12px;
-  padding-right: ${({ hasHandler }) => (hasHandler ? `${withHandlerSpacing}px` : "12px")};
-  padding-top: 12px;
-`;
-
-const CloseHandler = styled.div`
-  border-radius: 0 16px 16px 0;
-  right: 8px;
-  position: absolute;
-  top: 8px;
-`;
 
 const StyledAlert = styled(Flex)`
   position: relative;
   background-color: ${({ theme }) => theme.alert.background};
+  border: 1px solid ${({ theme }) => theme.alert.border};
   border-radius: 16px;
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 8px 0 rgba(254, 169, 72, 0.3);
 `;
 
 const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
   const Icon = getIcon(variant);
 
   return (
-    <StyledAlert>
-      <IconLabel variant={variant} hasDescription={!!children}>
-        <Icon color="currentColor" width="24px" />
-      </IconLabel>
-      <Details hasHandler={!!onClick}>
-        <Text bold>{title}</Text>
-        {typeof children === "string" ? <Text as="p">{children}</Text> : children}
-      </Details>
-      {onClick && (
-        <CloseHandler>
-          <IconButton scale="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="24px" color="currentColor" />
-          </IconButton>
-        </CloseHandler>
-      )}
+    <StyledAlert className="px-s16 py-s12" alignItems="center">
+      <Icon color="currentColor" width="24px"/>
+      <Box className="ml-s12" style={{ flex: 1 }} width="100%">
+        <Flex justifyContent="space-between">
+          <Text textStyle="R_14M" color={ColorStyles.BLACK}>{title}</Text>
+          {onClick && (
+            <IconButton
+              scale="sm"
+              variant="text"
+              onClick={onClick}
+              style={{
+                alignItems: 'flex-start',
+                padding: 0,
+                height: 'auto'
+              }}
+            >
+              <SmallCloseIcon />
+            </IconButton>
+          )}
+        </Flex>
+        {children || null}
+      </Box>
     </StyledAlert>
   );
 };

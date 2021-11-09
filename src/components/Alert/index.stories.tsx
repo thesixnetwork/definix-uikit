@@ -5,13 +5,14 @@ import noop from "lodash/noop";
 import { Meta } from "@storybook/react/types-6-0";
 import Alert from "./Alert";
 import { Text } from "../Text";
+import { ColorStyles } from "@/theme";
 
 const Row = styled.div`
   margin-bottom: 32px;
 `;
 
 export default {
-  title: "Components/Alert",
+  title: "Components/Alert[NEW]",
   component: Alert,
   argTypes: {},
 } as Meta;
@@ -21,22 +22,22 @@ export const Default: React.FC = () => {
     <div style={{ padding: "32px", width: "400px" }}>
       <Row>
         <Alert title="Info">
-          <Text as="p">This is a description</Text>
+          <Text as="p" textStyle="R_12R" color={ColorStyles.MEDIUMGREY}>This is a description</Text>
         </Alert>
       </Row>
       <Row>
         <Alert title="Success" variant="success">
-          <Text as="p">This is a description</Text>
+          <Text as="p" textStyle="R_12R" color={ColorStyles.MEDIUMGREY}>This is a description</Text>
         </Alert>
       </Row>
       <Row>
         <Alert title="Warning" variant="warning">
-          <Text as="p">This is a description</Text>
+          <Text as="p" textStyle="R_12R" color={ColorStyles.MEDIUMGREY}>This is a description</Text>
         </Alert>
       </Row>
       <Row>
         <Alert title="Danger" variant="danger">
-          <Text as="p">This is a description</Text>
+          <Text as="p" textStyle="R_12R" color={ColorStyles.MEDIUMGREY}>This is a description</Text>
         </Alert>
       </Row>
     </div>
@@ -53,7 +54,7 @@ export const WithHandler: React.FC = () => {
       </Row>
       <Row>
         <Alert onClick={handleClick} title="Success" variant="success">
-          A description of the success alert
+          <Text as="p" textStyle="R_12R" color={ColorStyles.MEDIUMGREY}>This is a description</Text>
         </Alert>
       </Row>
       <Row>
