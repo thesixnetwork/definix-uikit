@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 import ToastContainer from "./ToastContainer";
 
 export default {
-  title: "Widgets/Toast",
+  title: "Widgets/Toast[NEW]",
   component: ToastContainer,
   argTypes: {},
 };
@@ -13,13 +13,25 @@ export default {
 export const Default: React.FC = () => {
   const [toasts, setToasts] = useState([]);
 
-  const handleClick = (description = "") => {
+  const handleSuccessToastClick = (description = "") => {
     const now = Date.now();
     const randomToast = {
       id: `id-${now}`,
       title: `Title: ${now}`,
       description,
-      type: alertVariants[sample(Object.keys(alertVariants))],
+      type: alertVariants.SUCCESS,
+    };
+
+    setToasts((prevToasts) => [randomToast, ...prevToasts]);
+  };
+
+  const handleFailToastClick = (description = "") => {
+    const now = Date.now();
+    const randomToast = {
+      id: `id-${now}`,
+      title: `Title: ${now}`,
+      description,
+      type: alertVariants.DANGER,
     };
 
     setToasts((prevToasts) => [randomToast, ...prevToasts]);
@@ -31,14 +43,16 @@ export const Default: React.FC = () => {
 
   return (
     <div>
-      <Button type="button" variant="secondary" onClick={() => handleClick()}>
-        Random Toast
+      <Button type="button" variant="secondary" onClick={() => handleSuccessToastClick()}>
+        Success Toast
+      </Button>
+      <Button type="button" variant="secondary" mx="8px" onClick={() => handleFailToastClick()}>
+        Fail Toast
       </Button>
       <Button
         type="button"
         variant="secondary"
-        ml="8px"
-        onClick={() => handleClick("This is a description to explain more about the toast")}
+        onClick={() => handleSuccessToastClick("custom content")}
       >
         Random Toast with Description
       </Button>

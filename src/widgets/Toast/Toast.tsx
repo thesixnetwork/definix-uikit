@@ -5,6 +5,7 @@ import { Alert, alertVariants } from "../../components/Alert";
 import { Text } from "../../components/Text";
 import ToastAction from "./ToastAction";
 import { ToastProps, types } from "./types";
+import { ColorStyles } from "@/theme";
 
 const alertTypeMap = {
   [types.INFO]: alertVariants.INFO,
@@ -67,7 +68,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
         <Alert title={title} variant={alertTypeMap[type]} onClick={handleRemove}>
           {action ? (
             <>
-              <Text as="p" mb="8px">
+              <Text as="p" textStyle="R_12R" color={ColorStyles.MEDIUMGREY} className="mb-s12">
                 {description}
               </Text>
               <ToastAction action={action} />
