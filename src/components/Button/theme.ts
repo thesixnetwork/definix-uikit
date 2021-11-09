@@ -85,7 +85,7 @@ export const styleVariants = {
   },
   [ButtonVariants.TEXT]: {
     backgroundColor: "transparent",
-    color: "primary",
+    color: "textSubtle",
     boxShadow: "none",
   },
 };
