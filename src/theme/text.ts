@@ -6,6 +6,7 @@ export enum TextStyles {
   R_28M = "R_28M",
   R_26B = "R_26B",
   R_23M = "R_23M",
+  R_23B = "R_23B",
   R_20B = "R_20B",
   R_20M = "R_20M",
   R_20R = "R_20R",
@@ -70,10 +71,15 @@ export const textStyle: Record<string, Record<string, string | number>> = {
     fontWeight: 500,
     fontStretch: "normal",
     fontStyle: "normal",
-    lineHeight: 1.39,
-    letterSpacing: "normal",
   },
-
+  [TextStyles.R_23B]: {
+    fontFamily: "Roboto",
+    fontSize: "23px",
+    fontWeight: "bold",
+    fontStretch: "normal",
+    fontStyle: "normal",
+  },
+  
   [TextStyles.R_20B]: {
     fontFamily: "Roboto",
     fontSize: "20px",

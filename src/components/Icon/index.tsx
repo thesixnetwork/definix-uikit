@@ -42,6 +42,8 @@ import { ReactComponent as CheckCompleteIcon } from "./icons/ico_24_check_comple
 import { ReactComponent as CheckFailedIcon } from "./icons/ico_24_check_failed.svg";
 import { ReactComponent as SmallCloseIcon } from "./icons/ico_16_closed_g.svg";
 import { ReactComponent as ChangeIcon } from "./icons/ico_42_change.svg";
+import { ReactComponent as TokenFinixIcon } from "./icons/ico_24_token_finix.svg";
+import { ReactComponent as HomeFarmFinixIcon } from "./icons/img_home_farm_finix.svg";
 
 export {
   GnbMySIcon,
@@ -87,4 +89,6 @@ export {
   CheckFailedIcon,
   SmallCloseIcon,
   ChangeIcon,
+  TokenFinixIcon,
+  HomeFarmFinixIcon,
 };

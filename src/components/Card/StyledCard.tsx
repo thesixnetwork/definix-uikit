@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { space } from "styled-system";
+import { color, space } from "styled-system";
 import { CardProps } from "./types";
 import { pxToRem } from "@/style/mixin";
 import { spacing } from "@/theme/base";
@@ -34,6 +34,7 @@ const StyledCard = styled.div<StyledCardProps>`
   overflow: hidden;
   position: relative;
   ${space}
+  ${color}
 `;
 
 StyledCard.defaultProps = {

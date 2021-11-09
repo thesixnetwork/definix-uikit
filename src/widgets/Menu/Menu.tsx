@@ -14,7 +14,6 @@ import {
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
-import { breakpointMap } from "../../theme/base";
 
 const Wrapper = styled.div`
   position: relative;
@@ -30,6 +29,11 @@ const Container = styled.div`
   ${({ theme }) => theme.mediaQueries.mobile} {
     padding-left: 0;
   }
+
+  ${({ theme }) => theme.mediaQueries.xxl} {
+    margin: 0 auto;
+    width: calc(1440px - ${SIDEBAR_WIDTH_FULL_PC}px);
+  }
 `;
 
 const TopBackground = styled.div`
@@ -44,6 +48,7 @@ const TopBackground = styled.div`
 const Inner = styled.div<{ isMobile: boolean }>`
   padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
   min-height: calc(100vh - ${NAV_HEIGHT_PC}px);
+
   outline: 1px solid blue;
   ${({ isMobile }) =>
     isMobile &&
