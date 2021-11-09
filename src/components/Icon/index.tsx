@@ -84,5 +84,5 @@ export {
   CheckBIcon,
   CheckCompleteIcon,
   CheckFailedIcon,
-  SmallCloseIcon
+  SmallCloseIcon,
 };

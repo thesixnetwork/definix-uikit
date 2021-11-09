@@ -35,19 +35,21 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
 
   return (
     <StyledAlert className="px-s16 py-s12" alignItems="center">
-      <Icon color="currentColor" width="24px"/>
+      <Icon color="currentColor" width="24px" />
       <Box className="ml-s12" style={{ flex: 1 }} width="100%">
         <Flex justifyContent="space-between">
-          <Text textStyle="R_14M" color={ColorStyles.BLACK}>{title}</Text>
+          <Text textStyle="R_14M" color={ColorStyles.BLACK}>
+            {title}
+          </Text>
           {onClick && (
             <IconButton
               scale="sm"
               variant="text"
               onClick={onClick}
               style={{
-                alignItems: 'flex-start',
+                alignItems: "flex-start",
                 padding: 0,
-                height: 'auto'
+                height: "auto",
               }}
             >
               <SmallCloseIcon />
