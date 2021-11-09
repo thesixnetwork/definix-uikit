@@ -24,49 +24,56 @@ const Stub = styled.div`
 
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
+const Trans = ({ i18nKey }) => {
+  return <div>{i18nKey}</div>
+}
+
 // This hook is used to simulate a props change, and force a re rendering
 const useProps = () => {
+  const [userSlippageTolerance, setUserslippageTolerance] = useState(0.5);
+  const [deadline, setDeadline] = useState(0.5);
   const [props, setProps] = useState({
-    t: (key: string, replaceTxt: Record<string, string>) => {
-      console.log("!!translate", key);
-    },
-    userBlock: <UserBlock account="0xbdda50183d817c3289f895a4472eb475967dc980" login={noop} logout={noop} />,
-    chain: <Chain />,
-    // account: "0xbdda50183d817c3289f895a4472eb475967dc980",
-    // login: noop,
-    // logout: noop,
+    userSlippageTolerance,
+    setUserslippageTolerance,
+
+    deadline,
+    setDeadline,
+
+    account: "0xbdda50183d817c3289f895a4472eb475967dc980",
+    login: noop,
+    logout: noop,
+
+    Trans,
     // isDark: false,
     // toggleTheme: noop,
-    langs,
-    setLang: noop,
     currentLang: "EN",
-    finixPriceUsd: 0.023158668932877668,
+    setLang: noop,
+    langs,
+
     links,
     // profile: null,
   });
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProps({
-        userBlock: <UserBlock account="0xbdda50183d817c3289f895a4472eb475967dc980" login={noop} logout={noop} />,
-        chain: <Chain />,
-        // account: "0xbdda50183d817c3289f895a4472eb475967dc980",
-        // login: noop,
-        // logout: noop,
-        // isDark: false,
-        // toggleTheme: noop,
-        langs,
-        setLang: noop,
-        currentLang: "EN",
-        finixPriceUsd: 0.023158668932877668,
-        links,
-        // profile: null,
-      });
-    }, 2000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setProps({
+  //       // account: "0xbdda50183d817c3289f895a4472eb475967dc980",
+  //       // login: noop,
+  //       // logout: noop,
+  //       // isDark: false,
+  //       // toggleTheme: noop,
+  //       langs,
+  //       setLang: noop,
+  //       currentLang: "EN",
+  //       finixPriceUsd: 0.023158668932877668,
+  //       links,
+  //       // profile: null,
+  //     });
+  //   }, 2000);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   return props;
 };
@@ -93,19 +100,10 @@ export const Connected: React.FC = () => {
 };
 
 export const NotConnected: React.FC = () => {
+  const props = useProps();
   return (
     <BrowserRouter>
-      <Menu
-        account={null}
-        login={noop}
-        logout={noop}
-        isDark
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        links={links}
-      >
+      <Menu {...props} account={null}>
         <div>
           <h1>Page body</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -123,129 +121,44 @@ export const NotConnected: React.FC = () => {
   );
 };
 
-export const WithNoProfile: React.FC = () => {
-  return (
-    <BrowserRouter>
-      <Menu
-        account="0xbdda50183d817c3289f895a4472eb475967dc980"
-        login={noop}
-        logout={noop}
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        finixPriceUsd={0.23158668932877668}
-        links={links}
-        profile={{
-          profileLink: "/profile",
-          noProfileLink: "/no-profile",
-        }}
-      >
-        <div>
-          <Heading as="h1" mb="8px">
-            Page body
-          </Heading>
-          <Text as="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut
-          </Text>
-        </div>
-      </Menu>
-    </BrowserRouter>
-  );
-};
 
-export const WithProfile: React.FC = () => {
-  return (
-    <BrowserRouter>
-      <Menu
-        account="0xbdda50183d817c3289f895a4472eb475967dc980"
-        login={noop}
-        logout={noop}
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        finixPriceUsd={0.23158668932877668}
-        links={links}
-        profile={{
-          username: "pancakeswap",
-          image: "https://pancakeswap.finance/images/nfts/blueberries-preview.png",
-          profileLink: "/profile",
-          noProfileLink: "/no-profile",
-        }}
-      >
-        <div>
-          <Heading as="h1" mb="8px">
-            Page body
-          </Heading>
-          <Text as="p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut
-          </Text>
-        </div>
-      </Menu>
-    </BrowserRouter>
-  );
-};
+// export const MenuEntryComponent: React.FC = () => {
+//   return (
+//     <Flex justifyContent="space-between" p="16px" style={{ backgroundColor: "wheat" }}>
+//       <MenuEntry>Default</MenuEntry>
+//       <MenuEntry secondary>Secondary</MenuEntry>
+//       <MenuEntry isActive>isActive</MenuEntry>
+//     </Flex>
+//   );
+// };
 
-export const MenuEntryComponent: React.FC = () => {
-  return (
-    <Flex justifyContent="space-between" p="16px" style={{ backgroundColor: "wheat" }}>
-      <MenuEntry>Default</MenuEntry>
-      <MenuEntry secondary>Secondary</MenuEntry>
-      <MenuEntry isActive>isActive</MenuEntry>
-    </Flex>
-  );
-};
-
-export const WithSubmenuSelected: React.FC = () => {
-  return (
-    <MemoryRouter initialEntries={["/teams"]}>
-      <Menu
-        account="0xbdda50183d817c3289f895a4472eb475967dc980"
-        login={noop}
-        logout={noop}
-        isDark={false}
-        toggleTheme={noop}
-        langs={langs}
-        setLang={noop}
-        currentLang="EN"
-        finixPriceUsd={0.23158668932877668}
-        links={links}
-        profile={{
-          username: "pancakeswap",
-          image: "https://pancakeswap.finance/images/nfts/blueberries-preview.png",
-          profileLink: "/profile",
-          noProfileLink: "/no-profile",
-        }}
-      >
-        <div>
-          <Heading as="h1" mb="8px">
-            Submenu leaderboard selected
-          </Heading>
-        </div>
-      </Menu>
-    </MemoryRouter>
-  );
-};
+// export const WithSubmenuSelected: React.FC = () => {
+//   return (
+//     <MemoryRouter initialEntries={["/teams"]}>
+//       <Menu
+//         account="0xbdda50183d817c3289f895a4472eb475967dc980"
+//         login={noop}
+//         logout={noop}
+//         isDark={false}
+//         toggleTheme={noop}
+//         langs={langs}
+//         setLang={noop}
+//         currentLang="EN"
+//         finixPriceUsd={0.23158668932877668}
+//         links={links}
+//         profile={{
+//           username: "pancakeswap",
+//           image: "https://pancakeswap.finance/images/nfts/blueberries-preview.png",
+//           profileLink: "/profile",
+//           noProfileLink: "/no-profile",
+//         }}
+//       >
+//         <div>
+//           <Heading as="h1" mb="8px">
+//             Submenu leaderboard selected
+//           </Heading>
+//         </div>
+//       </Menu>
+//     </MemoryRouter>
+//   );
+// };

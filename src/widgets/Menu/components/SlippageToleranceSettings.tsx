@@ -72,13 +72,24 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
     setValue(parseFloat(inputValue));
   };
 
+  const handleClick = (value: number) => {
+    setValue(value);
+  };
+
   // Updates local storage if value is valid
   useEffect(() => {
     try {
       const rawValue = value * 100;
       if (!Number.isNaN(rawValue) && rawValue > 0 && rawValue < MAX_SLIPPAGE) {
         setUserslippageTolerance(rawValue);
-        setError(null);
+
+        if (rawValue < RISKY_SLIPPAGE_LOW) {
+          setError("Your transaction may fail");
+        } else if (rawValue > RISKY_SLIPPAGE_HIGH) {
+          setError("Your transaction may be frontrun");
+        } else {
+          setError(null);  
+        }
       } else {
         setError("Enter a valid slippage percentage");
       }
@@ -86,15 +97,6 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
       setError("Enter a valid slippage percentage");
     }
   }, [value, setError, setUserslippageTolerance]);
-
-  // Notify user if slippage is risky
-  useEffect(() => {
-    if (userSlippageTolerance < RISKY_SLIPPAGE_LOW) {
-      setError("Your transaction may fail");
-    } else if (userSlippageTolerance > RISKY_SLIPPAGE_HIGH) {
-      setError("Your transaction may be frontrun");
-    }
-  }, [userSlippageTolerance, setError]);
 
   return (
     <StyledSlippageToleranceSettings>
@@ -109,15 +111,13 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
       <Options>
         <Flex mb={["8px", 0]} mr={[0, "8px"]}>
           {predefinedValues.map(({ label, value: predefinedValue }) => {
-            const handleClick = () => setValue(predefinedValue);
-
             return (
               <Option key={predefinedValue}>
                 <Button
                   width="88px"
                   md
                   variant={value === predefinedValue ? "red" : "lightbrown"}
-                  onClick={handleClick}
+                  onClick={() => handleClick(predefinedValue)}
                 >
                   {label}
                 </Button>
@@ -143,7 +143,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         <Flex mt="S_12">
           <SettingIcon />
           <Text ml="5px" textStyle={TextStyles.R_14R} color={ColorStyles.RED}>
-            {error}
+            <Trans i18nKey={error} />
           </Text>
         </Flex>
       )}

@@ -94,8 +94,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
         </Flex>
         <Button
           ml="8px"
-          scale={ButtonScales.S_32ICON}
-          minWidth="auto"
+          xs
           variant={ButtonVariants.DEEPBROWN}
           startIcon={<GnbMySIcon />}
           onClick={() => {
@@ -104,7 +103,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
           }}
         >
           <Text textStyle={TextStyles.R_12B} ml="6px">
-            {/* {t('MY')} */}
+            <Trans i18nKey="MY" />
           </Text>
         </Button>
       </>

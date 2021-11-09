@@ -40,6 +40,10 @@ const WrapScrollPanel = styled.div`
   height: calc(100vh - 44px);
   overflow-y: scroll;
 
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
   ${({ theme }) => theme.mediaQueries.mobile} {
   }
 `;
