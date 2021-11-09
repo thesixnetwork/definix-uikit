@@ -22,72 +22,156 @@ BlinkMacSystemFont,
 function createSpacing() {
   const sizes = [0, 0.25, 0.5, 1, 1.25, 1.5, 2, 3, 4, 6];
   const props = ["margin", "padding"];
-  const styles = sizes
-    .flatMap((size, i) =>
-      props.map((prop) => {
-        const initial = prop.substr(0, 1);
-        return `
-      .${initial}a-${i} {
-        ${prop}: ${size}rem !important;
-      }
-      .${initial}t-${i} {
-        ${prop}-top: ${size}rem !important;
-      }
-      .${initial}b-${i} {
-        ${prop}-bottom: ${size}rem !important;
-      }
-      .${initial}l-${i} {
-        ${prop}-left: ${size}rem !important;
-      }
-      .${initial}r-${i} {
-        ${prop}-right: ${size}rem !important;
-      }
-      .${initial}x-${i} {
-        ${prop}-left: ${size}rem !important;
-        ${prop}-right: ${size}rem !important;
-      }
-      .${initial}y-${i} {
-        ${prop}-top: ${size}rem !important;
-        ${prop}-bottom: ${size}rem !important;
-      }
-    `;
-      })
-    )
+  const styles = props
+    .flatMap((prop) => {
+      const initial = prop.substr(0, 1);
+      return `
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}a-${i} {
+            ${prop}: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}t-${i} {
+            ${prop}-top: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}b-${i} {
+            ${prop}-bottom: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}l-${i} {
+            ${prop}-left: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}r-${i} {
+            ${prop}-right: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}x-${i} {
+            ${prop}-left: ${size}rem !important;
+            ${prop}-right: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+        ${sizes
+          .map(
+            (size, i) => `
+          .${initial}y-${i} {
+            ${prop}-top: ${size}rem !important;
+            ${prop}-bottom: ${size}rem !important;
+          }
+        `
+          )
+          .join("")}
+      `;
+    })
     .join("");
 
-  const custom = Object.keys(space)
-    .flatMap((key) => {
-      const size = pxToRem(space[key]);
-      const i = key.toLowerCase().replace("_", "");
-      return props.map((prop) => {
-        const initial = prop.substr(0, 1);
-        return `
+  const custom = props
+    .flatMap((prop) => {
+      const initial = prop.substr(0, 1);
+      const customSizes = Object.entries(space).map(([key, value]) => [
+        key.toLowerCase().replace("_", ""),
+        pxToRem(value),
+      ]);
+      return `
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}a-${i} {
             ${prop}: ${size} !important;
           }
+        `
+          )
+          .join("")}
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}t-${i} {
             ${prop}-top: ${size} !important;
           }
+        `
+          )
+          .join("")}
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}b-${i} {
             ${prop}-bottom: ${size} !important;
           }
+        `
+          )
+          .join("")}
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}l-${i} {
             ${prop}-left: ${size} !important;
           }
+        `
+          )
+          .join("")}
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}r-${i} {
             ${prop}-right: ${size} !important;
           }
+        `
+          )
+          .join("")}
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}x-${i} {
             ${prop}-left: ${size} !important;
             ${prop}-right: ${size} !important;
           }
+        `
+          )
+          .join("")}
+        ${customSizes
+          .map(
+            ([i, size]) => `
           .${initial}y-${i} {
             ${prop}-top: ${size} !important;
             ${prop}-bottom: ${size} !important;
-          }`;
-      });
+          }
+        `
+          )
+          .join("")}
+      `;
     })
     .join("");
+
   return css`
     ${styles}
     ${custom}
