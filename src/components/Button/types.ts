@@ -1,6 +1,7 @@
 import { ComponentProps, ElementType, ReactElement, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { LayoutProps, SpaceProps } from "styled-system";
+import { BoxProps } from "../Box";
 
 export enum ButtonScales {
   // new
@@ -67,3 +68,8 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;
+
+
+export interface ButtonGroupProps extends BoxProps {
+  r?: string;
+}

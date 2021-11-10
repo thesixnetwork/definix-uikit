@@ -1,16 +1,15 @@
 import { capitalize } from "lodash";
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import styled from "styled-components";
 import { IconButton } from ".";
 import Box from "../Box/Box";
 import Flex from "../Box/Flex";
-import { Text } from "../Text";
-import { ArrowBottomGIcon, SettingIcon } from "../Icon";
+import { SettingIcon } from "../Icon";
 import Button from "./Button";
 import { ButtonScales, ButtonVariants } from "./types";
-import { TextStyles } from "../../theme/text";
 import DropdownButton from "./DropdownButton";
+import ButtonGroup from "./ButtonGroup";
 
 const viewScales = [ButtonScales.XS, ButtonScales.SM, ButtonScales.MD, ButtonScales.LG];
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
@@ -154,3 +153,38 @@ export const Extends: React.FC = () => {
     </Box>
   );
 };
+
+const Buttons: React.FC = () => {
+  const times = ['1D', '1W', '1M', '3M', 'ALL']
+  const [state, setstate] = useState(times[0]);
+
+  return (
+    <>
+    {times.map((t) => (
+      <Button
+        scale="sm"
+        variant={t === state ? 'primary' : 'text'}
+        onClick={() => {
+          setstate(t)
+        }}
+      >
+        {t}
+      </Button>
+    ))}
+    </>
+  )
+}
+
+export const Group: React.FC = () => {
+
+  return (
+    <>
+      <ButtonGroup>
+        <Buttons />
+      </ButtonGroup>
+      <ButtonGroup mt="S_20" r="20px">
+        <Buttons />
+      </ButtonGroup>
+    </>
+  )
+}
