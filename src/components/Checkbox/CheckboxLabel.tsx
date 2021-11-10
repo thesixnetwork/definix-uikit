@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { border, layout, position, space } from "styled-system";
 import { CheckboxLabelProps } from "./types";
 
 const StyledCheckboxLabel = styled.label`
+  ${border}
+  ${layout}
+  ${position}
+  ${space}
   display: flex;
   > input {
     flex-shrink: 0;
@@ -13,13 +18,11 @@ const StyledCheckboxLabel = styled.label`
   }
 `;
 
-const CheckboxLabel: React.FC<CheckboxLabelProps> = ({ className, control, children }) => {
-  const singleCol = typeof children === "string" && !children?.length;
-
+const CheckboxLabel: React.FC<CheckboxLabelProps> = ({ control, children, ...props }) => {
   return (
-    <StyledCheckboxLabel className={className}>
+    <StyledCheckboxLabel {...props}>
       {control}
-      {singleCol ? children : <div>{children}</div>}
+      {children}
     </StyledCheckboxLabel>
   );
 };

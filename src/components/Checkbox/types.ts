@@ -1,4 +1,6 @@
 import { Colors } from "@/theme/types";
+import { HTMLAttributes } from "react";
+import { BackgroundProps, BorderProps, LayoutProps, PositionProps, SpaceProps } from "styled-system";
 
 export const scales = {
   SM: "sm",
@@ -12,8 +14,11 @@ export interface CheckboxProps {
   variantColor?: keyof Colors;
 }
 
-export interface CheckboxLabelProps {
-  className?: string;
+export interface CheckboxLabelProps extends BorderProps,
+  LayoutProps,
+  PositionProps,
+  SpaceProps,
+  HTMLAttributes<HTMLLabelElement> {
   control: React.ReactNode;
   children: React.ReactNode;
 }
