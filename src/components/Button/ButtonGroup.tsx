@@ -9,7 +9,6 @@ const StyledButtonGroup = styled(Box)<{ r: string}>`
 
   button {
     flex-shrink: 0;
-    width: 60px;
     border-radius: 0;
     border-right: 1px solid ${({ theme }) => theme.colors.border} !important;
 
