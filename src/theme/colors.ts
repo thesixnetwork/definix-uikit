@@ -94,7 +94,7 @@ export const baseColors = {
   textDisabled: colorHex.lightgrey,
   warning: colorHex.red,
   black20: hexToRGB(colorHex.black, 0.2),
-  white80: hexToRGB(colorHex.white, 0.8)
+  white80: hexToRGB(colorHex.white, 0.8),
 };
 
 export const brandColors = {
