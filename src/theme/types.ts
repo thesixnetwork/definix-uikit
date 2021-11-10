@@ -11,6 +11,7 @@ export type MediaQueries = {
   xxl: string;
   nav: string;
   mobile: string;
+  mobileXl: string;
 };
 
 export type Spacing = {
