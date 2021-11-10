@@ -17,7 +17,7 @@ const StyledCardRibbon = styled.div<Partial<StyledCardRibbonProps>>`
   top: 17px;
   border-top-right-radius: ${pxToRem(spacing.S_8)};
   border-bottom-right-radius: ${pxToRem(spacing.S_8)};
-  z-index: 1;
+  z-index: 2;
   ${textStyle.R_12B}
   color: white;
   ${({ upperCase }) => upperCase && "text-transform: uppercase;"};
