@@ -155,28 +155,27 @@ export const Extends: React.FC = () => {
 };
 
 const Buttons: React.FC = () => {
-  const times = ['1D', '1W', '1M', '3M', 'ALL']
+  const times = ["1D", "1W", "1M", "3M", "ALL"];
   const [state, setstate] = useState(times[0]);
 
   return (
     <>
-    {times.map((t) => (
-      <Button
-        scale="sm"
-        variant={t === state ? 'primary' : 'text'}
-        onClick={() => {
-          setstate(t)
-        }}
-      >
-        {t}
-      </Button>
-    ))}
+      {times.map((t) => (
+        <Button
+          scale="sm"
+          variant={t === state ? "primary" : "text"}
+          onClick={() => {
+            setstate(t);
+          }}
+        >
+          {t}
+        </Button>
+      ))}
     </>
-  )
-}
+  );
+};
 
 export const Group: React.FC = () => {
-
   return (
     <>
       <ButtonGroup>
@@ -186,5 +185,5 @@ export const Group: React.FC = () => {
         <Buttons />
       </ButtonGroup>
     </>
-  )
-}
+  );
+};
