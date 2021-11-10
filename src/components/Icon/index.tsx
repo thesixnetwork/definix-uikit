@@ -46,6 +46,7 @@ import { ReactComponent as TokenFinixIcon } from "./icons/ico_24_token_finix.svg
 import { ReactComponent as HomeFarmFinixIcon } from "./icons/img_home_farm_finix.svg";
 import { ReactComponent as HomeProtectionFinixIcon } from "./icons/img_home_protection_finix.svg";
 import { ReactComponent as LinkIcon } from "./icons/ico_16_link.svg";
+import { ReactComponent as FireIcon } from "./icons/ico_44_fire.svg";
 
 export {
   GnbMySIcon,
@@ -95,4 +96,5 @@ export {
   TokenFinixIcon,
   HomeFarmFinixIcon,
   HomeProtectionFinixIcon,
+  FireIcon,
 };

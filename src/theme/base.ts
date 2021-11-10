@@ -52,6 +52,7 @@ export const spacing: Spacing = {
   S_14: 14,
   S_16: 16,
   S_20: 20,
+  S_22: 22,
   S_24: 24,
   S_28: 28,
   S_30: 30,
