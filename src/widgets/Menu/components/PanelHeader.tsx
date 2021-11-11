@@ -8,6 +8,7 @@ import Chain from "./Chain";
 import UserBlock from "./UserBlock";
 import { hexToRGB } from "@/style/mixin";
 import { ColorStyles } from "@/theme";
+import { useMatchBreakpoints } from "@/hooks";
 
 interface Props extends PanelProps, PushedProps, UserProps, TranslateProps {}
 
@@ -25,7 +26,8 @@ const StyledHeader = styled(Flex)`
   justify-content: center;
 `;
 
-const PanelHeader: React.FC<Props> = ({ isMobile, pushNav, ...props }) => {
+const PanelHeader: React.FC<Props> = ({ pushNav, ...props }) => {
+  const { isMobile } = useMatchBreakpoints();
   return isMobile ? (
     // <MobileHeader>{userBlock}</MobileHeader>
     <MobileHeader>
