@@ -19,7 +19,6 @@ const MobileHeader = styled(Flex)`
 `;
 
 const StyledHeader = styled(Flex)`
-  display: none;
   align-items: center;
   justify-content: center;
 `;

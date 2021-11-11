@@ -18,7 +18,7 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
   bottom: 0;
   padding-top: 30px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   width: ${SIDEBAR_WIDTH_FULL_PC}px;
@@ -29,6 +29,7 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     padding-top: 16px;
+    // justify-content: space-between;
 
     width: ${SIDEBAR_WIDTH_FULL_MOBILE}px;
     transform: translateX(${({ isPushed }) => (isPushed ? "0" : "-100%")});

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
+import _ from "lodash";
 import styled from "styled-components";
 import { Box, Flex } from "../../../components/Box";
 import { IconButton } from "../../../components/Button";
 import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, NAV_ZINDEX, SIDEBAR_WIDTH_FULL_PC } from "../config";
-import { LogoMainFinixIcon, MenuIcon, SettingIcon } from "../../../components/Icon";
+import { LogoMainFinixIcon, MenuIcon, SettingIcon, GnbMyMobileIcon } from "../../../components/Icon";
 import { hexToRGB, pxToRem } from "../../../style/mixin";
 import { NavProps } from "../types";
 import { ColorStyles } from "../../../theme";
@@ -32,7 +33,7 @@ const MobileNav = styled.nav`
   } */
 `;
 
-const StyledNav = styled.nav`
+const StyledNav = styled.nav<{ isTop: boolean }>`
   position: fixed;
   top: 0;
   display: flex;
@@ -43,13 +44,40 @@ const StyledNav = styled.nav`
   align-items: center;
   padding: 0 ${pxToRem(60)};
   z-index: ${NAV_ZINDEX};
+  transition: background-color .2s;
+
+  ${({ theme, isTop }) => !isTop && `
+    background-color: ${theme.colors[ColorStyles.WHITE]};
+  `}
 `;
+
+const getIsTop = () => {
+  return window.pageYOffset === 0;
+}
 
 const Nav: React.FC<NavProps> = (props) => {
   const { isPushed, pushNav } = props;
   const { isMaxLg } = useMatchBreakpoints();
+  const [isTop, setIsTop] = useState(getIsTop());
   const isMobile = isMaxLg;
   const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
+  const refPrevIsTop = useRef<boolean>(getIsTop());
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isTopOfPage = getIsTop();
+      if (refPrevIsTop.current !== isTopOfPage) {
+        setIsTop(isTopOfPage);
+        refPrevIsTop.current = isTopOfPage;
+      }
+    };
+    const throttledHandleScroll = _.throttle(handleScroll, 200);
+
+    window.addEventListener("scroll", throttledHandleScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledHandleScroll);
+    };
+  }, []);
 
   if (isMobile) {
     return (
@@ -59,16 +87,17 @@ const Nav: React.FC<NavProps> = (props) => {
         </Box>
         <LogoMainFinixIcon viewBox="0 0 120 21" height="16" />
         <Box position="absolute" right={pxToRem(20)}>
-          <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+          <IconButton mr="S_12" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+          <IconButton startIcon={<GnbMyMobileIcon />} onClick={() => {}} />
         </Box>
       </MobileNav>
     );
   }
   return (
-    <StyledNav>
+    <StyledNav isTop={isTop}>
       <Chain {...props} />
       <Flex position="absolute" right={pxToRem(60)}>
-        <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        <IconButton mr="S_16" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
         <UserBlock {...props} />
       </Flex>
     </StyledNav>

@@ -35,7 +35,6 @@ const StyledButton = styled.a`
 `;
 
 const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth }) => {
-  // const history = useHistory()
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
@@ -62,22 +61,6 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
             />
           </Flex>
         </Flex>
-        <StyledButton
-          onClick={() => {
-            // history.push('/myinvestments')
-          }}
-        >
-          <Text textStyle={TextStyles.R_12M} color={ColorStyles.WHITE}>
-            <Trans i18nKey="Net Worth" />
-          </Text>
-          <Flex ml="12px" alignItems="center">
-            <Text mr="7px" textStyle={TextStyles.R_12B} width="140px" color={ColorStyles.WHITE}>
-              {netWorth}
-              {/* <NetWorth /> */}
-            </Text>
-            <IconButton startIcon={<ArrowRightGIcon />} />
-          </Flex>
-        </StyledButton>
       </Wrapper>
     ) : (
       <>
@@ -116,7 +99,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
       <Button
         {...(isMobile ? { md: true } : { xs: true })}
         variant={ButtonVariants.RED}
-        width="186px"
+        width={isMobile ? "186px" : "142px"}
         onClick={() => {
           onPresentConnectModal();
         }}

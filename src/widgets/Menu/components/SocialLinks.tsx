@@ -1,7 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 import Flex from "../../../components/Box/Flex";
 import Link from "../../../components/Link/Link";
-import { pxToRem } from "../../../style/mixin";
 import * as IconModule from "../../../components/Icon";
 import { socials } from "../config";
 
@@ -11,19 +11,36 @@ interface Props {
   isMobile: boolean;
 }
 
+const StyledFlex = styled(Flex)`
+  align-items: center;
+  justify-content: center;
+
+  > a {
+    margin-right: 16px;
+  }
+
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    justify-content: space-between;
+    padding: 0 40px;
+
+    > a {
+      margin-right: 0;
+    }
+  }
+`
+
 const SocialLinks: React.FC<Props> = ({ isMobile }) => (
-  <Flex alignItems="center" justifyContent={isMobile ? "space-between" : "center"} px={isMobile ? pxToRem(40) : 0}>
+  <StyledFlex>
     {socials.map((social, index) => {
       const Icon = Icons[social.icon];
       const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
-      const mr = index < socials.length - 1 ? pxToRem(isMobile ? 20 : 16) : 0;
       return (
-        <Link external key={social.label} href={social.href} aria-label={social.label} mr={mr}>
+        <Link external key={social.label} href={social.href} aria-label={social.label}>
           <Icon {...iconProps} />
         </Link>
       );
     })}
-  </Flex>
+  </StyledFlex>
 );
 
 export default React.memo(SocialLinks, () => true);
