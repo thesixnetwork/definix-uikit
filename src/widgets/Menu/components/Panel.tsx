@@ -8,8 +8,9 @@ import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
 import PanelHeader from "./PanelHeader";
 import { ColorStyles } from "@/theme";
 import MobilePanelHeaderFixed from "./MobilePanelHeaderFixed";
+import { useMatchBreakpoints } from "@/hooks";
 
-const StyledPanel = styled.div<{ isPushed: boolean; isMobile: boolean }>`
+const StyledPanel = styled.div<{ isPushed: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -55,7 +56,8 @@ const ContainerScrollPanel = styled.div`
 `;
 
 const Panel: React.FC<PanelProps> = (props) => {
-  const { isMobile, pushNav } = props;
+  const { pushNav } = props;
+  const { isMobile } = useMatchBreakpoints();
 
   useEffect(() => {
     if (isMobile) {

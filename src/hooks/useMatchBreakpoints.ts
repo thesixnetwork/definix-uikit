@@ -33,17 +33,16 @@ const mediaQueries: MediaQueries = (() => {
     return {
       ...accum,
       [size]: `(min-width: ${minWidth}px) and (max-width: ${breakpoint}px)`,
-      ['min' + size.charAt(0).toUpperCase() + size.slice(1)]: `(min-width: ${breakpoint}px)`,
-      ['max' + size.charAt(0).toUpperCase() + size.slice(1)]: `(max-width: ${breakpoint}px)`
+      ["min" + size.charAt(0).toUpperCase() + size.slice(1)]: `(min-width: ${breakpoint}px)`,
+      ["max" + size.charAt(0).toUpperCase() + size.slice(1)]: `(max-width: ${breakpoint}px)`,
     };
   }, {});
 })();
 
-
 const getKey = (size: string) => `is${size.charAt(0).toUpperCase()}${size.slice(1)}`;
 
 const useMatchBreakpoints = (): State => {
-  console.log(JSON.stringify(mediaQueries, null, 2))
+  console.log(JSON.stringify(mediaQueries, null, 2));
   const [state, setState] = useState<State>(() => {
     return Object.keys(mediaQueries).reduce((accum, size) => {
       const key = getKey(size);

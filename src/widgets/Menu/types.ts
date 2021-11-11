@@ -81,12 +81,7 @@ export interface SettingsModalProps extends SlippageToleranceProps, TransactionD
   onDismiss?: () => void;
 }
 
-export interface PanelProps
-  extends LangProps,
-    UserProps,
-    TranslateProps,
-    MenuEntryConfigProps,
-    PushedProps {}
+export interface PanelProps extends LangProps, UserProps, TranslateProps, MenuEntryConfigProps, PushedProps {}
 
 export interface NavProps
   extends UserProps,

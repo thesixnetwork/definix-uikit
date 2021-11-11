@@ -75,17 +75,8 @@ const Menu: React.FC<MenuProps> = (props) => {
   return (
     <Wrapper>
       <TopBackground />
-      <Nav
-        {...props}
-        isPushed={isPushed}
-        pushNav={setIsPushed}
-      />
-      <Panel
-        {...props}
-        isPushed={isPushed}
-        pushNav={setIsPushed}
-        links={links || defaultLinks}
-      />
+      <Nav {...props} isPushed={isPushed} pushNav={setIsPushed} />
+      <Panel {...props} isPushed={isPushed} pushNav={setIsPushed} links={links || defaultLinks} />
       <Container>
         <Inner>{children}</Inner>
       </Container>

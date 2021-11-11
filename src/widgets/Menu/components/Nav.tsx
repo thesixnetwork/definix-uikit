@@ -47,27 +47,31 @@ const StyledNav = styled.nav`
 
 const Nav: React.FC<NavProps> = (props) => {
   const { isPushed, pushNav } = props;
-  const { isMobile, isMaxXl } = useMatchBreakpoints();
+  const { isMobile } = useMatchBreakpoints();
   const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
 
   if (isMobile) {
-    return <MobileNav>
-      <Box position="absolute" left={pxToRem(20)}>
-        <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
-      </Box>
-      <LogoMainFinixIcon />
-      <Box position="absolute" right={pxToRem(20)}>
-        <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-      </Box>
-    </MobileNav>
+    return (
+      <MobileNav>
+        <Box position="absolute" left={pxToRem(20)}>
+          <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
+        </Box>
+        <LogoMainFinixIcon />
+        <Box position="absolute" right={pxToRem(20)}>
+          <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        </Box>
+      </MobileNav>
+    );
   }
-  return <StyledNav>
-    <Chain {...props} />
-    <Flex position="absolute" right={pxToRem(60)}>
-      <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-      <UserBlock {...props} />
-    </Flex>
-  </StyledNav>
+  return (
+    <StyledNav>
+      <Chain {...props} />
+      <Flex position="absolute" right={pxToRem(60)}>
+        <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        <UserBlock {...props} />
+      </Flex>
+    </StyledNav>
+  );
 };
 
 export default Nav;
