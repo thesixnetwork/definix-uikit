@@ -44,16 +44,18 @@ const StyledNav = styled.nav<{ isTop: boolean }>`
   align-items: center;
   padding: 0 ${pxToRem(60)};
   z-index: ${NAV_ZINDEX};
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 
-  ${({ theme, isTop }) => !isTop && `
+  ${({ theme, isTop }) =>
+    !isTop &&
+    `
     background-color: ${theme.colors[ColorStyles.WHITE]};
   `}
 `;
 
 const getIsTop = () => {
   return window.pageYOffset === 0;
-}
+};
 
 const Nav: React.FC<NavProps> = (props) => {
   const { isPushed, pushNav } = props;

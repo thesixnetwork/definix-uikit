@@ -27,7 +27,7 @@ const StyledFlex = styled(Flex)`
       margin-right: 0;
     }
   }
-`
+`;
 
 const SocialLinks: React.FC<Props> = ({ isMobile }) => (
   <StyledFlex>

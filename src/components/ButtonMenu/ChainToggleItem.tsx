@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   justify-content: center;
   height: 100%;
   cursor: pointer;
-`
+`;
 
 const InactiveButton = styled(StyledButton)`
   color: ${({ theme }) => theme.colors[ColorStyles.DEEPGREY]};
@@ -42,34 +42,26 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
   if (!isActive) {
     return (
       <InactiveButton>
-        {
-          isValidElement(startIcon) &&
+        {isValidElement(startIcon) &&
           cloneElement(startIcon, {
             width: scale === "md" ? "22" : "20",
             height: scale === "md" ? "22" : "20",
             mr: "0.5rem",
-          })
-        }
-        <StyledText ml="7px">
-          {children}
-        </StyledText>
+          })}
+        <StyledText ml="7px">{children}</StyledText>
       </InactiveButton>
     );
   }
 
   return (
     <ActiveButton>
-      {
-        isValidElement(startIcon) &&
+      {isValidElement(startIcon) &&
         cloneElement(startIcon, {
           width: scale === "md" ? "22" : "20",
           height: scale === "md" ? "22" : "20",
           mr: "0.5rem",
-        })
-      }
-      <StyledText ml="7px">
-        {children}
-      </StyledText>
+        })}
+      <StyledText ml="7px">{children}</StyledText>
     </ActiveButton>
   );
 };
