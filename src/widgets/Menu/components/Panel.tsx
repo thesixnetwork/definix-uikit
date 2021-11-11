@@ -72,7 +72,7 @@ const Panel: React.FC<PanelProps> = (props) => {
 
   useEffect(() => {
     if (isMobile) {
-      pushNav(true);
+      pushNav(false);
     }
   }, [isMobile]);
 
