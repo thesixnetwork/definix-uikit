@@ -11,6 +11,7 @@ import { useModal } from "../../Modal";
 import UserBlock from "./UserBlock";
 import Chain from "./Chain";
 import SettingsModal from "./SettingsModal";
+import { useMatchBreakpoints } from "@/hooks";
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -45,10 +46,12 @@ const StyledNav = styled.nav`
 `;
 
 const Nav: React.FC<NavProps> = (props) => {
-  const { isMobile, isPushed, pushNav } = props;
+  const { isPushed, pushNav } = props;
+  const { isMobile, isMaxXl } = useMatchBreakpoints();
   const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
-  return isMobile ? (
-    <MobileNav>
+
+  if (isMobile) {
+    return <MobileNav>
       <Box position="absolute" left={pxToRem(20)}>
         <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
       </Box>
@@ -57,15 +60,14 @@ const Nav: React.FC<NavProps> = (props) => {
         <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
       </Box>
     </MobileNav>
-  ) : (
-    <StyledNav>
-      <Chain {...props} />
-      <Flex position="absolute" right={pxToRem(60)}>
-        <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-        <UserBlock {...props} />
-      </Flex>
-    </StyledNav>
-  );
+  }
+  return <StyledNav>
+    <Chain {...props} />
+    <Flex position="absolute" right={pxToRem(60)}>
+      <IconButton mr="16px" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+      <UserBlock {...props} />
+    </Flex>
+  </StyledNav>
 };
 
 export default Nav;

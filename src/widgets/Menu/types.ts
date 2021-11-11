@@ -82,16 +82,14 @@ export interface SettingsModalProps extends SlippageToleranceProps, TransactionD
 }
 
 export interface PanelProps
-  extends BreakPointProps,
-    LangProps,
+  extends LangProps,
     UserProps,
     TranslateProps,
     MenuEntryConfigProps,
     PushedProps {}
 
 export interface NavProps
-  extends BreakPointProps,
-    UserProps,
+  extends UserProps,
     MenuEntryConfigProps,
     PushedProps,
     TranslateProps,

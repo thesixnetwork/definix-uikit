@@ -23,7 +23,6 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: relative;
-  // margin: 0 ${pxToRem(20)};
   padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
@@ -46,16 +45,15 @@ const TopBackground = styled.div`
   background-color: ${({ theme }) => theme.colors.yellowBg1};
 `;
 
-const Inner = styled.div<{ isMobile: boolean }>`
+const Inner = styled.div`
   padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
   min-height: calc(100vh - ${NAV_HEIGHT_PC}px);
 
   outline: 1px solid blue;
-  ${({ isMobile }) =>
-    isMobile &&
-    `
+
+  ${({ theme }) => theme.mediaQueries.mobileXl} {
     padding: ${NAV_HEIGHT_MOBILE}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
-  `}
+  }
 `;
 
 const Menu: React.FC<MenuProps> = (props) => {
@@ -79,36 +77,17 @@ const Menu: React.FC<MenuProps> = (props) => {
       <TopBackground />
       <Nav
         {...props}
-        isMobile={isMobile}
         isPushed={isPushed}
         pushNav={setIsPushed}
-        // settingModal={settingModal}
-        // userBlock={userBlock}
-        // chain={chain}
-        // login={login}
-        // account={account}
-        // logout={logout}
-        // Trans={Trans}
       />
       <Panel
         {...props}
-        isMobile={isMobile}
         isPushed={isPushed}
         pushNav={setIsPushed}
         links={links || defaultLinks}
-        // userBlock={userBlock}
-        // chain={chain}
-        // langs={langs}
-        // setLang={setLang}
-        // currentLang={currentLang}
-        // login={login}
-        // account={account}
-        // logout={logout}
-        // Trans={Trans}
-        // netWorth={netWorth}
       />
       <Container>
-        <Inner isMobile={isMobile}>{children}</Inner>
+        <Inner>{children}</Inner>
       </Container>
       <Footer isMobile={isMobile} />
     </Wrapper>
