@@ -14,11 +14,12 @@ export interface CheckboxProps {
   variantColor?: keyof Colors;
 }
 
-export interface CheckboxLabelProps extends BorderProps,
-  LayoutProps,
-  PositionProps,
-  SpaceProps,
-  HTMLAttributes<HTMLLabelElement> {
+export interface CheckboxLabelProps
+  extends BorderProps,
+    LayoutProps,
+    PositionProps,
+    SpaceProps,
+    HTMLAttributes<HTMLLabelElement> {
   control: React.ReactNode;
   children: React.ReactNode;
 }
