@@ -70,7 +70,8 @@ const Menu: React.FC<MenuProps> = (props) => {
     children,
     netWorth,
   } = props;
-  const { isMobile } = useMatchBreakpoints();
+  const { isMaxLg } = useMatchBreakpoints();
+  const isMobile = isMaxLg;
   const [isPushed, setIsPushed] = useState(!isMobile);
   return (
     <Wrapper>

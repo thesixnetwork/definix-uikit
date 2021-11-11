@@ -1,8 +1,8 @@
 import styled, { DefaultTheme } from "styled-components";
 import { color, space } from "styled-system";
 import { CardProps } from "./types";
-import { pxToRem } from "@/style/mixin";
-import { spacing } from "@/theme/base";
+import { pxToRem } from "../../style/mixin";
+import { spacing } from "../../theme/base";
 
 interface StyledCardProps extends CardProps {
   theme: DefaultTheme;

@@ -6,7 +6,7 @@ import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
 import config from "./config";
 import { Login } from "./types";
-import { ColorStyles, TextStyles } from "@/theme";
+import { ColorStyles, TextStyles } from "../../theme";
 
 interface Props {
   login: Login;

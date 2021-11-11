@@ -14,12 +14,7 @@
     "isolatedModules": true,
     "noEmit": false,
     "jsx": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/types/index.d.ts"],
   "exclude": ["node_modules", "src/**/*.stories.tsx", "src/__tests__/**/*"]

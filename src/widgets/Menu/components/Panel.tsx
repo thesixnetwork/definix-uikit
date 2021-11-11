@@ -4,17 +4,16 @@ import { hexToRGB } from "../../../style/mixin";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
 import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE, SIDEBAR_ZINDEX } from "../config";
-import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
+import { PanelProps } from "../types";
 import PanelHeader from "./PanelHeader";
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../../theme";
 import MobilePanelHeaderFixed from "./MobilePanelHeaderFixed";
-import { useMatchBreakpoints } from "@/hooks";
+import { useMatchBreakpoints } from "../../../hooks";
 
 const StyledPanel = styled.div<{ isPushed: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
-  /* display: none; */
   padding-top: 30px;
   flex-direction: column;
   justify-content: space-between;
@@ -40,6 +39,7 @@ const WrapScrollPanel = styled.div`
   width: 100%;
   height: calc(100vh - 44px);
   overflow-y: scroll;
+  overflow-x: hidden;
 
   ::-webkit-scrollbar {
     width: 0;
@@ -57,7 +57,8 @@ const ContainerScrollPanel = styled.div`
 
 const Panel: React.FC<PanelProps> = (props) => {
   const { pushNav } = props;
-  const { isMobile } = useMatchBreakpoints();
+  const { isMaxLg } = useMatchBreakpoints();
+  const isMobile = isMaxLg;
 
   useEffect(() => {
     if (isMobile) {

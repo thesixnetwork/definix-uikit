@@ -6,7 +6,7 @@ import { IconButton } from "../Button";
 import Box from "../Box/Box";
 import Flex from "../Box/Flex";
 import { AlertProps, variants } from "./types";
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 
 const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
   switch (variant) {

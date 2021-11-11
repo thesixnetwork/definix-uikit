@@ -5,7 +5,7 @@ import noop from "lodash/noop";
 import { Meta } from "@storybook/react/types-6-0";
 import Alert from "./Alert";
 import { Text } from "../Text";
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 
 const Row = styled.div`
   margin-bottom: 32px;

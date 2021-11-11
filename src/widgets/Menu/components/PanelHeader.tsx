@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { IconButton } from "@/components/Button";
-import { Flex } from "@/components/Box";
+import { Flex } from "../../../components/Box";
 import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
-import { CloseIcon, LogoMainFinixIcon } from "@/components/Icon";
-import Chain from "./Chain";
+import { LogoMainFinixIcon } from "../../../components/Icon";
 import UserBlock from "./UserBlock";
-import { hexToRGB } from "@/style/mixin";
-import { ColorStyles } from "@/theme";
-import { useMatchBreakpoints } from "@/hooks";
+import { hexToRGB } from "../../../style/mixin";
+import { ColorStyles } from "../../../theme";
+import { useMatchBreakpoints } from "../../../hooks";
 
 interface Props extends PanelProps, PushedProps, UserProps, TranslateProps {}
 
@@ -27,9 +25,9 @@ const StyledHeader = styled(Flex)`
 `;
 
 const PanelHeader: React.FC<Props> = ({ pushNav, ...props }) => {
-  const { isMobile } = useMatchBreakpoints();
+  const { isMaxLg } = useMatchBreakpoints();
+  const isMobile = isMaxLg;
   return isMobile ? (
-    // <MobileHeader>{userBlock}</MobileHeader>
     <MobileHeader>
       <UserBlock {...props} />
     </MobileHeader>

@@ -1,4 +1,4 @@
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 import React, { cloneElement, ElementType, isValidElement } from "react";
 import styled, { keyframes } from "styled-components";
 import getExternalLinkProps from "../../util/getExternalLinkProps";

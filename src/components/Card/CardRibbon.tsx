@@ -1,9 +1,9 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
 import { CardRibbonProps } from "./types";
-import { spacing } from "@/theme/base";
-import { textStyle } from "@/theme/text";
-import { pxToRem } from "@/style/mixin";
+import { spacing } from "../../theme/base";
+import { textStyle } from "../../theme/text";
+import { pxToRem } from "../../style/mixin";
 
 interface StyledCardRibbonProps extends CardRibbonProps {
   theme: DefaultTheme;

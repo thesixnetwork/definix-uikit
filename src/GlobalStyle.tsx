@@ -2,7 +2,7 @@ import { createGlobalStyle, css } from "styled-components";
 import { ResetCSSStyle } from "./ResetCSS";
 import { ColorStyles } from "./theme/colors";
 import { space } from "./theme/base";
-import { pxToRem } from "@/style/mixin";
+import { pxToRem } from "./style/mixin";
 
 /*
 // Safari for OS X and iOS (San Francisco)

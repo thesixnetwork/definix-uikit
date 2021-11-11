@@ -1,4 +1,4 @@
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 import React, { cloneElement, Children, ReactElement } from "react";
 import styled from "styled-components";
 import { ChainToggleProps } from "./types";

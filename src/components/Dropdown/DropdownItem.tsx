@@ -1,5 +1,5 @@
-import { hexToRGB } from "@/style/mixin";
-import { textStyle, TextStyles } from "@/theme";
+import { hexToRGB } from "../../style/mixin";
+import { textStyle, TextStyles } from "../../theme";
 import React from "react";
 import styled, { css } from "styled-components";
 import { DropdownItemProps, Scale, scales } from "./types";

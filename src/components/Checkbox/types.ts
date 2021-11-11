@@ -1,4 +1,4 @@
-import { Colors } from "@/theme/types";
+import { Colors } from "../../theme/types";
 import { HTMLAttributes } from "react";
 import { BackgroundProps, BorderProps, LayoutProps, PositionProps, SpaceProps } from "styled-system";
 

@@ -1,4 +1,4 @@
-import { TextStyles } from "@/theme";
+import { TextStyles } from "../../theme";
 import React from "react";
 import styled from "styled-components";
 import Text from "../../components/Text/Text";

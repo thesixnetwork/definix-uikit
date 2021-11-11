@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 import { BaseButtonProps, PolymorphicComponent } from "../Button/types";
 import { ChainToggleItemProps } from "./types";
 import { scalesValues } from "./ChainToggle";
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 
 interface ActiveButtonProps extends BaseButtonProps {
   toggleScale?: "sm" | "md";

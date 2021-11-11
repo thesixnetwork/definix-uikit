@@ -2,8 +2,8 @@ import React, { HTMLAttributes } from "react";
 import styled, { DefaultTheme } from "styled-components";
 import { color, space } from "styled-system";
 import { MENU_ENTRY_HEIGHT } from "../config";
-import { getVariantTextStyle, TextStyles, TextStyleProps } from "@/theme/text";
-import { ColorStyles } from "@/theme";
+import { getVariantTextStyle, TextStyles, TextStyleProps } from "../../../theme/text";
+import { ColorStyles } from "../../../theme";
 
 export interface Props extends TextStyleProps, HTMLAttributes<HTMLDivElement> {
   secondary?: boolean;

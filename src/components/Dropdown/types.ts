@@ -1,4 +1,4 @@
-import { TextStyles } from "@/theme";
+import { TextStyles } from "../../theme";
 import { HTMLAttributes } from "react";
 import { LayoutProps, PositionProps as SPositionProps } from "styled-system";
 export type Position = "top" | "bottom";

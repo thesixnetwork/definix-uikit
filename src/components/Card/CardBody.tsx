@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { spacing } from "../../theme/base";
-import { pxToRem } from "@/style/mixin";
+import { pxToRem } from "../../style/mixin";
 
 export type CardBodyProps = SpaceProps;
 

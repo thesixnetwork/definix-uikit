@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Dropdown from "../../../components/Dropdown/Dropdown";
 import { LangType } from "../types";
 import DropdownItem from "../../../components/Dropdown/DropdownItem";
-import DropdownButton from "@/components/Button/DropdownButton";
+import DropdownButton from "../../../components/Button/DropdownButton";
 
 interface Props {
   currentLang: string;

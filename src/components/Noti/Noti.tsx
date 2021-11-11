@@ -3,7 +3,7 @@ import Flex from "../Box/Flex";
 import { Text } from "../Text";
 import styled, { DefaultTheme } from "styled-components";
 import { space, SpaceProps } from "styled-system";
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 
 export enum NotiType {
   ALERT = "alert",

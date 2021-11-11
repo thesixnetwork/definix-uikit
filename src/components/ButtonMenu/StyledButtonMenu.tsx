@@ -1,4 +1,4 @@
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 import styled, { DefaultTheme } from "styled-components";
 import { ButtonVariants } from "../Button/types";
 

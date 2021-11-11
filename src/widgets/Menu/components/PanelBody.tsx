@@ -7,7 +7,7 @@ import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
 import { PanelProps, PushedProps } from "../types";
-import { useMatchBreakpoints } from "@/hooks";
+import { useMatchBreakpoints } from "../../../hooks";
 
 interface Props extends PanelProps, PushedProps {}
 

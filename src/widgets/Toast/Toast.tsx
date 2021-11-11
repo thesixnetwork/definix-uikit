@@ -5,7 +5,7 @@ import { Alert, alertVariants } from "../../components/Alert";
 import { Text } from "../../components/Text";
 import ToastAction from "./ToastAction";
 import { ToastProps, types } from "./types";
-import { ColorStyles } from "@/theme";
+import { ColorStyles } from "../../theme";
 
 const alertTypeMap = {
   [types.INFO]: alertVariants.INFO,

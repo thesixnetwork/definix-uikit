@@ -11,7 +11,7 @@ import { useModal } from "../../Modal";
 import UserBlock from "./UserBlock";
 import Chain from "./Chain";
 import SettingsModal from "./SettingsModal";
-import { useMatchBreakpoints } from "@/hooks";
+import { useMatchBreakpoints } from "../../../hooks";
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -47,7 +47,8 @@ const StyledNav = styled.nav`
 
 const Nav: React.FC<NavProps> = (props) => {
   const { isPushed, pushNav } = props;
-  const { isMobile } = useMatchBreakpoints();
+  const { isMaxLg } = useMatchBreakpoints();
+  const isMobile = isMaxLg;
   const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
 
   if (isMobile) {

@@ -1,5 +1,5 @@
-import { ColorStyles } from "@/theme";
-import { textStyle } from "@/theme/text";
+import { ColorStyles } from "../../theme";
+import { textStyle } from "../../theme/text";
 import { ButtonScales, ButtonVariants } from "./types";
 
 export const scaleVariants = {

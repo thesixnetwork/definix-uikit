@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Flex } from "@/components/Box";
-import { Text } from "@/components/Text";
-import { hexToRGB, pxToRem } from "@/style/mixin";
-import { LogoFooterSixIcon } from "@/components/Icon";
+import { Flex } from "../../../components/Box";
+import { Text } from "../../../components/Text";
+import { hexToRGB, pxToRem } from "../../../style/mixin";
+import { LogoFooterSixIcon } from "../../../components/Icon";
 import SocialLinks from "./SocialLinks";
-import { ColorStyles, TextStyles } from "@/theme";
+import { ColorStyles, TextStyles } from "../../../theme";
 import { SIDEBAR_WIDTH_FULL_PC } from "../config";
 
 interface Props {

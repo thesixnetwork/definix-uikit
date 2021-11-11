@@ -2,7 +2,7 @@ import styled, { DefaultTheme } from "styled-components";
 import { space, backgroundColor, color } from "styled-system";
 import { LabelProps, labelTypes } from "./types";
 import { get } from "lodash";
-import { ColorStyles, lightColors } from "@/theme";
+import { ColorStyles, lightColors } from "../../theme";
 
 interface StyledLabel {
   theme: DefaultTheme;
