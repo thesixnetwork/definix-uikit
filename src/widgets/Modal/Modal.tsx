@@ -7,7 +7,8 @@ import { IconButton } from "../../components/Button";
 import { InjectedProps } from "./types";
 
 interface Props extends InjectedProps {
-  title: string;
+  title?: string;
+  hideHeader?: boolean;
   hideCloseButton?: boolean;
   onBack?: () => void;
   mobileFull?: boolean;
@@ -70,26 +71,29 @@ const Modal: React.FC<Props> = ({
   onDismiss,
   onBack,
   children,
+  hideHeader = false,
   hideCloseButton = false,
   mobileFull = false,
   noPadding = false,
 }) => (
   <StyledModal mobileFull={mobileFull}>
-    <ModalHeader>
-      <ModalTitle>
-        {onBack && (
-          <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
-            <ArrowBackIcon color="primary" />
+    {!hideHeader && (
+      <ModalHeader>
+        <ModalTitle>
+          {onBack && (
+            <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
+              <ArrowBackIcon color="primary" />
+            </IconButton>
+          )}
+          {title && <Text textStyle="R_18M">{title}</Text>}
+        </ModalTitle>
+        {!hideCloseButton && (
+          <IconButton p="2px" variant="text" onClick={onDismiss} aria-label="Close the dialog">
+            <CloseIcon color="primary" />
           </IconButton>
         )}
-        <Text textStyle="R_18M">{title}</Text>
-      </ModalTitle>
-      {!hideCloseButton && (
-        <IconButton p="2px" variant="text" onClick={onDismiss} aria-label="Close the dialog">
-          <CloseIcon color="primary" />
-        </IconButton>
-      )}
-    </ModalHeader>
+      </ModalHeader>
+    )}
     <StyledModalBody flexDirection="column" noPadding={noPadding}>
       {children}
     </StyledModalBody>
