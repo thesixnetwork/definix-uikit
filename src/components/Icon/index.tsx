@@ -47,6 +47,8 @@ import { ReactComponent as HomeFarmFinixIcon } from "./icons/img_home_farm_finix
 import { ReactComponent as HomeProtectionFinixIcon } from "./icons/img_home_protection_finix.svg";
 import { ReactComponent as LinkIcon } from "./icons/ico_16_link.svg";
 import { ReactComponent as FireIcon } from "./icons/ico_44_fire.svg";
+import { ReactComponent as TokenKbnbIcon } from "./icons/img_token_kbnb.svg";
+import { ReactComponent as TokenKlayIcon } from "./icons/img_token_klay.svg";
 
 export {
   GnbMySIcon,
@@ -97,4 +99,6 @@ export {
   HomeFarmFinixIcon,
   HomeProtectionFinixIcon,
   FireIcon,
+  TokenKbnbIcon,
+  TokenKlayIcon,
 };

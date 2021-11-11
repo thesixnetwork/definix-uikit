@@ -16,7 +16,8 @@ const Container = styled.div`
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     position: relative;
-    bottom: 0;
+    bottom: 20px;
+    padding: 0 20px;
     width: ${SIDEBAR_WIDTH_FULL_MOBILE}px;
   }
 `;

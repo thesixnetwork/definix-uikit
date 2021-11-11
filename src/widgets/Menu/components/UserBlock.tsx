@@ -36,7 +36,8 @@ const StyledButton = styled.a`
 
 const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth }) => {
   // const history = useHistory()
-  const { isMobile } = useMatchBreakpoints();
+  const { isMaxLg } = useMatchBreakpoints();
+  const isMobile = isMaxLg;
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
@@ -111,10 +112,11 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
   }
 
   return (
-    <Flex width="100%" height={isMobile ? "188px" : "auto"} alignItems="center" justifyContent="center">
+    <Flex width="100%" height={isMobile ? "148px" : "auto"} alignItems="center" justifyContent="center">
       <Button
         {...(isMobile ? { md: true } : { xs: true })}
         variant={ButtonVariants.RED}
+        width="186px"
         onClick={() => {
           onPresentConnectModal();
         }}

@@ -57,7 +57,7 @@ const Nav: React.FC<NavProps> = (props) => {
         <Box position="absolute" left={pxToRem(20)}>
           <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
         </Box>
-        <LogoMainFinixIcon />
+        <LogoMainFinixIcon viewBox="0 0 120 21" height="16" />
         <Box position="absolute" right={pxToRem(20)}>
           <IconButton startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
         </Box>

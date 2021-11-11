@@ -10,7 +10,7 @@ interface Props extends PanelProps, PushedProps, UserProps, TranslateProps {}
 
 const MobilePanelHeaderFixed: React.FC<Props> = ({ pushNav, ...props }) => {
   return (
-    <Flex p="0 20px 0 24px" width="100%" alignItems="center" justifyContent="space-between" bg={ColorStyles.WHITE}>
+    <Flex p="0 18px 0 24px" width="100%" alignItems="center" justifyContent="space-between" bg={ColorStyles.WHITE}>
       <Chain {...props} />
       <IconButton startIcon={<CloseIcon />} onClick={() => pushNav(false)} />
     </Flex>

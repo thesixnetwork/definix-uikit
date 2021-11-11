@@ -1,96 +1,71 @@
 import React, { cloneElement, isValidElement } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Text } from "../Text";
-import Button from "../Button/Button";
-import { BaseButtonProps, PolymorphicComponent } from "../Button/types";
+import { PolymorphicComponent } from "../Button/types";
 import { ChainToggleItemProps } from "./types";
-import { scalesValues } from "./ChainToggle";
-import { ColorStyles } from "../../theme";
+import { ColorStyles, textStyle } from "../../theme";
 
-interface ActiveButtonProps extends BaseButtonProps {
-  toggleScale?: "sm" | "md";
-  forwardedAs: BaseButtonProps["as"];
-}
-
-interface InactiveButtonProps extends ActiveButtonProps {
-  forwardedAs: BaseButtonProps["as"];
-}
-
-const InactiveButton: PolymorphicComponent<InactiveButtonProps, "button"> = styled(Button)<InactiveButtonProps>`
-  flex: auto;
-  background-color: transparent;
+const StyledButton = styled.button`
+  position: relative;
+  border: none;
+  background: none;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: ${({ toggleScale }) => (toggleScale === "md" ? "7px" : "5px")};
-  min-width: ${({ toggleScale }) => scalesValues[toggleScale || "md"].minWidth};
-`;
-
-const ActiveButton: PolymorphicComponent<ActiveButtonProps, "button"> = styled(Button)<ActiveButtonProps>`
-  flex: auto;
-  display: flex;
-  align-items: center;
+  justify-content: center;
   height: 100%;
-  justify-content: flex-start;
-  padding-left: ${({ toggleScale }) => (toggleScale === "md" ? "7px" : "5px")};
-  min-width: ${({ toggleScale }) => scalesValues[toggleScale || "md"].minWidth};
-  border-radius: 16px;
-  background-color: ${({ theme }) => theme.colors[ColorStyles.BROWN]};
+  cursor: pointer;
+`
+
+const InactiveButton = styled(StyledButton)`
+  color: ${({ theme }) => theme.colors[ColorStyles.DEEPGREY]};
+  ${css(textStyle.R_12M)}
 `;
 
-const StyledText = styled(Text)`
-  flex: 1;
+const ActiveButton = styled(StyledButton)`
+  border-radius: 16px;
+  border: 1px solid ${({ theme }) => theme.colors[ColorStyles.BROWN]};
+  background-color: ${({ theme }) => theme.colors[ColorStyles.BROWN]};
+  color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
+  ${css(textStyle.R_12B)}
 `;
 
 const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
   isActive = false,
-  as,
   children,
   startIcon,
-  toggleScale,
-  ...props
+  scale,
 }: ChainToggleItemProps) => {
   if (!isActive) {
     return (
-      <InactiveButton
-        variant="brown"
-        forwardedAs={as}
-        toggleScale={toggleScale}
-        startIcon={
+      <InactiveButton>
+        {
           isValidElement(startIcon) &&
           cloneElement(startIcon, {
-            width: toggleScale === "md" ? "22" : "20",
-            height: toggleScale === "md" ? "22" : "20",
+            width: scale === "md" ? "22" : "20",
+            height: scale === "md" ? "22" : "20",
             mr: "0.5rem",
           })
         }
-        {...props}
-      >
-        <StyledText ml="7px" color={ColorStyles.DEEPGREY} textStyle="R_12M">
+        <Text ml="7px">
           {children}
-        </StyledText>
+        </Text>
       </InactiveButton>
     );
   }
 
   return (
-    <ActiveButton
-      forwardedAs={as}
-      startIcon={
+    <ActiveButton>
+      {
         isValidElement(startIcon) &&
         cloneElement(startIcon, {
-          width: toggleScale === "md" ? "22" : "20",
-          height: toggleScale === "md" ? "22" : "20",
+          width: scale === "md" ? "22" : "20",
+          height: scale === "md" ? "22" : "20",
           mr: "0.5rem",
         })
       }
-      variant="brown"
-      toggleScale={toggleScale}
-      {...props}
-    >
-      <StyledText ml="7px" color="greyscale.white" textStyle="R_12B">
+      <Text ml="7px">
         {children}
-      </StyledText>
+      </Text>
     </ActiveButton>
   );
 };

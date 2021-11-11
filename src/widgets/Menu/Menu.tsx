@@ -10,6 +10,8 @@ import {
   INNER_MARGIN_MOBILE,
   links as defaultLinks,
   SIDEBAR_WIDTH_FULL_PC,
+  DIM_ZINDEX,
+  INNTER_ZINDEX,
 } from "./config";
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
@@ -23,6 +25,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: relative;
+  z-index: ${INNTER_ZINDEX};
   padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
@@ -56,6 +59,17 @@ const Inner = styled.div`
   }
 `;
 
+const Dim = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${({ theme }) => theme.colors.black30};
+  z-index: ${DIM_ZINDEX};
+  pointer-events: none;
+`
+
 const Menu: React.FC<MenuProps> = (props) => {
   const {
     account,
@@ -81,6 +95,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <Container>
         <Inner>{children}</Inner>
       </Container>
+      { isMobile && isPushed && <Dim /> }
       <Footer isMobile={isMobile} />
     </Wrapper>
   );

@@ -1,3 +1,4 @@
+import { HTMLAttributes } from "react";
 import { BaseButtonProps, ButtonScales, ButtonVariants } from "../Button/types";
 
 export interface ButtonMenuItemProps extends BaseButtonProps {
@@ -15,13 +16,13 @@ export interface ButtonMenuProps {
 export interface ChainToggleProps {
   activeIndex?: number;
   onItemClick?: (index: number) => void;
-  toggleScale?: "sm" | "md";
+  scale?: "sm" | "md";
   children: React.ReactElement[];
 }
 
-export interface ChainToggleItemProps extends BaseButtonProps {
+export interface ChainToggleItemProps extends HTMLAttributes<HTMLButtonElement> {
   isActive?: boolean;
   startIcon: React.ReactNode;
-  toggleScale?: "sm" | "md";
+  scale?: "sm" | "md";
   children: React.ReactNode;
 }

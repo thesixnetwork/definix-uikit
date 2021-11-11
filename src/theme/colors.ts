@@ -94,6 +94,7 @@ export const baseColors = {
   textDisabled: colorHex.lightgrey,
   warning: colorHex.red,
   black20: hexToRGB(colorHex.black, 0.2),
+  black30: hexToRGB(colorHex.black, 0.3),
   white80: hexToRGB(colorHex.white, 0.8),
 };
 

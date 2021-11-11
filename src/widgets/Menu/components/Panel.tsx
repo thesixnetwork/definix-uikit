@@ -12,19 +12,20 @@ import { useMatchBreakpoints } from "../../../hooks";
 
 const StyledPanel = styled.div<{ isPushed: boolean }>`
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
+  bottom: 0;
   padding-top: 30px;
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   width: ${SIDEBAR_WIDTH_FULL_PC}px;
-  height: 100vh;
   transition: transform 0.2s;
   border-right: ${({ theme }) => `1px solid ${hexToRGB(theme.colors[ColorStyles.PALE], 0.3)}`};
   z-index: ${SIDEBAR_ZINDEX};
-  overflow: initial;
+  overflow: hidden;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     padding-top: 16px;
@@ -37,9 +38,10 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
 const WrapScrollPanel = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vh - 44px);
-  overflow-y: scroll;
+  flex: 1;
+  overflow-y: auto;
   overflow-x: hidden;
+  display: flex;
 
   ::-webkit-scrollbar {
     width: 0;
@@ -53,7 +55,15 @@ const ContainerScrollPanel = styled.div`
   position: relative;
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
 `;
+
+const WrapBodyFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`
 
 const Panel: React.FC<PanelProps> = (props) => {
   const { pushNav } = props;
@@ -62,7 +72,7 @@ const Panel: React.FC<PanelProps> = (props) => {
 
   useEffect(() => {
     if (isMobile) {
-      pushNav(false);
+      pushNav(true);
     }
   }, [isMobile]);
 
@@ -72,8 +82,10 @@ const Panel: React.FC<PanelProps> = (props) => {
       <WrapScrollPanel>
         <ContainerScrollPanel>
           <PanelHeader {...props} />
-          <PanelBody {...props} />
-          <PanelFooter {...props} />
+          <WrapBodyFooter>
+            <PanelBody {...props} />
+            <PanelFooter {...props} />
+          </WrapBodyFooter>
         </ContainerScrollPanel>
       </WrapScrollPanel>
     </StyledPanel>
