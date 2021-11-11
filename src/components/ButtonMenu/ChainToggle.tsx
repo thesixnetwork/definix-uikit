@@ -24,7 +24,7 @@ const StyledChainToggle = styled.div<ChainToggleProps>`
   width: ${({ scale }) => scalesValues[scale || "md"].fullWidth}px;
   height: ${({ scale }) => scalesValues[scale || "md"].height}px;
   box-sizing: content-box;
-  
+
   :before {
     content: "";
     position: absolute;
@@ -35,7 +35,6 @@ const StyledChainToggle = styled.div<ChainToggleProps>`
     border-radius: 16px;
     border: solid 1px ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]};
     background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
-    
   }
 
   > button {
@@ -43,10 +42,11 @@ const StyledChainToggle = styled.div<ChainToggleProps>`
       flex: ${({ scale }) => scalesValues[scale || "md"].minWidth / scalesValues[scale || "md"].fullWidth};
     }
     :last-child {
-      flex: ${({ scale }) => (scalesValues[scale || "md"].fullWidth - scalesValues[scale || "md"].minWidth) / scalesValues[scale || "md"].fullWidth};
+      flex: ${({ scale }) =>
+        (scalesValues[scale || "md"].fullWidth - scalesValues[scale || "md"].minWidth) /
+        scalesValues[scale || "md"].fullWidth};
     }
   }
-
 `;
 
 const ChainToggle: React.FC<ChainToggleProps> = ({ activeIndex = 0, scale = "md", onItemClick, children }) => {

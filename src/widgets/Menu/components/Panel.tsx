@@ -63,7 +63,7 @@ const WrapBodyFooter = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-`
+`;
 
 const Panel: React.FC<PanelProps> = (props) => {
   const { pushNav } = props;

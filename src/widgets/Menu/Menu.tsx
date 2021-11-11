@@ -68,7 +68,7 @@ const Dim = styled.div`
   background-color: ${({ theme }) => theme.colors.black30};
   z-index: ${DIM_ZINDEX};
   pointer-events: none;
-`
+`;
 
 const Menu: React.FC<MenuProps> = (props) => {
   const {
@@ -95,7 +95,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <Container>
         <Inner>{children}</Inner>
       </Container>
-      { isMobile && isPushed && <Dim /> }
+      {isMobile && isPushed && <Dim />}
       <Footer isMobile={isMobile} />
     </Wrapper>
   );
