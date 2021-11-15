@@ -26,13 +26,13 @@ export const Default: React.FC = () => {
           position="bottom"
           options={[
             {
-              id: 'six',
-              label: 'SIX'
+              id: "six",
+              label: "SIX",
             },
             {
-              id: 'finix',
-              label: 'FINIX'
-            }
+              id: "finix",
+              label: "FINIX",
+            },
           ]}
           onItemClick={(index) => console.log(index)}
         />

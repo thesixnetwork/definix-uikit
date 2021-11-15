@@ -27,7 +27,7 @@ export interface PositionProps {
 
 interface DropdownOption {
   id: string | number;
-  label: string
+  label: string;
   [key: string]: any;
 }
 

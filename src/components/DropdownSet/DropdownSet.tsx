@@ -61,12 +61,12 @@ const DropdownSet: React.FC<DropdownSetProps> = ({
               onClick={() => {
                 setActiveIndex(index);
                 onItemClick && onItemClick(index);
-                setIsOpen(false)
+                setIsOpen(false);
               }}
             >
               {option.label}
             </DropdownItem>
-          )
+          );
         })}
       </DropdownContent>
     </Container>
