@@ -12,6 +12,7 @@ export * from "./components/FallingBunnies";
 export * from "./components/Heading";
 export * from "./components/Image";
 export * from "./components/Input";
+export * from "./components/SearchInput";
 export * from "./components/Icon";
 export * from "./components/Layouts";
 export * from "./components/NotificationDot";
