@@ -1,0 +1,45 @@
+import { TextStyles } from "../../theme";
+import { HTMLAttributes } from "react";
+import { LayoutProps, PositionProps as SPositionProps } from "styled-system";
+export type Position = "top" | "bottom";
+export type Scale = "sm" | "md";
+
+export const scales: Record<
+  Scale,
+  {
+    textStyle: string;
+    activeTextStyle: string;
+  }
+> = {
+  sm: {
+    textStyle: TextStyles.R_12R,
+    activeTextStyle: TextStyles.R_12R,
+  },
+  md: {
+    textStyle: TextStyles.R_14R,
+    activeTextStyle: TextStyles.R_14M,
+  },
+};
+
+export interface PositionProps {
+  position?: Position;
+}
+
+interface DropdownOption {
+  id: string | number;
+  label: string
+  [key: string]: any;
+}
+
+export interface DropdownSetProps extends PositionProps, Omit<SPositionProps, "position">, LayoutProps {
+  scale?: Scale;
+  options: DropdownOption[];
+  defaultIndex?: number;
+  onItemClick?: (index: number) => void;
+}
+
+export interface DropdownItemProps extends HTMLAttributes<HTMLDivElement> {
+  isActive?: boolean;
+  isDivide?: boolean;
+  scale?: Scale;
+}
