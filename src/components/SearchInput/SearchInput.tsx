@@ -5,7 +5,7 @@ import { SearchInputProps } from "./types";
 import { Flex } from "../Box";
 import { layout } from "styled-system";
 import { SearchIcon } from "../Icon";
-import { IconButton } from "../Button"
+import { IconButton } from "../Button";
 
 const StyledInput = styled.input`
   border: 0;
@@ -45,15 +45,19 @@ const StyledFlex = styled(Flex)`
 `;
 
 const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): JSX.Element => {
-  const [keyword, setKeyword] = useState('')
-  const { onSearch, ...rest } = props
+  const [keyword, setKeyword] = useState("");
+  const { onSearch, ...rest } = props;
   return (
     <StyledFlex {...rest}>
-      <StyledInput defaultValue={keyword} onChange={(e) => {
-        setKeyword(e.target.value)
-      }} onKeyDown={(e) => {
-        if (e.code.toLowerCase() === 'enter') onSearch(keyword)
-      }}/>
+      <StyledInput
+        defaultValue={keyword}
+        onChange={(e) => {
+          setKeyword(e.target.value);
+        }}
+        onKeyDown={(e) => {
+          if (e.code.toLowerCase() === "enter") onSearch(keyword);
+        }}
+      />
       <IconButton variant="transparent" startIcon={<SearchIcon />} onClick={() => onSearch(keyword)} />
     </StyledFlex>
   );

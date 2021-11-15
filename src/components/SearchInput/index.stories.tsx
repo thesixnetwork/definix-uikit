@@ -13,22 +13,23 @@ export default {
 } as Meta;
 
 export const Default: React.FC = () => {
-  const [searchKeyword, setSearchKeyword] = useState('')
+  const [searchKeyword, setSearchKeyword] = useState("");
   return (
     <>
       <div
         style={{
-          margin: '50px',
+          margin: "50px",
           width: "200px",
         }}
       >
-        <SearchInput type="text" onSearch={(keyword: string) => {
-          setSearchKeyword(keyword)
-        }}/>
+        <SearchInput
+          type="text"
+          onSearch={(keyword: string) => {
+            setSearchKeyword(keyword);
+          }}
+        />
 
-        <div>
-          {!!searchKeyword.length ? 'searching... ' + searchKeyword : 'input keyword!'}
-        </div>
+        <div>{!!searchKeyword.length ? "searching... " + searchKeyword : "input keyword!"}</div>
       </div>
     </>
   );
