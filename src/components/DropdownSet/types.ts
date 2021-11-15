@@ -25,7 +25,7 @@ export interface PositionProps {
   position?: Position;
 }
 
-interface DropdownOption {
+export interface DropdownOption {
   id: string | number;
   label: string;
   [key: string]: any;
