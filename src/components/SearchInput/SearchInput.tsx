@@ -19,6 +19,8 @@ const StyledInput = styled.input`
   background-color: transparent;
 
   &::placeholder {
+    ${css(textStyle.R_14R)}
+    color: ${({ theme }) => theme.colors[ColorStyles.MEDIUMGREY]};
   }
 
   &:disabled {
@@ -48,8 +50,9 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
   const [keyword, setKeyword] = useState("");
   const { onSearch, ...rest } = props;
   return (
-    <StyledFlex {...rest}>
+    <StyledFlex>
       <StyledInput
+        {...rest}
         defaultValue={keyword}
         onChange={(e) => {
           setKeyword(e.target.value);

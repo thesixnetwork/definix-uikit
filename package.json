@@ -85,7 +85,9 @@
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.0"
   },
-  "bundledDependencies": ["polished"],
+  "bundledDependencies": [
+    "polished"
+  ],
   "dependencies": {
     "@types/lodash": "^4.14.162",
     "@types/styled-system": "^5.1.10",

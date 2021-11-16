@@ -24,6 +24,7 @@ export const Default: React.FC = () => {
       >
         <SearchInput
           type="text"
+          placeholder="Token name"
           onSearch={(keyword: string) => {
             setSearchKeyword(keyword);
           }}
