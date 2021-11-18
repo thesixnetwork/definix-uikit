@@ -1,5 +1,13 @@
 import { HTMLAttributes } from "react";
-import { BackgroundProps, BorderProps, FlexboxProps, LayoutProps, PositionProps, SpaceProps, GridProps } from "styled-system";
+import {
+  BackgroundProps,
+  BorderProps,
+  FlexboxProps,
+  LayoutProps,
+  PositionProps,
+  SpaceProps,
+  GridProps,
+} from "styled-system";
 import { ExtendColorProps } from "../../theme/types";
 
 export interface BoxProps
