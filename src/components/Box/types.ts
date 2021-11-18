@@ -22,4 +22,4 @@ export interface BoxProps
 }
 
 export interface FlexProps extends BoxProps, FlexboxProps, ExtendColorProps {}
-export interface GridProps extends BoxProps, GridProps, ExtendColorProps {}
+export interface GridComponentProps extends BoxProps, GridProps, ExtendColorProps {}
