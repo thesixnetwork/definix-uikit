@@ -51,6 +51,9 @@ import { ReactComponent as TokenKbnbIcon } from "./icons/img_token_kbnb.svg";
 import { ReactComponent as TokenKlayIcon } from "./icons/img_token_klay.svg";
 import { ReactComponent as GnbMyMobileIcon } from "./icons/ico_24_gnb_my_mobile.svg";
 import { ReactComponent as SearchIcon } from "./icons/ico_16_search.svg";
+import { ReactComponent as ImgBridgeTopFinixIcon } from "./icons/img_bridge_top_finix.svg";
+import { ReactComponent as ImgTokenSixIcon } from "./icons/img_token_six.svg";
+import { ReactComponent as ImgTokenFinixIcon } from "./icons/img_token_finix.svg";
 
 export {
   GnbMySIcon,
@@ -105,4 +108,7 @@ export {
   TokenKlayIcon,
   GnbMyMobileIcon,
   SearchIcon,
+  ImgBridgeTopFinixIcon,
+  ImgTokenSixIcon,
+  ImgTokenFinixIcon,
 };
