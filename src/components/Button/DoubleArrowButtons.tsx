@@ -3,7 +3,7 @@ import { ArrowLeftGIcon, ArrowRightGIcon, ArrowLeftWIcon, ArrowRightWIcon } from
 import { ColorStyles } from "../../theme";
 import React from "react";
 import Button from "./Button";
-import { Flex } from '../Box';
+import { Flex } from "../Box";
 import { DoubleArrowButtonsProps, ButtonVariants, ButtonScales } from "./types";
 
 const ButtonWrap = styled(Flex)`
@@ -11,9 +11,9 @@ const ButtonWrap = styled(Flex)`
   height: 28px;
   border: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTBROWN]};
   border-radius: 8px;
-`
+`;
 
-const ArrowButton = styled.button<{disabled: boolean; isLight: boolean;}>`
+const ArrowButton = styled.button<{ disabled: boolean; isLight: boolean }>`
   padding: 0px;
   width: 16px;
   height: 16px;
@@ -25,31 +25,38 @@ const ArrowButton = styled.button<{disabled: boolean; isLight: boolean;}>`
     opacity: 0.5;
     cursor: not-allowed;
   }
-`
+`;
 
 const DoubleArrowButtons: React.FC<DoubleArrowButtonsProps> = ({
-  type = 'light',
+  type = "light",
   disableLeftArrow,
   disableRightArrow,
   onClickLeftArrow,
-  onClickRightArrow
+  onClickRightArrow,
 }) => {
   return (
     <ButtonWrap justifyContent="space-between" alignItems="center" className="pa-s6">
-      <ArrowButton isLight={type === 'light'} onClick={() => {
-        if (disableLeftArrow) return
-        onClickLeftArrow()
-      }} disabled={disableLeftArrow}>
-        {type === 'light' ? <ArrowLeftGIcon/> : <ArrowLeftWIcon/> }
+      <ArrowButton
+        isLight={type === "light"}
+        onClick={() => {
+          if (disableLeftArrow) return;
+          onClickLeftArrow();
+        }}
+        disabled={disableLeftArrow}
+      >
+        {type === "light" ? <ArrowLeftGIcon /> : <ArrowLeftWIcon />}
       </ArrowButton>
-      <ArrowButton isLight={type === 'light'} onClick={() => {
-        if (disableRightArrow) return
-        onClickRightArrow()
-      }} disabled={disableRightArrow}>
-        {type === 'light' ? <ArrowRightGIcon/> : <ArrowRightWIcon/> }
+      <ArrowButton
+        isLight={type === "light"}
+        onClick={() => {
+          if (disableRightArrow) return;
+          onClickRightArrow();
+        }}
+        disabled={disableRightArrow}
+      >
+        {type === "light" ? <ArrowRightGIcon /> : <ArrowRightWIcon />}
       </ArrowButton>
     </ButtonWrap>
-
   );
 };
 
@@ -57,7 +64,7 @@ DoubleArrowButtons.defaultProps = {
   disableLeftArrow: false,
   disableRightArrow: false,
   onClickLeftArrow: () => {},
-  onClickRightArrow: () => {}
+  onClickRightArrow: () => {},
 };
 
 export default DoubleArrowButtons;

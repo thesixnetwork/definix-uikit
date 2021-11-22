@@ -116,5 +116,5 @@ export {
   ImgTokenFinixIcon,
   ArrowLeftGIcon,
   ArrowRightWIcon,
-  ArrowLeftWIcon
+  ArrowLeftWIcon,
 };

@@ -197,8 +197,8 @@ export const DoubleArrow: React.FC = () => {
         <DoubleArrowButtons
           disableLeftArrow={true}
           disableRightArrow={false}
-          onClickLeftArrow={() => alert('click left')}
-          onClickRightArrow={() => alert('click right')}
+          onClickLeftArrow={() => alert("click left")}
+          onClickRightArrow={() => alert("click right")}
         />
       </Box>
       <Box backgroundColor={ColorStyles.DEEPBROWN} p={10}>
@@ -206,10 +206,10 @@ export const DoubleArrow: React.FC = () => {
           type="dark"
           disableLeftArrow={true}
           disableRightArrow={false}
-          onClickLeftArrow={() => alert('click left')}
-          onClickRightArrow={() => alert('click right')}
+          onClickLeftArrow={() => alert("click left")}
+          onClickRightArrow={() => alert("click right")}
         />
       </Box>
     </>
-  )
-}
+  );
+};
