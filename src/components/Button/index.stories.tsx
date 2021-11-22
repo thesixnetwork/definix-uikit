@@ -10,6 +10,8 @@ import Button from "./Button";
 import { ButtonScales, ButtonVariants } from "./types";
 import DropdownButton from "./DropdownButton";
 import ButtonGroup from "./ButtonGroup";
+import DoubleArrowButtons from "./DoubleArrowButtons";
+import { ColorStyles } from "../../theme";
 
 const viewScales = [ButtonScales.XS, ButtonScales.SM, ButtonScales.MD, ButtonScales.LG];
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
@@ -187,3 +189,27 @@ export const Group: React.FC = () => {
     </>
   );
 };
+
+export const DoubleArrow: React.FC = () => {
+  return (
+    <>
+      <Box p={10}>
+        <DoubleArrowButtons
+          disableLeftArrow={true}
+          disableRightArrow={false}
+          onClickLeftArrow={() => alert('click left')}
+          onClickRightArrow={() => alert('click right')}
+        />
+      </Box>
+      <Box backgroundColor={ColorStyles.DEEPBROWN} p={10}>
+        <DoubleArrowButtons
+          type="dark"
+          disableLeftArrow={true}
+          disableRightArrow={false}
+          onClickLeftArrow={() => alert('click left')}
+          onClickRightArrow={() => alert('click right')}
+        />
+      </Box>
+    </>
+  )
+}

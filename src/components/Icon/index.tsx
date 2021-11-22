@@ -54,6 +54,9 @@ import { ReactComponent as SearchIcon } from "./icons/ico_16_search.svg";
 import { ReactComponent as ImgBridgeTopFinixIcon } from "./icons/img_bridge_top_finix.svg";
 import { ReactComponent as ImgTokenSixIcon } from "./icons/img_token_six.svg";
 import { ReactComponent as ImgTokenFinixIcon } from "./icons/img_token_finix.svg";
+import { ReactComponent as ArrowLeftGIcon } from "./icons/ico_16_arrow_left_g.svg";
+import { ReactComponent as ArrowLeftWIcon } from "./icons/ico_16_arrow_left_w.svg";
+import { ReactComponent as ArrowRightWIcon } from "./icons/ico_16_arrow_right_w.svg";
 
 export {
   GnbMySIcon,
@@ -111,4 +114,7 @@ export {
   ImgBridgeTopFinixIcon,
   ImgTokenSixIcon,
   ImgTokenFinixIcon,
+  ArrowLeftGIcon,
+  ArrowRightWIcon,
+  ArrowLeftWIcon
 };

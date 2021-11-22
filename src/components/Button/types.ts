@@ -72,3 +72,11 @@ export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponent
 export interface ButtonGroupProps extends BoxProps {
   r?: string;
 }
+
+export interface DoubleArrowButtonsProps {
+  type?: string;
+  disableLeftArrow: boolean;
+  disableRightArrow: boolean;
+  onClickLeftArrow: () => any;
+  onClickRightArrow: () => any;
+}
