@@ -39,6 +39,7 @@ export enum ColorStyles {
   LIGHTGREY_20 = "lightGrey20",
   GREY = "grey",
   LIGHTBROWN_20 = "lightBrown20",
+  LIGHTBROWN_50 = "lightBrown50",
 }
 
 const colorHex = {
@@ -106,6 +107,7 @@ export const brandColors = {
 export const customColors = {
   [ColorStyles.LIGHTGREY_20]: hexToRGB(baseColors[ColorStyles.LIGHTGREY], 0.2),
   [ColorStyles.LIGHTBROWN_20]: hexToRGB(baseColors[ColorStyles.LIGHTBROWN], 0.2),
+  [ColorStyles.LIGHTBROWN_50]: hexToRGB(baseColors[ColorStyles.LIGHTBROWN], 0.5),
 };
 
 export const lightColors = {
