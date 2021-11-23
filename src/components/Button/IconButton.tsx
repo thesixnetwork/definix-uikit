@@ -13,7 +13,7 @@ const StyledIconButton: PolymorphicComponent<BaseButtonProps, "button"> = styled
   ${space}
 `;
 
-const IconButton: React.FC<IconButtonProps> = ({ children }) => {
-  return <StyledIconButton>{children}</StyledIconButton>;
+const IconButton: React.FC<IconButtonProps> = ({ children, ...props }) => {
+  return <StyledIconButton {...props}>{children}</StyledIconButton>;
 };
 export default IconButton;

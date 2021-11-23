@@ -91,7 +91,7 @@ const Nav: React.FC<NavProps> = (props) => {
         </Box>
         <MainDefinixTextIcon />
         <Box position="absolute" right={pxToRem(20)}>
-          <IconButton onClick={() => onPresentSettingModal()}>
+          <IconButton mr="S_16" onClick={() => onPresentSettingModal()}>
             <SettingIcon />
           </IconButton>
           <IconButton onClick={() => {}}>
