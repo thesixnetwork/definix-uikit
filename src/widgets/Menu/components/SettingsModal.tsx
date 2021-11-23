@@ -8,9 +8,9 @@ import TransactionDeadlineSetting from "./TransactionDeadlineSetting";
 const defaultOnDismiss = () => null;
 
 const SettingsModal: React.FC<SettingsModalProps> = (props) => {
-  const { onDismiss = defaultOnDismiss } = props;
+  const { onDismiss = defaultOnDismiss, Trans } = props;
   return (
-    <Modal title="Settings" onDismiss={onDismiss}>
+    <Modal title={<Trans i18nKey="Setting" />} onDismiss={onDismiss}>
       <Box>
         <SlippageToleranceSetting {...props} />
         <TransactionDeadlineSetting {...props} />

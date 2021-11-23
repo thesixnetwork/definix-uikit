@@ -52,7 +52,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
     <StyledTransactionDeadlineSetting>
       <Label>
         <Text textStyle={TextStyles.R_16M} color={ColorStyles.DEEPGREY} mr="S_6">
-          <Trans i18nKey="Transaction deadline" />
+          <Trans i18nKey="Transaction Deadline" />
         </Text>
         {/* <Helper text={t("Your transaction will revert if it is pending for more than this long.")} /> */}
       </Label>
@@ -63,7 +63,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
           min="1"
           value={value}
           onChange={handleChange}
-          endIcon={<Text fontSize="16px">Minutes</Text>}
+          endIcon={<Text fontSize="16px"><Trans i18nKey="Minutes" /></Text>}
         />
       </Flex>
       {error && (

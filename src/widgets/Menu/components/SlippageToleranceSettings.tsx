@@ -110,7 +110,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
     <StyledSlippageToleranceSettings>
       <Label>
         <Text textStyle={TextStyles.R_16M} color={ColorStyles.DEEPGREY} mr="S_6">
-          <Trans i18nKey="Slippage tolerance" />
+          <Trans i18nKey="Slippage Tolerance" />
         </Text>
         {/* <Helper
           text={t('Your transaction will revert if the price changes unfavorably by more than this percentage.')}

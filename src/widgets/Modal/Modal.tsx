@@ -7,7 +7,7 @@ import { IconButton } from "../../components/Button";
 import { InjectedProps } from "./types";
 
 interface Props extends InjectedProps {
-  title?: string;
+  title?: string | React.ReactElement;
   hideHeader?: boolean;
   hideCloseButton?: boolean;
   onBack?: () => void;
