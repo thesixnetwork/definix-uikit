@@ -54,7 +54,11 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
               width="188px"
               left="-105px"
               Trans={Trans}
-              target={<IconButton><MoreNIcon /></IconButton>}
+              target={
+                <IconButton>
+                  <MoreNIcon />
+                </IconButton>
+              }
               account={account}
               logout={logout}
             />
