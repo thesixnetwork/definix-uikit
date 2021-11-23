@@ -9,7 +9,7 @@ import { DoubleArrowButtonsProps, ButtonVariants, ButtonScales } from "./types";
 const ButtonWrap = styled(Flex)`
   width: 50px;
   height: 28px;
-  border: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTBROWN]};
+  border: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTBROWN_50]};
   border-radius: 8px;
 `;
 
