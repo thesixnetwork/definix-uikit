@@ -85,12 +85,18 @@ const Nav: React.FC<NavProps> = (props) => {
     return (
       <MobileNav>
         <Box position="absolute" left={pxToRem(20)}>
-          <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
+          <IconButton onClick={() => pushNav(!isPushed)}>
+            <MenuIcon />
+          </IconButton>
         </Box>
         <MainDefinixTextIcon />
         <Box position="absolute" right={pxToRem(20)}>
-          <IconButton endIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-          <IconButton endIcon={<GnbMyMobileIcon />} onClick={() => {}} />
+          <IconButton onClick={() => onPresentSettingModal()}>
+            <SettingIcon />
+          </IconButton>
+          <IconButton onClick={() => {}}>
+            <GnbMyMobileIcon />
+          </IconButton>
         </Box>
       </MobileNav>
     );
@@ -99,7 +105,9 @@ const Nav: React.FC<NavProps> = (props) => {
     <StyledNav isTop={isTop}>
       <Chain {...props} />
       <Flex position="absolute" right={pxToRem(60)}>
-        <IconButton mr="S_16" endIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        <IconButton mr="S_16" onClick={() => onPresentSettingModal()}>
+          <SettingIcon />
+        </IconButton>
         <UserBlock {...props} />
       </Flex>
     </StyledNav>

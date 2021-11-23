@@ -43,8 +43,6 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
           </Text>
           {onClick && (
             <IconButton
-              scale="sm"
-              variant="text"
               onClick={onClick}
               style={{
                 alignItems: "flex-start",

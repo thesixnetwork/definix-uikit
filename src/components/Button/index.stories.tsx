@@ -106,7 +106,9 @@ export const Icons: React.FC = () => {
   return (
     <Box width="640px">
       <Row>
-        <IconButton variant="transparent" startIcon={<SettingIcon />} />
+        <IconButton>
+          <SettingIcon />
+        </IconButton>
       </Row>
     </Box>
   );

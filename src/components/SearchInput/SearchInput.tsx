@@ -61,7 +61,9 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
           if (e.code.toLowerCase() === "enter") onSearch(keyword);
         }}
       />
-      <IconButton variant="transparent" startIcon={<SearchIcon />} onClick={() => onSearch(keyword)} />
+      <IconButton onClick={() => onSearch(keyword)}>
+        <SearchIcon />
+      </IconButton>
     </StyledFlex>
   );
 };
