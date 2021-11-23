@@ -180,8 +180,17 @@ function createSpacing() {
 
 const GlobalStyle = createGlobalStyle`
   ${ResetCSSStyle}
+
+  :root {
+    --default-font-family: Roboto;
+  }
+
   html {
     font-size: 16px;
+  }
+
+  html[lang="ko"] {
+    --default-font-family: Noto Sans KR;
   }
 
   body {

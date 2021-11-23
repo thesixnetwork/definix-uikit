@@ -27,7 +27,7 @@ export enum TextStyles {
 
 export const textStyle: Record<string, Record<string, string | number>> = {
   [TextStyles.R_32B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(32),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -37,7 +37,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_28B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(28),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -47,7 +47,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_28M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(28),
     fontWeight: 500,
     fontStretch: "normal",
@@ -57,7 +57,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_26B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(26),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -67,14 +67,14 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_23M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(23),
     fontWeight: 500,
     fontStretch: "normal",
     fontStyle: "normal",
   },
   [TextStyles.R_23B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(23),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -82,7 +82,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_20B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(20),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -92,7 +92,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_20M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(20),
     fontWeight: 500,
     fontStretch: "normal",
@@ -102,7 +102,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_20R]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(20),
     fontWeight: "normal",
     fontStretch: "normal",
@@ -112,7 +112,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_18B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(18),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -122,7 +122,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_18M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(18),
     fontWeight: 500,
     fontStretch: "normal",
@@ -132,7 +132,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_18R]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(18),
     fontWeight: "normal",
     fontStretch: "normal",
@@ -142,7 +142,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_16B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(16),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -152,7 +152,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_16M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(16),
     fontWeight: 500,
     fontStretch: "normal",
@@ -162,7 +162,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_16R]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(16),
     fontWeight: "normal",
     fontStretch: "normal",
@@ -172,7 +172,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_14B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(14),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -182,7 +182,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_14M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(14),
     fontWeight: 500,
     fontStretch: "normal",
@@ -192,7 +192,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_14R]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(14),
     fontWeight: "normal",
     fontStretch: "normal",
@@ -202,7 +202,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_12B]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(12),
     fontWeight: "bold",
     fontStretch: "normal",
@@ -212,7 +212,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_12M]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(12),
     fontWeight: 500,
     fontStretch: "normal",
@@ -222,7 +222,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 
   [TextStyles.R_12R]: {
-    fontFamily: "Roboto",
+    fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(12),
     fontWeight: "normal",
     fontStretch: "normal",
