@@ -63,7 +63,11 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
           min="1"
           value={value}
           onChange={handleChange}
-          endIcon={<Text fontSize="16px"><Trans i18nKey="Minutes" /></Text>}
+          endIcon={
+            <Text fontSize="16px">
+              <Trans i18nKey="Minutes" />
+            </Text>
+          }
         />
       </Flex>
       {error && (
