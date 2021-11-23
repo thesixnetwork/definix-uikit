@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Button } from "../../../components/Button";
 import { Flex } from "../../../components/Box";
 import { Input } from "../../../components/Input";
-import { SettingIcon } from "../../../components/Icon";
+import { AlertIcon } from "../../../components/Icon";
 import { Text } from "../../../components/Text";
 import { ColorStyles } from "../../../theme/colors";
 import { TextStyles } from "../../../theme/text";
@@ -48,6 +48,14 @@ const Options = styled.div`
     > :last-child {
       padding-top: 0;
     }
+  }
+`;
+
+const WrapInput = styled(Flex)`
+  width: 154px;
+  align-items: center;
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    width: 184px;
   }
 `;
 
@@ -125,7 +133,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
             );
           })}
         </Flex>
-        <Flex alignItems="center">
+        <WrapInput>
           <Input
             type="number"
             step={0.1}
@@ -134,14 +142,13 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
             value={value}
             onChange={handleChange}
             isWarning={error !== null}
-            width="154px"
             endIcon={<Text fontSize="16px">%</Text>}
           />
-        </Flex>
+        </WrapInput>
       </Options>
       {error && (
-        <Flex mt="S_12">
-          <SettingIcon />
+        <Flex mt="S_12" alignItems="center">
+          <AlertIcon />
           <Text ml="5px" textStyle={TextStyles.R_14R} color={ColorStyles.RED}>
             <Trans i18nKey={error} />
           </Text>

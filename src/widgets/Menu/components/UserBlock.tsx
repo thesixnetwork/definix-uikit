@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Text } from "../../../components/Text";
 import { Flex } from "../../../components/Box";
-import { Button, IconButton, ButtonVariants, ButtonScales } from "../../../components/Button";
-import { useWalletModal, Login } from "../../WalletModal";
-import { ArrowRightGIcon, MoreNIcon, GnbMySIcon } from "../../../components/Icon";
+import { Button, IconButton, ButtonVariants } from "../../../components/Button";
+import { useWalletModal } from "../../WalletModal";
+import { MoreNIcon, GnbMySIcon } from "../../../components/Icon";
 import { ColorStyles } from "../../../theme/colors";
 import { TextStyles } from "../../../theme/text";
 import { useMatchBreakpoints } from "../../../hooks";
 import { TranslateProps, UserProps } from "../types";
 import WalletDropdown from "./WalletDropdown";
-// import { localStorageKey } from '../WalletModal/config'
 
 interface Props extends UserProps, TranslateProps {}
 
@@ -67,7 +66,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
         <Flex>
           <WalletDropdown
             target={
-              <Button xs variant={ButtonVariants.LIGHTBROWN} textStyle={TextStyles.R_12B}>
+              <Button width="110px" xs variant={ButtonVariants.LIGHTBROWN} textStyle={TextStyles.R_12B}>
                 {accountEllipsis}
               </Button>
             }
@@ -80,13 +79,13 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
           ml="8px"
           xs
           variant={ButtonVariants.DEEPBROWN}
-          startIcon={<GnbMySIcon />}
+          startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
           onClick={() => {
             // onPresentAccountModal();
             // history.push('/myinvestments')
           }}
         >
-          <Text textStyle={TextStyles.R_12B} ml="6px">
+          <Text textStyle={TextStyles.R_12B}>
             <Trans i18nKey="MY" />
           </Text>
         </Button>

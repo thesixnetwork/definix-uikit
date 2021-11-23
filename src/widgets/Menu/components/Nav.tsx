@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box, Flex } from "../../../components/Box";
 import { IconButton } from "../../../components/Button";
 import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, NAV_ZINDEX, SIDEBAR_WIDTH_FULL_PC } from "../config";
-import { LogoMainFinixIcon, MenuIcon, SettingIcon, GnbMyMobileIcon } from "../../../components/Icon";
+import { MainDefinixTextIcon, MenuIcon, SettingIcon, GnbMyMobileIcon } from "../../../components/Icon";
 import { hexToRGB, pxToRem } from "../../../style/mixin";
 import { NavProps } from "../types";
 import { ColorStyles } from "../../../theme";
@@ -87,10 +87,10 @@ const Nav: React.FC<NavProps> = (props) => {
         <Box position="absolute" left={pxToRem(20)}>
           <IconButton startIcon={<MenuIcon />} onClick={() => pushNav(!isPushed)} />
         </Box>
-        <LogoMainFinixIcon viewBox="0 0 120 21" height="16" />
+        <MainDefinixTextIcon />
         <Box position="absolute" right={pxToRem(20)}>
-          <IconButton mr="S_12" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
-          <IconButton startIcon={<GnbMyMobileIcon />} onClick={() => {}} />
+          <IconButton endIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+          <IconButton endIcon={<GnbMyMobileIcon />} onClick={() => {}} />
         </Box>
       </MobileNav>
     );
@@ -99,7 +99,7 @@ const Nav: React.FC<NavProps> = (props) => {
     <StyledNav isTop={isTop}>
       <Chain {...props} />
       <Flex position="absolute" right={pxToRem(60)}>
-        <IconButton mr="S_16" startIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
+        <IconButton mr="S_16" endIcon={<SettingIcon />} onClick={() => onPresentSettingModal()} />
         <UserBlock {...props} />
       </Flex>
     </StyledNav>

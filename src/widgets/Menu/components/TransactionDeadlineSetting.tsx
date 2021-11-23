@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Input } from "../../../components/Input";
 import { Text } from "../../../components/Text";
 import { Flex } from "../../../components/Box";
-import { SettingIcon } from "../../../components/Icon";
+import { AlertIcon } from "../../../components/Icon";
 import { TextStyles } from "../../../theme/text";
 import { ColorStyles } from "../../../theme/colors";
 import { TransactionDeadLineProps, TranslateProps } from "../types";
@@ -56,20 +56,19 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
         </Text>
         {/* <Helper text={t("Your transaction will revert if it is pending for more than this long.")} /> */}
       </Label>
-      <Flex alignItems="center">
+      <Flex width="184px" alignItems="center">
         <Input
           type="number"
           step="1"
           min="1"
           value={value}
           onChange={handleChange}
-          width="184px"
           endIcon={<Text fontSize="16px">Minutes</Text>}
         />
       </Flex>
       {error && (
-        <Flex mt="S_12">
-          <SettingIcon />
+        <Flex mt="S_12" alignItems="center">
+          <AlertIcon />
           <Text ml="5px" textStyle={TextStyles.R_14R} color={ColorStyles.RED}>
             {error}
           </Text>

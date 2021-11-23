@@ -57,6 +57,8 @@ import { ReactComponent as ImgTokenFinixIcon } from "./icons/img_token_finix.svg
 import { ReactComponent as ArrowLeftGIcon } from "./icons/ico_16_arrow_left_g.svg";
 import { ReactComponent as ArrowLeftWIcon } from "./icons/ico_16_arrow_left_w.svg";
 import { ReactComponent as ArrowRightWIcon } from "./icons/ico_16_arrow_right_w.svg";
+import { ReactComponent as AlertIcon } from "./icons/ico_16_alert.svg";
+import { ReactComponent as MainDefinixTextIcon } from "./icons/logo_main_definix_text.svg";
 
 export {
   GnbMySIcon,
@@ -117,4 +119,6 @@ export {
   ArrowLeftGIcon,
   ArrowRightWIcon,
   ArrowLeftWIcon,
+  AlertIcon,
+  MainDefinixTextIcon,
 };

@@ -50,7 +50,7 @@ StyledInput.defaultProps = {
 const Input = <E extends ElementType = "input">(props: InputProps<E>): JSX.Element => {
   const { endIcon, ...rest } = props;
   return (
-    <StyledFlex {...rest}>
+    <StyledFlex>
       <StyledInput {...rest} />
       {isValidElement(endIcon) &&
         cloneElement(endIcon, {

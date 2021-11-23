@@ -75,7 +75,7 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
         <>
           {isValidElement(startIcon) &&
             cloneElement(startIcon, {
-              className: "ml-s12",
+              className: "mr-s6",
             })}
           {children}
           {isValidElement(endIcon) &&
