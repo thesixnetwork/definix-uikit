@@ -122,5 +122,5 @@ export {
   ArrowLeftWIcon,
   AlertIcon,
   MainDefinixTextIcon,
-  ImgMyInvestmentDefaultIcon
+  ImgMyInvestmentDefaultIcon,
 };
