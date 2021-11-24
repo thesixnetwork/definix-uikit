@@ -126,5 +126,5 @@ export {
   MainDefinixTextIcon,
   ImgMyInvestmentDefaultIcon,
   GroupIcon,
-  MainDefinixImgTextIcon
+  MainDefinixImgTextIcon,
 };
