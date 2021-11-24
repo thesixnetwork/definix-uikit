@@ -34,6 +34,7 @@ export * from "./components/Label";
 export * from "./components/Divider";
 export * from "./components/BalanceInput";
 export * from "./components/Noti";
+export * from "./components/Loading";
 
 // Hooks
 export * from "./hooks";
