@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Flex } from "../../../components/Box";
 import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
-import { LogoMainFinixIcon } from "../../../components/Icon";
+import { MainDefinixImgTextIcon } from "../../../components/Icon";
 import UserBlock from "./UserBlock";
 import { hexToRGB } from "../../../style/mixin";
 import { ColorStyles } from "../../../theme";
@@ -32,7 +32,7 @@ const PanelHeader: React.FC<Props> = ({ pushNav, ...props }) => {
     </MobileHeader>
   ) : (
     <StyledHeader>
-      <LogoMainFinixIcon />
+      <MainDefinixImgTextIcon />
     </StyledHeader>
   );
 };
