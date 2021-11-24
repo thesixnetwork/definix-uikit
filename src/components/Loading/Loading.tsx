@@ -1,18 +1,7 @@
 import React from "react";
 import { GroupIcon } from "../Icon";
 import styled, { keyframes, css } from "styled-components";
-import {
-  NAV_HEIGHT_PC,
-  NAV_HEIGHT_MOBILE,
-  INNER_MARGIN_PC,
-  INNER_MARGIN_MOBILE,
-  links as defaultLinks,
-  SIDEBAR_WIDTH_FULL_PC,
-  DIM_ZINDEX,
-  INNTER_ZINDEX,
-} from "../../widgets/Menu/config";
 import { Flex } from "../Box";
-import { pxToRem } from "src/style/mixin";
 
 const FadeAnimation = keyframes`
   0%, 100% {
@@ -44,6 +33,10 @@ const Wrap = styled(Flex)`
   align-items: center;
   position: relative;
   top: 190px;
+
+  ${({ theme }) => theme.mediaQueries.mobileXl} {
+    top: 180px;
+  }
 `;
 
 const WrapCircle = styled.div`
@@ -58,11 +51,26 @@ const Circle = styled.div`
   border-radius: 100%;
   margin: 0 7px;
 
+  ${({ theme }) => theme.mediaQueries.mobileXl} {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+
   animation-name: ${FadeAnimation};
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   ${bindAnimation()}
 `;
+
+const WrapIcon = styled(Flex)`
+  width: 166px;
+  height: 102px;
+  ${({ theme }) => theme.mediaQueries.mobileXl} {
+    width: 134px;
+    height: 82px;
+  }
+`
 
 const Loading: React.FC = () => {
   return (
@@ -74,7 +82,9 @@ const Loading: React.FC = () => {
             <Circle />
           ))}
       </WrapCircle>
-      <GroupIcon />
+      <WrapIcon>
+        <GroupIcon viewBox="0 0 166 102" width="100%" height="100%" />
+      </WrapIcon>
     </Wrap>
   );
 };
