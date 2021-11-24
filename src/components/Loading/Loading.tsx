@@ -70,7 +70,7 @@ const WrapIcon = styled(Flex)`
     width: 134px;
     height: 82px;
   }
-`
+`;
 
 const Loading: React.FC = () => {
   return (
