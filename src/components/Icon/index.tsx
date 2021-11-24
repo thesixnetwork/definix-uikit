@@ -60,6 +60,8 @@ import { ReactComponent as ArrowRightWIcon } from "./icons/ico_16_arrow_right_w.
 import { ReactComponent as AlertIcon } from "./icons/ico_16_alert.svg";
 import { ReactComponent as MainDefinixTextIcon } from "./icons/logo_main_definix_text.svg";
 import { ReactComponent as ImgMyInvestmentDefaultIcon } from "./icons/img_myinvestment_default.svg";
+import { ReactComponent as GroupIcon } from "./icons/group.svg";
+import { ReactComponent as MainDefinixImgTextIcon } from "./icons/logo_main_definix_img_text.svg";
 
 export {
   GnbMySIcon,
@@ -123,4 +125,6 @@ export {
   AlertIcon,
   MainDefinixTextIcon,
   ImgMyInvestmentDefaultIcon,
+  GroupIcon,
+  MainDefinixImgTextIcon
 };

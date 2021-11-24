@@ -37,7 +37,12 @@ const StyledMenuLink = styled(MenuLink)`
   padding-left: 30px;
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, links }) => {
+const LineMenuEntry = styled(MenuEntry)`
+  margin-top: 24px;
+  border: 1px solid ${({ theme }) => theme.colors.border};
+`;
+
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav, links, Trans }) => {
   const { isMobile } = useMatchBreakpoints();
   const location = useLocation();
 
@@ -90,6 +95,15 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, links }) => {
           </MenuEntry>
         );
       })}
+      <LineMenuEntry isActive={false}>
+        <MenuLink href="#" onClick={() => window.open("https://klaytn.definix.com/", "_blank")}>
+          <IconModule.TokenFinixIcon viewBox="0 0 24 24" width="16" height="16" />
+          <LinkLabel isPushed={isPushed} ml="8px">
+            <Trans i18nKey="Switch to V1" />
+          </LinkLabel>
+          <IconModule.ArrowRightGIcon />
+        </MenuLink>
+      </LineMenuEntry>
     </Container>
   );
 };
