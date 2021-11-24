@@ -19,11 +19,7 @@ const StyledToast = styled.div`
   position: fixed;
   max-width: calc(100% - 32px);
   transition: all 250ms ease-in;
-  width: 100%;
-
-  ${({ theme }) => theme.mediaQueries.sm} {
-    max-width: 400px;
-  }
+  width: 320px;
 `;
 
 const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) => {
