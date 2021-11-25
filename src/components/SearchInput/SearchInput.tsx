@@ -49,7 +49,7 @@ const StyledFlex = styled(Flex)`
 const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): JSX.Element => {
   const input = useRef<HTMLInputElement>(null);
   const [keyword, setKeyword] = useState("");
-  const { onSearch, ...rest } = props;
+  const { onSearch, onReset, ...rest } = props;
   return (
     <StyledFlex>
       <StyledInput
@@ -73,6 +73,7 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
             if (input.current && input.current !== null) {
               input.current.value = "";
             }
+            onReset()
           }}
         >
           <ResetIcon />
