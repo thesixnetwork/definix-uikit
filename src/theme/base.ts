@@ -46,6 +46,7 @@ export const shadows = {
 };
 
 export const spacing: Spacing = {
+  S_2: 2,
   S_4: 4,
   S_6: 6,
   S_8: 8,
