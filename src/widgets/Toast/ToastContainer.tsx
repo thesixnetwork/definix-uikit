@@ -3,12 +3,7 @@ import { TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 import Toast from "./Toast";
 import { ToastContainerProps } from "./types";
-import {
-  NAV_HEIGHT_PC,
-  NAV_HEIGHT_MOBILE,
-  INNER_MARGIN_PC,
-  INNER_MARGIN_MOBILE,
-} from "../Menu/config";
+import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, INNER_MARGIN_PC, INNER_MARGIN_MOBILE } from "../Menu/config";
 import { pxToRem } from "../../style/mixin";
 
 const ZINDEX = 1000;
@@ -44,8 +39,8 @@ const StyledToastContainer = styled.div`
     &.appear.appear-active,
     &.enter-done {
       opacity: 1;
-      transform: translateX(0); 
-    } 
+      transform: translateX(0);
+    }
 
     &.exit {
       opacity: 1;
@@ -82,7 +77,7 @@ const StyledToastContainer = styled.div`
       &.enter {
         transform: translateX(0);
       }
-      
+
       &.enter.enter-active,
       &.appear.appear-active {
         transition: opacity 250ms ease-in;
@@ -110,9 +105,7 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl =
       <TransitionGroup className="toast-group">
         {toasts.map((toast, index) => {
           const zIndex = (ZINDEX - index).toString();
-          return (
-            <Toast key={toast.id} toast={toast} onRemove={onRemove} ttl={ttl} style={{ zIndex }} />
-          );
+          return <Toast key={toast.id} toast={toast} onRemove={onRemove} ttl={ttl} style={{ zIndex }} />;
         })}
       </TransitionGroup>
     </StyledToastContainer>
