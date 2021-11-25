@@ -49,6 +49,7 @@ const TopBackground = styled.div`
 `;
 
 const Inner = styled.div`
+  position: relative;
   padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
   min-height: calc(100vh - ${NAV_HEIGHT_PC}px);
 
