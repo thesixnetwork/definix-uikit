@@ -132,5 +132,5 @@ export {
   MainDefinixImgTextIcon,
   HelpOnIcon,
   CopyIcon,
-  ResetIcon
+  ResetIcon,
 };

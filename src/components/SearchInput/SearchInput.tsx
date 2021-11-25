@@ -66,12 +66,16 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
         />
 
         {keyword.length > 0 && (
-          <IconButton mr={12} p={0} onClick={() => {
-            setKeyword('')
-            if (input.current && input.current !== null) {
-              input.current.value = ''
-            }
-          }}>
+          <IconButton
+            mr={12}
+            p={0}
+            onClick={() => {
+              setKeyword("");
+              if (input.current && input.current !== null) {
+                input.current.value = "";
+              }
+            }}
+          >
             <ResetIcon />
           </IconButton>
         )}
@@ -79,7 +83,6 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
           <SearchIcon />
         </IconButton>
       </StyledFlex>
-
       keyword: {keyword}
     </>
   );
