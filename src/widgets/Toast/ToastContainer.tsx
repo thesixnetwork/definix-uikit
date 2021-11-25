@@ -19,6 +19,7 @@ const StyledToastContainer = styled.div`
     width: calc(100% - ${pxToRem(INNER_MARGIN_PC * 2)});
     height: 100%;
     margin: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
+    pointer-events: none;
   }
 
   .toast {
