@@ -52,6 +52,10 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
     target.style.cssText = `left: ${left}px; top: ${top}px; bottom: auto`;
   }, []);
 
+  const resetPosition = useCallback((target: HTMLDivElement) => {
+    target.style.cssText = "";
+  }, []);
+
   useLayoutEffect(() => {
     if (popoverRef.current) {
       updatePosition(popoverRef.current);
@@ -60,7 +64,12 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
 
   return (
     <HelperStyled className={className} {...props}>
-      <HelpOnIcon width={16} height={16} />
+      <HelpOnIcon
+        width={16}
+        height={16}
+        onMouseEnter={() => popoverRef.current && updatePosition(popoverRef.current)}
+        onMouseLeave={() => popoverRef.current && resetPosition(popoverRef.current)}
+      />
       <PopoverStyled textStyle="R_12R" position={position} ref={popoverRef}>
         {text}
       </PopoverStyled>
