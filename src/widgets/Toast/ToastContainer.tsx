@@ -17,9 +17,7 @@ const StyledToastContainer = styled.div`
     top: 0;
     left: 0;
     width: calc(100% - ${pxToRem(INNER_MARGIN_PC * 2)});
-    height: 100%;
     margin: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
-    pointer-events: none;
   }
 
   .toast {
@@ -100,7 +98,7 @@ const StyledToastContainer = styled.div`
   }
 `;
 
-const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl = 3000, stackSpacing = 24 }) => {
+const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl = 300000, stackSpacing = 24 }) => {
   return (
     <StyledToastContainer>
       <TransitionGroup className="toast-group">

@@ -1,18 +1,18 @@
-import React, { cloneElement, ElementType, isValidElement, useState } from "react";
+import React, { cloneElement, ElementType, isValidElement, useState, useRef } from "react";
 import { textStyle, ColorStyles } from "../../theme";
 import styled, { css } from "styled-components";
 import { SearchInputProps } from "./types";
 import { Flex } from "../Box";
 import { layout } from "styled-system";
-import { SearchIcon } from "../Icon";
+import { SearchIcon, ResetIcon } from "../Icon";
 import { IconButton } from "../Button";
 
 const StyledInput = styled.input`
   border: 0;
   display: block;
   height: 100%;
-  ${css(textStyle.R_14B)}
-  color: ${({ theme }) => theme.colors[ColorStyles.MEDIUMGREY]};
+  ${css(textStyle.R_14R)}
+  color: ${({ theme }) => theme.colors[ColorStyles.BLACK]};
   outline: 0;
   padding: 10px 16px;
   width: 100%;
@@ -47,24 +47,41 @@ const StyledFlex = styled(Flex)`
 `;
 
 const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): JSX.Element => {
+  const input = useRef<HTMLInputElement>(null);
   const [keyword, setKeyword] = useState("");
   const { onSearch, ...rest } = props;
   return (
-    <StyledFlex>
-      <StyledInput
-        {...rest}
-        defaultValue={keyword}
-        onChange={(e) => {
-          setKeyword(e.target.value);
-        }}
-        onKeyDown={(e) => {
-          if (e.code.toLowerCase() === "enter") onSearch(keyword);
-        }}
-      />
-      <IconButton onClick={() => onSearch(keyword)}>
-        <SearchIcon />
-      </IconButton>
-    </StyledFlex>
+    <>
+      <StyledFlex>
+        <StyledInput
+          ref={input}
+          {...rest}
+          defaultValue={keyword}
+          onChange={(e) => {
+            setKeyword(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.code.toLowerCase() === "enter") onSearch(keyword);
+          }}
+        />
+
+        {keyword.length > 0 && (
+          <IconButton mr={12} p={0} onClick={() => {
+            setKeyword('')
+            if (input.current && input.current !== null) {
+              input.current.value = ''
+            }
+          }}>
+            <ResetIcon />
+          </IconButton>
+        )}
+        <IconButton p={0} onClick={() => onSearch(keyword)}>
+          <SearchIcon />
+        </IconButton>
+      </StyledFlex>
+
+      keyword: {keyword}
+    </>
   );
 };
 
