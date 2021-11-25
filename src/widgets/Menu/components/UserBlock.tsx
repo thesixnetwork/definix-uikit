@@ -10,6 +10,7 @@ import { TextStyles } from "../../../theme/text";
 import { useMatchBreakpoints } from "../../../hooks";
 import { TranslateProps, UserProps } from "../types";
 import WalletDropdown from "./WalletDropdown";
+import { localStorageKey, connectorLocalStorageKey } from "src/widgets/WalletModal/config";
 
 interface Props extends UserProps, TranslateProps {}
 
@@ -38,6 +39,12 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
   const isMobile = isMaxLg;
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
+
+  const onLogout = () => {
+    window.localStorage.removeItem(localStorageKey);
+    window.localStorage.removeItem(connectorLocalStorageKey);
+    logout();
+  }
 
   if (account) {
     return isMobile ? (
