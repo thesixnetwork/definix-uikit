@@ -95,7 +95,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans }) => {
           variant={ButtonVariants.DEEPBROWN}
           startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
           onClick={() => {
-            location.href = '/my';
+            location.href = "/my";
             // onPresentAccountModal();
           }}
         >
