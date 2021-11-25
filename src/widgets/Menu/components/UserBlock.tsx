@@ -51,8 +51,9 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
               {accountEllipsis}
             </Text>
             <WalletDropdown
-              width="188px"
-              left="-105px"
+              left="-108px"
+              float="left"
+              width="170px"
               Trans={Trans}
               target={
                 <IconButton>
@@ -69,6 +70,8 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
       <>
         <Flex>
           <WalletDropdown
+            float="right"
+            width="188px"
             target={
               <Button width="110px" xs variant={ButtonVariants.LIGHTBROWN} textStyle={TextStyles.R_12B}>
                 {accountEllipsis}

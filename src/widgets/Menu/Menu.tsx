@@ -49,13 +49,13 @@ const TopBackground = styled.div`
 `;
 
 const Inner = styled.div`
-  padding: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
+  padding: ${NAV_HEIGHT_PC + 28}px ${pxToRem(INNER_MARGIN_PC)} 0;
   min-height: calc(100vh - ${NAV_HEIGHT_PC}px);
 
   outline: 1px solid blue;
 
   ${({ theme }) => theme.mediaQueries.mobileXl} {
-    padding: ${NAV_HEIGHT_MOBILE}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
+    padding: ${NAV_HEIGHT_MOBILE + 28}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
   }
 `;
 
@@ -72,17 +72,16 @@ const Dim = styled.div`
 
 const Menu: React.FC<MenuProps> = (props) => {
   const {
-    account,
-    login,
-    logout,
-    Trans,
-    langs,
-    setLang,
-    currentLang,
+    // account,
+    // login,
+    // logout,
+    // Trans,
+    // langs,
+    // setLang,
+    // currentLang,
     links,
     // profile,
     children,
-    netWorth,
   } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;

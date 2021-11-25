@@ -1,9 +1,9 @@
-import React, { useState, Children, ReactElement, cloneElement } from "react";
+import React, { useState, useEffect, useRef, Children, ReactElement, cloneElement } from "react";
 import styled from "styled-components";
 import { layout, position as sPosition } from "styled-system";
-import { DropdownProps, Position } from "./types";
+import { DropdownProps, Position, Float } from "./types";
 
-const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
+const DropdownContent = styled.div<{ position: Position; isOpen: boolean; float: Float }>`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
 
   border-radius: 8px;
@@ -14,7 +14,6 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
   min-width: 100%;
   flex-direction: column;
   position: absolute;
-  left: 0;
   max-height: 400px;
   overflow-y: auto;
   z-index: ${({ theme }) => theme.zIndices.dropdown};
@@ -26,6 +25,9 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
   ${({ position }) => `
     ${position === "top" ? "bottom" : "top"}: 100%;
     margin-${position === "top" ? "bottom" : "top"}: 4px;
+  `}
+  ${({ float }) => `
+    ${float}: 0;
   `}
   ${sPosition}
   ${layout}
@@ -42,20 +44,39 @@ const Dropdown: React.FC<DropdownProps> = ({
   isOpen,
   target,
   position = "bottom",
+  float = "left",
   children,
+  setIsOpen,
   onItemClick,
-  scale,
   ...props
 }) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex || -1);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onClick = (e: Event) => {
+      e.stopImmediatePropagation();
+      if (!ref.current?.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onClick);
+
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+    };
+  }, []);
+
   return (
-    <Container>
-      {target}
-      <DropdownContent position={position} isOpen={isOpen} {...props}>
+    <Container ref={ref}>
+      {cloneElement(target, {
+        onFocus: () => setIsOpen(!isOpen),
+      })}
+      <DropdownContent position={position} isOpen={isOpen} float={float} {...props}>
         {Children.map(children, (child: ReactElement, index) => {
           return cloneElement(child, {
-            scale,
             isActive: activeIndex === index,
+            onFocus: () => setIsOpen(true),
             onClick: () => {
               setActiveIndex(index);
               onItemClick && onItemClick(index);
@@ -68,7 +89,6 @@ const Dropdown: React.FC<DropdownProps> = ({
 };
 Dropdown.defaultProps = {
   position: "bottom",
-  scale: "md",
 };
 
 export default Dropdown;
