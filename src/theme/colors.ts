@@ -82,7 +82,7 @@ export const baseColors = {
   success: colorHex.green,
   successAlpha: hexToRGB(colorHex.green, 0.1),
   text: colorHex.deepgrey,
-  textInvert: colorHex.deepgrey,
+  textInvert: colorHex.white,
   textSubtle: colorHex.mediumgrey,
   background: colorHex.yellowBg2,
   backgroundBlueGradient: "linear-gradient(#0D418E #349BE7)",
