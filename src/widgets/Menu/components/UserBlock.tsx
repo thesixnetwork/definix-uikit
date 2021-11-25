@@ -68,7 +68,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
                 </IconButton>
               }
               account={account}
-              logout={logout}
+              logout={onLogout}
             />
           </Flex>
         </Flex>
@@ -85,7 +85,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
               </Button>
             }
             account={account}
-            logout={logout}
+            logout={onLogout}
             Trans={Trans}
           />
         </Flex>
