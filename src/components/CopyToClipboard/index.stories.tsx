@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import CopyToClipboard from ".";
+import { CopyToClipboard } from ".";
 import { Text } from "../Text";
 import { Flex } from "../Box";
 
