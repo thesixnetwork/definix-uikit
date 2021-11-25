@@ -78,8 +78,8 @@ const Loading: React.FC = () => {
       <WrapCircle>
         {Array(4)
           .fill(true)
-          .map(() => (
-            <Circle />
+          .map((val, index) => (
+            <Circle key={index} />
           ))}
       </WrapCircle>
       <WrapIcon>
