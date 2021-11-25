@@ -44,7 +44,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
     window.localStorage.removeItem(localStorageKey);
     window.localStorage.removeItem(connectorLocalStorageKey);
     logout();
-  }
+  };
 
   if (account) {
     return isMobile ? (
