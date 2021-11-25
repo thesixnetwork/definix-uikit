@@ -36,6 +36,9 @@ export const Default: React.FC = () => {
           <CopyToClipboard toCopy="주소3" color="primary" />
         </Flex>
       </Row>
+      <Row>
+        <CopyToClipboard toCopy="주소4">주소4</CopyToClipboard>
+      </Row>
     </>
   );
 };

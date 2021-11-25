@@ -5,9 +5,9 @@ import { CopyToClipboardProps } from "./types";
 import { CopyIcon } from "../Icon";
 import { IconButton } from "../Button";
 import { Text } from "../Text";
+import { spacing } from "src/theme/base";
 
 const StyleButton = styled(IconButton)<{ color: string }>`
-  margin-left: ${({ theme }) => theme.spacing.S_6}px;
   padding: 0;
   height: fit-content;
   color: ${({ color, theme }) => theme.colors[color]};
@@ -29,9 +29,9 @@ const Tooltip = styled(Text)<{ isTooltipDisplayed: boolean }>`
 `;
 
 const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
+  toCopy,
   color = "textSubtle",
-  toCopy = "Copied",
-  doneMessage,
+  doneMessage = "Copied",
   children,
   ...props
 }) => {
@@ -51,7 +51,7 @@ const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
       {...props}
     >
       {children}
-      <CopyIcon width="20px" />
+      <CopyIcon width="20px" style={{ marginLeft: `${spacing.S_6}px` }} />
       <Tooltip textStyle="R_12R" isTooltipDisplayed={isTooltipDisplayed}>
         {doneMessage}
       </Tooltip>
