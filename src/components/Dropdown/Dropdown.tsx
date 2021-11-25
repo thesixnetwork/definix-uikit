@@ -15,6 +15,7 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean; float:
   flex-direction: column;
   position: absolute;
   max-height: 400px;
+  overflow-x: hidden;
   overflow-y: auto;
   z-index: ${({ theme }) => theme.zIndices.dropdown};
 

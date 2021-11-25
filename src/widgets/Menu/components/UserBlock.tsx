@@ -34,7 +34,7 @@ const StyledButton = styled.a`
   background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
 `;
 
-const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth }) => {
+const UserBlock: React.FC<Props> = ({ account, login, logout, Trans }) => {
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
@@ -95,8 +95,8 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
           variant={ButtonVariants.DEEPBROWN}
           startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
           onClick={() => {
+            location.href = '/my';
             // onPresentAccountModal();
-            // history.push('/myinvestments')
           }}
         >
           <Text textStyle={TextStyles.R_12B}>

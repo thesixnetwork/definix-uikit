@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
+import copy from "copy-to-clipboard";
 import { Flex } from "../../../components/Box";
 import { CheckBIcon } from "../../../components/Icon";
 import { Text } from "../../../components/Text";
@@ -23,10 +24,9 @@ const WalletDropdown: React.FC<Props> = ({ target, account, logout, Trans, ...pr
       if (index === 0) {
         window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, "_blank");
       } else if (index === 1) {
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(account);
+        if (copy(account)) {
+          setIsCopied(true);
         }
-        setIsCopied(true);
       } else {
         logout();
       }

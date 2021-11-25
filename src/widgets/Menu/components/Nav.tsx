@@ -75,9 +75,9 @@ const Nav: React.FC<NavProps> = (props) => {
     };
     const throttledHandleScroll = _.throttle(handleScroll, 200);
 
-    window.addEventListener("scroll", throttledHandleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
