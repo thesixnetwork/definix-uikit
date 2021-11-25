@@ -96,11 +96,11 @@ const Nav: React.FC<NavProps> = (props) => {
           <IconButton onClick={() => onPresentSettingModal()}>
             <SettingIcon />
           </IconButton>
-          {
-            props.account && <IconButton ml="S_16" onClick={() => history.push('/my')}>
+          {props.account && (
+            <IconButton ml="S_16" onClick={() => history.push("/my")}>
               <GnbMyMobileIcon />
             </IconButton>
-          }
+          )}
         </Box>
       </MobileNav>
     );
