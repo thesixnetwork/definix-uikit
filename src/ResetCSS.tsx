@@ -63,16 +63,6 @@ export const ResetCSSStyle = `
   *::after {
     box-sizing: border-box;
   }
-  /* Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
 
   /* Slider */ 
   input[type=range] {
