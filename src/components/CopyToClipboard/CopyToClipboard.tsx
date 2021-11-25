@@ -25,7 +25,7 @@ const Tooltip = styled(Text)<{ isTooltipDisplayed: boolean }>`
   padding: 8px 10px;
   border-radius: 8px;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05);
-  color: ${({ theme }) => theme.colors.textInvert};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 const CopyToClipboard: React.FC<CopyToClipboardProps> = ({

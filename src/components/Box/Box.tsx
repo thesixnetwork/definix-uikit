@@ -10,7 +10,6 @@ const Box = styled.div<BoxProps>`
   ${layout}
   ${position}
   ${space}
-  ${color}
   ${getVariantTextStyle()}
 `;
 

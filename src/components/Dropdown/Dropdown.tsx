@@ -15,6 +15,7 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean; float:
   flex-direction: column;
   position: absolute;
   max-height: 400px;
+  overflow-x: hidden;
   overflow-y: auto;
   z-index: ${({ theme }) => theme.zIndices.dropdown};
 
@@ -55,7 +56,7 @@ const Dropdown: React.FC<DropdownProps> = ({
 
   useEffect(() => {
     const onClick = (e: Event) => {
-      e.stopImmediatePropagation();
+      // e.stopImmediatePropagation();
       if (!e.target) return;
       if (!ref.current?.contains(e.target as Node)) {
         setIsOpen(false);

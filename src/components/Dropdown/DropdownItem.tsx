@@ -10,6 +10,7 @@ const Item = styled.button<{ isActive: boolean; isDivide?: boolean }>`
   outline: none;
   padding: 0 16px;
   min-width: 100%;
+  width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
