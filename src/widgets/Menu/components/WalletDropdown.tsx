@@ -60,7 +60,7 @@ const WalletDropdown: React.FC<Props> = ({ target, account, logout, Trans, ...pr
       {...props}
     >
       <DropdownItem>
-        <Trans i18nKey="View on KlaytnscopeTH" />
+        <Trans i18nKey="View on Klaytnscope" />
       </DropdownItem>
       <DropdownItem>
         <Flex width="100%" alignItems="center" justifyContent="space-between">
