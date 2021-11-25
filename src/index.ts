@@ -35,6 +35,7 @@ export * from "./components/Divider";
 export * from "./components/BalanceInput";
 export * from "./components/Noti";
 export * from "./components/Loading";
+export * from "./components/CopyToClipboard";
 
 // Hooks
 export * from "./hooks";
