@@ -51,40 +51,37 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
   const [keyword, setKeyword] = useState("");
   const { onSearch, ...rest } = props;
   return (
-    <>
-      <StyledFlex>
-        <StyledInput
-          ref={input}
-          {...rest}
-          defaultValue={keyword}
-          onChange={(e) => {
-            setKeyword(e.target.value);
-          }}
-          onKeyDown={(e) => {
-            if (e.code.toLowerCase() === "enter") onSearch(keyword);
-          }}
-        />
+    <StyledFlex>
+      <StyledInput
+        ref={input}
+        {...rest}
+        defaultValue={keyword}
+        onChange={(e) => {
+          setKeyword(e.target.value);
+        }}
+        onKeyDown={(e) => {
+          if (e.code.toLowerCase() === "enter") onSearch(keyword);
+        }}
+      />
 
-        {keyword.length > 0 && (
-          <IconButton
-            mr={12}
-            p={0}
-            onClick={() => {
-              setKeyword("");
-              if (input.current && input.current !== null) {
-                input.current.value = "";
-              }
-            }}
-          >
-            <ResetIcon />
-          </IconButton>
-        )}
-        <IconButton p={0} onClick={() => onSearch(keyword)}>
-          <SearchIcon />
+      {keyword.length > 0 && (
+        <IconButton
+          mr={12}
+          p={0}
+          onClick={() => {
+            setKeyword("");
+            if (input.current && input.current !== null) {
+              input.current.value = "";
+            }
+          }}
+        >
+          <ResetIcon />
         </IconButton>
-      </StyledFlex>
-      keyword: {keyword}
-    </>
+      )}
+      <IconButton p={0} onClick={() => onSearch(keyword)}>
+        <SearchIcon />
+      </IconButton>
+    </StyledFlex>
   );
 };
 
