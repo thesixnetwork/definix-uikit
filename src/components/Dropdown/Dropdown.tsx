@@ -71,13 +71,12 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <Container ref={ref}>
       {cloneElement(target, {
-        onFocus: () => setIsOpen(!isOpen),
+        onClick: () => setIsOpen(!isOpen),
       })}
       <DropdownContent position={position} isOpen={isOpen} float={float} {...props}>
         {Children.map(children, (child: ReactElement, index) => {
           return cloneElement(child, {
             isActive: activeIndex === index,
-            onFocus: () => setIsOpen(true),
             onClick: () => {
               setActiveIndex(index);
               onItemClick && onItemClick(index);

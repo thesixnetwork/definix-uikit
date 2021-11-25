@@ -86,7 +86,8 @@
     "styled-components": "^5.2.0"
   },
   "bundledDependencies": [
-    "polished"
+    "polished",
+    "copy-to-clipboard"
   ],
   "dependencies": {
     "@types/lodash": "^4.14.162",
