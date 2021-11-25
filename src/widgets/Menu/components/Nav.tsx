@@ -13,6 +13,7 @@ import UserBlock from "./UserBlock";
 import Chain from "./Chain";
 import SettingsModal from "./SettingsModal";
 import { useMatchBreakpoints } from "../../../hooks";
+import { useHistory } from "react-router";
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -58,6 +59,7 @@ const getIsTop = () => {
 };
 
 const Nav: React.FC<NavProps> = (props) => {
+  const history = useHistory();
   const { isPushed, pushNav } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const [isTop, setIsTop] = useState(getIsTop());
@@ -91,12 +93,14 @@ const Nav: React.FC<NavProps> = (props) => {
         </Box>
         <MainDefinixTextIcon />
         <Box position="absolute" right={pxToRem(20)}>
-          <IconButton mr="S_16" onClick={() => onPresentSettingModal()}>
+          <IconButton onClick={() => onPresentSettingModal()}>
             <SettingIcon />
           </IconButton>
-          <IconButton onClick={() => {}}>
-            <GnbMyMobileIcon />
-          </IconButton>
+          {
+            props.account && <IconButton ml="S_16" onClick={() => history.push('/my')}>
+              <GnbMyMobileIcon />
+            </IconButton>
+          }
         </Box>
       </MobileNav>
     );
