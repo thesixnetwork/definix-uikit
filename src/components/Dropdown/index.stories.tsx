@@ -30,6 +30,7 @@ export const Default: React.FC = () => {
         }}
       >
         <Dropdown
+          setIsOpen={setIsOpen}
           isOpen={isOpen}
           target={<DropdownButton onClick={() => setIsOpen(!isOpen)}>Hover</DropdownButton>}
           position="top"
@@ -49,6 +50,7 @@ export const Default: React.FC = () => {
         }}
       >
         <Dropdown
+          setIsOpen={setIsOpen}
           defaultIndex={2}
           isOpen={isOpen}
           target={<DropdownButton onClick={() => setIsOpen(!isOpen)}>Hover</DropdownButton>}

@@ -56,7 +56,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   useEffect(() => {
     const onClick = (e: Event) => {
       e.stopImmediatePropagation();
-      if (!ref.current?.contains(e.target)) {
+      if (!e.target) return;
+      if (!ref.current?.contains(e.target as Node)) {
         setIsOpen(false);
       }
     };

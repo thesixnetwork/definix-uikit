@@ -16,8 +16,9 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
     <Dropdown
       defaultIndex={langs.findIndex(({ code }) => currentLang === code)}
       isOpen={isOpen}
+      setIsOpen={setIsOpen}
       position="top"
-      target={<DropdownButton onClick={() => setIsOpen(!isOpen)}>{currentLang.toUpperCase()}</DropdownButton>}
+      target={<DropdownButton>{currentLang.toUpperCase()}</DropdownButton>}
       onItemClick={(index) => {
         setLang(langs[index]);
         setIsOpen(!isOpen);

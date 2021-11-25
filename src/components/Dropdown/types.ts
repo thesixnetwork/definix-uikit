@@ -11,14 +11,14 @@ export interface PositionProps {
 
 export interface DropdownProps extends PositionProps, Omit<SPositionProps, "position">, LayoutProps {
   isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
   defaultIndex?: number;
   target: React.ReactElement;
   children: React.ReactElement[];
-  setIsOpen: (isOpen: boolean) => void;
   onItemClick?: (index: number) => void;
 }
 
-export interface DropdownItemProps extends HTMLAttributes<HTMLDivElement> {
+export interface DropdownItemProps extends HTMLAttributes<HTMLButtonElement> {
   isActive?: boolean;
   isDivide?: boolean;
 }
