@@ -73,7 +73,7 @@ const SearchInput = <E extends ElementType = "input">(props: SearchInputProps): 
             if (input.current && input.current !== null) {
               input.current.value = "";
             }
-            onReset()
+            onReset();
           }}
         >
           <ResetIcon />

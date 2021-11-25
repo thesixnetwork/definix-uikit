@@ -51,7 +51,9 @@ const DropdownSet: React.FC<DropdownSetProps> = ({
   const [activeIndex, setActiveIndex] = useState(defaultIndex || 0);
   return (
     <Container>
-      <DropdownButton width="100%" onClick={() => setIsOpen(!isOpen)}>{options[activeIndex].label}</DropdownButton>
+      <DropdownButton width="100%" onClick={() => setIsOpen(!isOpen)}>
+        {options[activeIndex].label}
+      </DropdownButton>
       <DropdownContent position={position} isOpen={isOpen} {...props}>
         {options.map((option, index) => {
           return (

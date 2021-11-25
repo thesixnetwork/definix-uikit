@@ -43,7 +43,7 @@ export const Default: React.FC = () => {
           position: "relative",
           marginTop: "100px",
           marginLeft: "100px",
-          width: "200px"
+          width: "200px",
         }}
       >
         <DropdownSet
