@@ -62,6 +62,8 @@ import { ReactComponent as MainDefinixTextIcon } from "./icons/logo_main_definix
 import { ReactComponent as ImgMyInvestmentDefaultIcon } from "./icons/img_myinvestment_default.svg";
 import { ReactComponent as GroupIcon } from "./icons/group.svg";
 import { ReactComponent as MainDefinixImgTextIcon } from "./icons/logo_main_definix_img_text.svg";
+import { ReactComponent as HelpOnIcon } from "./icons/ico_16_help_on.svg";
+import { ReactComponent as CopyIcon } from "./icons/ico_16_copy.svg";
 
 export {
   GnbMySIcon,
@@ -127,4 +129,6 @@ export {
   ImgMyInvestmentDefaultIcon,
   GroupIcon,
   MainDefinixImgTextIcon,
+  HelpOnIcon,
+  CopyIcon,
 };

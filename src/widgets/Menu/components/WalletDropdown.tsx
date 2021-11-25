@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Flex } from "../../../components/Box";
 import { CheckBIcon } from "../../../components/Icon";
+import { Text } from "../../../components/Text";
 import { Dropdown, DropdownItem, DropdownProps } from "../../../components/Dropdown";
 import { ColorStyles } from "../../../theme/colors";
 import { TranslateProps } from "../types";
@@ -51,12 +52,10 @@ const WalletDropdown: React.FC<Props> = ({ target, account, logout, Trans, ...pr
 
   return (
     <Dropdown
-      scale="sm"
-      isOpen={isDropdownOpen}
       position="bottom"
-      target={React.cloneElement(target, {
-        onClick: () => setIsDropdownOpen(!isDropdownOpen),
-      })}
+      target={target}
+      isOpen={isDropdownOpen}
+      setIsOpen={setIsDropdownOpen}
       onItemClick={onItemClick}
       {...props}
     >
@@ -69,12 +68,14 @@ const WalletDropdown: React.FC<Props> = ({ target, account, logout, Trans, ...pr
           {isCopied && (
             <Flex alignItems="center" color={ColorStyles.MEDIUMGREY}>
               <CheckBIcon />
-              <Trans i18nKey="Copied" />
+              <Text ml="2px">
+                <Trans i18nKey="Copied" />
+              </Text>
             </Flex>
           )}
         </Flex>
       </DropdownItem>
-      <DropdownItem>
+      <DropdownItem isDivide={true}>
         <Trans i18nKey="Disconnect" />
       </DropdownItem>
     </Dropdown>

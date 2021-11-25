@@ -10,6 +10,7 @@ import { TextStyles } from "../../../theme/text";
 import { useMatchBreakpoints } from "../../../hooks";
 import { TranslateProps, UserProps } from "../types";
 import WalletDropdown from "./WalletDropdown";
+import { localStorageKey, connectorLocalStorageKey } from "src/widgets/WalletModal/config";
 
 interface Props extends UserProps, TranslateProps {}
 
@@ -39,6 +40,12 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
+  const onLogout = () => {
+    window.localStorage.removeItem(localStorageKey);
+    window.localStorage.removeItem(connectorLocalStorageKey);
+    logout();
+  };
+
   if (account) {
     return isMobile ? (
       <Wrapper>
@@ -51,8 +58,9 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
               {accountEllipsis}
             </Text>
             <WalletDropdown
-              width="188px"
-              left="-105px"
+              left="-108px"
+              float="left"
+              width="170px"
               Trans={Trans}
               target={
                 <IconButton>
@@ -60,7 +68,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
                 </IconButton>
               }
               account={account}
-              logout={logout}
+              logout={onLogout}
             />
           </Flex>
         </Flex>
@@ -69,13 +77,15 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans, netWorth })
       <>
         <Flex>
           <WalletDropdown
+            float="right"
+            width="188px"
             target={
               <Button width="110px" xs variant={ButtonVariants.LIGHTBROWN} textStyle={TextStyles.R_12B}>
                 {accountEllipsis}
               </Button>
             }
             account={account}
-            logout={logout}
+            logout={onLogout}
             Trans={Trans}
           />
         </Flex>

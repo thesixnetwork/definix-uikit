@@ -4,8 +4,8 @@ import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
 import Flex from "../../components/Box/Flex";
 import { Modal } from "../Modal";
-import CopyToClipboard from "./CopyToClipboard";
 import { connectorLocalStorageKey } from "./config";
+import { CopyToClipboard } from "../../components/CopyToClipboard";
 
 interface Props {
   account: string;
