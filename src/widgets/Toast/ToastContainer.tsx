@@ -13,11 +13,12 @@ const TOP_POSITION = 80; // Initial position from the top
 // flex-direction: row-reverse;
 const StyledToastContainer = styled.div`
   .toast-group {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - ${pxToRem(INNER_MARGIN_PC * 2)});
-    margin: ${NAV_HEIGHT_PC}px ${pxToRem(INNER_MARGIN_PC)} 0;
+    width: calc(100% - ${INNER_MARGIN_PC * 2});
+    margin: ${NAV_HEIGHT_PC}px ${INNER_MARGIN_PC} 0;
+    z-index: 99;
   }
 
   .toast {
@@ -58,20 +59,27 @@ const StyledToastContainer = styled.div`
         transform: translateX(-100%);
       }
     }
-  }
 
-  ${({ theme }) => theme.mediaQueries.mobileXl} {
-    .toast-group {
-      width: calc(100% - ${pxToRem(INNER_MARGIN_MOBILE * 2)});
-      margin: ${NAV_HEIGHT_MOBILE}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
+    &:nth-child(3) {
+      &.enter.enter-active,
+      &.appear.appear-active,
+      &.enter-done {
+        opacity: 0;
+        transform: translateX(-200%);
+      }
     }
   }
 
   ${({ theme }) => theme.mediaQueries.mobile} {
+    .toast-group {
+      width: calc(100% - ${INNER_MARGIN_MOBILE * 2});
+      margin: ${NAV_HEIGHT_MOBILE}px ${INNER_MARGIN_MOBILE} 0;
+    }
+
     .toast {
       padding-left: 0;
       padding-top: 16px;
-      transition: opacity 250ms ease-in;
+      transition: opacity 250ms ease-in, transform 250ms;
 
       &.enter {
         transform: translateX(0);
@@ -94,11 +102,19 @@ const StyledToastContainer = styled.div`
           transform: translateX(0) translateY(100%);
         }
       }
+      &:nth-child(3) {
+        &.enter.enter-active,
+        &.appear.appear-active,
+        &.enter-done {
+          opacity: 0;
+          transform: translateX(0) translateY(200%);
+        }
+      }
     }
   }
 `;
 
-const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl = 300000, stackSpacing = 24 }) => {
+const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove, ttl = 3000, stackSpacing = 24 }) => {
   return (
     <StyledToastContainer>
       <TransitionGroup className="toast-group">
