@@ -1,7 +1,6 @@
 import { ButtonScales, ButtonVariants } from "../components/Button";
 import { AlertTheme } from "../components/Alert/types";
 import { CardTheme } from "../components/Card/types";
-import { RadioTheme } from "../components/Radio/types";
 import { ToggleTheme } from "../components/Toggle/types";
 import { TooltipTheme } from "../components/Tooltip/types";
 import { NavTheme } from "../widgets/Menu/types";
@@ -16,7 +15,6 @@ export interface DefinixTheme {
   card: CardTheme;
   nav: NavTheme;
   modal: ModalTheme;
-  radio: RadioTheme;
   toggle: ToggleTheme;
   tooltip: TooltipTheme;
   breakpoints: Breakpoints;
