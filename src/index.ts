@@ -37,6 +37,7 @@ export * from "./components/Noti";
 export * from "./components/Loading";
 export * from "./components/CopyToClipboard";
 export * from "./components/Helper";
+export * from "./components/ErrorBlock";
 
 // Hooks
 export * from "./hooks";
