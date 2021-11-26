@@ -44,7 +44,8 @@ const LineMenuEntry = styled(MenuEntry)`
 `;
 
 const V1MenuLink = styled(MenuLink)`
-  > svg, div {
+  > svg,
+  div {
     flex-shrink: 0;
     flex-wrap: wrap;
   }
@@ -52,7 +53,7 @@ const V1MenuLink = styled(MenuLink)`
   > div {
     width: 110px;
   }
-`
+`;
 
 const PanelBody: React.FC<Props> = ({ isPushed, pushNav, links, Trans }) => {
   const { isMobile } = useMatchBreakpoints();
