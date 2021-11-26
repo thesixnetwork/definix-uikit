@@ -7,8 +7,8 @@ export type Scale = "sm" | "md";
 export const scales: Record<
   Scale,
   {
-    textStyle: string;
-    activeTextStyle: string;
+    textStyle: TextStyles;
+    activeTextStyle: TextStyles;
   }
 > = {
   sm: {

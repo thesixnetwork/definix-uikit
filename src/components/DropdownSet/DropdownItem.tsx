@@ -1,7 +1,6 @@
 import { hexToRGB } from "../../style/mixin";
-import { textStyle, TextStyles } from "../../theme";
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { DropdownItemProps, Scale, scales } from "./types";
 
 const Item = styled.div<{ isActive: boolean; scale: Scale; isDivide?: boolean }>`
@@ -12,7 +11,7 @@ const Item = styled.div<{ isActive: boolean; scale: Scale; isDivide?: boolean }>
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.colors.deepgrey};
-  ${({ isActive, scale }) => css(textStyle[isActive ? scales[scale].activeTextStyle : scales[scale].textStyle])}
+  ${({ isActive, scale, theme }) => theme.textStyle[isActive ? scales[scale].activeTextStyle : scales[scale].textStyle]}
   ${({ isDivide, theme }) => isDivide && `border-top: 1px solid ${theme.colors.lightgrey};`}
   white-space: nowrap;
 

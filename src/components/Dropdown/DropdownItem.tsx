@@ -1,5 +1,4 @@
 import { hexToRGB } from "../../style/mixin";
-import { textStyle } from "../../theme";
 import React from "react";
 import styled, { css } from "styled-components";
 import { DropdownItemProps } from "./types";
@@ -17,7 +16,7 @@ const Item = styled.button<{ isActive: boolean; isDivide?: boolean }>`
   color: ${({ theme }) => theme.colors.deepgrey};
   ${({ isDivide, theme }) => isDivide && `border-top: 1px solid ${theme.colors.lightgrey};`}
   white-space: nowrap;
-  ${({ isActive }) => css(isActive ? textStyle.R_12M : textStyle.R_12R)}
+  ${({ isActive, theme }) => isActive ? theme.textStyle.R_12M : theme.textStyle.R_12R}
 
   background-color: ${({ isActive, theme }) => (isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white)};
 `;

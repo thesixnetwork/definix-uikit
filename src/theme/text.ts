@@ -27,7 +27,7 @@ export enum TextStyles {
   R_12R = "R_12R",
 }
 
-export const textStyle: Record<string, Record<string, string | number>> = {
+export const textStyle: Record<TextStyles, Record<string, string | number>> = {
   [TextStyles.R_32B]: {
     fontFamily: "var(--default-font-family)",
     fontSize: pxToRem(32),
@@ -234,10 +234,10 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 };
 
-export const textStyleToCss = _.mapValues(textStyle, (values: Record<string, string | number>) => {
-  return css(values);
-});
 export type TextStyleToCssType = Record<TextStyles, string[]>;
+export const textStyleToCss: TextStyleToCssType = _.mapValues(textStyle, (values: Record<string, string | number>) => {
+  return css(values) as string[];
+});
 
 export type TextStyleType = typeof TextStyles;
 export interface TextStyleProps {
