@@ -236,7 +236,7 @@ export const textStyle: Record<string, Record<string, string | number>> = {
 
 export const textStyleToCss = _.mapValues(textStyle, (values: Record<string, string | number>) => {
   return css(values);
-})
+});
 export type TextStyleToCssType = typeof textStyleToCss;
 
 export type TextStyleType = typeof TextStyles;
@@ -250,7 +250,6 @@ export const getVariantTextStyle = () =>
     variants: textStyle,
   });
 
-
 export default {
-  textStyle: textStyleToCss
-}
+  textStyle: textStyleToCss,
+};
