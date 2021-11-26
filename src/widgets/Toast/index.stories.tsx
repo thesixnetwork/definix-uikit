@@ -94,41 +94,42 @@ export const WithAction: React.FC = () => {
 export const MultiToast: React.FC = () => {
   const [toasts, setToasts] = useState([]);
 
-  const createToast = useCallback((title: string) => {
-    const now = Date.now();
-    const randomToast = {
-      id: `id-${now}`,
-      title,
-      action: {
-        text: "Action Button",
-        url: "https://pancakeswap.finance",
-      },
-      type: alertVariants[sample(Object.keys(alertVariants))],
-    };
-    setToasts((prevToasts) => [randomToast, ...prevToasts]);
-    if (toasts.length >= 3) {
-      setToasts((prevToasts) => {
-        prevToasts.pop()
-        return prevToasts
-      })
-    }
-  }, [toasts])
+  const createToast = useCallback(
+    (title: string) => {
+      const now = Date.now();
+      const randomToast = {
+        id: `id-${now}`,
+        title,
+        action: {
+          text: "Action Button",
+          url: "https://pancakeswap.finance",
+        },
+        type: alertVariants[sample(Object.keys(alertVariants))],
+      };
+      setToasts((prevToasts) => [randomToast, ...prevToasts]);
+      if (toasts.length >= 3) {
+        setToasts((prevToasts) => {
+          prevToasts.pop();
+          return prevToasts;
+        });
+      }
+    },
+    [toasts]
+  );
 
   const handleClick = () => {
     setTimeout(() => {
-      createToast('toast1')
-    }, 4000)
+      createToast("toast1");
+    }, 4000);
     setTimeout(() => {
-      createToast('toast2')
-    }, 3000)
+      createToast("toast2");
+    }, 3000);
     setTimeout(() => {
-      createToast('toast3')
-    }, 2000)
+      createToast("toast3");
+    }, 2000);
     setTimeout(() => {
-      createToast('toast4')
-    }, 1000)
-
-    
+      createToast("toast4");
+    }, 1000);
   };
 
   const handleRemove = (id: string) => {
@@ -137,7 +138,9 @@ export const MultiToast: React.FC = () => {
 
   return (
     <div>
-      <Button type="button" variant="success" ml="8px" onClick={() => handleClick()}>MultiToast</Button>
+      <Button type="button" variant="success" ml="8px" onClick={() => handleClick()}>
+        MultiToast
+      </Button>
       <ToastContainer toasts={toasts} onRemove={handleRemove} />
     </div>
   );
