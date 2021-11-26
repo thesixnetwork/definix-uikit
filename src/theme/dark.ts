@@ -6,10 +6,12 @@ import { dark as darkNav } from "../widgets/Menu/theme";
 import { dark as darkModal } from "../widgets/Modal/theme";
 import { dark as darkTooltip } from "../components/Tooltip/theme";
 import base from "./base";
+import text from "./text";
 import { darkColors } from "./colors";
 
 const darkTheme: DefaultTheme = {
   ...base,
+  ...text,
   isDark: true,
   alert: darkAlert,
   colors: darkColors,

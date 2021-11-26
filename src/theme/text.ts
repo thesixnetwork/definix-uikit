@@ -1,5 +1,7 @@
 import { pxToRem } from "../style/mixin";
 import { variant } from "styled-system";
+import { css } from "styled-components";
+import _ from "lodash";
 
 export enum TextStyles {
   R_32B = "R_32B",
@@ -232,6 +234,11 @@ export const textStyle: Record<string, Record<string, string | number>> = {
   },
 };
 
+export const textStyleToCss = _.mapValues(textStyle, (values: Record<string, string | number>) => {
+  return css(values);
+})
+export type TextStyleToCssType = typeof textStyleToCss;
+
 export type TextStyleType = typeof TextStyles;
 export interface TextStyleProps {
   textStyle?: TextStyleType | string;
@@ -242,3 +249,8 @@ export const getVariantTextStyle = () =>
     prop: "textStyle",
     variants: textStyle,
   });
+
+
+export default {
+  textStyle: textStyleToCss
+}

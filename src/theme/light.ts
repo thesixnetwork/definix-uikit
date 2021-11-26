@@ -6,10 +6,12 @@ import { light as lightTooltip } from "../components/Tooltip/theme";
 import { light as lightNav } from "../widgets/Menu/theme";
 import { light as lightModal } from "../widgets/Modal/theme";
 import base from "./base";
+import text from "./text";
 import { lightColors } from "./colors";
 
 const lightTheme: DefaultTheme = {
   ...base,
+  ...text,
   isDark: false,
   alert: lightAlert,
   colors: lightColors,

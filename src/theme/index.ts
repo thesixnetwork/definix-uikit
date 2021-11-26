@@ -6,6 +6,7 @@ import { TooltipTheme } from "../components/Tooltip/types";
 import { NavTheme } from "../widgets/Menu/types";
 import { ModalTheme } from "../widgets/Modal/types";
 import { Colors, Breakpoints, MediaQueries, Spacing, Shadows, Radii, ZIndices } from "./types";
+import { TextStyleToCssType } from "./text";
 
 export interface DefinixTheme {
   siteWidth: number;
@@ -24,6 +25,7 @@ export interface DefinixTheme {
   shadows: Shadows;
   radii: Radii;
   zIndices: ZIndices;
+  textStyle: TextStyleToCssType;
 }
 
 export { default as dark } from "./dark";
