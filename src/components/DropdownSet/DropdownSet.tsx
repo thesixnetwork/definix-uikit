@@ -35,7 +35,7 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean }>`
 
 const Container = styled.div`
   position: relative;
-  width: max-content;
+  width: 100%;
   height: max-content;
 `;
 
@@ -51,7 +51,9 @@ const DropdownSet: React.FC<DropdownSetProps> = ({
   const [activeIndex, setActiveIndex] = useState(defaultIndex || 0);
   return (
     <Container>
-      <DropdownButton onClick={() => setIsOpen(!isOpen)}>{options[activeIndex].label}</DropdownButton>
+      <DropdownButton width="100%" onClick={() => setIsOpen(!isOpen)}>
+        {options[activeIndex].label}
+      </DropdownButton>
       <DropdownContent position={position} isOpen={isOpen} {...props}>
         {options.map((option, index) => {
           return (

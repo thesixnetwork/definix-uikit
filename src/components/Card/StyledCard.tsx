@@ -31,7 +31,6 @@ const StyledCard = styled.div<StyledCardProps>`
   background-color: ${({ theme }) => theme.card.background};
   border-radius: ${pxToRem(spacing.S_16)};
   box-shadow: ${getBoxShadow};
-  overflow: hidden;
   position: relative;
   ${space}
   ${color}

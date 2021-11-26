@@ -18,8 +18,32 @@ export const Default: React.FC = () => {
       <div
         style={{
           position: "relative",
-          top: "100px",
+          marginTop: "100px",
           marginLeft: "100px",
+        }}
+      >
+        <DropdownSet
+          position="bottom"
+          options={[
+            {
+              id: "six",
+              label: "SIX",
+            },
+            {
+              id: "finix",
+              label: "FINIX",
+            },
+          ]}
+          onItemClick={(index) => console.log(index)}
+        />
+      </div>
+
+      <div
+        style={{
+          position: "relative",
+          marginTop: "100px",
+          marginLeft: "100px",
+          width: "200px",
         }}
       >
         <DropdownSet
