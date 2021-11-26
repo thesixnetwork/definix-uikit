@@ -65,6 +65,7 @@ import { ReactComponent as MainDefinixImgTextIcon } from "./icons/logo_main_defi
 import { ReactComponent as HelpOnIcon } from "./icons/ico_16_help_on.svg";
 import { ReactComponent as CopyIcon } from "./icons/ico_16_copy.svg";
 import { ReactComponent as ResetIcon } from "./icons/ico_16_closed.svg";
+import { ReactComponent as ErrorIcon } from "./icons/img_error.svg";
 
 export {
   GnbMySIcon,
@@ -133,4 +134,5 @@ export {
   HelpOnIcon,
   CopyIcon,
   ResetIcon,
+  ErrorIcon,
 };

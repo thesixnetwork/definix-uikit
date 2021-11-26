@@ -53,7 +53,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, Trans }) => {
           <Text mt="55px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
             <Trans i18nKey="Wallet Address" />
           </Text>
-          <Flex>
+          <Flex alignItems="center">
             <Text mt="2px" mr="4px" textStyle={TextStyles.R_18M} color={ColorStyles.BLACK}>
               {accountEllipsis}
             </Text>
