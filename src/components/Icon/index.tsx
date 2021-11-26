@@ -66,7 +66,7 @@ import { ReactComponent as HelpOnIcon } from "./icons/ico_16_help_on.svg";
 import { ReactComponent as CopyIcon } from "./icons/ico_16_copy.svg";
 import { ReactComponent as ResetIcon } from "./icons/ico_16_closed.svg";
 import { ReactComponent as ErrorIcon } from "./icons/img_error.svg";
-import { ReactComponent as UnSelectTokenIcon } from "./icons/img_token_unselect.svg"
+import { ReactComponent as UnSelectTokenIcon } from "./icons/img_token_unselect.svg";
 
 export {
   GnbMySIcon,
