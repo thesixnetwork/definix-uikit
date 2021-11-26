@@ -53,8 +53,12 @@ export const Default: React.FC = () => {
   return (
     <BrowserRouter>
       <Menu {...props}>
-        <ErrorBlock message={`알 수 없는 오류로 일시적인 문제가 발생하였습니다.
-        잠시 후에 다시 시도해주시길 바랍니다.`} label="Home" onBack={() => console.log('back')} />
+        <ErrorBlock
+          message={`알 수 없는 오류로 일시적인 문제가 발생하였습니다.
+        잠시 후에 다시 시도해주시길 바랍니다.`}
+          label="Home"
+          onBack={() => console.log("back")}
+        />
       </Menu>
     </BrowserRouter>
   );

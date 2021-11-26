@@ -1,9 +1,9 @@
 import React, { MouseEvent } from "react";
 import styled from "styled-components";
-import { Text } from '../Text';
+import { Text } from "../Text";
 import { Button } from "../Button";
 import { ErrorBlockProps } from "./types";
-import { ErrorIcon } from '../Icon';
+import { ErrorIcon } from "../Icon";
 import { NAV_HEIGHT_MOBILE } from "src/widgets/Menu/config";
 
 const Wrap = styled.div`
@@ -19,7 +19,7 @@ const Wrap = styled.div`
     padding-bottom: 28px;
     margin-top: 0;
   }
-`
+`;
 
 const Box = styled.div`
   display: flex;
@@ -39,7 +39,7 @@ const Box = styled.div`
     height: 100%;
     padding: 0 40px;
   }
-`
+`;
 
 const LabelText = styled(Text)`
   white-space: pre-line;
@@ -49,27 +49,37 @@ const LabelText = styled(Text)`
   ${({ theme }) => theme.mediaQueries.mobile} {
     margin-top: 40px;
   }
-`
+`;
 
 const BackButton = styled(Button)`
   margin-top: 24px;
   ${({ theme }) => theme.mediaQueries.mobile} {
     margin-top: 32px;
   }
-`
+`;
 
 const ErrorBlock: React.FC<ErrorBlockProps> = ({ message, label, onBack }) => {
   return (
     <Wrap>
       <Box>
         <ErrorIcon />
-        <LabelText textStyle="R_14R" color="deepgrey">{message}</LabelText>
-        <BackButton lg width="128px" variant="brown" onClick={(e: MouseEvent) => {
-          e.preventDefault();
-          onBack && onBack();
-        }}>{label}</BackButton>
+        <LabelText textStyle="R_14R" color="deepgrey">
+          {message}
+        </LabelText>
+        <BackButton
+          lg
+          width="128px"
+          variant="brown"
+          onClick={(e: MouseEvent) => {
+            e.preventDefault();
+            onBack && onBack();
+          }}
+        >
+          {label}
+        </BackButton>
       </Box>
-    </Wrap>)
+    </Wrap>
+  );
 };
 
 export default ErrorBlock;
