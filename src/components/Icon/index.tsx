@@ -67,6 +67,8 @@ import { ReactComponent as CopyIcon } from "./icons/ico_16_copy.svg";
 import { ReactComponent as ResetIcon } from "./icons/ico_16_closed.svg";
 import { ReactComponent as ErrorIcon } from "./icons/img_error.svg";
 import { ReactComponent as UnSelectTokenIcon } from "./icons/img_token_unselect.svg";
+import { ReactComponent as ImgFarmIcon } from "./icons/img_farm.svg";
+import { ReactComponent as ImgPoolIcon } from "./icons/img_pool.svg";
 
 export {
   GnbMySIcon,
@@ -137,4 +139,6 @@ export {
   ResetIcon,
   ErrorIcon,
   UnSelectTokenIcon,
+  ImgFarmIcon,
+  ImgPoolIcon
 };
