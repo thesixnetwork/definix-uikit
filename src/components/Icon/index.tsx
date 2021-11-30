@@ -140,5 +140,5 @@ export {
   ErrorIcon,
   UnSelectTokenIcon,
   ImgFarmIcon,
-  ImgPoolIcon
+  ImgPoolIcon,
 };
