@@ -69,8 +69,8 @@ import { ReactComponent as ErrorIcon } from "./icons/img_error.svg";
 import { ReactComponent as UnSelectTokenIcon } from "./icons/img_token_unselect.svg";
 import { ReactComponent as ImgFarmIcon } from "./icons/img_farm.svg";
 import { ReactComponent as ImgPoolIcon } from "./icons/img_pool.svg";
-import { ReactComponent as ImgEmptyStateWallet } from './icons/img_empty_state_wallet.svg';
-import { ReactComponent as ImgEmptyStateLiquidity } from './icons/img_empty_state_liquidity.svg';
+import { ReactComponent as ImgEmptyStateWallet } from "./icons/img_empty_state_wallet.svg";
+import { ReactComponent as ImgEmptyStateLiquidity } from "./icons/img_empty_state_liquidity.svg";
 
 export {
   GnbMySIcon,
