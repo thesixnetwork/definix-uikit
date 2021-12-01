@@ -24,25 +24,25 @@ export const StyledHeading = styled(Heading)`
   margin-right: 16px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
-    font-size: ${({ theme }) => theme.textStyle.R_23B};
+    ${({ theme }) => theme.textStyle.R_23B};
     margin-right: 0;
   }
 `;
 export const StyledLink = styled.a`
-  font-size: ${({ theme }) => theme.textStyle.R_14R};
+  ${({ theme }) => theme.textStyle.R_14R};
   text-decoration: underline;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
-    font-size: ${({ theme }) => theme.textStyle.R_12R};
+    ${({ theme }) => theme.textStyle.R_12R};
     margin-top: 8px;
   }
 `;
 export const StyledDescription = styled.p`
-  font-size: ${({ theme }) => theme.textStyle.R_18R};
+  ${({ theme }) => theme.textStyle.R_18R};
   line-height: 1.44;
   color: ${({ theme }) => theme.colors.mediumgrey};
 
   ${({ theme }) => theme.mediaQueries.mobile} {
-    font-size: ${({ theme }) => theme.textStyle.R_12R};
+    ${({ theme }) => theme.textStyle.R_12R};
   }
 `;
