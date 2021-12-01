@@ -17,5 +17,4 @@ export const StyledAnountButton = styled.button`
 
   ${space}
   ${color}
-  
 `;
