@@ -16,8 +16,8 @@ const StyledToastContainer = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: calc(100% - ${INNER_MARGIN_PC * 2});
-    margin: ${NAV_HEIGHT_PC}px ${INNER_MARGIN_PC} 0;
+    width: calc(100% - ${INNER_MARGIN_PC * 2}px);
+    margin: ${NAV_HEIGHT_PC}px ${INNER_MARGIN_PC}px 0;
     z-index: 99;
   }
 
@@ -72,8 +72,8 @@ const StyledToastContainer = styled.div`
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     .toast-group {
-      width: calc(100% - ${INNER_MARGIN_MOBILE * 2});
-      margin: ${NAV_HEIGHT_MOBILE}px ${INNER_MARGIN_MOBILE} 0;
+      width: calc(100% - ${INNER_MARGIN_MOBILE * 2}px);
+      margin: ${NAV_HEIGHT_MOBILE}px ${INNER_MARGIN_MOBILE}px 0;
     }
 
     .toast {
