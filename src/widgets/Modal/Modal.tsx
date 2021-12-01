@@ -88,7 +88,7 @@ const Modal: React.FC<Props> = ({
   useEffect(() => {
     if (!modalRef.current) return;
     // modalRef.current.focus();
-    const firstFocusElement = modalRef.current.querySelectorAll('input, button, a')[0];
+    const firstFocusElement = modalRef.current.querySelectorAll("input, button, a")[0];
     (firstFocusElement as HTMLButtonElement).focus();
   }, []);
   return (
@@ -114,7 +114,7 @@ const Modal: React.FC<Props> = ({
         {children}
       </StyledModalBody>
     </StyledModal>
-  )
+  );
 };
 
 export default Modal;

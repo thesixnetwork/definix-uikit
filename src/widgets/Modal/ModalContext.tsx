@@ -26,8 +26,6 @@ const ModalWrapper = styled.div`
     top: ${NAV_HEIGHT_MOBILE}px;
     justify-content: flex-start;
   }
-
-
 `;
 
 export const Context = createContext<ModalsContext>({

@@ -10,9 +10,7 @@ const TitleSet: React.FC<TitleSetProps> = ({ title, link, linkLabel, description
     <StyledTitleSet {...props}>
       <Flex flexDirection="column">
         <Flex alignItems="flex-end" mb="16px">
-          <Title mr="16px">
-            {title}
-          </Title>
+          <Title mr="16px">{title}</Title>
           {link && linkLabel && (
             <StyledLink href={link} target="_blank">
               {linkLabel}

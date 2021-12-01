@@ -136,5 +136,5 @@ export {
   ResetIcon,
   ErrorIcon,
   UnSelectTokenIcon,
-  SearchIcon
+  SearchIcon,
 };
