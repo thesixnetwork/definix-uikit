@@ -14,10 +14,12 @@ export const StyledTitleSet = styled.div`
 `;
 export const StyledTitle = styled(Flex)`
   align-items: flex-end;
+  margin-bottom: 16px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 8px;
   }
 `;
 export const StyledHeading = styled(Heading)`

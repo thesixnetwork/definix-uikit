@@ -10,13 +10,12 @@ export const StyledAnountButton = styled.button`
   border-radius: 13px;
   border: 1px solid ${({ theme }) => theme.colors.lightgrey};
   background-color: transparent;
-  font-size: 14px;
-  line-height: 1.43;
   text-align: center;
   color: ${({ theme }) => theme.colors.deepgrey};
-  font-weight: 500;
   cursor: pointer;
+  ${({ theme }) => theme.textStyle.R_14R}
 
   ${space}
   ${color}
+  
 `;
