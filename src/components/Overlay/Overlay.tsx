@@ -12,6 +12,7 @@ const Overlay = styled.div.attrs({ role: "presentation" })<OverlayProps>`
   opacity: ${({ show }) => (show ? 0.3 : 0)};
   z-index: ${({ zIndex }) => zIndex};
   pointer-events: ${({ show }) => (show ? "initial" : "none")};
+  overflow: hidden;
 `;
 
 Overlay.defaultProps = {

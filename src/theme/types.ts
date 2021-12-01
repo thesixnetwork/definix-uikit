@@ -11,6 +11,7 @@ export type MediaQueries = {
   xxl: string;
   nav: string;
   mobile: string;
+  mobileMd: string;
   mobileXl: string;
 };
 

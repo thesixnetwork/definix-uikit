@@ -20,6 +20,7 @@ const mediaQueries: MediaQueries = {
   xxl: `@media screen and (min-width: ${breakpointMap.xxl}px)`,
   nav: `@media screen and (min-width: ${breakpointMap.lg}px)`,
 
+  mobileMd: `@media screen and (max-width: ${breakpointMap.md}px)`,
   mobile: `@media screen and (max-width: ${breakpointMap.lg}px)`,
   mobileXl: `@media screen and (max-width: ${breakpointMap.xl}px)`,
 };

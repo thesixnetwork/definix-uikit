@@ -1,13 +1,14 @@
 import React, { useCallback, useLayoutEffect, useMemo, useRef } from "react";
 import styled from "styled-components";
-import { Box } from "../Box";
+import { Flex } from "../Box";
 import { Text } from "../Text";
 import { HelpOnIcon } from "../Icon";
 import { HelperProps } from "./types";
 
-const HelperStyled = styled(Box)`
+const HelperStyled = styled(Flex)`
   position: relative;
   width: fit-content;
+  align-items: center;
 
   &:hover > div {
     opacity: 0.9;

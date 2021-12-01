@@ -2,6 +2,7 @@ import React, { createContext, useState } from "react";
 import styled from "styled-components";
 import Overlay from "../../components/Overlay/Overlay";
 import { Handler } from "./types";
+import { NAV_HEIGHT_MOBILE } from "../Menu/config";
 
 interface ModalsContext {
   onPresent: (node: React.ReactNode, key?: string) => void;
@@ -20,6 +21,13 @@ const ModalWrapper = styled.div`
   bottom: 0;
   left: 0;
   z-index: ${({ theme }) => theme.zIndices.modal - 1};
+
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    top: ${NAV_HEIGHT_MOBILE}px;
+    justify-content: flex-start;
+  }
+
+
 `;
 
 export const Context = createContext<ModalsContext>({
