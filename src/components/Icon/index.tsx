@@ -70,6 +70,7 @@ import { ReactComponent as UnSelectTokenIcon } from "./icons/img_token_unselect.
 import { ReactComponent as ImgFarmIcon } from "./icons/img_farm.svg";
 import { ReactComponent as ImgPoolIcon } from "./icons/img_pool.svg";
 import { ReactComponent as ImgEmptyStateWallet } from './icons/img_empty_state_wallet.svg';
+import { ReactComponent as ImgEmptyStateLiquidity } from './icons/img_empty_state_liquidity.svg';
 
 export {
   GnbMySIcon,
@@ -143,4 +144,5 @@ export {
   ImgFarmIcon,
   ImgPoolIcon,
   ImgEmptyStateWallet,
+  ImgEmptyStateLiquidity,
 };
