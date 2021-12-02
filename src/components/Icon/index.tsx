@@ -71,6 +71,7 @@ import { ReactComponent as ImgFarmIcon } from "./icons/img_farm.svg";
 import { ReactComponent as ImgPoolIcon } from "./icons/img_pool.svg";
 import { ReactComponent as ImgEmptyStateWallet } from "./icons/img_empty_state_wallet.svg";
 import { ReactComponent as ImgEmptyStateLiquidity } from "./icons/img_empty_state_liquidity.svg";
+import { ReactComponent as ArrowDoubleArrowIcon } from "./icons/ico_16_arrow_double_arrow.svg";
 
 export {
   GnbMySIcon,
@@ -145,4 +146,5 @@ export {
   ImgPoolIcon,
   ImgEmptyStateWallet,
   ImgEmptyStateLiquidity,
+  ArrowDoubleArrowIcon,
 };
