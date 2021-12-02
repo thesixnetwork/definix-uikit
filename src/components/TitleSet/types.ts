@@ -5,5 +5,6 @@ export interface TitleSetProps extends SpaceProps {
   link?: string;
   linkLabel?: string;
   description: string;
+  linkBottom?: boolean;
   children?: React.ReactNode;
 }
