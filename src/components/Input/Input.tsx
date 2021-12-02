@@ -3,7 +3,7 @@ import { textStyle, ColorStyles } from "../../theme";
 import styled, { css } from "styled-components";
 import { InputProps, BaseInputProps } from "./types";
 import { Flex } from "../Box";
-import { layout } from "styled-system";
+import { border, color, layout, position, space } from "styled-system";
 
 const StyledInput = styled.input<BaseInputProps>`
   border: 0;
@@ -40,6 +40,7 @@ const StyledFlex = styled(Flex)`
   border-radius: 8px;
   padding-right: 16px;
   ${layout}
+  ${space}
 `;
 
 StyledInput.defaultProps = {

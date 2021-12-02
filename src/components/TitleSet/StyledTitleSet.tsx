@@ -12,31 +12,32 @@ export const StyledTitleSet = styled.div`
 
   ${space}
 `;
-export const StyledTitle = styled(Flex)`
+export const StyledTitle = styled(Flex)<{ linkBottom?: boolean }>`
+  flex-direction: row;
   align-items: flex-end;
   margin-bottom: 16px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 8px;
+    flex-direction: ${({ linkBottom }) => (linkBottom ? "column" : "row")};
+    align-items: ${({ linkBottom }) => (linkBottom ? "flex-start" : "flex-end")};
+    margin-bottom: ${({ linkBottom }) => (linkBottom ? "8px" : "16px")};
   }
 `;
-export const StyledHeading = styled(Heading)`
+export const StyledHeading = styled(Heading)<{ linkBottom?: boolean }>`
   margin-right: 16px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     ${({ theme }) => theme.textStyle.R_23B};
-    margin-right: 0;
+    margin-right: ${({ linkBottom }) => (linkBottom ? "0" : "16px")};
   }
 `;
-export const StyledLink = styled.a`
+export const StyledLink = styled.a<{ linkBottom?: boolean }>`
   ${({ theme }) => theme.textStyle.R_14R};
   text-decoration: underline;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     ${({ theme }) => theme.textStyle.R_12R};
-    margin-top: 8px;
+    margin-top: ${({ linkBottom }) => (linkBottom ? "4px" : "0")};
   }
 `;
 export const StyledDescription = styled.p`
