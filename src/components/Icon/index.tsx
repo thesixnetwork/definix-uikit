@@ -73,6 +73,7 @@ import { ReactComponent as ImgEmptyStateWallet } from "./icons/img_empty_state_w
 import { ReactComponent as ImgEmptyStateLiquidity } from "./icons/img_empty_state_liquidity.svg";
 import { ReactComponent as ArrowDoubleArrowIcon } from "./icons/ico_16_arrow_double_arrow.svg";
 import { ReactComponent as ChangeBottomIcon } from "./icons/ico_42_change_bottom.svg";
+import { ReactComponent as ArrowChangeIcon } from "./icons/ico-16-arrow-change.svg";
 
 export {
   GnbMySIcon,
@@ -149,4 +150,5 @@ export {
   ImgEmptyStateLiquidity,
   ArrowDoubleArrowIcon,
   ChangeBottomIcon,
+  ArrowChangeIcon,
 };
