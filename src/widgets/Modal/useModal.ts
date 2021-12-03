@@ -1,11 +1,13 @@
-import { useCallback, useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect, cloneElement } from "react";
 import { Context } from "./ModalContext";
 import { Handler } from "./types";
 
-const useModal = (modal: React.ReactNode, closeOnOverlayClick = true): [Handler, Handler] => {
+const useModal = (modal: React.ReactElement, closeOnOverlayClick = true, updateModal?: () => React.ReactElement): [Handler, Handler] => {
   const { onPresent, onDismiss, setCloseOnOverlayClick } = useContext(Context);
-  const onPresentCallback = useCallback(() => {
-    onPresent(modal);
+  const onPresentCallback = useCallback((props?: any) => {
+    onPresent(cloneElement(modal, {
+      ...(props || {})
+    }));
   }, [modal, onPresent]);
 
   useEffect(() => {
