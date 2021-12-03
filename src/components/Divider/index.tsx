@@ -1,2 +1,3 @@
 export { default as Divider } from "./Divider";
-export type { DividerProps } from "./types";
+export { default as VDivider } from "./VDivider";
+export type { DividerProps, VDividerProps } from "./types";
