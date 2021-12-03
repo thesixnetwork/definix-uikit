@@ -6,7 +6,7 @@ interface StyledAnountButton {
 }
 
 export const StyledAnountButton = styled.button`
-  padding: 3px 11px 2px 11px;
+  padding: 1px 11px 2px 11px;
   border-radius: 13px;
   border: 1px solid ${({ theme }) => theme.colors.lightgrey};
   background-color: transparent;
@@ -14,7 +14,6 @@ export const StyledAnountButton = styled.button`
   color: ${({ theme }) => theme.colors.deepgrey};
   cursor: pointer;
   ${({ theme }) => theme.textStyle.R_14R}
-
   ${space}
   ${color}
 `;
