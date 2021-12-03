@@ -16,6 +16,21 @@ const HelperStyled = styled(Flex)`
   }
 `;
 
+const StyledIcon = styled(HelpOnIcon)`
+  cursor: pointer;
+  &:hover {
+    g {
+      fill: currentColor;
+    }
+    rect {
+      fill: #fff;
+    }
+    path {
+      stroke: #fff;
+    }
+  }
+`;
+
 const PopoverStyled = styled(Text)<{ position: string }>`
   transition: 0.2s;
   width: max-content;
@@ -37,6 +52,7 @@ const PopoverStyled = styled(Text)<{ position: string }>`
   background: rgb(0, 0, 0, 0.6);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05);
   color: ${({ theme }) => theme.colors.white};
+  white-space: inherit;
 `;
 
 const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...props }) => {
@@ -65,7 +81,7 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
 
   return (
     <HelperStyled className={className} {...props}>
-      <HelpOnIcon
+      <StyledIcon
         width={16}
         height={16}
         onMouseEnter={() => popoverRef.current && updatePosition(popoverRef.current)}

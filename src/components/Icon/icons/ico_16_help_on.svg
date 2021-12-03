@@ -1,6 +1,9 @@
-<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-    <g fill="none" fill-rule="evenodd">
-        <circle fill="currentColor" cx="8" cy="8" r="7"/>
-        <path d="M8.12 10.26a.6.6 0 1 1 0 1.2.6.6 0 0 1 0-1.2zm-.08-5.723c1.245 0 2.16 1.147 1.953 2.286-.092.506-.342.898-.725 1.263l-.459.406c-.118.124-.153.226-.13.507a.55.55 0 0 1-1.096.093c-.05-.592.092-1.006.432-1.361l.124-.116.37-.326c.23-.218.358-.418.402-.663.087-.474-.324-.989-.87-.989-.435 0-.826.24-1.028.617a.55.55 0 1 1-.97-.518 2.263 2.263 0 0 1 1.998-1.199z" fill="#FFF"/>
+<svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(0 .5)" fill="none" fill-rule="evenodd">
+        <circle stroke="currentColor" stroke-width="1.2" cx="8" cy="8" r="6.4"/>
+        <g transform="translate(6.528 5.087)">
+            <rect fill="currentColor" x=".992" y="5.174" width="1.2" height="1.2" rx=".6"/>
+            <path d="M1.603 3.958c-.04-.483.083-.727.28-.934.264-.275.904-.633 1.041-1.387C3.061.883 2.46 0 1.513 0 .858 0 .288.368 0 .908" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+        </g>
     </g>
 </svg>
