@@ -4,6 +4,7 @@ import { Flex } from "../Box";
 import { Text } from "../Text";
 import { HelpOnIcon } from "../Icon";
 import { HelperProps } from "./types";
+import { throttle } from "lodash";
 
 const HelperStyled = styled(Flex)`
   position: relative;
@@ -69,15 +70,14 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
     target.style.cssText = `left: ${left}px; top: ${top}px; bottom: auto`;
   }, []);
 
+  const delayedUpdatePosition = useCallback(
+    throttle((target) => updatePosition(target), 500),
+    []
+  );
+
   const resetPosition = useCallback((target: HTMLDivElement) => {
     target.style.cssText = "";
   }, []);
-
-  useLayoutEffect(() => {
-    if (popoverRef.current) {
-      updatePosition(popoverRef.current);
-    }
-  }, [text, position, popoverRef]);
 
   return (
     <HelperStyled className={className} {...props}>
@@ -85,6 +85,7 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
         width={16}
         height={16}
         onMouseEnter={() => popoverRef.current && updatePosition(popoverRef.current)}
+        onMouseMove={() => popoverRef.current && delayedUpdatePosition(popoverRef.current)}
         onMouseLeave={() => popoverRef.current && resetPosition(popoverRef.current)}
       />
       <PopoverStyled textStyle="R_12R" position={position} ref={popoverRef}>
