@@ -4,6 +4,7 @@ import { Flex } from "../Box";
 import { Text } from "../Text";
 import { HelpOnIcon } from "../Icon";
 import { HelperProps } from "./types";
+import { throttle } from "lodash";
 
 const HelperStyled = styled(Flex)`
   position: relative;
@@ -11,8 +12,7 @@ const HelperStyled = styled(Flex)`
   align-items: center;
 
   &:hover > div {
-    opacity: 0.9;
-    visibility: visible;
+    display: block;
   }
 `;
 
@@ -32,7 +32,6 @@ const StyledIcon = styled(HelpOnIcon)`
 `;
 
 const PopoverStyled = styled(Text)<{ position: string }>`
-  transition: 0.2s;
   width: max-content;
   max-width: 280px;
   position: absolute;
@@ -47,8 +46,7 @@ const PopoverStyled = styled(Text)<{ position: string }>`
   line-height: 1.5;
   padding: 8px 10px;
   border-radius: 16px;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   background: rgb(0, 0, 0, 0.6);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05);
   color: ${({ theme }) => theme.colors.white};
@@ -69,15 +67,14 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
     target.style.cssText = `left: ${left}px; top: ${top}px; bottom: auto`;
   }, []);
 
+  const delayedUpdatePosition = useCallback(
+    throttle((target) => updatePosition(target), 500),
+    []
+  );
+
   const resetPosition = useCallback((target: HTMLDivElement) => {
     target.style.cssText = "";
   }, []);
-
-  useLayoutEffect(() => {
-    if (popoverRef.current) {
-      updatePosition(popoverRef.current);
-    }
-  }, [text, position, popoverRef]);
 
   return (
     <HelperStyled className={className} {...props}>
@@ -85,6 +82,7 @@ const Helper: React.FC<HelperProps> = ({ text, position = "left", className, ...
         width={16}
         height={16}
         onMouseEnter={() => popoverRef.current && updatePosition(popoverRef.current)}
+        onMouseMove={() => popoverRef.current && delayedUpdatePosition(popoverRef.current)}
         onMouseLeave={() => popoverRef.current && resetPosition(popoverRef.current)}
       />
       <PopoverStyled textStyle="R_12R" position={position} ref={popoverRef}>
