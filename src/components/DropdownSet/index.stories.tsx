@@ -9,11 +9,11 @@ export default {
 };
 
 export const Default: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const [isOpen2, setIsOpen2] = useState(false)
-  const [activeIndex2, setActiveIndex2] = useState(0)
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [activeIndex2, setActiveIndex2] = useState(0);
   return (
     <div
       style={{
@@ -42,8 +42,8 @@ export const Default: React.FC = () => {
             },
           ]}
           onOptionClick={(index) => {
-            setActiveIndex(index)
-            setIsOpen(false)
+            setActiveIndex(index);
+            setIsOpen(false);
           }}
           onButtonClick={() => setIsOpen(!isOpen)}
         />
@@ -72,8 +72,8 @@ export const Default: React.FC = () => {
             },
           ]}
           onOptionClick={(index) => {
-            setActiveIndex2(index)
-            setIsOpen2(false)
+            setActiveIndex2(index);
+            setIsOpen2(false);
           }}
           onButtonClick={() => setIsOpen2(!isOpen2)}
         />
