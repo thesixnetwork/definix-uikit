@@ -34,8 +34,10 @@ export interface DropdownOption {
 export interface DropdownSetProps extends PositionProps, Omit<SPositionProps, "position">, LayoutProps {
   scale?: Scale;
   options: DropdownOption[];
-  defaultIndex?: number;
-  onItemClick?: (index: number) => void;
+  isOpen: boolean;
+  activeIndex: number;
+  onButtonClick: () => void;
+  onOptionClick: (index: number) => void;
 }
 
 export interface DropdownItemProps extends HTMLAttributes<HTMLDivElement> {

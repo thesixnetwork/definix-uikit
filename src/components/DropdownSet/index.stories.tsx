@@ -9,6 +9,11 @@ export default {
 };
 
 export const Default: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const [isOpen2, setIsOpen2] = useState(false)
+  const [activeIndex2, setActiveIndex2] = useState(0)
   return (
     <div
       style={{
@@ -24,6 +29,8 @@ export const Default: React.FC = () => {
       >
         <DropdownSet
           position="bottom"
+          isOpen={isOpen}
+          activeIndex={activeIndex}
           options={[
             {
               id: "six",
@@ -34,7 +41,11 @@ export const Default: React.FC = () => {
               label: "FINIX",
             },
           ]}
-          onItemClick={(index) => console.log(index)}
+          onOptionClick={(index) => {
+            setActiveIndex(index)
+            setIsOpen(false)
+          }}
+          onButtonClick={() => setIsOpen(!isOpen)}
         />
       </div>
 
@@ -48,6 +59,8 @@ export const Default: React.FC = () => {
       >
         <DropdownSet
           position="bottom"
+          isOpen={isOpen2}
+          activeIndex={activeIndex2}
           options={[
             {
               id: "six",
@@ -58,7 +71,11 @@ export const Default: React.FC = () => {
               label: "FINIX",
             },
           ]}
-          onItemClick={(index) => console.log(index)}
+          onOptionClick={(index) => {
+            setActiveIndex2(index)
+            setIsOpen2(false)
+          }}
+          onButtonClick={() => setIsOpen2(!isOpen2)}
         />
       </div>
     </div>

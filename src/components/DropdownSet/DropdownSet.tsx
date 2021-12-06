@@ -40,18 +40,18 @@ const Container = styled.div`
 `;
 
 const DropdownSet: React.FC<DropdownSetProps> = ({
-  defaultIndex,
   position = "bottom",
   options,
-  onItemClick,
   scale,
+  isOpen,
+  activeIndex,
+  onButtonClick,
+  onOptionClick,
   ...props
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(defaultIndex || 0);
   return (
     <Container>
-      <DropdownButton width="100%" onClick={() => setIsOpen(!isOpen)}>
+      <DropdownButton width="100%" onClick={onButtonClick}>
         {options[activeIndex].label}
       </DropdownButton>
       <DropdownContent position={position} isOpen={isOpen} {...props}>
@@ -60,11 +60,7 @@ const DropdownSet: React.FC<DropdownSetProps> = ({
             <DropdownItem
               scale={scale}
               isActive={activeIndex === index}
-              onClick={() => {
-                setActiveIndex(index);
-                onItemClick && onItemClick(index);
-                setIsOpen(false);
-              }}
+              onClick={() => onOptionClick(index)}
             >
               {option.label}
             </DropdownItem>
