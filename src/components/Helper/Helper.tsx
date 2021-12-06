@@ -12,8 +12,7 @@ const HelperStyled = styled(Flex)`
   align-items: center;
 
   &:hover > div {
-    opacity: 0.9;
-    visibility: visible;
+    display: block;
   }
 `;
 
@@ -33,7 +32,6 @@ const StyledIcon = styled(HelpOnIcon)`
 `;
 
 const PopoverStyled = styled(Text)<{ position: string }>`
-  transition: 0.2s;
   width: max-content;
   max-width: 280px;
   position: absolute;
@@ -48,8 +46,7 @@ const PopoverStyled = styled(Text)<{ position: string }>`
   line-height: 1.5;
   padding: 8px 10px;
   border-radius: 16px;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   background: rgb(0, 0, 0, 0.6);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05);
   color: ${({ theme }) => theme.colors.white};
