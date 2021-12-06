@@ -1,5 +1,6 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled, { css, DefaultTheme } from "styled-components";
 import { space } from "styled-system";
+import { textStyle } from "../../theme";
 import Flex from "../Box/Flex";
 
 interface StyledTabBoxProps {
@@ -24,7 +25,7 @@ export const StyledTabArea = styled.div`
   ${space}
 `;
 
-export const StyledBorderBottom = styled.div<{ isSelected: boolean }>`
+export const StyledBorderBottom = styled.div<{ isSelected?: boolean }>`
   position: absolute;
   left: 0;
   bottom: 0;
@@ -34,20 +35,14 @@ export const StyledBorderBottom = styled.div<{ isSelected: boolean }>`
   ${space}
 `;
 
-export const StyledTab = styled.div<{ isSelected: boolean }>`
+export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; width?: string }>`
   position: relative;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1.5;
   text-align: center;
   cursor: pointer;
   color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : theme.colors.lightgrey)};
-
-  padding: 13px 26px;
-  ${({ theme }) => theme.mediaQueries.xl} {
-    padding: 18px 26px;
-  }
+  padding: ${({ small }) => (small ? "18px 12px" : "20px 48px")};
+  ${({ small }) => css(small ? textStyle.R_14B : textStyle.R_16B)}
+  ${({ width }) => width && `width: ${width}`}
   ${space}
 `;
 

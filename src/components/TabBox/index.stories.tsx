@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 /* eslint-disable import/no-unresolved */
 import { Meta } from "@storybook/react/types-6-0";
 import TabBox from "./TabBox";
+import Tabs from "./Tabs";
 import { Card } from "../Card";
 
 const Row = styled.div`
@@ -44,6 +45,25 @@ export const WrappedCard: React.FC = () => {
           <TabBox tabs={tabs}></TabBox>
         </Card>
       </Row>
+    </div>
+  );
+};
+
+export const TabAndContent: React.FC = () => {
+  const tabNames = useMemo(() => tabs.map(({ name }) => name), [tabs]);
+  const [curTab, setCurTab] = useState<string>(tabNames[0]);
+  const Add = tabs[0].component;
+  const Remove = tabs[1].component;
+
+  return (
+    <div style={{ padding: "32px", width: "500px" }}>
+      <Row>
+        <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} />
+      </Row>
+      <Row>
+        <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} small width="50%" />
+      </Row>
+      <Row>{tabs.map(({ name, component }) => (curTab === name ? component : null))}</Row>
     </div>
   );
 };
