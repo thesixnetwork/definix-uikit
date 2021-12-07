@@ -7,7 +7,7 @@ import { Box } from "../Box";
 const StyledVDivider = styled(Box)`
   height: 1px;
   ${space}
-`
+`;
 
 const Divider: React.FC<DividerProps> = ({ color = "border", ...props }) => {
   return <StyledVDivider backgroundColor={color} {...props} />;
