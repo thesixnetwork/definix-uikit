@@ -16,6 +16,7 @@ export const StyledTitle = styled(Flex)<{ linkBottom?: boolean }>`
   flex-direction: row;
   align-items: flex-end;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     flex-direction: ${({ linkBottom }) => (linkBottom ? "column" : "row")};
