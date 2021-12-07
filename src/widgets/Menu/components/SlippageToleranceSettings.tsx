@@ -9,7 +9,6 @@ import { Text } from "../../../components/Text";
 import { ColorStyles } from "../../../theme/colors";
 import { TextStyles } from "../../../theme/text";
 import { SlippageToleranceProps, TranslateProps } from "../types";
-// import Helper from 'uikit-dev/components/Helper'
 
 interface Props extends SlippageToleranceProps, TranslateProps {}
 

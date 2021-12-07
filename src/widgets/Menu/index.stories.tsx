@@ -25,7 +25,7 @@ const Stub = styled.div`
 const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
 
 const Trans = ({ i18nKey }) => {
-  return <div>{i18nKey}</div>;
+  return <span>{i18nKey}</span>;
 };
 
 // This hook is used to simulate a props change, and force a re rendering
@@ -101,9 +101,16 @@ export const Connected: React.FC = () => {
 
 export const NotConnected: React.FC = () => {
   const props = useProps();
+  const [account, setAccount] = useState(null);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setAccount('123123')
+  //   }, 1000);
+  // }, []);
   return (
     <BrowserRouter>
-      <Menu {...props} account={null}>
+      <Menu {...props} account={account}>
         <div>
           <h1>Page body</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore

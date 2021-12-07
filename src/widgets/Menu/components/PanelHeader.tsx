@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Flex } from "../../../components/Box";
-import { PanelProps, PushedProps, TranslateProps, UserProps } from "../types";
+import { PushedProps } from "../types";
 import { MainDefinixImgTextIcon } from "../../../components/Icon";
 import UserBlock from "./UserBlock";
 import { hexToRGB } from "../../../style/mixin";
 import { ColorStyles } from "../../../theme";
 import { useMatchBreakpoints } from "../../../hooks";
-
-interface Props extends PanelProps, PushedProps, UserProps, TranslateProps {}
 
 const MobileHeader = styled(Flex)`
   flex-direction: column;
@@ -23,12 +21,12 @@ const StyledHeader = styled(Flex)`
   justify-content: center;
 `;
 
-const PanelHeader: React.FC<Props> = ({ pushNav, ...props }) => {
+const PanelHeader: React.FC = () => {
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
   return isMobile ? (
     <MobileHeader>
-      <UserBlock {...props} />
+      <UserBlock />
     </MobileHeader>
   ) : (
     <StyledHeader>

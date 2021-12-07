@@ -2,13 +2,12 @@ import React from "react";
 import { useMatchBreakpoints } from "../../../hooks";
 import { ChainToggle, ChainToggleItem } from "../../../components/ButtonMenu";
 import { TokenKbnbIcon, TokenKlayIcon } from "../../../components/Icon";
-import { TranslateProps } from "../types";
+import { useMenu } from "../MenuContext";
 
-interface Props extends TranslateProps {}
-
-const Chain: React.FC<Props> = ({ Trans }) => {
+const Chain: React.FC = () => {
   const { isMaxXl } = useMatchBreakpoints();
   const isMobile = isMaxXl;
+  const { Trans } = useMenu();
 
   return (
     <div>

@@ -14,6 +14,7 @@ import Chain from "./Chain";
 import SettingsModal from "./SettingsModal";
 import { useMatchBreakpoints } from "../../../hooks";
 import { useHistory } from "react-router";
+import { useMenu } from "../MenuContext";
 
 const MobileNav = styled.nav`
   position: fixed;
@@ -60,11 +61,18 @@ const getIsTop = () => {
 
 const Nav: React.FC<NavProps> = (props) => {
   const history = useHistory();
+  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance } = useMenu();
   const { isPushed, pushNav } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const [isTop, setIsTop] = useState(getIsTop());
   const isMobile = isMaxLg;
-  const [onPresentSettingModal] = useModal(<SettingsModal {...props} />, false);
+  const [onPresentSettingModal] = useModal(<SettingsModal {...{
+    Trans,
+    setDeadline,
+    deadline,
+    setUserslippageTolerance,
+    userSlippageTolerance
+  }} />, false);
   const refPrevIsTop = useRef<boolean>(getIsTop());
 
   useEffect(() => {
@@ -96,7 +104,7 @@ const Nav: React.FC<NavProps> = (props) => {
           <IconButton onClick={() => onPresentSettingModal()}>
             <SettingIcon />
           </IconButton>
-          {props.account && (
+          {account && (
             <IconButton ml="S_16" onClick={() => history.push("/my")}>
               <GnbMyMobileIcon />
             </IconButton>
@@ -107,7 +115,7 @@ const Nav: React.FC<NavProps> = (props) => {
   }
   return (
     <StyledNav isTop={isTop}>
-      <Chain {...props} />
+      <Chain />
       <Flex position="absolute" right={pxToRem(60)}>
         <IconButton mr="S_16" onClick={() => onPresentSettingModal()}>
           <SettingIcon />

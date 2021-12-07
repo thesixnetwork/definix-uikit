@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Panel from "./components/Panel";
@@ -8,7 +8,6 @@ import {
   NAV_HEIGHT_MOBILE,
   INNER_MARGIN_PC,
   INNER_MARGIN_MOBILE,
-  links as defaultLinks,
   SIDEBAR_WIDTH_FULL_PC,
   DIM_ZINDEX,
   INNTER_ZINDEX,
@@ -16,6 +15,7 @@ import {
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
+import MenuProvider, { useMenu } from "./MenuContext";
 
 const Wrapper = styled.div`
   position: relative;
@@ -73,25 +73,22 @@ const Dim = styled.div`
 
 const Menu: React.FC<MenuProps> = (props) => {
   const {
-    // account,
-    // login,
-    // logout,
-    // Trans,
-    // langs,
-    // setLang,
-    // currentLang,
-    links,
-    // profile,
     children,
   } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
   const [isPushed, setIsPushed] = useState(!isMobile);
+  const { setState } = useMenu();
+
+  useEffect(() => {
+    setState(props);
+  }, [props])
+
   return (
     <Wrapper>
       <TopBackground />
-      <Nav {...props} isPushed={isPushed} pushNav={setIsPushed} />
-      <Panel {...props} isPushed={isPushed} pushNav={setIsPushed} links={links || defaultLinks} />
+      <Nav isPushed={isPushed} pushNav={setIsPushed} />
+      <Panel isPushed={isPushed} pushNav={setIsPushed} />
       <Container>
         <Inner>{children}</Inner>
       </Container>
@@ -99,6 +96,14 @@ const Menu: React.FC<MenuProps> = (props) => {
       <Footer isMobile={isMobile} />
     </Wrapper>
   );
+}
+
+const WrapMenu: React.FC<MenuProps> = (props) => {
+  return (
+    <MenuProvider {...props}>
+      <Menu {...props} />
+    </MenuProvider>
+  );
 };
 
-export default Menu;
+export default WrapMenu;

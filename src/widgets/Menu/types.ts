@@ -77,19 +77,14 @@ export interface TransactionDeadLineProps {
   setDeadline: (value: number) => void;
 }
 
-export interface SettingsModalProps extends SlippageToleranceProps, TransactionDeadLineProps, TranslateProps {
+export interface SettingsModalProps extends TranslateProps, SlippageToleranceProps, TransactionDeadLineProps {
   onDismiss?: () => void;
 }
 
-export interface PanelProps extends LangProps, UserProps, TranslateProps, MenuEntryConfigProps, PushedProps {}
+export interface PanelProps extends PushedProps {}
 
 export interface NavProps
-  extends UserProps,
-    MenuEntryConfigProps,
-    PushedProps,
-    TranslateProps,
-    SlippageToleranceProps,
-    TransactionDeadLineProps {}
+  extends PushedProps {}
 
 export interface MenuProps
   extends LangProps,

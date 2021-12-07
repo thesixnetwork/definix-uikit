@@ -9,9 +9,8 @@ import { AlertIcon } from "../../../components/Icon";
 import { TextStyles } from "../../../theme/text";
 import { ColorStyles } from "../../../theme/colors";
 import { TransactionDeadLineProps, TranslateProps } from "../types";
-// import Helper from 'uikit-dev/components/Helper'
 
-interface Props extends TransactionDeadLineProps, TranslateProps {}
+interface Props extends TranslateProps, TransactionDeadLineProps {}
 
 const StyledTransactionDeadlineSetting = styled.div`
   margin-top: 4px;

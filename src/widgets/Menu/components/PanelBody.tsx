@@ -6,10 +6,11 @@ import * as IconModule from "../../../components/Icon";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
 import MenuLink from "./MenuLink";
-import { PanelProps, PushedProps } from "../types";
+import { PushedProps } from "../types";
 import { useMatchBreakpoints } from "../../../hooks";
+import { useMenu } from "../MenuContext";
 
-interface Props extends PanelProps, PushedProps {}
+interface Props extends PushedProps {}
 
 const Icons = IconModule as unknown as { [key: string]: React.FC<SvgProps> };
 
@@ -55,8 +56,9 @@ const V1MenuLink = styled(MenuLink)`
   }
 `;
 
-const PanelBody: React.FC<Props> = ({ isPushed, pushNav, links, Trans }) => {
+const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
   const { isMobile } = useMatchBreakpoints();
+  const { links, Trans } = useMenu();
   const location = useLocation();
 
   // Close the menu when a user clicks a link on mobile

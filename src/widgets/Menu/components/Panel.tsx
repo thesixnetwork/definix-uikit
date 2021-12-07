@@ -82,19 +82,19 @@ const Panel: React.FC<PanelProps> = (props) => {
       <MobilePanelHeaderFixed {...props} />
       <WrapScrollPanel>
         <ContainerScrollPanel>
-          <PanelHeader {...props} />
+          <PanelHeader />
           <WrapBodyFooter>
             <PanelBody {...props} />
-            <PanelFooter {...props} />
+            <PanelFooter />
           </WrapBodyFooter>
         </ContainerScrollPanel>
       </WrapScrollPanel>
     </StyledPanel>
   ) : (
     <StyledPanel {...props}>
-      <PanelHeader {...props} />
+      <PanelHeader />
       <PanelBody {...props} />
-      <PanelFooter {...props} />
+      <PanelFooter />
     </StyledPanel>
   );
 };

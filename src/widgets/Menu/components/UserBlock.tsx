@@ -8,11 +8,9 @@ import { MoreNIcon, GnbMySIcon } from "../../../components/Icon";
 import { ColorStyles } from "../../../theme/colors";
 import { TextStyles } from "../../../theme/text";
 import { useMatchBreakpoints } from "../../../hooks";
-import { TranslateProps, UserProps } from "../types";
+import { localStorageKey, connectorLocalStorageKey } from "../../WalletModal/config";
 import WalletDropdown from "./WalletDropdown";
-import { localStorageKey, connectorLocalStorageKey } from "src/widgets/WalletModal/config";
-
-interface Props extends UserProps, TranslateProps {}
+import { useMenu } from "../MenuContext";
 
 const Wrapper = styled.div`
   position: relative;
@@ -34,10 +32,11 @@ const StyledButton = styled.a`
   background-color: ${({ theme }) => theme.colors[ColorStyles.DEEPBROWN]};
 `;
 
-const UserBlock: React.FC<Props> = ({ account, login, logout, Trans }) => {
+const UserBlock: React.FC = () => {
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
-  const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
+  const { account, login, logout, Trans } = useMenu();
+  const { onPresentConnectModal } = useWalletModal(Trans, login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
   const onLogout = () => {

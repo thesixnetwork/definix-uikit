@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
-import { PanelProps, PushedProps } from "../types";
+import { useMenu } from "../MenuContext";
+import { PushedProps } from "../types";
 import LangSelector from "./LangSelector";
-
-interface Props extends PanelProps, PushedProps {}
 
 const Container = styled.div`
   position: fixed;
@@ -22,7 +21,8 @@ const Container = styled.div`
   }
 `;
 
-const PanelFooter: React.FC<Props> = ({ isPushed, pushNav, currentLang, langs, setLang }) => {
+const PanelFooter: React.FC = () => {
+  const { currentLang, langs, setLang } = useMenu();
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
