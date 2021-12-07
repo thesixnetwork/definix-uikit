@@ -13,6 +13,7 @@ export type MediaQueries = {
   mobile: string;
   mobileMd: string;
   mobileXl: string;
+  mobileSwap: string;
 };
 
 export type Spacing = {

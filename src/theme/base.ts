@@ -23,6 +23,7 @@ const mediaQueries: MediaQueries = {
   mobileMd: `@media screen and (max-width: ${breakpointMap.md}px)`,
   mobile: `@media screen and (max-width: ${breakpointMap.lg}px)`,
   mobileXl: `@media screen and (max-width: ${breakpointMap.xl}px)`,
+  mobileSwap: `@media screen and (max-width: ${breakpointMap.lg}px)`,
 };
 
 export const shadows = {
