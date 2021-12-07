@@ -83,8 +83,7 @@ export interface SettingsModalProps extends TranslateProps, SlippageTolerancePro
 
 export interface PanelProps extends PushedProps {}
 
-export interface NavProps
-  extends PushedProps {}
+export interface NavProps extends PushedProps {}
 
 export interface MenuProps
   extends LangProps,

@@ -2,17 +2,13 @@ import React, { createContext, useState, useCallback, useContext } from "react";
 import { links } from "./config";
 import { MenuProps } from "./types";
 
-interface MenuState extends MenuProps {
-
-}
+interface MenuState extends MenuProps {}
 
 interface MenuContext extends MenuState {
   setState: (state: Partial<MenuState>) => void;
 }
 
-const Trans = ({ i18nKey }: {
-  i18nKey: string;
-}) => {
+const Trans = ({ i18nKey }: { i18nKey: string }) => {
   return <div>{i18nKey}</div>;
 };
 
@@ -23,7 +19,7 @@ export const Context = createContext<MenuContext>({
   Trans,
   langs: [],
   setLang: () => null,
-  currentLang: 'en',
+  currentLang: "en",
   links,
   setDeadline: () => null,
   setUserslippageTolerance: () => null,
@@ -40,15 +36,15 @@ const MenuProvider: React.FC<MenuState> = ({ children, ...rest }) => {
       return {
         ...prev,
         ...nextState,
-      }
-    })
-  }, [])
+      };
+    });
+  }, []);
 
   return (
     <Context.Provider
       value={{
         ...state,
-        setState: updateState
+        setState: updateState,
       }}
     >
       {children}
@@ -57,7 +53,7 @@ const MenuProvider: React.FC<MenuState> = ({ children, ...rest }) => {
 };
 
 export const useMenu = () => {
-  return useContext(Context)
-}
+  return useContext(Context);
+};
 
 export default MenuProvider;

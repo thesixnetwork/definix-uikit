@@ -66,13 +66,18 @@ const Nav: React.FC<NavProps> = (props) => {
   const { isMaxLg } = useMatchBreakpoints();
   const [isTop, setIsTop] = useState(getIsTop());
   const isMobile = isMaxLg;
-  const [onPresentSettingModal] = useModal(<SettingsModal {...{
-    Trans,
-    setDeadline,
-    deadline,
-    setUserslippageTolerance,
-    userSlippageTolerance
-  }} />, false);
+  const [onPresentSettingModal] = useModal(
+    <SettingsModal
+      {...{
+        Trans,
+        setDeadline,
+        deadline,
+        setUserslippageTolerance,
+        userSlippageTolerance,
+      }}
+    />,
+    false
+  );
   const refPrevIsTop = useRef<boolean>(getIsTop());
 
   useEffect(() => {

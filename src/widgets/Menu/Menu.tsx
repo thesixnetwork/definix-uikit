@@ -72,9 +72,7 @@ const Dim = styled.div`
 `;
 
 const Menu: React.FC<MenuProps> = (props) => {
-  const {
-    children,
-  } = props;
+  const { children } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
   const [isPushed, setIsPushed] = useState(!isMobile);
@@ -82,7 +80,7 @@ const Menu: React.FC<MenuProps> = (props) => {
 
   useEffect(() => {
     setState(props);
-  }, [props])
+  }, [props]);
 
   return (
     <Wrapper>
@@ -96,7 +94,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <Footer isMobile={isMobile} />
     </Wrapper>
   );
-}
+};
 
 const WrapMenu: React.FC<MenuProps> = (props) => {
   return (
