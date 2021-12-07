@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { StyledContentArea, Wrap } from "./StyledTabBox";
 import { TabBoxProps } from "./types";
-import Flex from "../Box/Flex";
-import TabArea from "./TabArea";
-import Tab from "./Tab";
 import { isEqual } from "lodash";
+import Tabs from "./Tabs";
 
-const TabBox: React.FC<TabBoxProps> = ({ tabs, small, children, ...props }) => {
+const TabBox: React.FC<TabBoxProps> = ({ tabs, small, equal, children, ...props }) => {
   const [curTab, setCurTab] = useState<string>(tabs[0]?.name);
   const tabNames = useRef(tabs.map(({ name }) => name));
 
@@ -25,15 +23,7 @@ const TabBox: React.FC<TabBoxProps> = ({ tabs, small, children, ...props }) => {
 
   return (
     <Wrap>
-      <TabArea isSelected>
-        <Flex>
-          {tabs.map(({ name }, i) => (
-            <Tab key={`tab-${name}`} small={small} isSelected={curTab === name} onClick={() => onClickTab(name)}>
-              {name}
-            </Tab>
-          ))}
-        </Flex>
-      </TabArea>
+      <Tabs tabs={tabNames.current} curTab={curTab} setCurTab={onClickTab} small={small} equal={equal} />
       <StyledContentArea {...props}>
         {tabs.map(({ name, component }) => (curTab === name ? component : null))}
       </StyledContentArea>

@@ -2,11 +2,11 @@ import React from "react";
 import { StyledBorderBottom, StyledTab } from "./StyledTabBox";
 import { TabProps } from "./types";
 
-const Tab: React.FC<TabProps> = ({ onClick, isSelected, children, small, width }) => {
+const Tab: React.FC<TabProps> = ({ onClick, isSelected, children, small, ...props }) => {
   return (
-    <StyledTab width={width} small={small} onClick={onClick} isSelected={isSelected}>
+    <StyledTab small={small} onClick={onClick} isSelected={isSelected} {...props}>
       {children}
-      <StyledBorderBottom isSelected={isSelected} style={{ zIndex: 1 }} />
+      <StyledBorderBottom isSelected={isSelected} />
     </StyledTab>
   );
 };

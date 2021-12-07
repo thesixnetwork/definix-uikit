@@ -4,7 +4,7 @@ import Flex from "../Box/Flex";
 import TabArea from "./TabArea";
 import Tab from "./Tab";
 
-const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, small, ...props }) => {
+const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, small, ...props }) => {
   useEffect(() => {
     setCurTab(tabs[0]);
   }, [tabs]);
@@ -18,6 +18,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, small, ...props })
             small={small}
             isSelected={curTab === name}
             onClick={() => setCurTab(name)}
+            {...(equal && { style: { flex: "1 1 0px" } })}
             {...props}
           >
             {name}
