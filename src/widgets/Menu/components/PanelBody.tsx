@@ -67,7 +67,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
   return (
     <Container>
       {links.map((entry) => {
-        const isActive = entry.href === location.pathname;
+        const isActive = (entry.href === location.pathname) || (entry.href === '/' + location.pathname.split('/')[1]);
         const Icon = Icons[entry.icon];
         const ActiveIcon = Icons[entry.activeIcon];
         const iconElement = <Icon width="24px" />;
