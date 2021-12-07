@@ -5,12 +5,12 @@ import { Box } from "../Box";
 import styled from "styled-components";
 import { space } from "styled-system";
 
-const StyledVDivider = styled(Box)<{ color: string }>`
+const StyledVDivider = styled(Box)<{ bdcolor: string }>`
   margin: 0;
   flex-shrink: 0;
   border-width: 0;
   border-style: solid;
-  border-color: ${({ color, theme }) => theme.colors[color] || theme.colors[ColorStyles.LIGHTGREY]};
+  border-color: ${({ bdcolor, theme }) => theme.colors[bdcolor] || theme.colors.border};
   border-bottom-width: 0;
   height: auto;
   border-right-width: thin;
@@ -18,7 +18,7 @@ const StyledVDivider = styled(Box)<{ color: string }>`
   ${space}
 `;
 
-const VDivider: React.FC<DividerProps> = ({ color = "lightgrey", ...props }) => {
-  return <StyledVDivider as="hr" color={color} {...props} />;
+const VDivider: React.FC<DividerProps> = ({ color = "border", ...props }) => {
+  return <StyledVDivider as="hr" bdcolor={color} {...props} />;
 };
 export default VDivider;
