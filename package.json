@@ -87,7 +87,9 @@
   },
   "bundledDependencies": [
     "polished",
-    "copy-to-clipboard"
+    "copy-to-clipboard",
+    "react-popper",
+    "@popperjs/core"
   ],
   "dependencies": {
     "@types/lodash": "^4.14.162",
@@ -95,6 +97,7 @@
     "copy-to-clipboard": "^3.3.1",
     "lodash": "^4.17.20",
     "polished": "^4.1.3",
+    "react-popper": "^2.2.5",
     "react-transition-group": "^4.4.1",
     "styled-system": "^5.1.5"
   }
