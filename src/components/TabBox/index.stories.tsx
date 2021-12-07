@@ -33,6 +33,12 @@ export const Default: React.FC = () => {
       <Row>
         <TabBox tabs={tabs}></TabBox>
       </Row>
+      <Row>
+        <TabBox tabs={tabs} equal></TabBox>
+      </Row>
+      <Row>
+        <TabBox tabs={tabs} small equal></TabBox>
+      </Row>
     </div>
   );
 };
@@ -61,7 +67,7 @@ export const TabAndContent: React.FC = () => {
         <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} />
       </Row>
       <Row>
-        <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} small width="50%" />
+        <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} small equal />
       </Row>
       <Row>{tabs.map(({ name, component }) => (curTab === name ? component : null))}</Row>
     </div>
