@@ -3,19 +3,19 @@ import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Panel from "./components/Panel";
 import { MenuProps } from "./types";
+import theme from '../../theme/base';
 import {
   NAV_HEIGHT_PC,
   NAV_HEIGHT_MOBILE,
   INNER_MARGIN_PC,
   INNER_MARGIN_MOBILE,
   SIDEBAR_WIDTH_FULL_PC,
-  DIM_ZINDEX,
-  INNTER_ZINDEX,
 } from "./config";
 import { pxToRem } from "../../style/mixin";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import MenuProvider, { useMenu } from "./MenuContext";
+import { Overlay } from "src/components/Overlay";
 
 const Wrapper = styled.div`
   position: relative;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: relative;
-  z-index: ${INNTER_ZINDEX};
+  z-index: ${({ theme }) => theme.zIndices.inner};
   padding-left: ${SIDEBAR_WIDTH_FULL_PC}px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
@@ -58,17 +58,6 @@ const Inner = styled.div`
   }
 `;
 
-const Dim = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: ${({ theme }) => theme.colors.black30};
-  z-index: ${DIM_ZINDEX};
-  pointer-events: none;
-`;
-
 const Menu: React.FC<MenuProps> = (props) => {
   const { children } = props;
   const { isMaxLg } = useMatchBreakpoints();
@@ -88,7 +77,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <Container>
         <Inner>{children}</Inner>
       </Container>
-      {isMobile && isPushed && <Dim />}
+      {isMobile && isPushed && <Overlay zIndex={theme.zIndices.sidebar - 1} show onClick={() => setIsPushed(false)} />}
       <Footer isMobile={isMobile} />
     </Wrapper>
   );

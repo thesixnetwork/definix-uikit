@@ -60,6 +60,9 @@ export type Colors = {
 export type ZIndices = {
   dropdown: number;
   modal: number;
+  nav: number;
+  inner: number;
+  sidebar: number;
   [key: string]: number;
 };
 

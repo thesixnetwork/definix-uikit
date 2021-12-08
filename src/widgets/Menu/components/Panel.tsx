@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { hexToRGB } from "../../../style/mixin";
 import PanelBody from "./PanelBody";
 import PanelFooter from "./PanelFooter";
-import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE, SIDEBAR_ZINDEX } from "../config";
+import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
 import { PanelProps } from "../types";
 import PanelHeader from "./PanelHeader";
 import { ColorStyles } from "../../../theme";
@@ -24,7 +24,7 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
   width: ${SIDEBAR_WIDTH_FULL_PC}px;
   transition: transform 0.2s;
   border-right: ${({ theme }) => `1px solid ${hexToRGB(theme.colors[ColorStyles.PALE], 0.3)}`};
-  z-index: ${SIDEBAR_ZINDEX};
+  z-index: ${({ theme }) => theme.zIndices.sidebar};
   overflow: hidden;
 
   ${({ theme }) => theme.mediaQueries.mobile} {

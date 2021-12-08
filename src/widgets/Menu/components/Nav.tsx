@@ -3,7 +3,7 @@ import _ from "lodash";
 import styled from "styled-components";
 import { Box, Flex } from "../../../components/Box";
 import { IconButton } from "../../../components/Button";
-import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, NAV_ZINDEX, SIDEBAR_WIDTH_FULL_PC } from "../config";
+import { NAV_HEIGHT_PC, NAV_HEIGHT_MOBILE, SIDEBAR_WIDTH_FULL_PC } from "../config";
 import { MainDefinixTextIcon, MenuIcon, SettingIcon, GnbMyMobileIcon } from "../../../components/Icon";
 import { hexToRGB, pxToRem } from "../../../style/mixin";
 import { NavProps } from "../types";
@@ -28,7 +28,7 @@ const MobileNav = styled.nav`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
-  z-index: ${NAV_ZINDEX};
+  z-index: ${({ theme }) => theme.zIndices.nav};
 
   /* ${({ theme }) => theme.mediaQueries.lg} {
     display: none;
@@ -45,7 +45,7 @@ const StyledNav = styled.nav<{ isTop: boolean }>`
   justify-content: center;
   align-items: center;
   padding: 0 ${pxToRem(60)};
-  z-index: ${NAV_ZINDEX};
+  z-index: ${({ theme }) => theme.zIndices.nav};
   transition: background-color 0.2s;
 
   ${({ theme, isTop }) =>

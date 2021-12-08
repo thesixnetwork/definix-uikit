@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Text from "../../components/Text/Text";
-import Flex from "../../components/Box/Flex";
+import { Box, Flex, FlexProps } from "../../components/Box";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { InjectedProps } from "./types";
@@ -35,6 +35,7 @@ const StyledModal = styled(Flex)<{ mobileFull: boolean }>`
     `
     border-radius: ${theme.spacing.S_16}px;
     ${theme.mediaQueries.mobileMd} {
+      flex: 1 1 auto;
       border-radius: 0;
       padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
       padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
@@ -60,7 +61,7 @@ const ModalTitle = styled(Flex)`
   flex: 1;
 `;
 
-const StyledModalBody = styled(Flex)<{ noPadding: boolean }>`
+const StyledModalBody = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }>`
   position: relative;
   flex: 1;
   ${({ noPadding, theme }) =>
@@ -72,7 +73,37 @@ const StyledModalBody = styled(Flex)<{ noPadding: boolean }>`
       padding-right: 24px;
     }
   `};
+
+  ${({ mobileFull, theme }) =>
+    mobileFull &&
+    `
+    ${theme.mediaQueries.mobileMd} {
+      flex: 4;
+    }
+  `}
 `;
+
+const StyledModalFooter = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }>`
+  width: 100%;
+  flex: 1;
+  ${({ noPadding, theme }) =>
+    !noPadding &&
+    `
+    padding: 0px 20px 24px;
+    ${theme.mediaQueries.xs} {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  `};
+
+  ${({ mobileFull, theme }) =>
+    mobileFull &&
+    `
+    ${theme.mediaQueries.mobileMd} {
+      flex: 1;
+    }
+  `}
+`
 
 const Modal: React.FC<Props> = ({
   title,
@@ -88,9 +119,10 @@ const Modal: React.FC<Props> = ({
   useEffect(() => {
     if (!modalRef.current) return;
     // modalRef.current.focus();
-    const firstFocusElement = modalRef.current.querySelectorAll("input, button, a")[0];
-    (firstFocusElement as HTMLButtonElement).focus();
+    // const firstFocusElement = modalRef.current.querySelectorAll("input, button, a")[0];
+    // (firstFocusElement as HTMLButtonElement).focus();
   }, []);
+
   return (
     <StyledModal ref={modalRef} mobileFull={mobileFull}>
       {!hideHeader && (
@@ -110,11 +142,37 @@ const Modal: React.FC<Props> = ({
           )}
         </ModalHeader>
       )}
-      <StyledModalBody flexDirection="column" noPadding={noPadding}>
-        {children}
+      <StyledModalBody flexDirection="column" noPadding={noPadding} mobileFull={mobileFull}>
+        {React.Children.map(children, (child: React.ReactNode) => {
+          if (!React.isValidElement(child)) {
+            return <></>
+          }
+          if ((child.type as any).name === 'ModalBody') {
+            return React.cloneElement(child);
+          }
+        })}
       </StyledModalBody>
+      {React.Children.map(children, (child: React.ReactNode) => {
+        if (!React.isValidElement(child)) {
+          return <></>
+        }
+        if ((child.type as any).name === 'ModalFooter') {
+          return <StyledModalFooter noPadding={noPadding} mobileFull={mobileFull}>
+            {React.cloneElement(child)}
+          </StyledModalFooter>
+        }
+      })}
     </StyledModal>
   );
 };
+
+
+export const ModalBody: React.FC<FlexProps> = ({ children, ...props }) => {
+  return <Flex position="relative" flexDirection="column" width="100%" {...props}>{children}</Flex>
+}
+
+export const ModalFooter: React.FC<FlexProps> = ({ children, ...props }) => {
+  return <Flex position="relative" flexDirection="column" width="100%" justifyContent="flex-end" {...props}>{children}</Flex>
+}
 
 export default Modal;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "../../../components/Box";
-import { Modal } from "../../Modal";
+import { Modal, ModalBody } from "../../Modal";
 import { SettingsModalProps } from "../types";
 import SlippageToleranceSetting from "./SlippageToleranceSettings";
 import TransactionDeadlineSetting from "./TransactionDeadlineSetting";
@@ -11,10 +11,10 @@ const SettingsModal: React.FC<SettingsModalProps> = (props) => {
   const { onDismiss = defaultOnDismiss, Trans } = props;
   return (
     <Modal title={<Trans i18nKey="Setting" />} onDismiss={onDismiss}>
-      <Box>
+      <ModalBody>
         <SlippageToleranceSetting {...props} />
         <TransactionDeadlineSetting {...props} />
-      </Box>
+      </ModalBody>
     </Modal>
   );
 };

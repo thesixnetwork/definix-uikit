@@ -7,6 +7,7 @@ import Checkbox from "../../components/Checkbox/Checkbox";
 import CheckboxLabel from "../../components/Checkbox/CheckboxLabel";
 import Box from "../../components/Box/Box";
 import Text from "../../components/Text/Text";
+import { ModalBody, ModalFooter } from "./Modal";
 
 export default {
   title: "Widgets/Modal[Ing]",
@@ -20,13 +21,17 @@ interface CustomModalProps extends InjectedProps {
 
 const CustomModal: React.FC<CustomModalProps> = ({ title, onDismiss }) => (
   <Modal title={title} onDismiss={onDismiss}>
-    <Heading>{title}</Heading>
-    <Button>This button Does nothing</Button>
+    <ModalBody>
+      <Heading>{title}</Heading>
+    </ModalBody>
+    <ModalFooter>
+      <Button>This button Does nothing</Button>
+    </ModalFooter>
   </Modal>
 );
 const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
   <Modal title="Disclaimers" hideCloseButton mobileFull onDismiss={onDismiss}>
-    <Box maxWidth="438px">
+    <ModalBody maxWidth="438px">
       <Box
         border="1px solid"
         borderColor="lightgrey"
@@ -79,6 +84,8 @@ const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
       <CheckboxLabel control={<Checkbox />} className="my-5">
         <Text textStyle="R_14R">I have read all the information above and agree to using the service.</Text>
       </CheckboxLabel>
+    </ModalBody>
+    <ModalFooter>
       <Button scale="40" width="100%" onClick={onDismiss}>
         Confirm
       </Button>
@@ -87,7 +94,7 @@ const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
           Do not show this message for 14 days
         </Text>
       </CheckboxLabel>
-    </Box>
+    </ModalFooter>
   </Modal>
 );
 

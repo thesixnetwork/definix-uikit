@@ -114,9 +114,6 @@ export const NAV_HEIGHT_MOBILE = 56;
 export const INNER_MARGIN_PC = 60;
 export const INNER_MARGIN_MOBILE = 20;
 
-export const NAV_ZINDEX = 89;
-export const INNTER_ZINDEX = 88;
-export const DIM_ZINDEX = 90;
 export const SIDEBAR_ZINDEX = 91;
 
 export const SIDEBAR_WIDTH_REDUCED = 56;

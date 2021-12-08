@@ -80,6 +80,9 @@ const radii = {
 const zIndices = {
   dropdown: 10,
   modal: 100,
+  nav: 90,
+  inner: 85,
+  sidebar: 95,
 };
 
 export default {

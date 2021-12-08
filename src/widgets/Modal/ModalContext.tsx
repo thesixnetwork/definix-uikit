@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import styled from "styled-components";
 import Overlay from "../../components/Overlay/Overlay";
+import theme from '../../theme/base';
 import { Handler } from "./types";
 import { NAV_HEIGHT_MOBILE } from "../Menu/config";
 
@@ -17,15 +18,11 @@ const ModalWrapper = styled.div`
   align-items: center;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: calc(100% - constant(safe-area-inset-top));
+  height: calc(100% - env(safe-area-inset-top));
   z-index: ${({ theme }) => theme.zIndices.modal - 1};
-
-  ${({ theme }) => theme.mediaQueries.mobile} {
-    top: ${NAV_HEIGHT_MOBILE}px;
-    justify-content: flex-start;
-  }
 `;
 
 export const Context = createContext<ModalsContext>({
@@ -65,7 +62,7 @@ const ModalProvider: React.FC = ({ children }) => {
     >
       {isOpen && (
         <ModalWrapper>
-          <Overlay show onClick={handleOverlayDismiss} />
+          <Overlay show zIndex={theme.zIndices.modal - 1} onClick={handleOverlayDismiss} />
           {React.isValidElement(modalNode) &&
             React.cloneElement(modalNode, {
               onDismiss: handleDismiss,
