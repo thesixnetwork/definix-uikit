@@ -53,6 +53,7 @@ export const spacing: Spacing = {
   S_4: 4,
   S_6: 6,
   S_8: 8,
+  S_10: 10,
   S_12: 12,
   S_14: 14,
   S_16: 16,
