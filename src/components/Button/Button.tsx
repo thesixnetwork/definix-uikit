@@ -68,7 +68,7 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
           {Array(4)
             .fill(0)
             .map((val, index) => (
-              <StyledLoadingDot index={index} />
+              <StyledLoadingDot key={index} index={index} />
             ))}
         </StyledLoading>
       ) : (
