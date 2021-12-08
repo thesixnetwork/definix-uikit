@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useMatchBreakpoints } from "../../hooks";
 import Panel from "./components/Panel";
 import { MenuProps } from "./types";
-import theme from '../../theme/base';
+import theme from "../../theme/base";
 import {
   NAV_HEIGHT_PC,
   NAV_HEIGHT_MOBILE,

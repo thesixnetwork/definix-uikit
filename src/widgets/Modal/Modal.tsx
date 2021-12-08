@@ -103,7 +103,7 @@ const StyledModalFooter = styled(Flex)<{ noPadding: boolean; mobileFull: boolean
       flex: 1;
     }
   `}
-`
+`;
 
 const Modal: React.FC<Props> = ({
   title,
@@ -145,34 +145,43 @@ const Modal: React.FC<Props> = ({
       <StyledModalBody flexDirection="column" noPadding={noPadding} mobileFull={mobileFull}>
         {React.Children.map(children, (child: React.ReactNode) => {
           if (!React.isValidElement(child)) {
-            return <></>
+            return <></>;
           }
-          if ((child.type as any).name === 'ModalBody') {
+          if ((child.type as any).name === "ModalBody") {
             return React.cloneElement(child);
           }
         })}
       </StyledModalBody>
       {React.Children.map(children, (child: React.ReactNode) => {
         if (!React.isValidElement(child)) {
-          return <></>
+          return <></>;
         }
-        if ((child.type as any).name === 'ModalFooter') {
-          return <StyledModalFooter noPadding={noPadding} mobileFull={mobileFull}>
-            {React.cloneElement(child)}
-          </StyledModalFooter>
+        if ((child.type as any).name === "ModalFooter") {
+          return (
+            <StyledModalFooter noPadding={noPadding} mobileFull={mobileFull}>
+              {React.cloneElement(child)}
+            </StyledModalFooter>
+          );
         }
       })}
     </StyledModal>
   );
 };
 
-
 export const ModalBody: React.FC<FlexProps> = ({ children, ...props }) => {
-  return <Flex position="relative" flexDirection="column" width="100%" {...props}>{children}</Flex>
-}
+  return (
+    <Flex position="relative" flexDirection="column" width="100%" {...props}>
+      {children}
+    </Flex>
+  );
+};
 
 export const ModalFooter: React.FC<FlexProps> = ({ children, ...props }) => {
-  return <Flex position="relative" flexDirection="column" width="100%" justifyContent="flex-end" {...props}>{children}</Flex>
-}
+  return (
+    <Flex position="relative" flexDirection="column" width="100%" justifyContent="flex-end" {...props}>
+      {children}
+    </Flex>
+  );
+};
 
 export default Modal;
