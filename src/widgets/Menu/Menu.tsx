@@ -52,9 +52,7 @@ const Inner = styled.div`
   position: relative;
   padding: ${NAV_HEIGHT_PC + 28}px ${pxToRem(INNER_MARGIN_PC)} 0;
   min-height: calc(100vh - ${NAV_HEIGHT_PC}px);
-
-  outline: 1px solid blue;
-
+  /* outline: 1px solid blue; */
   ${({ theme }) => theme.mediaQueries.mobileXl} {
     padding: ${NAV_HEIGHT_MOBILE + 28}px ${pxToRem(INNER_MARGIN_MOBILE)} 0;
   }
