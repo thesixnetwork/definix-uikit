@@ -122,13 +122,13 @@ const Modal: React.FC<Props> = ({
   const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!modalRef.current) return;
-    modalRef.current.focus();
+    // modalRef.current.focus();
     // const firstFocusElement = modalRef.current.querySelectorAll("input, button, a")[0];
     // (firstFocusElement as HTMLButtonElement).focus();
   }, []);
 
   return (
-    <StyledModal ref={modalRef} mobileFull={mobileFull} tabIndex={0}>
+    <StyledModal ref={modalRef} mobileFull={mobileFull}>
       {!hideHeader && (
         <ModalHeader>
           <ModalTitle>
