@@ -23,6 +23,7 @@ const StyledModal = styled(Flex)<{ mobileFull: boolean }>`
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
+  align-self: center;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
@@ -34,7 +35,8 @@ const StyledModal = styled(Flex)<{ mobileFull: boolean }>`
     mobileFull &&
     `
     border-radius: ${theme.spacing.S_16}px;
-    ${theme.mediaQueries.mobileMd} {
+    ${theme.mediaQueries.mobile} {
+      align-self: flex-start;
       flex: 1 1 auto;
       border-radius: 0;
       padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
@@ -77,7 +79,7 @@ const StyledModalBody = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }
   ${({ mobileFull, theme }) =>
     mobileFull &&
     `
-    ${theme.mediaQueries.mobileMd} {
+    ${theme.mediaQueries.mobile} {
       flex: 4;
     }
   `}
@@ -99,7 +101,9 @@ const StyledModalFooter = styled(Flex)<{ noPadding: boolean; mobileFull: boolean
   ${({ mobileFull, theme }) =>
     mobileFull &&
     `
-    ${theme.mediaQueries.mobileMd} {
+    ${theme.mediaQueries.mobile} {
+      padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
+      padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
       flex: 1;
     }
   `}
@@ -118,13 +122,13 @@ const Modal: React.FC<Props> = ({
   const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!modalRef.current) return;
-    // modalRef.current.focus();
+    modalRef.current.focus();
     // const firstFocusElement = modalRef.current.querySelectorAll("input, button, a")[0];
     // (firstFocusElement as HTMLButtonElement).focus();
   }, []);
 
   return (
-    <StyledModal ref={modalRef} mobileFull={mobileFull}>
+    <StyledModal ref={modalRef} mobileFull={mobileFull} tabIndex={0}>
       {!hideHeader && (
         <ModalHeader>
           <ModalTitle>

@@ -1,9 +1,8 @@
 import React, { createContext, useState } from "react";
 import styled from "styled-components";
 import Overlay from "../../components/Overlay/Overlay";
-import theme from "../../theme/base";
+import theme from '../../theme/base';
 import { Handler } from "./types";
-import { NAV_HEIGHT_MOBILE } from "../Menu/config";
 
 interface ModalsContext {
   onPresent: (node: React.ReactNode, key?: string) => void;
@@ -13,15 +12,13 @@ interface ModalsContext {
 
 const ModalWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex: 1;
   justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: calc(100% - constant(safe-area-inset-top));
-  height: calc(100% - env(safe-area-inset-top));
+  right: 0;
+  bottom: 0;
   z-index: ${({ theme }) => theme.zIndices.modal - 1};
 `;
 
