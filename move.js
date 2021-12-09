@@ -19,8 +19,7 @@ try {
 try {
   execSync('rm *.tgz')
 } catch (e) {
-  console.error('remove tgz failed.');
-  process.exit(-1);
+  console.warn('remove tgz failed.');
 }
 
 try {
@@ -42,7 +41,7 @@ if (args.length > 0 && args[0] === '-d') {
     Object.entries(envConfig).map(([, value]) => {
       if (value !== '') {
         const target = path.resolve(__dirname, value)
-        execSync(`cp -rf ${unpackPath}/ ${target}/node_modules/definixswap-uikit`, {
+        execSync(`cp -rf ${unpackPath}/ ${target}/node_modules/definixswap-uikit-v2`, {
           stdio: 'inherit'
         });
       }
@@ -63,7 +62,7 @@ try {
     if (value !== '') {
       const target = path.resolve(__dirname, value)
       try {
-        execSync(`cd ${target} && yarn remove definixswap-uikit`, {
+        execSync(`cd ${target} && yarn remove definixswap-uikit-v2`, {
           stdio: 'inherit'
         })
       } catch (e) {
