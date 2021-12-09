@@ -76,7 +76,7 @@ import { ReactComponent as ChangeBottomIcon } from "./icons/ico_42_change_bottom
 import { ReactComponent as ArrowChangeIcon } from "./icons/ico-16-arrow-change.svg";
 import { ReactComponent as NotiIcon } from "./icons/ico_16_noti.svg";
 import { ReactComponent as ImgRebalancingIcon } from "./icons/img_rebalancing.svg";
-import { ReactComponent as ChangePlusIcon } from './icons/ico-42-change-plus.svg';
+import { ReactComponent as ChangePlusIcon } from "./icons/ico-42-change-plus.svg";
 
 export {
   GnbMySIcon,

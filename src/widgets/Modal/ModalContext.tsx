@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 import styled from "styled-components";
 import Overlay from "../../components/Overlay/Overlay";
-import theme from '../../theme/base';
+import theme from "../../theme/base";
 import { Handler } from "./types";
 
 interface ModalsContext {
