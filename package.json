@@ -19,7 +19,6 @@
     "build-storybook": "build-storybook",
     "test": "jest",
     "release": "yarn build && np",
-    "move": "node move.js",
     "move:d": "node move.js -d"
   },
   "husky": {
