@@ -16,6 +16,12 @@ try {
   process.exit(-1);
 }
 
+try {
+  execSync('rm *.tgz')
+} catch (e) {
+  console.error('remove tgz failed.');
+  process.exit(-1);
+}
 
 try {
   execSync(`npm run build && npm pack`, {
