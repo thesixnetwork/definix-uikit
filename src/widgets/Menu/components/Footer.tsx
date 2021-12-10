@@ -16,7 +16,7 @@ const StyledFooter = styled.div`
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     left: 0;
-      width: 100%;
+    width: 100%;
   }
 `;
 
@@ -31,7 +31,7 @@ const Inner = styled.div`
     flex-direction: column;
     flex-wrap: wrap-reverse;
     justify-content: stretch;
- 
+
     > div {
       width: 100%;
     }
@@ -68,7 +68,7 @@ const WrapIcon = styled.div`
     width: 48px;
     height: 27px;
   }
-`
+`;
 
 const CopyRightText = styled(Text)`
   ${({ theme }) => theme.textStyle.R_14R}
@@ -76,14 +76,14 @@ const CopyRightText = styled(Text)`
   ${({ theme }) => theme.mediaQueries.mobile} {
     ${({ theme }) => theme.textStyle.R_12R}
   }
-`
+`;
 
 const AuditText = styled(CopyRightText)`
   margin-top: 6px;
   ${({ theme }) => theme.mediaQueries.mobile} {
     margin-top: 2px;
   }
-`
+`;
 
 const Footer: React.FC = () => {
   const { Trans } = useMenu();
@@ -92,11 +92,7 @@ const Footer: React.FC = () => {
       <Inner>
         <LeftFlex>
           <WrapIcon>
-            <LogoFooterSixIcon
-              viewBox="0 0 86 48"
-              width="100%"
-              height="100%"
-            />
+            <LogoFooterSixIcon viewBox="0 0 86 48" width="100%" height="100%" />
           </WrapIcon>
           <StyledFlex>
             <CopyRightText>
