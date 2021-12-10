@@ -52,10 +52,12 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
 
   return (
     <StyledButton
-      {...(as ? {} : {
-        startIcon,
-        endIcon,
-      })}
+      {...(as
+        ? {}
+        : {
+            startIcon,
+            endIcon,
+          })}
       $isLoading={isLoading}
       className={classNames.join(" ")}
       disabled={isDisabled}
