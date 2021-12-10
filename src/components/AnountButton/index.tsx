@@ -1,2 +1,2 @@
 export { default as AnountButton } from "./AnountButton";
-export type { AnountButtonProps } from "./types";
+export type { AnountButtonProps } from "./AnountButton";
