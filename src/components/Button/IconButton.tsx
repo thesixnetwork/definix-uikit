@@ -14,7 +14,7 @@ const StyledIconButton = styled(StyledButton)<BaseButtonProps>`
 `;
 
 const IconButton = <E extends ElementType = "button">(props: IconButtonProps<E>): JSX.Element => {
-  const { children, ...rest} = props;
+  const { children, ...rest } = props;
   return <StyledIconButton {...rest}>{children}</StyledIconButton>;
 };
 export default IconButton;
