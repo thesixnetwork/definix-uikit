@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ElementType } from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import StyledButton from "./StyledButton";
-import { BaseButtonProps, PolymorphicComponent, IconButtonProps } from "./types";
+import { BaseButtonProps, IconButtonProps } from "./types";
 
-const StyledIconButton: PolymorphicComponent<BaseButtonProps, "button"> = styled(StyledButton)<BaseButtonProps>`
+const StyledIconButton = styled(StyledButton)<BaseButtonProps>`
   padding: 4px;
   width: auto;
   border-radius: 0;
@@ -13,7 +13,8 @@ const StyledIconButton: PolymorphicComponent<BaseButtonProps, "button"> = styled
   ${space}
 `;
 
-const IconButton: React.FC<IconButtonProps> = ({ children, ...props }) => {
-  return <StyledIconButton {...props}>{children}</StyledIconButton>;
+const IconButton = <E extends ElementType = "button">(props: IconButtonProps<E>): JSX.Element => {
+  const { children, ...rest} = props;
+  return <StyledIconButton {...rest}>{children}</StyledIconButton>;
 };
 export default IconButton;

@@ -105,7 +105,7 @@ const Nav: React.FC<NavProps> = (props) => {
             <SettingIcon />
           </IconButton>
           {account && (
-            <IconButton ml="S_16" onClick={() => onLink("/my")}>
+            <IconButton ml="S_16" as={Link} to="/my">
               <GnbMyMobileIcon />
             </IconButton>
           )}

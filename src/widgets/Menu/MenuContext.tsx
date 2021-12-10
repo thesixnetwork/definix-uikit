@@ -1,5 +1,6 @@
 import React, { createContext, useState, useCallback, useContext } from "react";
 import { links } from "./config";
+import { Link } from "react-router-dom";
 import { MenuProps } from "./types";
 
 interface MenuState extends MenuProps {}
@@ -10,10 +11,6 @@ interface MenuContext extends MenuState {
 
 const Trans = ({ i18nKey }: { i18nKey: string }) => {
   return <div>{i18nKey}</div>;
-};
-
-const Link = ({ to }: { to: string }) => {
-  return <a href={to}></a>;
 };
 
 export const Context = createContext<MenuContext>({

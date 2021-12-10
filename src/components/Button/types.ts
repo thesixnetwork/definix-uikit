@@ -69,7 +69,7 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;
 
-export type IconButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, SpaceProps>;
+export type IconButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;
 
 export interface ButtonGroupProps extends BoxProps {
   r?: string;

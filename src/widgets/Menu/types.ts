@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Login } from "../WalletModal/types";
 
 export interface LangType {
@@ -69,9 +70,7 @@ export interface TranslateProps {
 }
 
 export interface LinkProps {
-  Link: React.FC<{
-    to: string;
-  }>;
+  Link: typeof Link;
 }
 
 export interface SlippageToleranceProps {
