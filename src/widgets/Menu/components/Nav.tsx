@@ -29,10 +29,6 @@ const MobileNav = styled.nav`
   align-items: center;
   background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   z-index: ${({ theme }) => theme.zIndices.nav};
-
-  /* ${({ theme }) => theme.mediaQueries.lg} {
-    display: none;
-  } */
 `;
 
 const StyledNav = styled.nav<{ isTop: boolean }>`
@@ -56,7 +52,7 @@ const StyledNav = styled.nav<{ isTop: boolean }>`
 `;
 
 const getIsTop = () => {
-  return window.pageYOffset === 0;
+  return window.pageYOffset < 50;
 };
 
 const Nav: React.FC<NavProps> = (props) => {
@@ -88,7 +84,6 @@ const Nav: React.FC<NavProps> = (props) => {
         refPrevIsTop.current = isTopOfPage;
       }
     };
-    const throttledHandleScroll = _.throttle(handleScroll, 200);
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -104,7 +99,9 @@ const Nav: React.FC<NavProps> = (props) => {
             <MenuIcon />
           </IconButton>
         </Box>
-        <MainDefinixTextIcon />
+        <a href="/">
+          <MainDefinixTextIcon />
+        </a>
         <Box position="absolute" right={pxToRem(20)}>
           <IconButton onClick={() => onPresentSettingModal()}>
             <SettingIcon />

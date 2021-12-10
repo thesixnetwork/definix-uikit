@@ -64,6 +64,7 @@ export interface UserProps {
 export interface TranslateProps {
   Trans: React.FC<{
     i18nKey: string;
+    components?: any;
   }>;
 }
 

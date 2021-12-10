@@ -2,40 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import { Flex } from "../../../components/Box";
 import { Text } from "../../../components/Text";
-import { hexToRGB, pxToRem } from "../../../style/mixin";
 import { LogoFooterSixIcon } from "../../../components/Icon";
 import SocialLinks from "./SocialLinks";
-import { ColorStyles, TextStyles } from "../../../theme";
 import { SIDEBAR_WIDTH_FULL_PC } from "../config";
+import { useMenu } from "../MenuContext";
 
-interface Props {
-  isMobile: boolean;
-}
-
-const StyledFooter = styled.div<{ isMobile: boolean }>`
+const StyledFooter = styled.div`
   position: relative;
   overflow: hidden;
   left: ${SIDEBAR_WIDTH_FULL_PC}px;
   width: calc(100% - ${SIDEBAR_WIDTH_FULL_PC}px);
-  background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
+  background-color: ${({ theme }) => theme.colors.white};
 
-  ${({ isMobile }) =>
-    isMobile &&
-    `
-      left: 0;
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    left: 0;
       width: 100%;
-  `}
+  }
 `;
 
-const Inner = styled.div<{ isMobile: boolean }>`
+const Inner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px ${pxToRem(60)} 60px;
+  padding: 30px 60px 60px;
 
-  ${({ isMobile }) =>
-    isMobile &&
-    `
+  ${({ theme }) => theme.mediaQueries.mobile} {
     padding: 20px 0 40px;
     flex-direction: column;
     flex-wrap: wrap-reverse;
@@ -44,51 +35,79 @@ const Inner = styled.div<{ isMobile: boolean }>`
     > div {
       width: 100%;
     }
-  `}
+  }
 `;
 
 const StyledFlex = styled(Flex)`
   flex-direction: column;
+  margin-left: 24px;
+  margin-top: 0;
+
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    margin-left: 0;
+    margin-top: 9px;
+  }
 `;
 
-const LeftFlex = styled(Flex)<{ isMobile: boolean }>`
+const LeftFlex = styled(Flex)`
   margin-top: 40px;
-  ${({ isMobile, theme }) =>
-    isMobile &&
-    `
-    padding: 20px ${pxToRem(40)} 0;
+
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    padding: 20px 40px 0;
     margin-top: 20px;
-    border-top: 1px solid ${hexToRGB(theme.colors[ColorStyles.LIGHTGREY], 0.5)};
+    border-top: 1px solid ${({ theme }) => theme.colors.lightGrey50};
     flex-direction: column;
     order: 1;
-  `}
+  }
 `;
 
-const Footer: React.FC<Props> = (props) => {
-  const { isMobile } = props;
+const WrapIcon = styled.div`
+  width: 86px;
+  height: 48px;
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    width: 48px;
+    height: 27px;
+  }
+`
+
+const CopyRightText = styled(Text)`
+  ${({ theme }) => theme.textStyle.R_14R}
+  color: ${({ theme }) => theme.colors.mediumgrey};
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    ${({ theme }) => theme.textStyle.R_12R}
+  }
+`
+
+const AuditText = styled(CopyRightText)`
+  margin-top: 6px;
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    margin-top: 2px;
+  }
+`
+
+const Footer: React.FC = () => {
+  const { Trans } = useMenu();
   return (
-    <StyledFooter {...props}>
-      <Inner {...props}>
-        <LeftFlex {...props}>
-          <LogoFooterSixIcon
-            viewBox="0 0 86 48"
-            width={props.isMobile ? "48" : "86"}
-            height={props.isMobile ? "27" : "48"}
-          />
-          <StyledFlex ml={isMobile ? 0 : pxToRem(24)} mt={isMobile ? "9px" : 0}>
-            <Text textStyle={isMobile ? TextStyles.R_12R : TextStyles.R_14R} color={ColorStyles.MEDIUMGREY}>
-              Copyright © 2021 <strong>SIX Network</strong>. All Right Reserved
-            </Text>
-            <Text
-              mt={isMobile ? "2px" : "6px"}
-              textStyle={isMobile ? TextStyles.R_12R : TextStyles.R_14R}
-              color={ColorStyles.MEDIUMGREY}
-            >
-              Audited By <strong>Certik</strong>
-            </Text>
+    <StyledFooter>
+      <Inner>
+        <LeftFlex>
+          <WrapIcon>
+            <LogoFooterSixIcon
+              viewBox="0 0 86 48"
+              width="100%"
+              height="100%"
+            />
+          </WrapIcon>
+          <StyledFlex>
+            <CopyRightText>
+              <Trans i18nKey="copyright" components={{ 0: <strong /> }}></Trans>
+            </CopyRightText>
+            <AuditText>
+              <Trans i18nKey="audit" components={{ 0: <strong /> }}></Trans>
+            </AuditText>
           </StyledFlex>
         </LeftFlex>
-        <SocialLinks {...props} />
+        <SocialLinks />
       </Inner>
     </StyledFooter>
   );

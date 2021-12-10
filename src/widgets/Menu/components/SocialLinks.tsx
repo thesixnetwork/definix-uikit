@@ -7,10 +7,6 @@ import { socials } from "../config";
 
 const Icons = IconModule as unknown as { [key: string]: React.StatelessComponent<React.SVGAttributes<SVGElement>> };
 
-interface Props {
-  isMobile: boolean;
-}
-
 const StyledFlex = styled(Flex)`
   align-items: center;
   justify-content: center;
@@ -29,9 +25,9 @@ const StyledFlex = styled(Flex)`
   }
 `;
 
-const SocialLinks: React.FC<Props> = ({ isMobile }) => (
+const SocialLinks: React.FC = () => (
   <StyledFlex>
-    {socials.map((social, index) => {
+    {socials.map((social) => {
       const Icon = Icons[social.icon];
       const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
       return (

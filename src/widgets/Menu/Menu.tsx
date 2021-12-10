@@ -78,7 +78,7 @@ const Menu: React.FC<MenuProps> = (props) => {
         <Inner>{children}</Inner>
       </Container>
       {isMobile && isPushed && <Overlay zIndex={theme.zIndices.sidebar - 1} show onClick={() => setIsPushed(false)} />}
-      <Footer isMobile={isMobile} />
+      <Footer />
     </Wrapper>
   );
 };

@@ -30,7 +30,9 @@ const PanelHeader: React.FC = () => {
     </MobileHeader>
   ) : (
     <StyledHeader>
-      <MainDefinixImgTextIcon />
+      <a href="/">
+        <MainDefinixImgTextIcon />
+      </a>
     </StyledHeader>
   );
 };
