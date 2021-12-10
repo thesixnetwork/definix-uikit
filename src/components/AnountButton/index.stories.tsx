@@ -26,6 +26,16 @@ export const Default: React.FC = () => {
         </AnountButton>
         <AnountButton onClick={() => {}}>MAX</AnountButton>
       </Row>
+
+      <Row>
+        <AnountButton isSelected onClick={() => {}} mr="5px">
+          25%
+        </AnountButton>
+        <AnountButton isSelected onClick={() => {}} mr="5px">
+          50%
+        </AnountButton>
+        <AnountButton isSelected onClick={() => {}}>MAX</AnountButton>
+      </Row>
     </div>
   );
 };
