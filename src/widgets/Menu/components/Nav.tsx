@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import _ from "lodash";
 import styled from "styled-components";
 import { Box, Flex } from "../../../components/Box";
@@ -13,7 +13,6 @@ import UserBlock from "./UserBlock";
 import Chain from "./Chain";
 import SettingsModal from "./SettingsModal";
 import { useMatchBreakpoints } from "../../../hooks";
-import { useHistory } from "react-router";
 import { useMenu } from "../MenuContext";
 
 const MobileNav = styled.nav`
@@ -56,8 +55,7 @@ const getIsTop = () => {
 };
 
 const Nav: React.FC<NavProps> = (props) => {
-  const history = useHistory();
-  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance } = useMenu();
+  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link } = useMenu();
   const { isPushed, pushNav } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const [isTop, setIsTop] = useState(getIsTop());
@@ -99,15 +97,15 @@ const Nav: React.FC<NavProps> = (props) => {
             <MenuIcon />
           </IconButton>
         </Box>
-        <a href="/">
+        <Link to="/">
           <MainDefinixTextIcon />
-        </a>
+        </Link>
         <Box position="absolute" right={pxToRem(20)}>
           <IconButton onClick={() => onPresentSettingModal()}>
             <SettingIcon />
           </IconButton>
           {account && (
-            <IconButton ml="S_16" onClick={() => history.push("/my")}>
+            <IconButton ml="S_16" onClick={() => onLink("/my")}>
               <GnbMyMobileIcon />
             </IconButton>
           )}
@@ -122,7 +120,7 @@ const Nav: React.FC<NavProps> = (props) => {
         <IconButton mr="S_16" onClick={() => onPresentSettingModal()}>
           <SettingIcon />
         </IconButton>
-        <UserBlock {...props} />
+        <UserBlock />
       </Flex>
     </StyledNav>
   );

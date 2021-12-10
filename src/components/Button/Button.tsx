@@ -36,7 +36,7 @@ const StyledLoading = styled.div`
 `;
 
 const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.Element => {
-  const { startIcon, endIcon, external, className, isLoading, disabled, children, ...rest } = props;
+  const { startIcon, endIcon, external, className, isLoading, disabled, children, as, ...rest } = props;
   const scaleAttr: ButtonScales = Object.values(ButtonScales).find((scale) => (rest as any)[scale]) || ButtonScales.MD;
   const internalProps = external ? getExternalLinkProps() : {};
   const isDisabled = isLoading || disabled;
@@ -52,8 +52,10 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
 
   return (
     <StyledButton
-      startIcon={startIcon}
-      endIcon={endIcon}
+      {...(as ? {} : {
+        startIcon,
+        endIcon,
+      })}
       $isLoading={isLoading}
       className={classNames.join(" ")}
       disabled={isDisabled}

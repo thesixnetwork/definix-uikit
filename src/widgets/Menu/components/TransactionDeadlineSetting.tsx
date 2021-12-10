@@ -1,10 +1,10 @@
 // import useUserDeadline from 'hooks/useUserDeadline'
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// import { useTranslation } from 'react-i18next'
 import { Input } from "../../../components/Input";
 import { Text } from "../../../components/Text";
 import { Flex } from "../../../components/Box";
+import { Helper } from "../../../components/Helper";
 import { AlertIcon } from "../../../components/Icon";
 import { TextStyles } from "../../../theme/text";
 import { ColorStyles } from "../../../theme/colors";
@@ -40,10 +40,10 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
         setDeadline(rawValue);
         setError(null);
       } else {
-        setError("Enter a valid deadline");
+        setError("Enter a valid number");
       }
     } catch {
-      setError("Enter a valid deadline");
+      setError("Enter a valid number");
     }
   }, [value, setError, setDeadline]);
 
@@ -53,7 +53,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
         <Text textStyle={TextStyles.R_16M} color={ColorStyles.DEEPGREY} mr="S_6">
           <Trans i18nKey="Transaction Deadline" />
         </Text>
-        {/* <Helper text={t("Your transaction will revert if it is pending for more than this long.")} /> */}
+        <Helper text={<Trans i18nKey="Your transaction will revert if"></Trans>}></Helper>
       </Label>
       <Flex width="184px" alignItems="center">
         <Input
@@ -73,7 +73,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
         <Flex mt="S_12" alignItems="center">
           <AlertIcon />
           <Text ml="5px" textStyle={TextStyles.R_14R} color={ColorStyles.RED}>
-            {error}
+            <Trans i18nKey={error} />
           </Text>
         </Flex>
       )}

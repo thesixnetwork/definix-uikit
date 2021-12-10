@@ -35,7 +35,7 @@ const StyledButton = styled.a`
 const UserBlock: React.FC = () => {
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
-  const { account, login, logout, Trans } = useMenu();
+  const { account, login, logout, Trans, Link } = useMenu();
   const { onPresentConnectModal } = useWalletModal(Trans, login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
 
@@ -92,11 +92,9 @@ const UserBlock: React.FC = () => {
           ml="8px"
           xs
           variant={ButtonVariants.DEEPBROWN}
+          as={Link}
+          to="/my"
           startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
-          onClick={() => {
-            location.href = "/my";
-            // onPresentAccountModal();
-          }}
         >
           <Text textStyle={TextStyles.R_12B}>
             <Trans i18nKey="MY" />

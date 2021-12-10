@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import styled from "styled-components";
 import { Flex } from "../../../components/Box";
 import { PushedProps } from "../types";
@@ -7,6 +7,7 @@ import UserBlock from "./UserBlock";
 import { hexToRGB } from "../../../style/mixin";
 import { ColorStyles } from "../../../theme";
 import { useMatchBreakpoints } from "../../../hooks";
+import { useMenu } from "../MenuContext";
 
 const MobileHeader = styled(Flex)`
   flex-direction: column;
@@ -23,6 +24,7 @@ const StyledHeader = styled(Flex)`
 
 const PanelHeader: React.FC = () => {
   const { isMaxLg } = useMatchBreakpoints();
+  const { Link } = useMenu();
   const isMobile = isMaxLg;
   return isMobile ? (
     <MobileHeader>
@@ -30,9 +32,9 @@ const PanelHeader: React.FC = () => {
     </MobileHeader>
   ) : (
     <StyledHeader>
-      <a href="/">
+      <Link to="/">
         <MainDefinixImgTextIcon />
-      </a>
+      </Link>
     </StyledHeader>
   );
 };

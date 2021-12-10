@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import noop from "lodash/noop";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
-import Flex from "../../components/Box/Flex";
-import Heading from "../../components/Heading/Heading";
-import Text from "../../components/Text/Text";
-import { MenuEntry } from "./components/MenuEntry";
+import { BrowserRouter } from "react-router-dom";
 import Menu from "./Menu";
 import { LangType } from "./types";
 import { links } from "./config";
-import UserBlock from "./components/UserBlock";
-import Chain from "./components/Chain";
 
 export default {
   title: "Widgets/Menu[NEW]",
@@ -26,6 +20,9 @@ const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, langua
 
 const Trans = ({ i18nKey }) => {
   return <span>{i18nKey}</span>;
+};
+const Link = ({ to, children }) => {
+  return <a href={to}>{children}</a>;
 };
 
 // This hook is used to simulate a props change, and force a re rendering
@@ -49,6 +46,8 @@ const useProps = () => {
     currentLang: "EN",
     setLang: noop,
     langs,
+
+    Link,
 
     links,
     // profile: null,

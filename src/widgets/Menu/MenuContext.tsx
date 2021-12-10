@@ -12,6 +12,10 @@ const Trans = ({ i18nKey }: { i18nKey: string }) => {
   return <div>{i18nKey}</div>;
 };
 
+const Link = ({ to }: { to: string }) => {
+  return <a href={to}></a>;
+};
+
 export const Context = createContext<MenuContext>({
   account: undefined,
   login: () => null,
@@ -26,6 +30,7 @@ export const Context = createContext<MenuContext>({
   userSlippageTolerance: 0,
   setState: () => null,
   deadline: 0,
+  Link,
 });
 
 const MenuProvider: React.FC<MenuState> = ({ children, ...rest }) => {

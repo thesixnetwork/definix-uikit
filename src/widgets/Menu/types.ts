@@ -68,6 +68,12 @@ export interface TranslateProps {
   }>;
 }
 
+export interface LinkProps {
+  Link: React.FC<{
+    to: string;
+  }>;
+}
+
 export interface SlippageToleranceProps {
   userSlippageTolerance: number;
   setUserslippageTolerance: (value: number) => void;
@@ -92,4 +98,5 @@ export interface MenuProps
     MenuEntryConfigProps,
     TranslateProps,
     SlippageToleranceProps,
+    LinkProps,
     TransactionDeadLineProps {}
