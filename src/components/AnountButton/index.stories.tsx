@@ -34,7 +34,9 @@ export const Default: React.FC = () => {
         <AnountButton isSelected onClick={() => {}} mr="5px">
           50%
         </AnountButton>
-        <AnountButton isSelected onClick={() => {}}>MAX</AnountButton>
+        <AnountButton isSelected onClick={() => {}}>
+          MAX
+        </AnountButton>
       </Row>
     </div>
   );

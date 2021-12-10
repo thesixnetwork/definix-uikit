@@ -18,11 +18,11 @@ interface StyledAnountButtonProps {
 }
 
 const StyledAnountButton = styled.button<StyledAnountButtonProps>`
-  padding: ${({isSelected}) => isSelected ? '2px 8.5px 3px 8.5px' : '2px 8.5px 2.5px 8.5px'};
+  padding: ${({ isSelected }) => (isSelected ? "2px 8.5px 3px 8.5px" : "2px 8.5px 2.5px 8.5px")};
   border-radius: 13px;
-  border: ${({ isSelected, theme }) => isSelected ? 'none' : `1px solid ${theme.colors.lightgrey}`};
-  background-color: ${({ isSelected, theme }) => isSelected ? theme.colors.orange : 'transparent'};
-  color: ${({ isSelected, theme }) => isSelected ? theme.colors.white : theme.colors.deepgrey};
+  border: ${({ isSelected, theme }) => (isSelected ? "none" : `1px solid ${theme.colors.lightgrey}`)};
+  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.orange : "transparent")};
+  color: ${({ isSelected, theme }) => (isSelected ? theme.colors.white : theme.colors.deepgrey)};
   text-align: center;
   cursor: pointer;
   ${({ theme }) => theme.textStyle.R_14R}
@@ -31,7 +31,6 @@ const StyledAnountButton = styled.button<StyledAnountButtonProps>`
   ${color}
   ${getVariantTextStyle()}
 `;
-
 
 const AnountButton: React.FC<AnountButtonProps> = ({ onClick, isSelected = false, children, ...props }) => {
   return (

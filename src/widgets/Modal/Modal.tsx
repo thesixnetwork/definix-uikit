@@ -159,7 +159,7 @@ const Modal: React.FC<Props> = ({
           if (!React.isValidElement(child)) {
             return <></>;
           }
-          if ((child.type as any).name === "ModalBody") {
+          if (child.props.isBody) {
             return React.cloneElement(child);
           }
         })}
@@ -168,7 +168,7 @@ const Modal: React.FC<Props> = ({
         if (!React.isValidElement(child)) {
           return <></>;
         }
-        if ((child.type as any).name === "ModalFooter") {
+        if (child.props.isFooter) {
           return (
             <StyledModalFooter noPadding={noPadding} mobileFull={mobileFull}>
               {React.cloneElement(child)}
@@ -190,7 +190,14 @@ export const ModalBody: React.FC<BodyProps> = ({ children, ...props }) => {
 
 export const ModalFooter: React.FC<FooterProps> = ({ children, ...props }) => {
   return (
-    <Flex className="modal-footer" position="relative" flexDirection="column" width="100%" justifyContent="flex-end" {...props}>
+    <Flex
+      className="modal-footer"
+      position="relative"
+      flexDirection="column"
+      width="100%"
+      justifyContent="flex-end"
+      {...props}
+    >
       {children}
     </Flex>
   );
