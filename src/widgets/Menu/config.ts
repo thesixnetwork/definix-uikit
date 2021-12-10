@@ -6,7 +6,7 @@ export const links = [
     href: "/",
   },
   {
-    label: "ExChange",
+    label: "Exchange",
     icon: "GnbExchangeNIcon",
     activeIcon: "GnbExchangeSIcon",
     items: [
