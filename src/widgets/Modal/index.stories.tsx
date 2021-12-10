@@ -21,17 +21,17 @@ interface CustomModalProps extends InjectedProps {
 
 const CustomModal: React.FC<CustomModalProps> = ({ title, onDismiss }) => (
   <Modal title={title} onDismiss={onDismiss}>
-    <ModalBody>
+    <ModalBody isBody>
       <Heading>{title}</Heading>
     </ModalBody>
-    <ModalFooter>
+    <ModalFooter isFooter>
       <Button>This button Does nothing</Button>
     </ModalFooter>
   </Modal>
 );
 const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
   <Modal title="Disclaimers" hideCloseButton mobileFull onDismiss={onDismiss}>
-    <ModalBody maxWidth="438px">
+    <ModalBody isBody maxWidth="438px">
       <Box
         border="1px solid"
         borderColor="lightgrey"
@@ -85,7 +85,7 @@ const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
         <Text textStyle="R_14R">I have read all the information above and agree to using the service.</Text>
       </CheckboxLabel>
     </ModalBody>
-    <ModalFooter>
+    <ModalFooter isFooter>
       <Button scale="40" width="100%" onClick={onDismiss}>
         Confirm
       </Button>

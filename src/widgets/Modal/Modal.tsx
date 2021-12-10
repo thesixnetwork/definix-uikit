@@ -16,6 +16,14 @@ interface Props extends InjectedProps {
   noPadding?: boolean;
 }
 
+interface BodyProps extends FlexProps {
+  isBody: boolean;
+}
+
+interface FooterProps extends FlexProps {
+  isFooter: boolean;
+}
+
 const StyledModal = styled(Flex)<{ mobileFull: boolean }>`
   flex-direction: column;
   background: ${({ theme }) => theme.modal.background};
@@ -172,17 +180,17 @@ const Modal: React.FC<Props> = ({
   );
 };
 
-export const ModalBody: React.FC<FlexProps> = ({ children, ...props }) => {
+export const ModalBody: React.FC<BodyProps> = ({ children, ...props }) => {
   return (
-    <Flex position="relative" flexDirection="column" width="100%" {...props}>
+    <Flex className="modal-body" position="relative" flexDirection="column" width="100%" {...props}>
       {children}
     </Flex>
   );
 };
 
-export const ModalFooter: React.FC<FlexProps> = ({ children, ...props }) => {
+export const ModalFooter: React.FC<FooterProps> = ({ children, ...props }) => {
   return (
-    <Flex position="relative" flexDirection="column" width="100%" justifyContent="flex-end" {...props}>
+    <Flex className="modal-footer" position="relative" flexDirection="column" width="100%" justifyContent="flex-end" {...props}>
       {children}
     </Flex>
   );

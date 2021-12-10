@@ -11,7 +11,7 @@ const SettingsModal: React.FC<SettingsModalProps> = (props) => {
   const { onDismiss = defaultOnDismiss, Trans } = props;
   return (
     <Modal title={<Trans i18nKey="Setting" />} onDismiss={onDismiss}>
-      <ModalBody>
+      <ModalBody isBody>
         <SlippageToleranceSetting {...props} />
         <TransactionDeadlineSetting {...props} />
       </ModalBody>
