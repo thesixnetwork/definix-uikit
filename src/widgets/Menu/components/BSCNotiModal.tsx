@@ -9,7 +9,7 @@ interface Props extends TranslateProps, InjectedModalProps {}
 const BSCNotiModal: React.FC<Props> = ({ Trans, onDismiss = () => null }) => {
   return (
     <Modal hideHeader onDismiss={onDismiss}>
-      <ModalBody isBody pt="24px" minHeight="88px" display="flex" justifyContent="center">
+      <ModalBody isBody pt="24px" maxWidth="272px" minHeight="88px" display="flex" justifyContent="center">
         <Text textStyle="R_14R" color="deepgrey">
           <Trans i18nKey="Binance Smart Chain is" />
         </Text>
