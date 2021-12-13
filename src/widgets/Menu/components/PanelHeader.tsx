@@ -24,15 +24,17 @@ const StyledHeader = styled(Flex)`
 
 const PanelHeader: React.FC = () => {
   const { isMaxLg } = useMatchBreakpoints();
-  const { Link } = useMenu();
+  const { Link, links } = useMenu();
   const isMobile = isMaxLg;
+
+  const link = links.find(({ label }) => label === 'Home')
   return isMobile ? (
     <MobileHeader>
       <UserBlock />
     </MobileHeader>
   ) : (
     <StyledHeader>
-      <Link to="/">
+      <Link to={link && link.href ? link.href : '/'}>
         <MainDefinixImgTextIcon />
       </Link>
     </StyledHeader>
