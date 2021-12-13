@@ -55,12 +55,13 @@ const getIsTop = () => {
 };
 
 const Nav: React.FC<NavProps> = (props) => {
-  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } = useMenu();
+  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } =
+    useMenu();
   const { isPushed, pushNav } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const [isTop, setIsTop] = useState(getIsTop());
   const isMobile = isMaxLg;
-  const link = links.find(({ label }) => label === 'Home')
+  const link = links.find(({ label }) => label === "Home");
   const [onPresentSettingModal] = useModal(
     <SettingsModal
       {...{
@@ -98,7 +99,7 @@ const Nav: React.FC<NavProps> = (props) => {
             <MenuIcon />
           </IconButton>
         </Box>
-        <Link to={link && link.href ? link.href : '/'}>
+        <Link to={link && link.href ? link.href : "/"}>
           <MainDefinixTextIcon />
         </Link>
         <Box position="absolute" right={pxToRem(20)}>

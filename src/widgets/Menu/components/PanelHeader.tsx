@@ -27,14 +27,14 @@ const PanelHeader: React.FC = () => {
   const { Link, links } = useMenu();
   const isMobile = isMaxLg;
 
-  const link = links.find(({ label }) => label === 'Home')
+  const link = links.find(({ label }) => label === "Home");
   return isMobile ? (
     <MobileHeader>
       <UserBlock />
     </MobileHeader>
   ) : (
     <StyledHeader>
-      <Link to={link && link.href ? link.href : '/'}>
+      <Link to={link && link.href ? link.href : "/"}>
         <MainDefinixImgTextIcon />
       </Link>
     </StyledHeader>
