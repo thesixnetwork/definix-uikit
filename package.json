@@ -19,7 +19,8 @@
     "build-storybook": "build-storybook",
     "test": "jest",
     "release": "yarn build && np",
-    "move:d": "node move.js -d"
+    "move:d": "node move.js -d",
+    "deploy": "npm run build && npm version patch && npm publish"
   },
   "husky": {
     "hooks": {
