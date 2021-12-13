@@ -12,13 +12,14 @@ interface Props {
 
 const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const currentLangObj = langs.find(({ code }) => code === currentLang);
   return (
     <Dropdown
       defaultIndex={langs.findIndex(({ code }) => currentLang === code)}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
       position="top"
-      target={<DropdownButton>{currentLang.toUpperCase()}</DropdownButton>}
+      target={<DropdownButton>{currentLangObj ? currentLangObj.language : currentLang.toUpperCase()}</DropdownButton>}
       onItemClick={(index) => {
         setLang(langs[index]);
         setIsOpen(!isOpen);
