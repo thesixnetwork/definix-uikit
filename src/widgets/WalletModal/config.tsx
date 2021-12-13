@@ -27,11 +27,6 @@ const connectors: Config[] = [
   //   connectorId: ConnectorNames.Injected,
   // },
   // {
-  //   title: "TokenPocket",
-  //   icon: TokenPocket,
-  //   connectorId: ConnectorNames.Injected,
-  // },
-  // {
   //   title: "WalletConnect",
   //   icon: WalletConnect,
   //   connectorId: ConnectorNames.WalletConnect,
@@ -54,6 +49,11 @@ const connectors: Config[] = [
   {
     title: "D`CENT",
     icon: Dcent,
+    connectorId: ConnectorNames.Injected,
+  },
+  {
+    title: "TokenPocket",
+    icon: TokenPocket,
     connectorId: ConnectorNames.Injected,
   },
   {
