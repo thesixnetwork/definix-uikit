@@ -33,15 +33,14 @@ const StyledText = styled(Text)`
   white-space: nowrap;
 `;
 
-const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
-  isActive = false,
-  children,
-  startIcon,
-  scale,
-}: ChainToggleItemProps) => {
+const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = (props: ChainToggleItemProps) => {
+  const { isActive = false,
+    children,
+    startIcon,
+    scale, ...rest } = props
   if (!isActive) {
     return (
-      <InactiveButton>
+      <InactiveButton {...rest}>
         {isValidElement(startIcon) &&
           cloneElement(startIcon, {
             width: scale === "md" ? "22" : "20",
@@ -54,7 +53,7 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = ({
   }
 
   return (
-    <ActiveButton>
+    <ActiveButton {...rest}>
       {isValidElement(startIcon) &&
         cloneElement(startIcon, {
           width: scale === "md" ? "22" : "20",
