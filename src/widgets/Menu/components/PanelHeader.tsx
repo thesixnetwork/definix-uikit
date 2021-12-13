@@ -27,7 +27,7 @@ const PanelHeader: React.FC = () => {
   const { Link, links } = useMenu();
   const isMobile = isMaxLg;
 
-  const link = links.find(({ label }) => label === "Home");
+  const link = links[0];
   return isMobile ? (
     <MobileHeader>
       <UserBlock />

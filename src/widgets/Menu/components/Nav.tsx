@@ -61,7 +61,7 @@ const Nav: React.FC<NavProps> = (props) => {
   const { isMaxLg } = useMatchBreakpoints();
   const [isTop, setIsTop] = useState(getIsTop());
   const isMobile = isMaxLg;
-  const link = links.find(({ label }) => label === "Home");
+  const link = links[0];
   const [onPresentSettingModal] = useModal(
     <SettingsModal
       {...{
