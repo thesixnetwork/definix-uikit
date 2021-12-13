@@ -57,7 +57,7 @@ const ChainToggle: React.FC<ChainToggleProps> = ({ activeIndex = 0, scale = "md"
           isActive: activeIndex === index,
           onClick: onItemClick ? () => onItemClick(index) : undefined,
           scale,
-          ...child.props
+          ...child.props,
         });
       })}
     </StyledChainToggle>

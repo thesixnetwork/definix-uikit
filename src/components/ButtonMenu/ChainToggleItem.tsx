@@ -34,10 +34,7 @@ const StyledText = styled(Text)`
 `;
 
 const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = (props: ChainToggleItemProps) => {
-  const { isActive = false,
-    children,
-    startIcon,
-    scale, ...rest } = props
+  const { isActive = false, children, startIcon, scale, ...rest } = props;
   if (!isActive) {
     return (
       <InactiveButton {...rest}>

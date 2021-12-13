@@ -15,9 +15,12 @@ const Chain: React.FC = () => {
   return (
     <div>
       <ChainToggle scale={isMobile ? "sm" : "md"} activeIndex={1}>
-        <ChainToggleItem startIcon={<TokenKbnbIcon viewBox="0 0 200 200" />} onClick={() => {
-          onPresentAlertModal()
-        }}>
+        <ChainToggleItem
+          startIcon={<TokenKbnbIcon viewBox="0 0 200 200" />}
+          onClick={() => {
+            onPresentAlertModal();
+          }}
+        >
           <Trans i18nKey={isMobile ? "BSC" : "Binance Smart Chain"} />
         </ChainToggleItem>
         <ChainToggleItem startIcon={<TokenKlayIcon viewBox="0 0 200 200" />}>
