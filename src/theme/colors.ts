@@ -98,6 +98,7 @@ export const baseColors = {
   black20: hexToRGB(colorHex.black, 0.2),
   black30: hexToRGB(colorHex.black, 0.3),
   white80: hexToRGB(colorHex.white, 0.8),
+  brown30: hexToRGB(colorHex.brown, 0.3),
 };
 
 export const brandColors = {
