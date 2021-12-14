@@ -32,6 +32,7 @@ const StyledCard = styled.div<StyledCardProps>`
   border-radius: ${pxToRem(spacing.S_16)};
   box-shadow: ${getBoxShadow};
   position: relative;
+  overflow: ${({ isOverflowHidden }) => isOverflowHidden ? 'hidden' : 'auto'};
   ${space}
   ${color}
 `;
