@@ -111,7 +111,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
         );
       })}
       <LineMenuEntry isActive={false}>
-        <V1MenuLink href="#" onClick={() => window.open("https://klaytn.definix.com/", "_blank")}>
+        <V1MenuLink href={"https://klaytn.definix.com/"} target="_blank">
           <IconModule.TokenFinixIcon viewBox="0 0 24 24" width="16" height="16" />
           <LinkLabel isPushed={isPushed} ml="8px">
             <Trans i18nKey="Switch to V1" />
