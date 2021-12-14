@@ -30,6 +30,7 @@ export * from "./components/Loading";
 export * from "./components/CopyToClipboard";
 export * from "./components/Helper";
 export * from "./components/ErrorBlock";
+export * from "./components/Coin";
 
 // Hooks
 export * from "./hooks";
