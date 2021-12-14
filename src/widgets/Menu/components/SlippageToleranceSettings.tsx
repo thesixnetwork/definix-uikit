@@ -136,7 +136,8 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
             type="number"
             step={0.1}
             min={0.1}
-            placeholder="5%"
+            maxLength={10}
+            placeholder="0.5"
             value={value}
             onChange={handleChange}
             isWarning={error !== null}
