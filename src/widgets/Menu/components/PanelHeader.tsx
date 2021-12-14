@@ -34,9 +34,11 @@ const PanelHeader: React.FC = () => {
     </MobileHeader>
   ) : (
     <StyledHeader>
-      <Link to={link && link.href ? link.href : "/"}>
+      {link?.href === '/' ? <Link to={link.href}>
         <MainDefinixImgTextIcon />
-      </Link>
+      </Link> : <a href={link.href}>
+        <MainDefinixImgTextIcon />
+      </a>}
     </StyledHeader>
   );
 };
