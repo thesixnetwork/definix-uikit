@@ -4,10 +4,12 @@ import { ButtonGroupProps } from "./types";
 import { Box } from "../Box";
 
 const StyledButtonGroup = styled(Box)<{ r: string }>`
+  display: inline-flex;
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ r }) => r || "8px"};
 
   button {
+    margin: 0;
     flex-shrink: 0;
     border-radius: 0;
     border-right: 1px solid ${({ theme }) => theme.colors.border} !important;
