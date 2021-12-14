@@ -112,7 +112,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         <Text textStyle={TextStyles.R_16M} color={ColorStyles.DEEPGREY} mr="S_6">
           <Trans i18nKey="Slippage Tolerance" />
         </Text>
-        <Helper text={<Trans i18nKey="Your transaction will revert if"></Trans>}></Helper>
+        <Helper text={<Trans i18nKey="Your transaction will revert if the price"></Trans>}></Helper>
       </Label>
       <Options>
         <Flex mb={["8px", 0]} mr={[0, "8px"]}>
