@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from "react";
 import styled, { DefaultTheme } from "styled-components";
-import { color, space } from "styled-system";
+import { color, ColorProps, space, SpaceProps } from "styled-system";
 import { MENU_ENTRY_HEIGHT } from "../config";
 import { getVariantTextStyle, TextStyles, TextStyleProps } from "../../../theme/text";
 import { ColorStyles } from "../../../theme";
@@ -11,7 +11,11 @@ export interface Props extends TextStyleProps, HTMLAttributes<HTMLDivElement> {
   theme?: DefaultTheme;
 }
 
-const LinkLabel = styled.div<{ isPushed: boolean }>`
+interface LinkLabelProps extends SpaceProps, ColorProps, TextStyleProps {
+  isPushed: boolean;
+}
+
+const LinkLabel = styled.div<LinkLabelProps>`
   flex-grow: 1;
   ${space}
   ${color}
@@ -61,4 +65,4 @@ const MenuEntryComponent: React.FC<Props> = ({ isActive, ...props }) => {
   );
 };
 
-export { MenuEntryComponent as MenuEntry, LinkLabelMemo as LinkLabel };
+export { MenuEntryComponent as MenuEntry, LinkLabel };
