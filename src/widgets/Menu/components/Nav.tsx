@@ -99,11 +99,15 @@ const Nav: React.FC<NavProps> = (props) => {
             <MenuIcon />
           </IconButton>
         </Box>
-        {link?.href === '/' ? <Link to={link.href}>
-          <MainDefinixTextIcon />
-        </Link> : <a href={link.href}>
-          <MainDefinixTextIcon />
-        </a>}
+        {link?.href === "/" ? (
+          <Link to={link.href}>
+            <MainDefinixTextIcon />
+          </Link>
+        ) : (
+          <a href={link.href}>
+            <MainDefinixTextIcon />
+          </a>
+        )}
         <Box position="absolute" right={pxToRem(20)}>
           <IconButton onClick={() => onPresentSettingModal()}>
             <SettingIcon />
