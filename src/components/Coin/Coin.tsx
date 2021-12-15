@@ -7,7 +7,7 @@ export const getTokenImageUrl = (tokenName: string) => {
   if (!tokenName) {
     return "";
   }
-  return '';
+  return "";
   // try {
   //   return require(`./coins/${tokenName.toLowerCase()}.png`);
   // } catch {
