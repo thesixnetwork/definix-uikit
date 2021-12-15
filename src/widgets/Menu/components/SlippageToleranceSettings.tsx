@@ -78,14 +78,14 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target;
     if (!/^[0-9]{1,2}\.[0-9]{1}$/.test(inputValue)) {
-      const splitVal = inputValue.split('.')
+      const splitVal = inputValue.split(".");
       if (splitVal[0] && splitVal[0].length > 2) {
         splitVal[0] = splitVal[0].slice(0, 2);
       }
       if (splitVal[1] && splitVal[1].length > 1) {
         splitVal[1] = splitVal[1].slice(0, 1);
       }
-      setValue(parseFloat(splitVal.join('.')));
+      setValue(parseFloat(splitVal.join(".")));
       return;
     }
     setValue(parseFloat(inputValue));
