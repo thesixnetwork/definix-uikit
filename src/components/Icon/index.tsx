@@ -77,6 +77,8 @@ import { ReactComponent as ArrowChangeIcon } from "./icons/ico-16-arrow-change.s
 import { ReactComponent as NotiIcon } from "./icons/ico_16_noti.svg";
 import { ReactComponent as ImgRebalancingIcon } from "./icons/img_rebalancing.svg";
 import { ReactComponent as ChangePlusIcon } from "./icons/ico-42-change-plus.svg";
+import { ReactComponent as GnbFinixSIcon } from "./icons/ico_24_gnb_finix_s.svg";
+import { ReactComponent as GnbFinixNIcon } from "./icons/ico_24_gnb_finix_n.svg";
 
 export {
   GnbMySIcon,
@@ -157,4 +159,6 @@ export {
   NotiIcon,
   ImgRebalancingIcon,
   ChangePlusIcon,
+  GnbFinixSIcon,
+  GnbFinixNIcon,
 };
