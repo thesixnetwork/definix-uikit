@@ -77,6 +77,17 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target;
+    if (!/^[0-9]{1,2}\.[0-9]{1}$/.test(inputValue)) {
+      const splitVal = inputValue.split(".");
+      if (splitVal[0] && splitVal[0].length > 2) {
+        splitVal[0] = splitVal[0].slice(0, 2);
+      }
+      if (splitVal[1] && splitVal[1].length > 1) {
+        splitVal[1] = splitVal[1].slice(0, 1);
+      }
+      setValue(parseFloat(splitVal.join(".")));
+      return;
+    }
     setValue(parseFloat(inputValue));
   };
 
@@ -112,7 +123,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         <Text textStyle={TextStyles.R_16M} color={ColorStyles.DEEPGREY} mr="S_6">
           <Trans i18nKey="Slippage Tolerance" />
         </Text>
-        <Helper text={<Trans i18nKey="Your transaction will revert if"></Trans>}></Helper>
+        <Helper text={<Trans i18nKey="Your transaction will revert if the price"></Trans>}></Helper>
       </Label>
       <Options>
         <Flex mb={["8px", 0]} mr={[0, "8px"]}>
@@ -136,7 +147,6 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
             type="number"
             step={0.1}
             min={0.1}
-            maxLength={10}
             placeholder="0.5"
             value={value}
             onChange={handleChange}
