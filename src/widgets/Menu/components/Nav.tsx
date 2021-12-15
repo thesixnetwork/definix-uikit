@@ -47,6 +47,7 @@ const StyledNav = styled.nav<{ isTop: boolean }>`
     !isTop &&
     `
     background-color: ${theme.colors[ColorStyles.WHITE]};
+    border-bottom: 1px solid rgba(218, 208, 197, 0.3);
   `}
 `;
 
