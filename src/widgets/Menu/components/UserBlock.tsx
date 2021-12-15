@@ -88,7 +88,7 @@ const UserBlock: React.FC = () => {
             Trans={Trans}
           />
         </Flex>
-        <Button
+        {/* <Button
           ml="8px"
           xs
           variant={ButtonVariants.DEEPBROWN}
@@ -99,23 +99,36 @@ const UserBlock: React.FC = () => {
           <Text textStyle={TextStyles.R_12B}>
             <Trans i18nKey="MY" />
           </Text>
-        </Button>
+        </Button> */}
       </>
     );
   }
 
   return (
     <Flex width="100%" height={isMobile ? "148px" : "auto"} alignItems="center" justifyContent="center">
-      <Button
-        {...(isMobile ? { md: true } : { xs: true })}
-        variant={ButtonVariants.RED}
-        width={isMobile ? "186px" : "142px"}
-        onClick={() => {
-          onPresentConnectModal();
-        }}
-      >
-        <Trans i18nKey="Connect Wallet" />
-      </Button>
+      {isMobile ? (
+        <Button
+          md
+          variant={ButtonVariants.RED}
+          width="186px"
+          onClick={() => {
+            onPresentConnectModal();
+          }}
+        >
+          <Trans i18nKey="Connect Wallet" />
+        </Button>
+      ) : (
+        <Button
+          xs
+          variant={ButtonVariants.RED}
+          width="142px"
+          onClick={() => {
+            onPresentConnectModal();
+          }}
+        >
+          <Trans i18nKey="Connect Wallet" />
+        </Button>
+      )}
     </Flex>
   );
 };
