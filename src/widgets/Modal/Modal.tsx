@@ -86,6 +86,7 @@ const StyledModalBody = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }
       padding-right: 24px;
       .modal-body {
         overflow: auto;
+        overscroll-behavior: contain;
       }
     }
   `};
