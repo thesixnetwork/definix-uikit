@@ -77,15 +77,23 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target;
+
+    console.log(inputValue);
+    if (+inputValue >= 100) {
+      setValue(99.9);
+      return;
+    }
+
     if (!/^[0-9]{1,2}\.[0-9]{1}$/.test(inputValue)) {
       const splitVal = inputValue.split(".");
-      if (splitVal[0] && splitVal[0].length > 2) {
-        splitVal[0] = splitVal[0].slice(0, 2);
+      if (splitVal[0] && +splitVal[0] >= 100) {
+        splitVal[0] = "99";
       }
       if (splitVal[1] && splitVal[1].length > 1) {
         splitVal[1] = splitVal[1].slice(0, 1);
       }
       setValue(parseFloat(splitVal.join(".")));
+      console.log("splitVal", splitVal, parseFloat(splitVal.join(".")));
       return;
     }
     setValue(parseFloat(inputValue));
@@ -147,6 +155,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
             type="number"
             step={0.1}
             min={0.1}
+            max={100}
             placeholder="0.5"
             value={value}
             onChange={handleChange}
