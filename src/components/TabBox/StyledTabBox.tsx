@@ -1,6 +1,7 @@
 import styled, { css, DefaultTheme } from "styled-components";
 import { space } from "styled-system";
 import { textStyle } from "../../theme";
+import { hexToRGB } from "../../style/mixin";
 import Flex from "../Box/Flex";
 
 interface StyledTabBoxProps {
@@ -31,7 +32,7 @@ export const StyledBorderBottom = styled.div<{ isSelected?: boolean }>`
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : theme.colors.lightgrey)};
+  background-color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : hexToRGB(theme.colors.lightgrey, 0.4))};
   ${space}
 `;
 
@@ -40,7 +41,7 @@ export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; widt
   text-align: center;
   cursor: pointer;
   word-break: keep-all;
-  color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : theme.colors.lightgrey)};
+  color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : hexToRGB(theme.colors.mediumgrey, 0.5))};
   padding: ${({ small }) => (small ? "18px 12px" : "20px 48px")};
   ${({ small }) => css(small ? textStyle.R_14B : textStyle.R_16B)}
   ${({ width }) => width && `width: ${width}`}
