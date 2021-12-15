@@ -4,18 +4,8 @@ import Text from "../../components/Text/Text";
 import { Box, Flex, FlexProps } from "../../components/Box";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
-import { InjectedProps } from "./types";
+import { ModalProps } from "./types";
 import { NAV_HEIGHT_MOBILE } from "../Menu/config";
-
-interface Props extends InjectedProps {
-  title?: string | React.ReactElement;
-  hideHeader?: boolean;
-  hideCloseButton?: boolean;
-  onBack?: () => void;
-  mobileFull?: boolean;
-  noPadding?: boolean;
-  maxWidth?: string;
-}
 
 interface BodyProps extends FlexProps {
   isBody: boolean;
@@ -127,7 +117,7 @@ const StyledModalFooter = styled(Flex)<{ noPadding: boolean; mobileFull: boolean
   `}
 `;
 
-const Modal: React.FC<Props> = ({
+const Modal: React.FC<ModalProps> = ({
   title,
   onDismiss,
   onBack,
