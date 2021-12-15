@@ -7,11 +7,12 @@ export const getTokenImageUrl = (tokenName: string) => {
   if (!tokenName) {
     return "";
   }
-  try {
-    return require(`./coins/${tokenName.toLowerCase()}.png`);
-  } catch {
-    return null;
-  }
+  return '';
+  // try {
+  //   return require(`./coins/${tokenName.toLowerCase()}.png`);
+  // } catch {
+  //   return null;
+  // }
 };
 
 const StyledCoinImage = styled.img<SpaceProps>`
