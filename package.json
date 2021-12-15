@@ -20,7 +20,8 @@
     "test": "jest",
     "release": "yarn build && np",
     "move:d": "node move.js -d",
-    "deploy": "npm run build && npm version patch && npm publish"
+    "predeploy": "npm version patch",
+    "deploy": "npm run build && npm publish"
   },
   "husky": {
     "hooks": {
