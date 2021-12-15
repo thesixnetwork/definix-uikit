@@ -28,7 +28,9 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
       }}
     >
       {langs.map((lang, index) => (
-        <DropdownItem key={index}><Text textStyle="R_14M">{lang.language}</Text></DropdownItem>
+        <DropdownItem key={index}>
+          <Text textStyle="R_14M">{lang.language}</Text>
+        </DropdownItem>
       ))}
     </Dropdown>
   );

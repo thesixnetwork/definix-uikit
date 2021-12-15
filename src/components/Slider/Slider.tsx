@@ -1,11 +1,5 @@
 import React, { ChangeEvent } from "react";
-import { 
-  SliderContainer,
-  StyledSlider,
-  BarBackground,
-  BarProgress,
-  StyledInput,
-} from "./styles";
+import { SliderContainer, StyledSlider, BarBackground, BarProgress, StyledInput } from "./styles";
 import SliderProps from "./types";
 
 // We need to adjust the offset as the percentage increases, as 100% really is 100% - label width. The number 10 is arbitrary, but seems to work...
