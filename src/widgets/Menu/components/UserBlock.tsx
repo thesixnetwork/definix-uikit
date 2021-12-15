@@ -88,7 +88,7 @@ const UserBlock: React.FC = () => {
             Trans={Trans}
           />
         </Flex>
-        {/* <Button
+        <Button
           ml="8px"
           xs
           variant={ButtonVariants.DEEPBROWN}
@@ -99,7 +99,7 @@ const UserBlock: React.FC = () => {
           <Text textStyle={TextStyles.R_12B}>
             <Trans i18nKey="MY" />
           </Text>
-        </Button> */}
+        </Button>
       </>
     );
   }
