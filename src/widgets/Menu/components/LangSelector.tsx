@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Dropdown from "../../../components/Dropdown/Dropdown";
+import { Text } from "../../../components/Text";
 import { LangType } from "../types";
 import DropdownItem from "../../../components/Dropdown/DropdownItem";
 import DropdownButton from "../../../components/Button/DropdownButton";
@@ -15,6 +16,7 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
   const currentLangObj = langs.find(({ code }) => code === currentLang);
   return (
     <Dropdown
+      width="94px"
       defaultIndex={langs.findIndex(({ code }) => currentLang === code)}
       isOpen={isOpen}
       setIsOpen={setIsOpen}
@@ -26,7 +28,7 @@ const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
       }}
     >
       {langs.map((lang, index) => (
-        <DropdownItem key={index}>{lang.language}</DropdownItem>
+        <DropdownItem key={index}><Text textStyle="R_14M">{lang.language}</Text></DropdownItem>
       ))}
     </Dropdown>
   );

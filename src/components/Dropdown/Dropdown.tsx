@@ -34,9 +34,9 @@ const DropdownContent = styled.div<{ position: Position; isOpen: boolean; float:
   ${layout}
 `;
 
-const Container = styled.div`
+const Container = styled.div<{ width: string }>`
   position: relative;
-  width: max-content;
+  width: ${({ width }) => width ? width : 'max-content'};
   height: max-content;
 `;
 
@@ -49,6 +49,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   children,
   setIsOpen,
   onItemClick,
+  width,
   ...props
 }) => {
   const [activeIndex, setActiveIndex] = useState(defaultIndex || -1);
@@ -70,7 +71,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   }, []);
 
   return (
-    <Container ref={ref}>
+    <Container ref={ref} width={width ? width : 'auto'}>
       {cloneElement(target, {
         onClick: () => setIsOpen(!isOpen),
       })}
