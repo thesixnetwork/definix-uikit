@@ -14,6 +14,7 @@ interface Props extends InjectedProps {
   onBack?: () => void;
   mobileFull?: boolean;
   noPadding?: boolean;
+  maxWidth?: string;
 }
 
 interface BodyProps extends FlexProps {
@@ -32,11 +33,11 @@ const StyledModal = styled(Flex)<{ mobileFull: boolean }>`
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
   align-self: center;
+  max-height: 100%;
 
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
     min-width: 300px;
-    max-width: 100%;
   }
 
   ${({ mobileFull, theme }) =>
@@ -44,6 +45,7 @@ const StyledModal = styled(Flex)<{ mobileFull: boolean }>`
     `
     border-radius: ${theme.spacing.S_16}px;
     ${theme.mediaQueries.mobile} {
+      max-width: 100% !important;
       align-self: flex-start;
       flex: 1 1 auto;
       border-radius: 0;
@@ -74,6 +76,7 @@ const ModalTitle = styled(Flex)`
 const StyledModalBody = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }>`
   position: relative;
   flex: 1;
+  overflow: hidden;
   ${({ noPadding, theme }) =>
     !noPadding &&
     `
@@ -81,6 +84,9 @@ const StyledModalBody = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }
     ${theme.mediaQueries.xs} {
       padding-left: 24px;
       padding-right: 24px;
+      .modal-body {
+        overflow: auto;
+      }
     }
   `};
 
@@ -89,6 +95,9 @@ const StyledModalBody = styled(Flex)<{ noPadding: boolean; mobileFull: boolean }
     `
     ${theme.mediaQueries.mobile} {
       flex: 4;
+      .modal-body {
+        max-height: initial;
+      }
     }
   `}
 `;
@@ -126,6 +135,7 @@ const Modal: React.FC<Props> = ({
   hideCloseButton = false,
   mobileFull = false,
   noPadding = false,
+  maxWidth = "initial",
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -136,7 +146,7 @@ const Modal: React.FC<Props> = ({
   }, []);
 
   return (
-    <StyledModal ref={modalRef} mobileFull={mobileFull}>
+    <StyledModal ref={modalRef} mobileFull={mobileFull} maxWidth={maxWidth}>
       {!hideHeader && (
         <ModalHeader>
           <ModalTitle>

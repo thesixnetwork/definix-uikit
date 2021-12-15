@@ -30,18 +30,17 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onDismiss }) => (
   </Modal>
 );
 const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
-  <Modal title="Disclaimers" hideCloseButton mobileFull onDismiss={onDismiss}>
-    <ModalBody isBody maxWidth="438px">
+  <Modal title="Disclaimers" hideCloseButton mobileFull onDismiss={onDismiss} maxWidth="438px">
+    <ModalBody isBody maxHeight="200px">
       <Box
         border="1px solid"
         borderColor="lightgrey"
-        height="328px"
         overflow="scroll"
-        textStyle="R_12R"
+        textStyle="R_14R"
         color="deepgrey"
         borderRadius="8px"
-        paddingX="3"
-        paddingTop="3"
+        paddingX="S_24"
+        paddingTop="S_24"
       >
         <Box>
           <Text className="mb-3">
@@ -81,19 +80,22 @@ const DisclaimerModal: React.FC<InjectedProps> = ({ onDismiss }) => (
           </Text>
         </Box>
       </Box>
-      <CheckboxLabel control={<Checkbox />} className="my-5">
+    </ModalBody>
+
+    <ModalFooter isFooter>
+      <CheckboxLabel control={<Checkbox />} className="mb-5">
         <Text textStyle="R_14R">I have read all the information above and agree to using the service.</Text>
       </CheckboxLabel>
-    </ModalBody>
-    <ModalFooter isFooter>
-      <Button scale="40" width="100%" onClick={onDismiss}>
-        Confirm
-      </Button>
-      <CheckboxLabel control={<Checkbox scale="sm" variantColor="lightbrown" />} className="mt-6">
-        <Text textStyle="R_12R" color="mediumgrey">
-          Do not show this message for 14 days
-        </Text>
-      </CheckboxLabel>
+      <div className="flex flex-column">
+        <CheckboxLabel control={<Checkbox scale="sm" variantColor="lightbrown" />} mt="S_4">
+          <Text textStyle="R_12R" color="mediumgrey">
+            Do not show
+          </Text>
+        </CheckboxLabel>
+        <Button scale="lg" mt="S_20">
+          Confirm
+        </Button>
+      </div>
     </ModalFooter>
   </Modal>
 );
