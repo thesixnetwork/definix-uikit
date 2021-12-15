@@ -21,7 +21,7 @@
     "release": "yarn build && np",
     "move:d": "node move.js -d",
     "predeploy": "npm version patch",
-    "deploy": "npm run build && npm publish"
+    "deploy": "npm version patch &&npm run build && npm publish"
   },
   "husky": {
     "hooks": {
