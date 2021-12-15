@@ -45,7 +45,11 @@ const ImageSet: React.FC<ImageSetProps> = ({ srcSet, alt, ...otherProps }) => {
 
   return (
     <Wrapper ref={imgRef} {...otherProps}>
-      {isLoaded ? <StyledImage src={srcSet[0]} srcSet={`${srcSet[1]} 2x, ${srcSet[2]} 3x`} alt={alt} /> : <Placeholder />}
+      {isLoaded ? (
+        <StyledImage src={srcSet[0]} srcSet={`${srcSet[1]} 2x, ${srcSet[2]} 3x`} alt={alt} />
+      ) : (
+        <Placeholder />
+      )}
     </Wrapper>
   );
 };
