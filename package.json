@@ -1,5 +1,5 @@
 {
-  "name": "definixswap-uikit-v2",
+  "name": "@fingerlabs/definixswap-uikit-v2",
   "version": "0.0.12",
   "description": "Set of UI components for Definix projects",
   "main": "dist/index.cjs.js",
@@ -21,7 +21,7 @@
     "release": "yarn build && np",
     "move:d": "node move.js -d",
     "predeploy": "npm version patch",
-    "deploy": "npm run build && npm publish"
+    "deploy": "npm version patch && npm run build && npm publish --access=public"
   },
   "husky": {
     "hooks": {
