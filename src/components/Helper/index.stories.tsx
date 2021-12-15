@@ -20,38 +20,34 @@ export const Default: React.FC = () => {
     <>
       <Row style={{ marginLeft: "200px" }}>
         <Flex alignItems="center">
-          <Text textStyle="R_14R">Position: left</Text>
+          <Text textStyle="R_14R">CASE 1</Text>
           <Helper
             text="text text text text text text text text text text text text text text text text text text text text text text."
             className="ml-1"
-            position="left"
           />
         </Flex>
       </Row>
       <Row style={{ display: "flex" }}>
-        <Text textStyle="R_14R">Position: right</Text>
+        <Text textStyle="R_14R">CASE 2</Text>
         <Helper
           text="text text text text text text text text text text text text text text text text text text text text text text."
           className="ml-1"
-          position="right"
         />
       </Row>
       <Row style={{ marginTop: "200px" }}>
         <Flex alignItems="center" color="primary">
-          <Text textStyle="R_14R">Position: top</Text>
+          <Text textStyle="R_14R">CASE 3</Text>
           <Helper
             text="text text text text text text text text text text text text text text text text text text text text text text."
             className="ml-1"
-            position="top"
           />
         </Flex>
       </Row>
       <Row>
         <Flex alignItems="center">
-          <Text textStyle="R_14R">Position: bottom</Text>
+          <Text textStyle="R_14R">CASE 4</Text>
           <Helper
             text="text text text text text text text text text text text text text text text text text text text text text text."
-            position="bottom"
             color="secondary"
           />
         </Flex>

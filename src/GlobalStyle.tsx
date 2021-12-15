@@ -349,6 +349,10 @@ const GlobalStyle = createGlobalStyle`
   .h-auto { height: auto !important; }
 
   ${createSpacing()}
+
+  .tooltip-container {
+    z-index: 99999;
+  }
   
   /*# sourceMappingURL=s.css.map */
 `;
