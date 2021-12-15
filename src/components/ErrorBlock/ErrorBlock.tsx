@@ -4,14 +4,14 @@ import { Text } from "../Text";
 import { Button } from "../Button";
 import { ErrorBlockProps } from "./types";
 import { ErrorIcon } from "../Icon";
-import { NAV_HEIGHT_MOBILE } from "src/widgets/Menu/config";
+import { NAV_HEIGHT_MOBILE, NAV_HEIGHT_PC } from "src/widgets/Menu/config";
 
 const Wrap = styled.div`
   position: relative;
   display: flex;
   width: 100%;
   height: 100%;
-  margin-top: 212px;
+  margin-top: ${212 - NAV_HEIGHT_PC}px;
   justify-content: center;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
