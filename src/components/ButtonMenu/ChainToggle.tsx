@@ -6,13 +6,13 @@ import { ChainToggleProps } from "./types";
 export const scalesValues = {
   sm: {
     height: 28,
-    fullWidth: 201,
-    minWidth: 86,
+    fullWidth: 191,
+    minWidth: 73,
   },
   md: {
     height: 32,
-    fullWidth: 310,
-    minWidth: 164,
+    fullWidth: 282,
+    minWidth: 163,
   },
 };
 
@@ -33,18 +33,20 @@ const StyledChainToggle = styled.div<ChainToggleProps>`
     width: 100%;
     height: 100%;
     border-radius: 16px;
-    border: solid 1px ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]};
+    border: solid 1px rgba(224, 224, 224, 0.52);
     background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
   }
 
   > button {
     :first-child {
-      flex: ${({ scale }) => scalesValues[scale || "md"].minWidth / scalesValues[scale || "md"].fullWidth};
+      width: ${({ scale }) => scalesValues[scale || "md"].minWidth}px;
+      /* flex: ${({ scale }) => scalesValues[scale || "md"].minWidth / scalesValues[scale || "md"].fullWidth}; */
     }
     :last-child {
-      flex: ${({ scale }) =>
+      width: ${({ scale }) => scalesValues[scale || "md"].fullWidth - scalesValues[scale || "md"].minWidth}px;
+      /* flex: ${({ scale }) =>
         (scalesValues[scale || "md"].fullWidth - scalesValues[scale || "md"].minWidth) /
-        scalesValues[scale || "md"].fullWidth};
+        scalesValues[scale || "md"].fullWidth}; */
     }
   }
 `;
