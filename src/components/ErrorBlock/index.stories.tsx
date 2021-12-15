@@ -15,6 +15,10 @@ const Trans = ({ i18nKey }) => {
   return <div>{i18nKey}</div>;
 };
 
+const Link = ({ to, children }) => {
+  return <a href={to}>{children}</a>;
+};
+
 const useProps = () => {
   const [userSlippageTolerance, setUserslippageTolerance] = useState(0.5);
   const [deadline, setDeadline] = useState(0.5);
@@ -30,6 +34,7 @@ const useProps = () => {
     logout: noop,
 
     Trans,
+    Link,
     // isDark: false,
     // toggleTheme: noop,
     currentLang: "EN",
@@ -43,7 +48,7 @@ const useProps = () => {
 };
 
 export default {
-  title: "Components/ErrorPage[NEW]",
+  title: "Components/ErrorBlock[NEW]",
   component: ErrorBlock,
   argTypes: {},
 } as Meta;

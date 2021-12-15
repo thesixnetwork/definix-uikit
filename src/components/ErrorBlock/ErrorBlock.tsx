@@ -2,8 +2,9 @@ import React, { MouseEvent } from "react";
 import styled from "styled-components";
 import { Text } from "../Text";
 import { Button } from "../Button";
+import { ImageSet } from "../Image";
 import { ErrorBlockProps } from "./types";
-import { ErrorIcon } from "../Icon";
+import { ImgError1x, ImgError2x, ImgError3x } from "../Finix";
 import { NAV_HEIGHT_MOBILE, NAV_HEIGHT_PC } from "src/widgets/Menu/config";
 
 const Wrap = styled.div`
@@ -62,7 +63,8 @@ const ErrorBlock: React.FC<ErrorBlockProps> = ({ message, label, onBack }) => {
   return (
     <Wrap>
       <Box>
-        <ErrorIcon />
+        <ImageSet srcSet={[ImgError1x, ImgError2x, ImgError3x]} alt="" width={166} height={132} />
+        {/* <ErrorIcon /> */}
         <LabelText textStyle="R_14R" color="deepgrey">
           {message}
         </LabelText>

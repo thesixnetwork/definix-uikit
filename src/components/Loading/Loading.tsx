@@ -1,7 +1,8 @@
 import React from "react";
-import { GroupIcon } from "../Icon";
 import styled, { keyframes, css } from "styled-components";
 import { Flex } from "../Box";
+import ImageSet from "../Image/ImageSet";
+import { ImgLoading1x, ImgLoading2x, ImgLoading3x } from "../Finix";
 
 const FadeAnimation = keyframes`
   0%, 100% {
@@ -63,7 +64,7 @@ const Circle = styled.div`
   ${bindAnimation()}
 `;
 
-const WrapIcon = styled(Flex)`
+const StyledImageSet = styled(ImageSet)`
   width: 166px;
   height: 102px;
   ${({ theme }) => theme.mediaQueries.mobileXl} {
@@ -82,9 +83,7 @@ const Loading: React.FC = () => {
             <Circle key={index} />
           ))}
       </WrapCircle>
-      <WrapIcon>
-        <GroupIcon viewBox="0 0 166 102" width="100%" height="100%" />
-      </WrapIcon>
+      <StyledImageSet srcSet={[ImgLoading1x, ImgLoading2x, ImgLoading3x]} alt="" width={166} height={102} />
     </Wrap>
   );
 };

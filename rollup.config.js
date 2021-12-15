@@ -1,6 +1,7 @@
 import typescript from "@rollup/plugin-typescript";
 import svgr from '@svgr/rollup';
 import url from "@rollup/plugin-url";
+import image from '@rollup/plugin-image';
 import pkg from "./package.json";
 
 export default {
@@ -9,5 +10,5 @@ export default {
     { file: pkg.main, format: "cjs" },
     { file: pkg.module, format: "es" },
   ],
-  plugins: [typescript(), url(), svgr()],
+  plugins: [typescript(), image(), url(), svgr()],
 };
