@@ -10,7 +10,7 @@ export default {
 } as Meta;
 
 export const Default: React.FC = () => {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState("");
   return (
     <>
       <div
@@ -31,7 +31,7 @@ export const Default: React.FC = () => {
           value={value}
           placeholder="0"
           onChange={(e) => {
-            setValue(e.target.value)
+            setValue(e.target.value);
           }}
         />
       </div>

@@ -24,12 +24,18 @@ const StyledInput = styled.input`
 `;
 
 const BalanceInput = (props: BalanceInputProps): JSX.Element => {
-  const { onChange, ...rest } = props
-  return <StyledInput {...rest} pattern="^[0-9]*[.,]?[0-9]*$" onChange={(e) => {
-    if (e.target.validity.valid) {
-      typeof onChange === 'function' && onChange(e)
-    }
-  }} />;
+  const { onChange, ...rest } = props;
+  return (
+    <StyledInput
+      {...rest}
+      pattern="^[0-9]*[.,]?[0-9]*$"
+      onChange={(e) => {
+        if (e.target.validity.valid) {
+          typeof onChange === "function" && onChange(e);
+        }
+      }}
+    />
+  );
 };
 
 export default BalanceInput;
