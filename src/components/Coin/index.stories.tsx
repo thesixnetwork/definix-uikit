@@ -47,7 +47,7 @@ export const Default: React.FC<CoinProps> = ({ symbol = "ETH", ...props }) => {
           display: "flex",
         }}
       >
-        <Lp size="80px" lpSymbols={['FINIX', 'SIX']} />
+        <Lp size="80px" lpSymbols={["FINIX", "SIX"]} />
       </div>
     </>
   );

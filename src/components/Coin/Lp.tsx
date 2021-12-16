@@ -32,8 +32,7 @@ const StyledEmpty = styled.div<{ width: string; height: string }>`
   height: ${({ height }) => (height ? height : "auto")};
 `;
 
-const StyledWrap = styled.div`
-`
+const StyledWrap = styled.div``;
 
 const Lp: React.FC<LpProps> = ({ lpSymbols, size, ...props }) => {
   const [symbol1, symbol2] = lpSymbols;
