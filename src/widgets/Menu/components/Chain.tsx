@@ -1,7 +1,7 @@
 import React from "react";
 import { useMatchBreakpoints } from "../../../hooks";
 import { ChainToggle, ChainToggleItem } from "../../../components/ButtonMenu";
-import { TokenKbnbIcon, TokenKlayIcon } from "../../../components/Icon";
+import { Coin } from "../../../components/Coin";
 import { useMenu } from "../MenuContext";
 import { useModal } from "../../Modal";
 import BSCNotiModal from "./BSCNotiModal";
@@ -16,14 +16,14 @@ const Chain: React.FC = () => {
     <div>
       <ChainToggle scale={isMobile ? "sm" : "md"} activeIndex={1}>
         <ChainToggleItem
-          startIcon={<TokenKbnbIcon viewBox="0 0 200 200" />}
+          startIcon={<Coin symbol="KBNB" size={isMobile ? "18px" : "16px"} />}
           onClick={() => {
             onPresentAlertModal();
           }}
         >
           <Trans i18nKey={isMobile ? "BSC" : "Binance Smart Chain"} />
         </ChainToggleItem>
-        <ChainToggleItem startIcon={<TokenKlayIcon viewBox="0 0 200 200" />}>
+        <ChainToggleItem startIcon={<Coin symbol="KLAY" size={isMobile ? "18px" : "16px"} />}>
           <Trans i18nKey="Klaytn Chain" />
         </ChainToggleItem>
       </ChainToggle>
