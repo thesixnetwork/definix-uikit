@@ -3,14 +3,11 @@ import { SliderContainer, StyledSlider, BarBackground, BarProgress, StyledInput 
 import { SliderProps } from "./types";
 
 const Slider: React.FC<SliderProps> = ({ min, max, value, onValueChanged, valueLabel, ...props }) => {
-  const handleChange = useCallback(
-    ({ target }: ChangeEvent<HTMLInputElement>) => {
-      if (onValueChanged) {
-        onValueChanged(parseInt(target.value, 10));
-      }
-    },
-    [onValueChanged]
-  );
+  const handleChange = useCallback(({ target }: ChangeEvent<HTMLInputElement>) => {
+    if(onValueChanged){
+      onValueChanged(parseInt(target.value, 10));
+    }
+  }, [onValueChanged]);
   const progressPercentage = useMemo(() => (value / max) * 100, [value, max]);
   const isCurrentValueMaxValue = useMemo(() => value === max, [value, max]);
 
