@@ -1,19 +1,18 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useCallback, useMemo } from "react";
 import { SliderContainer, StyledSlider, BarBackground, BarProgress, StyledInput } from "./styles";
-import SliderProps from "./types";
-
-// We need to adjust the offset as the percentage increases, as 100% really is 100% - label width. The number 10 is arbitrary, but seems to work...
-// const MOVING_SLIDER_LABEL_OFFSET_FACTOR = 10;
+import { SliderProps } from "./types";
 
 const Slider: React.FC<SliderProps> = ({ min, max, value, onValueChanged, valueLabel, ...props }) => {
-  const handleChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
-    onValueChanged(parseInt(target.value, 10));
-  };
-  const progressPercentage = (value / max) * 100;
-  const isCurrentValueMaxValue = value === max;
-  // const labelOffset = progressPercentage - progressPercentage / MOVING_SLIDER_LABEL_OFFSET_FACTOR;
+  const handleChange = useCallback(({ target }: ChangeEvent<HTMLInputElement>) => {
+    if(onValueChanged){
+      onValueChanged(parseInt(target.value, 10));
+    }
+  }, [onValueChanged]);
+  const progressPercentage = useMemo(() => (value / max) * 100, [value, max]);
+  const isCurrentValueMaxValue = useMemo(() => value === max, [value, max]);
+
   return (
-    <SliderContainer {...props}>
+    <SliderContainer>
       <StyledSlider>
         <BarBackground />
         <BarProgress isCurrentValueMaxValue={isCurrentValueMaxValue} progress={progressPercentage} />
