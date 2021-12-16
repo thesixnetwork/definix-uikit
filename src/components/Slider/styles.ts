@@ -1,22 +1,23 @@
 import { InputHTMLAttributes } from "react";
-import { ColorStyles } from "src";
+import { ColorStyles } from "src/theme/colors";
 import styled from "styled-components";
-import { Box } from "../Box";
+// import { Box } from "../Box";
 
-export const SliderContainer = styled(Box)`
+export const SliderContainer = styled.div`
   position: relative;
   height: 48px;
 `;
 
-interface SliderLabelProps {
-  progress: number;
-}
-export const SliderLabel = styled.label<SliderLabelProps>`
-  position: absolute;
-  bottom: 0;
-  margin-left: 16px; // offset the bunny butt width
-  left: calc(${({ progress }) => progress}%);
-`;
+// interface SliderLabelProps {
+//   progress: number;
+// }
+
+// export const SliderLabel = styled.label<SliderLabelProps>`
+//   position: absolute;
+//   bottom: 0;
+//   margin-left: 16px;
+//   left: calc(${({ progress }) => progress}%);
+// `;
 
 export const StyledSlider = styled.div`
   position: absolute;
@@ -47,7 +48,7 @@ export const StyledInput = styled.input<StyledInputProps>`
     width: 22px;
     height: 22px;
     border: 5px solid #ff6828;
-    background-color: ${ColorStyles.WHITE};
+    /* background-color: ${ColorStyles.WHITE}; */
     border-radius: 50%;
     cursor: pointer;
     transform: translate(-2px, 1px);
@@ -57,7 +58,7 @@ export const StyledInput = styled.input<StyledInputProps>`
     width: 22px;
     height: 22px;
     border: 5px solid #ff6828;
-    background-color: ${ColorStyles.WHITE};
+    /* background-color: ${ColorStyles.WHITE}; */
     border-radius: 50%;
     cursor: pointer;
     transform: translate(-2px, 1px);
@@ -70,7 +71,7 @@ export const BarBackground = styled.div`
   height: 5px;
   top: 18px;
   border-radius: 2.5px;
-  background-color: ${ColorStyles.LIGHTGREY};
+  /* background-color: ${ColorStyles.LIGHTGREY}; */
 `;
 
 export const BarProgress = styled.div<{ progress: number; isCurrentValueMaxValue: boolean }>`

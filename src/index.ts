@@ -29,9 +29,9 @@ export * from "./components/Noti";
 export * from "./components/Loading";
 export * from "./components/CopyToClipboard";
 export * from "./components/Helper";
+export * from "./components/Slider";
 export * from "./components/ErrorBlock";
 export * from "./components/Coin";
-export * from "./components/Slider";
 export * from "./components/Finix";
 
 // Hooks
