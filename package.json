@@ -1,6 +1,6 @@
 {
   "name": "@fingerlabs/definixswap-uikit-v2",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Set of UI components for Definix projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
