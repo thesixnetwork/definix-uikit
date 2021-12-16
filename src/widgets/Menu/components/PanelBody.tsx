@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
 import { SvgProps } from "../../../components/Svg";
+import { Coin } from "../../../components/Coin";
 import * as IconModule from "../../../components/Icon";
 import Accordion from "./Accordion";
 import { MenuEntry, LinkLabel } from "./MenuEntry";
@@ -112,7 +113,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
       })}
       <LineMenuEntry isActive={false}>
         <V1MenuLink href={"https://klaytn.definix.com/"} target="_blank">
-          <IconModule.TokenFinixIcon viewBox="0 0 24 24" width="16" height="16" />
+          <Coin symbol="FINIX" size="16px" />
           <LinkLabel isPushed={isPushed} ml="8px">
             <Trans i18nKey="Switch to V1" />
           </LinkLabel>

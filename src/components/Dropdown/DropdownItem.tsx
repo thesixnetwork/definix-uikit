@@ -19,6 +19,10 @@ const Item = styled.button<{ isActive: boolean; isDivide?: boolean }>`
   ${({ isActive, theme }) => (isActive ? theme.textStyle.R_12M : theme.textStyle.R_12R)}
 
   background-color: ${({ isActive, theme }) => (isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white)};
+
+  :hover {
+    background-color: ${({ theme }) => hexToRGB(theme.colors.pale, 0.2)};
+  }
 `;
 
 const DropdownItem: React.FC<DropdownItemProps> = ({ children, isActive = false, ...props }) => {
