@@ -60,3 +60,8 @@ export interface CoinProps extends SpaceProps {
   symbol: COIN_SYMBOL | string;
   size?: string;
 }
+
+export interface LpProps extends SpaceProps {
+  lpSymbols: string[];
+  size?: string;
+}

@@ -2,7 +2,7 @@
 
 ## Install
 
-`yarn add definixswap-uikit-v2`
+`yarn add @fingerlabs/definixswap-uikit-v2`
 
 ## Setup
 
@@ -11,7 +11,7 @@
 A reset CSS is available as a global styled component.
 
 ```
-import { ResetCSS } from 'definixswap-uikit-v2'
+import { ResetCSS } from '@fingerlabs/definixswap-uikit-v2'
 ...
 <ResetCSS />
 ```
