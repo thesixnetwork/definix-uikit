@@ -8,7 +8,7 @@ export const getTokenImageUrl = (tokenName: COIN_SYMBOL | string) => {
     return "";
   }
   try {
-    return COIN_SRCSET[tokenName as COIN_SYMBOL]
+    return COIN_SRCSET[tokenName as COIN_SYMBOL];
   } catch {
     return null;
   }
@@ -22,11 +22,22 @@ const StyledCoinImage = styled.img<SpaceProps>`
 const StyledEmpty = styled.div<{ width: number; height: number }>`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
-`
+`;
 
 const Coin: React.FC<CoinProps> = ({ symbol, size, ...props }) => {
   const imgUrl = getTokenImageUrl(symbol);
-  return imgUrl ? <StyledCoinImage width={size} height={size} src={imgUrl[0]} srcSet={`${imgUrl[1]} 2x, ${imgUrl[2]} 3x`} alt={symbol} {...props} /> : <StyledEmpty width={size} height={size}/>;
+  return imgUrl ? (
+    <StyledCoinImage
+      width={size}
+      height={size}
+      src={imgUrl[0]}
+      srcSet={`${imgUrl[1]} 2x, ${imgUrl[2]} 3x`}
+      alt={symbol}
+      {...props}
+    />
+  ) : (
+    <StyledEmpty width={size} height={size} />
+  );
 };
 
 Coin.defaultProps = {
