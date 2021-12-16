@@ -19,9 +19,9 @@ const StyledCoinImage = styled.img<SpaceProps>`
   ${space}
 `;
 
-const StyledEmpty = styled.div<{ width: number; height: number }>`
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
+const StyledEmpty = styled.div<{ width: string; height: string }>`
+  width: ${({ width }) => width ? width : 'auto'};
+  height: ${({ height }) => height ? height : 'auto'};
 `;
 
 const Coin: React.FC<CoinProps> = ({ symbol, size, ...props }) => {
@@ -36,7 +36,7 @@ const Coin: React.FC<CoinProps> = ({ symbol, size, ...props }) => {
       {...props}
     />
   ) : (
-    <StyledEmpty width={size} height={size} />
+    <StyledEmpty width={size as string} height={size as string} />
   );
 };
 

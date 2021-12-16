@@ -19,21 +19,22 @@ import {
 } from "./Symbol";
 
 export enum COIN_SYMBOL {
-  ADA = "ada",
-  BTCB = "btcb",
-  BUSD = "busd",
-  FINIX = "finix",
-  KBNB = "kbnb",
-  KDAI = "kdai",
-  KETH = "keth",
-  KLAY = "klay",
-  KSP = "ksp",
-  KUSDT = "kusdt",
-  KWBTC = "kwbtc",
-  SIX = "six",
-  UNSELECT = "unselect",
-  VFINIX = "vfinix",
-  XRP = "xrp",
+  ADA = "ADA",
+  BTCB = "BTCB",
+  BUSD = "BUSD",
+  FINIX = "FINIX",
+  KBNB = "KBNB",
+  KDAI = "KDAI",
+  KETH = "KETH",
+  KLAY = "KLAY",
+  WKLAY = "WKLAY",
+  KSP = "KSP",
+  KUSDT = "KUSDT",
+  KWBTC = "KWBTC",
+  SIX = "SIX",
+  UNSELECT = "UNSELECT",
+  VFINIX = "VFINIX",
+  KXRP = "KXRP",
 }
 
 export const COIN_SRCSET: Record<COIN_SYMBOL, string[]> = {
@@ -45,13 +46,14 @@ export const COIN_SRCSET: Record<COIN_SYMBOL, string[]> = {
   [COIN_SYMBOL.KDAI]: ImgTokenKdai,
   [COIN_SYMBOL.KETH]: ImgTokenKeth,
   [COIN_SYMBOL.KLAY]: ImgTokenKlay,
+  [COIN_SYMBOL.WKLAY]: ImgTokenKlay,
   [COIN_SYMBOL.KSP]: ImgTokenKsp,
   [COIN_SYMBOL.KUSDT]: ImgTokenKusdt,
   [COIN_SYMBOL.KWBTC]: ImgTokenKwbtc,
   [COIN_SYMBOL.SIX]: ImgTokenSix,
   [COIN_SYMBOL.UNSELECT]: ImgTokenUnselect,
   [COIN_SYMBOL.VFINIX]: ImgTokenVfinix,
-  [COIN_SYMBOL.XRP]: ImgTokenXrp,
+  [COIN_SYMBOL.KXRP]: ImgTokenXrp,
 };
 
 export interface CoinProps extends SpaceProps {
