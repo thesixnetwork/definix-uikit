@@ -44,8 +44,7 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = (p
   if (!isActive) {
     return (
       <InactiveButton {...rest}>
-        {isValidElement(startIcon) &&
-          cloneElement(startIcon)}
+        {isValidElement(startIcon) && cloneElement(startIcon)}
         <StyledText ml="7px">{children}</StyledText>
       </InactiveButton>
     );
@@ -53,8 +52,7 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = (p
 
   return (
     <ActiveButton {...rest}>
-      {isValidElement(startIcon) &&
-        cloneElement(startIcon)}
+      {isValidElement(startIcon) && cloneElement(startIcon)}
       <StyledText ml="7px">{children}</StyledText>
     </ActiveButton>
   );
