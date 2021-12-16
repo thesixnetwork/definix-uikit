@@ -33,3 +33,11 @@ export { default as ImgError3x } from "./images/img_error@3x.png";
 export { default as ImgMyinvestmentDefault1x } from "./images/img_myinvestment_default.png";
 export { default as ImgMyinvestmentDefault2x } from "./images/img_myinvestment_default@2x.png";
 export { default as ImgMyinvestmentDefault3x } from "./images/img_myinvestment_default@3x.png";
+
+export { default as ImgLongterm1x } from "./images/img-longterm.png";
+export { default as ImgLongterm2x } from "./images/img-longterm@2x.png";
+export { default as ImgLongterm3x } from "./images/img-longterm@3x.png";
+
+export { default as ImgBridge1x } from "./images/img-bridge.png";
+export { default as ImgBridge2x } from "./images/img-bridge@2x.png";
+export { default as ImgBridge3x } from "./images/img-bridge@3x.png";
