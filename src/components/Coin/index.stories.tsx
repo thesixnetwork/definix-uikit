@@ -1,5 +1,6 @@
 import React from "react";
 import Coin from "./Coin";
+import Lp from "./Lp";
 import { CoinProps, COIN_SYMBOL } from "./types";
 
 export default {
@@ -39,6 +40,14 @@ export const Default: React.FC<CoinProps> = ({ symbol = "ETH", ...props }) => {
         {Object.entries(COIN_SYMBOL).map(([key, value]) => (
           <Coin size="80px" symbol={value} />
         ))}
+      </div>
+      <div
+        style={{
+          padding: "20px",
+          display: "flex",
+        }}
+      >
+        <Lp size="80px" lpSymbols={['FINIX', 'SIX']} />
       </div>
     </>
   );
