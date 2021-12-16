@@ -14,6 +14,12 @@ const StyledButton = styled.button`
   justify-content: center;
   height: 100%;
   cursor: pointer;
+  padding-left: 10px;
+  padding-right: 14px;
+
+  :nth-child(2) {
+    padding-right: 18px;
+  }
 `;
 
 const InactiveButton = styled(StyledButton)`
@@ -40,8 +46,8 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = (p
       <InactiveButton {...rest}>
         {isValidElement(startIcon) &&
           cloneElement(startIcon, {
-            width: scale === "md" ? "22" : "20",
-            height: scale === "md" ? "22" : "20",
+            width: scale === "md" ? "18" : "16",
+            height: scale === "md" ? "18" : "16",
             mr: "0.5rem",
           })}
         <StyledText ml="7px">{children}</StyledText>
@@ -53,8 +59,8 @@ const ChainToggleItem: PolymorphicComponent<ChainToggleItemProps, "button"> = (p
     <ActiveButton {...rest}>
       {isValidElement(startIcon) &&
         cloneElement(startIcon, {
-          width: scale === "md" ? "22" : "20",
-          height: scale === "md" ? "22" : "20",
+          width: scale === "md" ? "18" : "16",
+          height: scale === "md" ? "18" : "16",
           mr: "0.5rem",
         })}
       <StyledText ml="7px">{children}</StyledText>

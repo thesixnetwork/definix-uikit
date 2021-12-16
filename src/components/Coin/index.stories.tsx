@@ -1,9 +1,6 @@
 import React from "react";
-import { textStyle } from "../../theme/text";
-import { ColorStyles } from "../../theme";
 import Coin from "./Coin";
-import { Flex } from "../Box";
-import { CoinProps } from "./types";
+import { CoinProps, COIN_SYMBOL } from "./types";
 
 export default {
   title: "Components/Coin[NEW]",
@@ -12,13 +9,31 @@ export default {
 
 export const Default: React.FC<CoinProps> = ({ symbol = "ETH", ...props }) => {
   return (
-    <div style={{ padding: "20px" }}>
-      <Coin symbol="FINIX" />
-      <Flex alignItems="center">
-        <Coin symbol="BTC" size="30px" mr="10px" />
-        Bitcoin
-      </Flex>
-      <Coin symbol={symbol} {...props} />
-    </div>
+    <>
+      <div style={{
+        padding: "20px",
+        display: 'flex',
+      }}>
+        {
+          Object.entries(COIN_SYMBOL).map(([key, value]) => <Coin symbol={value} />)
+        }
+      </div>
+      <div style={{
+        padding: "20px",
+        display: 'flex',
+      }}>
+        {
+          Object.entries(COIN_SYMBOL).map(([key, value]) => <Coin size="40px" symbol={value} />)
+        }
+      </div>
+      <div style={{
+        padding: "20px",
+        display: 'flex',
+      }}>
+        {
+          Object.entries(COIN_SYMBOL).map(([key, value]) => <Coin size="80px" symbol={value} />)
+        }
+      </div>
+    </>
   );
 };
