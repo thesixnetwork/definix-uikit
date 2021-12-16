@@ -22,9 +22,9 @@ export { default as ImgFarm1x } from "./images/img_farm.png";
 export { default as ImgFarm2x } from "./images/img_farm@2x.png";
 export { default as ImgFarm3x } from "./images/img_farm@3x.png";
 
-export { default as ImgPool1x } from "./images/img_pool.png";
-export { default as ImgPool2x } from "./images/img_pool@2x.png";
-export { default as ImgPool3x } from "./images/img_pool@3x.png";
+export { default as ImgPool1x } from "./images/img_pool_new.png";
+export { default as ImgPool2x } from "./images/img_pool_new@2x.png";
+export { default as ImgPool3x } from "./images/img_pool_new@3x.png";
 
 export { default as ImgError1x } from "./images/img_error.png";
 export { default as ImgError2x } from "./images/img_error@2x.png";
