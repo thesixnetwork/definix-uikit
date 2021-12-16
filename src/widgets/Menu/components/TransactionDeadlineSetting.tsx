@@ -29,6 +29,9 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target;
+    if (inputValue.length > 4) {
+      return;
+    }
     setValue(parseInt(inputValue, 10));
   };
 
@@ -60,7 +63,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
           type="number"
           step="1"
           min="1"
-          max="4"
+          maxLength={4}
           value={value}
           placeholder="20"
           onChange={handleChange}
