@@ -15,10 +15,12 @@ const BSCNotiModal: React.FC<Props> = ({ Trans, onDismiss = () => null }) => {
         </Text>
       </ModalBody>
       <ModalFooter isFooter>
-        <Button onClick={() => {
-          location.href = 'https://bsc.definix.com'
-          onDismiss();
-        }}>
+        <Button
+          onClick={() => {
+            location.href = "https://bsc.definix.com";
+            onDismiss();
+          }}
+        >
           <Trans i18nKey="Go to BSC" />
         </Button>
       </ModalFooter>
