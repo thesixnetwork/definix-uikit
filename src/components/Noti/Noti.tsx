@@ -23,6 +23,7 @@ const StyledNoti = styled.div`
 const StyledIcon = styled.div`
   width: 14px;
   height: 14px;
+  min-width: 14px;
   margin-right: 5px;
   border-radius: 50%;
   display: flex;
