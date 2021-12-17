@@ -36,6 +36,7 @@ export interface MenuEntry {
   activeIcon: string;
   items?: MenuSubEntry[];
   href?: string;
+  target?: string;
   calloutClass?: string;
   initialOpenState?: boolean;
 }

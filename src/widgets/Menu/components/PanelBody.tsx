@@ -90,10 +90,10 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
               className={calloutClass}
               isActive={entry.items.some((item) => item.href === location.pathname)}
             >
-              {entry.items.map((item) => {
+              {entry.items.map(({ href, label, ...rest }) => {
                 return (
-                  <MenuEntry key={item.href} secondary isActive={item.href === location.pathname} onClick={handleClick}>
-                    <StyledMenuLink href={item.href}>{item.label}</StyledMenuLink>
+                  <MenuEntry key={href} secondary isActive={href === location.pathname} onClick={handleClick}>
+                    <StyledMenuLink href={href} {...rest}>{label}</StyledMenuLink>
                   </MenuEntry>
                 );
               })}
@@ -102,7 +102,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
         }
         return (
           <MenuEntry key={entry.label} isActive={isActive}>
-            <MenuLink href={entry.href} onClick={handleClick}>
+            <MenuLink href={entry.href} onClick={handleClick} {...(entry.target ? {
+              target: entry.target
+             } : {})}>
               {isActive ? activeIconElement : iconElement}
               <LinkLabel isPushed={isPushed} ml="6px">
                 {entry.label}
@@ -115,7 +117,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
         <V1MenuLink href={"https://klaytn.definix.com/"} target="_blank">
           <Coin symbol="FINIX" size="16px" />
           <LinkLabel isPushed={isPushed} ml="8px">
-            <Trans i18nKey="Switch to V1" />
+            <Trans i18nKey="Switch to G1" />
           </LinkLabel>
         </V1MenuLink>
       </LineMenuEntry>
