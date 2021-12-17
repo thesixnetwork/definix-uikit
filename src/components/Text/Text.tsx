@@ -4,6 +4,8 @@ import { getVariantTextStyle } from "../../theme/text";
 import { TextProps } from "./types";
 
 const Text = styled.div<TextProps>`
+  white-space: pre-line;
+  word-break: keep-all;
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
   ${space}
   ${typography}

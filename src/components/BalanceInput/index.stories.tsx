@@ -10,6 +10,7 @@ export default {
 } as Meta;
 
 export const Default: React.FC = () => {
+  const [value, setValue] = useState("");
   return (
     <>
       <div
@@ -26,7 +27,13 @@ export const Default: React.FC = () => {
           width: "400px",
         }}
       >
-        <BalanceInput value="" placeholder="0" />
+        <BalanceInput
+          value={value}
+          placeholder="0"
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+        />
       </div>
     </>
   );
