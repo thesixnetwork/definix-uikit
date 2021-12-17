@@ -48,7 +48,9 @@ const StyledFlex = styled(Flex)`
   }
 `;
 
-const StyledLogoWrap = styled(Flex)``;
+const StyledLogoWrap = styled(Flex)`
+  align-items: center;
+`;
 
 const LeftFlex = styled(Flex)`
   /* margin-top: 40px; */
@@ -117,6 +119,7 @@ const Footer: React.FC = () => {
               <FingerLabsLogo viewBox="0 0 86 48" width="100%" height="100%" />
             </WrapIcon>
           </StyledLogoWrap>
+
           <StyledFlex>
             <CopyRightText>
               <Trans i18nKey="copyright" components={{ 0: <strong /> }}></Trans>
