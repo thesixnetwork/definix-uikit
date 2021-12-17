@@ -27,7 +27,7 @@ import { ReactComponent as FooterKakaotalkIcon } from "./icons/ico_24_footer_kak
 import { ReactComponent as FooterGithubIcon } from "./icons/ico_24_footer_github.svg";
 import { ReactComponent as FooterGitbookIcon } from "./icons/ico_24_footer_gitbook.svg";
 import { ReactComponent as FooterFacebookIcon } from "./icons/ico_24_footer_facebook.svg";
-import { ReactComponent as LogoFooterSixIcon } from "./icons/logo_footer_six.svg";
+import { ReactComponent as LogoFooterSixIcon } from "./icons/logo_footer_sixnetwork.svg";
 import { ReactComponent as MoreNIcon } from "./icons/ico_24_more_n.svg";
 import { ReactComponent as ArrowRightGIcon } from "./icons/ico_16_arrow_right_g.svg";
 import { ReactComponent as MenuIcon } from "./icons/ico_24_menu.svg";
