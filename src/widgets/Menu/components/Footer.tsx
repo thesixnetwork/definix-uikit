@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Flex } from "../../../components/Box";
 import { Text } from "../../../components/Text";
-import { LogoFooterSixIcon } from "../../../components/Icon";
+import { FingerLabsLogo, LogoFooterSixIcon } from "../../../components/Icon";
 import SocialLinks from "./SocialLinks";
 import { SIDEBAR_WIDTH_FULL_PC } from "../config";
 import { useMenu } from "../MenuContext";
@@ -31,7 +31,6 @@ const Inner = styled.div`
     flex-direction: column;
     flex-wrap: wrap-reverse;
     justify-content: stretch;
-
     > div {
       width: 100%;
     }
@@ -49,14 +48,18 @@ const StyledFlex = styled(Flex)`
   }
 `;
 
+const StyledLogoWrap = styled(Flex)``;
+
 const LeftFlex = styled(Flex)`
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  align-items: center;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     padding: 20px 40px 0;
     margin-top: 20px;
     border-top: 1px solid ${({ theme }) => theme.colors.lightGrey50};
     flex-direction: column;
+    align-items: flex-start;
     order: 1;
   }
 `;
@@ -85,15 +88,35 @@ const AuditText = styled(CopyRightText)`
   }
 `;
 
+const Divider = styled.div`
+  width: 1px;
+  height: 40px;
+  background-color: ${({theme}) => theme.colors.lightGrey50};
+  margin-left: 20px;
+  margin-right: 20px;
+
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    height: 27px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+`;
+
 const Footer: React.FC = () => {
   const { Trans } = useMenu();
   return (
     <StyledFooter>
       <Inner>
         <LeftFlex>
-          <WrapIcon>
-            <LogoFooterSixIcon viewBox="0 0 86 48" width="100%" height="100%" />
-          </WrapIcon>
+          <StyledLogoWrap>
+            <WrapIcon>
+              <LogoFooterSixIcon viewBox="0 0 86 48" width="100%" height="100%" />
+            </WrapIcon>
+            <Divider />
+            <WrapIcon>
+              <FingerLabsLogo viewBox="0 0 86 48" width="100%" height="100%" />
+            </WrapIcon>
+          </StyledLogoWrap>
           <StyledFlex>
             <CopyRightText>
               <Trans i18nKey="copyright" components={{ 0: <strong /> }}></Trans>
