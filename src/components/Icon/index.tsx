@@ -79,6 +79,7 @@ import { ReactComponent as ImgRebalancingIcon } from "./icons/img_rebalancing.sv
 import { ReactComponent as ChangePlusIcon } from "./icons/ico-42-change-plus.svg";
 import { ReactComponent as GnbFinixSIcon } from "./icons/ico_24_gnb_finix_s.svg";
 import { ReactComponent as GnbFinixNIcon } from "./icons/ico_24_gnb_finix_n.svg";
+import { ReactComponent as FingerLabsLogo } from "./icons/logo_footer_fingerlabs.svg";
 
 export {
   GnbMySIcon,
@@ -161,4 +162,5 @@ export {
   ChangePlusIcon,
   GnbFinixSIcon,
   GnbFinixNIcon,
+  FingerLabsLogo,
 };
