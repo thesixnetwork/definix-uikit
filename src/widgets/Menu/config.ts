@@ -55,12 +55,12 @@ export const links = [
       {
         label: "GitBook",
         href: "https://sixnetwork.gitbook.io/definix-on-klaytn-en/",
-        target: '_blank'
+        target: "_blank",
       },
       {
         label: "Partnership",
         href: "https://docs.google.com/forms/d/e/1FAIpQLScQcrUmV53N5y-ita6zD4Do8nQ6zdI_Al795jMUK--HSbHU5Q/viewform",
-        target: '_blank'
+        target: "_blank",
       },
     ],
   },

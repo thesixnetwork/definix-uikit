@@ -93,7 +93,9 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
               {entry.items.map(({ href, label, ...rest }) => {
                 return (
                   <MenuEntry key={href} secondary isActive={href === location.pathname} onClick={handleClick}>
-                    <StyledMenuLink href={href} {...rest}>{label}</StyledMenuLink>
+                    <StyledMenuLink href={href} {...rest}>
+                      {label}
+                    </StyledMenuLink>
                   </MenuEntry>
                 );
               })}
@@ -102,9 +104,15 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
         }
         return (
           <MenuEntry key={entry.label} isActive={isActive}>
-            <MenuLink href={entry.href} onClick={handleClick} {...(entry.target ? {
-              target: entry.target
-             } : {})}>
+            <MenuLink
+              href={entry.href}
+              onClick={handleClick}
+              {...(entry.target
+                ? {
+                    target: entry.target,
+                  }
+                : {})}
+            >
               {isActive ? activeIconElement : iconElement}
               <LinkLabel isPushed={isPushed} ml="6px">
                 {entry.label}
