@@ -92,7 +92,7 @@ const UserBlock: React.FC = () => {
         {link?.href === "/" ? (
           <Button
             ml="8px"
-            xs
+            scale="xs"
             variant={ButtonVariants.DEEPBROWN}
             as={Link}
             to="/my"
@@ -105,7 +105,7 @@ const UserBlock: React.FC = () => {
         ) : (
           <Button
             ml="8px"
-            xs
+            scale="xs"
             variant={ButtonVariants.DEEPBROWN}
             as="a"
             href={`${link.href}/my`}
