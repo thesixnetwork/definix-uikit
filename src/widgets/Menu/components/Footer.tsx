@@ -91,7 +91,7 @@ const AuditText = styled(CopyRightText)`
 const Divider = styled.div`
   width: 1px;
   height: 40px;
-  background-color: ${({theme}) => theme.colors.lightGrey50};
+  background-color: ${({ theme }) => theme.colors.lightGrey50};
   margin-left: 20px;
   margin-right: 20px;
 
