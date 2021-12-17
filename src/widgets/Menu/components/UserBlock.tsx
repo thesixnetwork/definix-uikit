@@ -35,9 +35,10 @@ const StyledButton = styled.a`
 const UserBlock: React.FC = () => {
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
-  const { account, login, logout, Trans, Link } = useMenu();
+  const { account, login, logout, Trans, Link, links } = useMenu();
   const { onPresentConnectModal } = useWalletModal(Trans, login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
+  const link = links[0];
 
   const onLogout = () => {
     window.localStorage.removeItem(localStorageKey);
@@ -88,18 +89,33 @@ const UserBlock: React.FC = () => {
             Trans={Trans}
           />
         </Flex>
-        <Button
-          ml="8px"
-          xs
-          variant={ButtonVariants.DEEPBROWN}
-          as={Link}
-          to="/my"
-          startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
-        >
-          <Text textStyle={TextStyles.R_12B}>
-            <Trans i18nKey="MY" />
-          </Text>
-        </Button>
+        {link?.href === "/" ? (
+          <Button
+            ml="8px"
+            xs
+            variant={ButtonVariants.DEEPBROWN}
+            as={Link}
+            to="/my"
+            startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
+          >
+            <Text textStyle={TextStyles.R_12B}>
+              <Trans i18nKey="MY" />
+            </Text>
+          </Button>
+        ) : (
+          <Button
+            ml="8px"
+            xs
+            variant={ButtonVariants.DEEPBROWN}
+            as="a"
+            href={`${link.href}/my`}
+            startIcon={<GnbMySIcon viewBox="0 0 24 24" />}
+          >
+            <Text textStyle={TextStyles.R_12B}>
+              <Trans i18nKey="MY" />
+            </Text>
+          </Button>
+        )}
       </>
     );
   }
