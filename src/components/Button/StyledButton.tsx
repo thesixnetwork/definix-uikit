@@ -37,7 +37,7 @@ const StyledButton = styled.button<BaseButtonProps>`
     color: ${({ theme, variant }) =>
       variant === ButtonVariants.LINE
         ? hexToRGB(theme.colors[ColorStyles.MEDIUMGREY], 0.4)
-        : hexToRGB(theme.colors[ColorStyles.WHITE], 0.5)};
+        : hexToRGB(theme.colors[ColorStyles.WHITE], 0.8)};
     cursor: not-allowed;
   }
 
@@ -88,7 +88,7 @@ export const StyledLink = styled.a<BaseButtonProps>`
     color: ${({ theme, variant }) =>
       variant === ButtonVariants.LINE
         ? hexToRGB(theme.colors[ColorStyles.MEDIUMGREY], 0.4)
-        : hexToRGB(theme.colors[ColorStyles.WHITE], 0.5)};
+        : hexToRGB(theme.colors[ColorStyles.WHITE], 0.8)};
     cursor: not-allowed;
   }
 
