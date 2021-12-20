@@ -8,6 +8,7 @@ import { PanelProps } from "../types";
 import PanelHeader from "./PanelHeader";
 import { ColorStyles } from "../../../theme";
 import MobilePanelHeaderFixed from "./MobilePanelHeaderFixed";
+import MobilePanelFooterFixed from "./MobilePanelFooterFixed";
 import { useMatchBreakpoints } from "../../../hooks";
 
 const StyledPanel = styled.div<{ isPushed: boolean }>`
@@ -28,7 +29,7 @@ const StyledPanel = styled.div<{ isPushed: boolean }>`
   overflow: hidden;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
-    padding-top: 16px;
+    padding-top: 0;
     // justify-content: space-between;
 
     width: ${SIDEBAR_WIDTH_FULL_MOBILE}px;
@@ -85,10 +86,11 @@ const Panel: React.FC<PanelProps> = (props) => {
           <PanelHeader />
           <WrapBodyFooter>
             <PanelBody {...props} />
-            <PanelFooter />
+            {/* <PanelFooter /> */}
           </WrapBodyFooter>
         </ContainerScrollPanel>
       </WrapScrollPanel>
+      <MobilePanelFooterFixed />
     </StyledPanel>
   ) : (
     <StyledPanel {...props}>

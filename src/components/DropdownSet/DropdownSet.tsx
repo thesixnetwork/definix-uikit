@@ -57,7 +57,12 @@ const DropdownSet: React.FC<DropdownSetProps> = ({
       <DropdownContent position={position} isOpen={isOpen} {...props}>
         {options.map((option, index) => {
           return (
-            <DropdownItem key={option.id} scale={scale} isActive={activeIndex === index} onClick={() => onOptionClick(index)}>
+            <DropdownItem
+              key={option.id}
+              scale={scale}
+              isActive={activeIndex === index}
+              onClick={() => onOptionClick(index)}
+            >
               {option.label}
             </DropdownItem>
           );
