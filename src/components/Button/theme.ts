@@ -24,7 +24,7 @@ export const scaleVariants = {
     height: "48px",
     padding: "10px 12px",
     // minWidth: "186px",
-    ...textStyle.R_14B,
+    ...textStyle.R_16B,
   },
   [ButtonScales.ICON]: {
     height: "32px",
