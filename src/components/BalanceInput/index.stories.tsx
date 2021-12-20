@@ -4,7 +4,7 @@ import { Meta } from "@storybook/react/types-6-0";
 import BalanceInput from "./BalanceInput";
 
 export default {
-  title: "Components/BalanceInput[NEW]",
+  title: "Components/BalanceInput",
   component: BalanceInput,
   argTypes: {},
 } as Meta;

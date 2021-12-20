@@ -9,7 +9,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/TitleSet[NEW]",
+  title: "Components/TitleSet",
   component: TitleSet,
   argTypes: {},
 } as Meta;

@@ -7,7 +7,7 @@ import VDivider from "./VDivider";
 import { Flex } from "../Box";
 
 export default {
-  title: "Components/Divider[NEW]",
+  title: "Components/Divider",
   component: Divider,
   argTypes: {},
 } as Meta;

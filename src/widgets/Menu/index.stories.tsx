@@ -7,7 +7,7 @@ import { LangType } from "./types";
 import { links } from "./config";
 
 export default {
-  title: "Widgets/Menu[NEW]",
+  title: "Widgets/Menu",
   component: Menu,
   argTypes: {},
 };

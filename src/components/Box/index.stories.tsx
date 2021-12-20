@@ -6,7 +6,7 @@ import Text from "../Text/Text";
 import { Link } from "../Link";
 
 export default {
-  title: "Components/Primitives[NEW]",
+  title: "Components/Primitives",
   component: BoxComponent,
   argTypes: {},
 };

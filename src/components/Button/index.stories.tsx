@@ -17,7 +17,7 @@ const viewScales = [ButtonScales.XS, ButtonScales.SM, ButtonScales.MD, ButtonSca
 const viewVariants = [ButtonVariants.RED, ButtonVariants.BROWN, ButtonVariants.LIGHTBROWN, ButtonVariants.LINE];
 
 export default {
-  title: "Components/Button[NEW]",
+  title: "Components/Button",
   component: Button,
   argTypes: {},
 };

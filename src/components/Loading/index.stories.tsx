@@ -2,7 +2,7 @@ import React from "react";
 import { Loading } from "./index";
 
 export default {
-  title: "Components/Loading[NEW]",
+  title: "Components/Loading",
   component: Loading,
   argTypes: {
     fontSize: {

@@ -17,7 +17,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/Button Menu[NEW]",
+  title: "Components/Button Menu",
   component: ButtonMenu,
   argTypes: {},
 } as Meta;

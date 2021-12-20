@@ -9,7 +9,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/Label[NEW]",
+  title: "Components/Label",
   component: Label,
   argTypes: {},
 } as Meta;

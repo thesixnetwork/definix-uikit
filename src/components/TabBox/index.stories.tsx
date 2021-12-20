@@ -11,7 +11,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/TabBox[NEW]",
+  title: "Components/TabBox",
   component: TabBox,
   argTypes: {},
 } as Meta;

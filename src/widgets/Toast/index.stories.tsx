@@ -6,7 +6,7 @@ import ToastContainer from "./ToastContainer";
 import { useEffect } from "hoist-non-react-statics/node_modules/@types/react";
 
 export default {
-  title: "Widgets/Toast[NEW]",
+  title: "Widgets/Toast",
   component: ToastContainer,
   argTypes: {},
 };

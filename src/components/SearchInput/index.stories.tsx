@@ -7,7 +7,7 @@ import { SettingIcon } from "../Icon";
 import { Text } from "../Text";
 
 export default {
-  title: "Components/SearchInput[NEW]",
+  title: "Components/SearchInput",
   component: SearchInput,
   argTypes: {},
 } as Meta;

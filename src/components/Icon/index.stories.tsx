@@ -3,7 +3,7 @@ import styled from "styled-components";
 import * as Icons from ".";
 
 export default {
-  title: "Components/Icon[NEW]",
+  title: "Components/Icon",
   component: Icons.LogoMainFinixIcon,
   argTypes: {},
 };

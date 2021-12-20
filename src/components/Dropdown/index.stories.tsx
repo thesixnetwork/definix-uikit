@@ -8,7 +8,7 @@ import { TextStyles } from "../../theme/text";
 import { ArrowBottomGIcon } from "../Icon";
 
 export default {
-  title: "Components/Dropdown[NEW]",
+  title: "Components/Dropdown",
   component: Dropdown,
   argTypes: {},
 };

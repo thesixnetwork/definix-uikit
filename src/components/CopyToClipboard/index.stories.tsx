@@ -10,7 +10,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/CopyToClipboard[NEW]",
+  title: "Components/CopyToClipboard",
   component: CopyToClipboard,
   argTypes: {},
 };

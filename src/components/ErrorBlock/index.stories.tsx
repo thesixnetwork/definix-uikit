@@ -48,7 +48,7 @@ const useProps = () => {
 };
 
 export default {
-  title: "Components/ErrorBlock[NEW]",
+  title: "Components/ErrorBlock",
   component: ErrorBlock,
   argTypes: {},
 } as Meta;

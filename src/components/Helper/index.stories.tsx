@@ -10,7 +10,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/Helper[NEW]",
+  title: "Components/Helper",
   component: Helper,
   argTypes: {},
 };

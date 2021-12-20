@@ -4,7 +4,7 @@ import { ColorStyles } from "../../theme";
 import Text from "./Text";
 
 export default {
-  title: "Components/Text[NEW]",
+  title: "Components/Text",
   component: Text,
   argTypes: {
     bold: {

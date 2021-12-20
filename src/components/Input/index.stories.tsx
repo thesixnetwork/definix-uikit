@@ -7,7 +7,7 @@ import { SettingIcon } from "../Icon";
 import { Text } from "../Text";
 
 export default {
-  title: "Components/Input[NEW]",
+  title: "Components/Input",
   component: Input,
   argTypes: {},
 } as Meta;

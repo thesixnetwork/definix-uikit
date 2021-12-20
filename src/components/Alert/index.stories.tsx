@@ -12,7 +12,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/Alert[NEW]",
+  title: "Components/Alert",
   component: Alert,
   argTypes: {},
 } as Meta;

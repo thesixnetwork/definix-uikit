@@ -4,7 +4,7 @@ import Lp from "./Lp";
 import { CoinProps, COIN_SYMBOL } from "./types";
 
 export default {
-  title: "Components/Coin[NEW]",
+  title: "Components/Coin",
   component: Coin,
 };
 

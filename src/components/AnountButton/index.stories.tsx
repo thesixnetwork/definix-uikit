@@ -9,7 +9,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/AnountButton[NEW]",
+  title: "Components/AnountButton",
   component: AnountButton,
   argTypes: {},
 } as Meta;
