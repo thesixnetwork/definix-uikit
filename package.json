@@ -19,8 +19,7 @@
     "build-storybook": "build-storybook",
     "test": "jest",
     "move:d": "node move.js -d",
-    "release": "standard-version",
-    "deploy": "yarn build && np"
+    "deploy": "yarn build && standard-version && np"
   },
   "husky": {
     "hooks": {
@@ -32,6 +31,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.js"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
