@@ -15,6 +15,7 @@ const Trans = ({ i18nKey }: { i18nKey: string }) => {
 
 export const Context = createContext<MenuContext>({
   account: undefined,
+  version: '0.0.1',
   login: () => null,
   logout: () => null,
   Trans,
