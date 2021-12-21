@@ -10,20 +10,23 @@ interface Props {
 }
 
 const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
-  console.log(langs)
+  console.log(langs);
   const [isOpen, setIsOpen] = useState(false);
   const currentLangObj = langs.find(({ code }) => code === currentLang);
   const options = useMemo(() => {
     return langs.map((lang) => {
       return {
         id: lang.code,
-        label: lang.language
-      }
-    })
-  }, [langs])
+        label: lang.language,
+      };
+    });
+  }, [langs]);
   const currentLangIndex = useMemo(() => {
-    return Math.max(options.findIndex(({ id }) => id === currentLang), 0)
-  }, [currentLang, options])
+    return Math.max(
+      options.findIndex(({ id }) => id === currentLang),
+      0
+    );
+  }, [currentLang, options]);
   return (
     <Box width="100px">
       <DropdownSet
