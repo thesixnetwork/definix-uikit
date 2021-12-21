@@ -16,13 +16,16 @@ const Stub = styled.div`
   grid-column: 1/13;
 `;
 
-const langs: LangType[] = [{
-  code: 'en',
-  language: 'English'
-}, {
-  code: 'ko',
-  language: '한국어'
-}];
+const langs: LangType[] = [
+  {
+    code: "en",
+    language: "English",
+  },
+  {
+    code: "ko",
+    language: "한국어",
+  },
+];
 
 const Trans = ({ i18nKey }) => {
   return <span>{i18nKey}</span>;
