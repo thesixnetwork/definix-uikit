@@ -16,7 +16,13 @@ const Stub = styled.div`
   grid-column: 1/13;
 `;
 
-const langs: LangType[] = [...Array(20)].map((_, i) => ({ code: `en${i}`, language: `English${i}` }));
+const langs: LangType[] = [{
+  code: 'en',
+  language: 'English'
+}, {
+  code: 'ko',
+  language: '한국어'
+}];
 
 const Trans = ({ i18nKey }) => {
   return <span>{i18nKey}</span>;

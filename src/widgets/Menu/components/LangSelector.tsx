@@ -10,7 +10,6 @@ interface Props {
 }
 
 const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
-  console.log(langs);
   const [isOpen, setIsOpen] = useState(false);
   const currentLangObj = langs.find(({ code }) => code === currentLang);
   const options = useMemo(() => {
