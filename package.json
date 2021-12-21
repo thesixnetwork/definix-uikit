@@ -1,6 +1,6 @@
 {
   "name": "@fingerlabs/definixswap-uikit-v2",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "Set of UI components for Definix projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -18,10 +18,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "release": "yarn build && np",
     "move:d": "node move.js -d",
-    "predeploy": "npm version patch",
-    "deploy": "npm run build && npm publish --access=public"
+    "release": "standard-version",
+    "deploy": "yarn build && np"
   },
   "husky": {
     "hooks": {
@@ -74,6 +73,7 @@
     "react-is": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.39.0",
+    "standard-version": "^9.3.2",
     "styled-components": "^5.2.0",
     "themeprovider-storybook": "^1.6.4",
     "ts-jest": "^26.5.1",
