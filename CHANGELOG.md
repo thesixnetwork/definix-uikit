@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.24](https://github.com/thesixnetwork/definix-uikit/compare/v0.0.23...v0.0.24) (2021-12-21)
+
+
+### Features
+
+* Change footer style ([fad86db](https://github.com/thesixnetwork/definix-uikit/commit/fad86dbdcc8ee0e26a15273b768f048cee437456))
+* Edit [GZ2021-114] ([40d090c](https://github.com/thesixnetwork/definix-uikit/commit/40d090c955f02d20eec3174e29eb2daf0624e572))
+* Edit storybook ([1a923bd](https://github.com/thesixnetwork/definix-uikit/commit/1a923bd42bd0a9936832342641d3ead95d09e0ac))
+* Edit userblock button ([b49e731](https://github.com/thesixnetwork/definix-uikit/commit/b49e731d7a24e730b392292a0d010ee5df4736b3))
+
+
+### Bug Fixes
+
+* Change Button style ([18ffde9](https://github.com/thesixnetwork/definix-uikit/commit/18ffde9c3c90abbe44c9f242e72a3b50aa8457b5))
+* Fix lint ([026807a](https://github.com/thesixnetwork/definix-uikit/commit/026807a5400881b6b2adb0c13025fb547c0247e0))
+* Fix lint ([cda1321](https://github.com/thesixnetwork/definix-uikit/commit/cda132106977aa8f1addfc95b2c53e5deae079b3))
+
 ### [0.0.22](https://github.com/thesixnetwork/definix-uikit/compare/v0.0.21...v0.0.22) (2021-12-21)
 
 
