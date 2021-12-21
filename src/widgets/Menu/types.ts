@@ -99,4 +99,6 @@ export interface MenuProps
     TranslateProps,
     SlippageToleranceProps,
     LinkProps,
-    TransactionDeadLineProps {}
+    TransactionDeadLineProps {
+      version: string;
+    }

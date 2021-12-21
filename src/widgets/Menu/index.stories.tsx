@@ -41,6 +41,7 @@ const useProps = () => {
   const [props, setProps] = useState({
     userSlippageTolerance,
     setUserslippageTolerance,
+    version: 'v1.0.1',
 
     deadline,
     setDeadline,

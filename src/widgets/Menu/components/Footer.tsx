@@ -105,7 +105,7 @@ const Divider = styled.div`
 `;
 
 const Footer: React.FC = () => {
-  const { Trans } = useMenu();
+  const { Trans, version } = useMenu();
   return (
     <StyledFooter>
       <Inner>
@@ -126,6 +126,12 @@ const Footer: React.FC = () => {
             </CopyRightText>
             <AuditText>
               <Trans i18nKey="audit" components={{ 0: <strong /> }}></Trans>
+              <span style={{
+                color: '#ffffff',
+                marginLeft: '5px'
+              }}>
+                {version}
+              </span>
             </AuditText>
           </StyledFlex>
         </LeftFlex>
