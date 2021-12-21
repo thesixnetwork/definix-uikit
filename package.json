@@ -20,8 +20,9 @@
     "test": "jest",
     "release": "yarn build && np",
     "move:d": "node move.js -d",
-    "predeploy": "npm version patch",
-    "deploy": "yarn build && standard-version && np"
+    "predeploy": "standard-version",
+    "deploy": "yarn build && npm publish --access=public",
+    "postdeploy": "git push --follow-tags origin hand/main"
   },
   "husky": {
     "hooks": {
