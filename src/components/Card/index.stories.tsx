@@ -8,6 +8,7 @@ import UIKitCardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import CardFooter from "./CardFooter";
 import Card from "./Card";
+import { ColorStyles } from "../../theme";
 
 const Row = styled.div`
   margin-bottom: 32px;
@@ -58,6 +59,18 @@ export const Default: React.FC = () => {
       </Row>
       <Row>
         <Card isDisabled>
+          <CardBody>Disabled</CardBody>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </Row>
+      <Row>
+        <Card cardBg={ColorStyles.DEEPBROWN}>
+          <CardBody>Disabled</CardBody>
+          <CardFooter>Footer</CardFooter>
+        </Card>
+      </Row>
+      <Row>
+        <Card cardBg={ColorStyles.ORANGE}>
           <CardBody>Disabled</CardBody>
           <CardFooter>Footer</CardFooter>
         </Card>

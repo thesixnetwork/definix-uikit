@@ -11,7 +11,7 @@ interface StyledCardProps extends CardProps {
 /**
  * Priority: Warning --> Success --> Active
  */
-const getBoxShadow = ({ isActive, isSuccess, isWarning, theme }: StyledCardProps) => {
+const getBoxShadow = ({ isActive, isSuccess, isWarning, theme, cardBg }: StyledCardProps) => {
   if (isWarning) {
     return theme.card.boxShadowWarning;
   }
@@ -24,12 +24,17 @@ const getBoxShadow = ({ isActive, isSuccess, isWarning, theme }: StyledCardProps
     return theme.card.boxShadowActive;
   }
 
+  if (cardBg) {
+    return theme.card.onlyBoxShadow;
+  }
+
   return theme.card.boxShadow;
 };
 
 const StyledCard = styled.div<StyledCardProps>`
-  background-color: ${({ theme }) => theme.card.background};
+  background-color: ${({ theme, cardBg }) => (cardBg ? theme.colors[cardBg] : theme.card.background)};
   border-radius: ${pxToRem(spacing.S_16)};
+
   box-shadow: ${getBoxShadow};
   position: relative;
   overflow: ${({ isOverflowHidden }) => (isOverflowHidden ? "hidden" : "auto")};

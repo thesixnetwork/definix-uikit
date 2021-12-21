@@ -2,6 +2,8 @@ import { HTMLAttributes } from "react";
 import { SpaceProps } from "styled-system";
 import { Colors, ExtendColorProps } from "../../theme/types";
 
+export type CardBg = keyof Colors;
+
 export interface CardRibbonProps {
   variantColor?: keyof Colors;
   upperCase?: boolean;
@@ -11,6 +13,7 @@ export interface CardRibbonProps {
 export type CardTheme = {
   background: string;
   boxShadow: string;
+  onlyBoxShadow: string;
   boxShadowActive: string;
   boxShadowSuccess: string;
   boxShadowWarning: string;
@@ -25,4 +28,5 @@ export interface CardProps extends SpaceProps, HTMLAttributes<HTMLDivElement>, E
   isDisabled?: boolean;
   ribbon?: React.ReactNode;
   isOverflowHidden?: boolean;
+  cardBg?: CardBg;
 }
