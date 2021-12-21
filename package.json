@@ -1,6 +1,6 @@
 {
   "name": "@fingerlabs/definixswap-uikit-v2",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Set of UI components for Definix projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -20,8 +20,9 @@
     "test": "jest",
     "release": "yarn build && np",
     "move:d": "node move.js -d",
-    "predeploy": "npm version patch",
-    "deploy": "yarn build && standard-version && np"
+    "predeploy": "standard-version",
+    "deploy": "yarn build && npm publish --access=public",
+    "postdeploy": "git push --follow-tags origin hand/main"
   },
   "husky": {
     "hooks": {
