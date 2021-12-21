@@ -21,7 +21,7 @@
     "release": "yarn build && np",
     "move:d": "node move.js -d",
     "predeploy": "npm version patch",
-    "deploy": "npm run build && npm publish --access=public"
+    "deploy": "yarn build && standard-version && np"
   },
   "husky": {
     "hooks": {
@@ -74,6 +74,7 @@
     "react-is": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "rollup": "^2.39.0",
+    "standard-version": "^9.3.2",
     "styled-components": "^5.2.0",
     "themeprovider-storybook": "^1.6.4",
     "ts-jest": "^26.5.1",
