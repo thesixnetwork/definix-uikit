@@ -8,7 +8,7 @@ import UIKitCardHeader from "./CardHeader";
 import CardBody from "./CardBody";
 import CardFooter from "./CardFooter";
 import Card from "./Card";
-import { ColorStyles } from '../../theme'
+import { ColorStyles } from "../../theme";
 
 const Row = styled.div`
   margin-bottom: 32px;

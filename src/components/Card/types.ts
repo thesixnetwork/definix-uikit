@@ -28,5 +28,5 @@ export interface CardProps extends SpaceProps, HTMLAttributes<HTMLDivElement>, E
   isDisabled?: boolean;
   ribbon?: React.ReactNode;
   isOverflowHidden?: boolean;
-  cardBg?: CardBg
+  cardBg?: CardBg;
 }
