@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.1](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.0...v0.16.1) (2021-12-21)
+
+
+### Features
+
+* Add GZ2021-451 version text in footer ([fac3501](https://github.com/thesixnetwork/definix-uikit/commit/fac3501d14ba88b9e49815ef6b1bdb800cfa143d))
+* Edit GZ2021-282 LangSelector storybook ([c4e2b13](https://github.com/thesixnetwork/definix-uikit/commit/c4e2b1344ffd1c8fa1a1dd20b8efec32f6553685))
+* Fix GZ2021-451 to menu context ([1ccf471](https://github.com/thesixnetwork/definix-uikit/commit/1ccf471adfe0bdf8b7912e8ebedc1a4bf808dc75))
+
 ## [0.16.0](https://github.com/thesixnetwork/definix-uikit/compare/v0.0.24...v0.16.0) (2021-12-21)
 
 ### [0.0.24](https://github.com/thesixnetwork/definix-uikit/compare/v0.0.23...v0.0.24) (2021-12-21)
