@@ -126,10 +126,12 @@ const Footer: React.FC = () => {
             </CopyRightText>
             <AuditText>
               <Trans i18nKey="audit" components={{ 0: <strong /> }}></Trans>
-              <span style={{
-                color: '#ffffff',
-                marginLeft: '5px'
-              }}>
+              <span
+                style={{
+                  color: "#ffffff",
+                  marginLeft: "5px",
+                }}
+              >
                 {version}
               </span>
             </AuditText>

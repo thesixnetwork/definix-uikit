@@ -100,5 +100,5 @@ export interface MenuProps
     SlippageToleranceProps,
     LinkProps,
     TransactionDeadLineProps {
-      version: string;
-    }
+  version: string;
+}
