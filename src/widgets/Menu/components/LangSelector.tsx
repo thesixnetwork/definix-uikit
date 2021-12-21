@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import Dropdown from "../../../components/Dropdown/Dropdown";
-import { Text } from "../../../components/Text";
+import React, { useState, useMemo } from "react";
 import { LangType } from "../types";
-import DropdownItem from "../../../components/Dropdown/DropdownItem";
-import DropdownButton from "../../../components/Button/DropdownButton";
+import { DropdownSet } from "../../../components/DropdownSet";
+import { Box } from "../../../components/Box";
 
 interface Props {
   currentLang: string;
@@ -12,27 +10,34 @@ interface Props {
 }
 
 const LangSelector: React.FC<Props> = ({ currentLang, langs, setLang }) => {
+  console.log(langs)
   const [isOpen, setIsOpen] = useState(false);
   const currentLangObj = langs.find(({ code }) => code === currentLang);
+  const options = useMemo(() => {
+    return langs.map((lang) => {
+      return {
+        id: lang.code,
+        label: lang.language
+      }
+    })
+  }, [langs])
+  const currentLangIndex = useMemo(() => {
+    return Math.max(options.findIndex(({ id }) => id === currentLang), 0)
+  }, [currentLang, options])
   return (
-    <Dropdown
-      width="94px"
-      defaultIndex={langs.findIndex(({ code }) => currentLang === code)}
-      isOpen={isOpen}
-      setIsOpen={setIsOpen}
-      position="top"
-      target={<DropdownButton>{currentLangObj ? currentLangObj.language : currentLang.toUpperCase()}</DropdownButton>}
-      onItemClick={(index) => {
-        setLang(langs[index]);
-        setIsOpen(!isOpen);
-      }}
-    >
-      {langs.map((lang, index) => (
-        <DropdownItem key={index}>
-          <Text textStyle="R_14M">{lang.language}</Text>
-        </DropdownItem>
-      ))}
-    </Dropdown>
+    <Box width="100px">
+      <DropdownSet
+        position="top"
+        isOpen={isOpen}
+        activeIndex={currentLangIndex}
+        options={options}
+        onOptionClick={(index: number) => {
+          setLang(langs[index]);
+          setIsOpen(!isOpen);
+        }}
+        onButtonClick={() => setIsOpen(!isOpen)}
+      />
+    </Box>
   );
 };
 

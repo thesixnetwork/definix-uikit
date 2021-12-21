@@ -18,9 +18,9 @@ const Item = styled.button<{ isActive: boolean; isDivide?: boolean }>`
   white-space: nowrap;
   ${({ isActive, theme }) => (isActive ? theme.textStyle.R_12M : theme.textStyle.R_12R)}
 
-  background-color: ${({ isActive, theme }) => (isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white)};
+  background-color: ${({ theme }) => theme.colors.white};
 
-  :hover {
+  &:hover {
     background-color: ${({ theme }) => hexToRGB(theme.colors.pale, 0.2)};
   }
 `;

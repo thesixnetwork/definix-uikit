@@ -15,7 +15,10 @@ const Item = styled.div<{ isActive: boolean; scale: Scale; isDivide?: boolean }>
   ${({ isDivide, theme }) => isDivide && `border-top: 1px solid ${theme.colors.lightgrey};`}
   white-space: nowrap;
 
-  background-color: ${({ isActive, theme }) => (isActive ? hexToRGB(theme.colors.pale, 0.2) : theme.colors.white)};
+  background-color: ${({ theme }) => theme.colors.white};
+  &:hover {
+    background-color: ${({ theme }) => hexToRGB(theme.colors.pale, 0.2)};
+  }
 `;
 
 const DropdownItem: React.FC<DropdownItemProps> = ({ children, isActive = false, scale = "md", ...props }) => {
