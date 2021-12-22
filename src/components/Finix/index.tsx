@@ -41,3 +41,15 @@ export { default as ImgLongterm3x } from "./images/img-longterm@3x.png";
 export { default as ImgBridge1x } from "./images/img-bridge.png";
 export { default as ImgBridge2x } from "./images/img-bridge@2x.png";
 export { default as ImgBridge3x } from "./images/img-bridge@3x.png";
+
+export { default as ImgSilver1x } from "./images/img_myinvestment_silver.png";
+export { default as ImgSilver2x } from "./images/img_myinvestment_silver@2x.png";
+export { default as ImgSilver3x } from "./images/img_myinvestment_silver@3x.png";
+
+export { default as ImgGold1x } from "./images/img_myinvestment_gold.png";
+export { default as ImgGold2x } from "./images/img_myinvestment_gold@2x.png";
+export { default as ImgGold3x } from "./images/img_myinvestment_gold@3x.png";
+
+export { default as ImgDiamond1x } from "./images/img_myinvestment_diamond.png";
+export { default as ImgDiamond2x } from "./images/img_myinvestment_diamond@2x.png";
+export { default as ImgDiamond3x } from "./images/img_myinvestment_diamond@3x.png";
