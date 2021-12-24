@@ -42,7 +42,7 @@ export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; widt
   text-align: center;
   cursor: pointer;
   word-break: keep-all;
-  color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : hexToRGB(theme.colors.mediumgrey, 0.5))};
+  color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : theme.colors.mediumgrey)};
   padding: ${({ small }) => (small ? "18px 12px" : "20px 48px")};
   ${({ small }) => css(small ? textStyle.R_14B : textStyle.R_16B)}
   ${({ width }) => width && `width: ${width}`}

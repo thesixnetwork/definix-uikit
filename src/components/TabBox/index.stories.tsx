@@ -29,7 +29,7 @@ const tabs = [
 
 export const Default: React.FC = () => {
   return (
-    <div style={{ padding: "32px", width: "800px" }}>
+    <div style={{ padding: "32px", width: "800px", maxWidth: "100%" }}>
       <Row>
         <TabBox tabs={tabs}></TabBox>
       </Row>

@@ -18,7 +18,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, small, ...p
             small={small}
             isSelected={curTab === name}
             onClick={() => setCurTab(name)}
-            {...(equal && { style: { flex: "1 1 0px" } })}
+            {...(equal && { style: { flex: "1 1 0px", paddingLeft: 0, paddingRight: 0 } })}
             {...props}
           >
             {name}
