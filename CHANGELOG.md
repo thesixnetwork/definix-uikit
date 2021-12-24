@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.9](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.1...v0.16.9) (2021-12-24)
+
+
+### Features
+
+* Remove initial white-space value in Helper ([df801c3](https://github.com/thesixnetwork/definix-uikit/commit/df801c3363d23f180cd4d006474dc07e4f8dbb92))
+
+
+### Bug Fixes
+
+* Change Noti type ([3ca982a](https://github.com/thesixnetwork/definix-uikit/commit/3ca982a3a662b62a2e7ad925c3572809c1558e46))
+
 ### [0.16.8](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.7...v0.16.8) (2021-12-24)
 
 ### [0.16.7](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.6...v0.16.7) (2021-12-24)
