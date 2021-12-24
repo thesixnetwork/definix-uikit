@@ -37,7 +37,6 @@ const PopoverStyled = styled(Text)`
   background: rgb(0, 0, 0, 0.6);
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.05);
   color: ${({ theme }) => theme.colors.white};
-  white-space: initial;
   word-break: keep-all;
 `;
 
