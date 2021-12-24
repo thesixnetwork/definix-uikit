@@ -1,7 +1,7 @@
 import React from "react";
 import Flex from "../Box/Flex";
 import { Text } from "../Text";
-import styled, { DefaultTheme } from "styled-components";
+import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { ColorStyles } from "../../theme";
 
@@ -10,8 +10,8 @@ export enum NotiType {
   GUIDE = "guide",
 }
 
-interface NotiProps extends SpaceProps {
-  type: NotiType;
+export interface NotiProps extends SpaceProps {
+  type?: "alert" | "guide" | NotiType;
   children?: React.ReactNode;
 }
 
@@ -24,6 +24,7 @@ const StyledIcon = styled.div`
   width: 14px;
   height: 14px;
   min-width: 14px;
+  min-height: 14px;
   margin-right: 5px;
   border-radius: 50%;
   display: flex;
@@ -56,4 +57,9 @@ const Noti: React.FC<NotiProps> = ({ type, children, ...props }) => {
     </StyledNoti>
   );
 };
+
+Noti.defaultProps = {
+  type: "alert",
+};
+
 export default Noti;

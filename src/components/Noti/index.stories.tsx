@@ -23,6 +23,15 @@ export const Default: React.FC = () => {
       <Row>
         <Noti type={NotiType.GUIDE}>Insufficient balance</Noti>
       </Row>
+      <Row>
+        <Noti>Insufficient balance</Noti>
+      </Row>
+      <Row>
+        <Noti type="alert">Insufficient balance</Noti>
+      </Row>
+      <Row>
+        <Noti type="guide">Insufficient balance</Noti>
+      </Row>
     </div>
   );
 };
