@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.10](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.9...v0.16.10) (2021-12-25)
+
+
+### Features
+
+* Remove tab padding-x if equal is true. ([a72e92c](https://github.com/thesixnetwork/definix-uikit/commit/a72e92ce10d6424987a3a25c98537286c31fefef))
+
+
+### Bug Fixes
+
+* Change Noti Icon ([3215d72](https://github.com/thesixnetwork/definix-uikit/commit/3215d7201544a6ef7156f2b4bf0220220e2d4d03))
+
 ### [0.16.9](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.1...v0.16.9) (2021-12-24)
 
 
