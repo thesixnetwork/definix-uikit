@@ -21,6 +21,8 @@ export enum ButtonVariants {
   DEEPBROWN = "deepbrown",
   LINE = "line",
   TRANSPARENT = "transparent",
+  YELLOW = "yellow",
+  BROWN30 = "brown30",
 
   // old
   PRIMARY = "primary",

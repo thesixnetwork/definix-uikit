@@ -57,6 +57,14 @@ export const styleVariants = {
   [ButtonVariants.TRANSPARENT]: {
     backgroundColor: "transparent",
   },
+  [ButtonVariants.YELLOW]: {
+    backgroundColor: ColorStyles.YELLOW,
+    color: ColorStyles.WHITE,
+  },
+  [ButtonVariants.BROWN30]: {
+    backgroundColor: ColorStyles.BROWN_30,
+    color: ColorStyles.WHITE_30,
+  },
 
   [ButtonVariants.PRIMARY]: {
     backgroundColor: ColorStyles.RED,
