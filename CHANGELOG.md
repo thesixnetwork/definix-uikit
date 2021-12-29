@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.12](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.11...v0.16.12) (2021-12-29)
+
+
+### Features
+
+* Add PlusBIcon ([cc9ac08](https://github.com/thesixnetwork/definix-uikit/commit/cc9ac08d6123db2b0a8ccc94f10bc24159ee00d1))
+
 ### [0.16.11](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.9...v0.16.11) (2021-12-29)
 
 
