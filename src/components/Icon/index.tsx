@@ -83,6 +83,7 @@ import { ReactComponent as FingerLabsLogo } from "./icons/logo_footer_fingerlabs
 import { ReactComponent as GradeDiamondIcon } from "./icons/ico_44_grade_diamond.svg";
 import { ReactComponent as GradeGoldIcon } from "./icons/ico_44_grade_gold.svg";
 import { ReactComponent as GradeSilverIcon } from "./icons/ico_44_grade_silver.svg";
+import { ReactComponent as CloseBIcon } from "./icons/ico_24_close_b.svg";
 
 export {
   GnbMySIcon,
@@ -169,4 +170,5 @@ export {
   GradeDiamondIcon,
   GradeGoldIcon,
   GradeSilverIcon,
+  CloseBIcon,
 };

@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Text from "../../components/Text/Text";
-import { Box, Flex, FlexProps } from "../../components/Box";
-import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
+import { Flex, FlexProps } from "../../components/Box";
+import { ArrowBackIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { ModalProps } from "./types";
 import { NAV_HEIGHT_MOBILE } from "../Menu/config";
+import { CloseBIcon } from "src/components/Icon";
 
 interface BodyProps extends FlexProps {
   isBody: boolean;
@@ -129,6 +130,7 @@ const Modal: React.FC<ModalProps> = ({
   maxWidth = "initial",
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     if (!modalRef.current) return;
     // modalRef.current.focus();
@@ -150,7 +152,7 @@ const Modal: React.FC<ModalProps> = ({
           </ModalTitle>
           {!hideCloseButton && (
             <IconButton p="2px" onClick={onDismiss} aria-label="Close the dialog">
-              <CloseIcon />
+              <CloseBIcon />
             </IconButton>
           )}
         </ModalHeader>
