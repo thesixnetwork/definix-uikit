@@ -130,7 +130,7 @@ const Modal: React.FC<ModalProps> = ({
   maxWidth = "initial",
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     if (!modalRef.current) return;
     // modalRef.current.focus();
