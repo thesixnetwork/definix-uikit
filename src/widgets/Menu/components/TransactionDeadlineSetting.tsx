@@ -32,8 +32,8 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
 
     if (isNaN(+inputValue) || inputValue.length > 4) {
       return;
-    } else if (!inputValue || inputValue === '') {
-      setValue('20');
+    } else if (!inputValue || inputValue === "") {
+      setValue("20");
     } else {
       setValue(inputValue);
     }

@@ -80,20 +80,19 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
 
     if (isNaN(+inputValue) || inputValue.length > 10) {
       return;
-    } else if (!inputValue || inputValue === '') {
-      setValue('0.5');
+    } else if (!inputValue || inputValue === "") {
+      setValue("0.5");
     } else if (+inputValue > 50) {
       return;
     } else if (+inputValue == 50) {
-      setValue('49');
+      setValue("49");
     } else {
       if (/^[0]+[^\.]/gi.test(inputValue)) {
-        setValue(inputValue.replace(/^[0]+[^\.]/, ''));
+        setValue(inputValue.replace(/^[0]+[^\.]/, ""));
         return;
       }
       setValue(inputValue);
     }
-
   };
 
   const handleClick = (value: number) => {
