@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.15](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.15) (2022-01-05)
+
+
+### Features
+
+* Change Noti icon ([83f817e](https://github.com/thesixnetwork/definix-uikit/commit/83f817e55416913f93fa6050ecb8d3614aca0672))
+* Edit connect modal design GZ2021-264 ([7538b05](https://github.com/thesixnetwork/definix-uikit/commit/7538b05f18dfc3f4005b416e97817586cbdd74e7))
+
 ### [0.16.14](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.13...v0.16.14) (2022-01-05)
 
 ### [0.16.13](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.12...v0.16.13) (2022-01-05)
