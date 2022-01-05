@@ -15,7 +15,7 @@ import { useMenu } from "../MenuContext";
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 188px;
+  height: 136px;
 `;
 
 const StyledButton = styled.a`
@@ -50,7 +50,7 @@ const UserBlock: React.FC = () => {
     return isMobile ? (
       <Wrapper>
         <Flex pl="12px" flexDirection="column" alignItems="flex-start">
-          <Text mt="55px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
+          <Text mt="38px" textStyle={TextStyles.R_12R} color={ColorStyles.MEDIUMGREY}>
             <Trans i18nKey="Wallet Address" />
           </Text>
           <Flex alignItems="center">
