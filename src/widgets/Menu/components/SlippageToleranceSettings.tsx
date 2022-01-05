@@ -72,40 +72,38 @@ const predefinedValues = [
 ];
 
 const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageTolerance, setUserslippageTolerance }) => {
-  const [value, setValue] = useState(userSlippageTolerance / 100);
+  const [value, setValue] = useState((userSlippageTolerance / 100).toString());
   const [error, setError] = useState<string | null>(null);
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target;
 
-    console.log(inputValue);
-    if (+inputValue >= 100) {
-      setValue(99.9);
+    if (isNaN(+inputValue) || inputValue.length > 10) {
       return;
+    } else if (!inputValue || inputValue === '') {
+      setValue('0.5');
+    } else if (+inputValue > 50) {
+      return;
+    } else if (+inputValue == 50) {
+      setValue('49');
+    } else {
+      if (/^[0]+[^\.]/gi.test(inputValue)) {
+        setValue(inputValue.replace(/^[0]+[^\.]/, ''));
+        return;
+      }
+      setValue(inputValue);
     }
 
-    if (!/^[0-9]{1,2}\.[0-9]{1}$/.test(inputValue)) {
-      const splitVal = inputValue.split(".");
-      if (splitVal[0] && +splitVal[0] >= 50) {
-        splitVal[0] = "49";
-      }
-      if (splitVal[1] && splitVal[1].length > 1) {
-        splitVal[1] = splitVal[1].slice(0, 1);
-      }
-      setValue(parseFloat(splitVal.join(".")));
-      return;
-    }
-    setValue(parseFloat(inputValue));
   };
 
   const handleClick = (value: number) => {
-    setValue(value);
+    setValue(value.toString());
   };
 
   // Updates local storage if value is valid
   useEffect(() => {
     try {
-      const rawValue = value * 100;
+      const rawValue = +value * 100;
       if (!Number.isNaN(rawValue) && rawValue > 0 && rawValue < MAX_SLIPPAGE) {
         setUserslippageTolerance(rawValue);
 
@@ -140,7 +138,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
                 <Button
                   width="88px"
                   md
-                  variant={value === predefinedValue ? "red" : "lightbrown"}
+                  variant={+value === predefinedValue ? "red" : "lightbrown"}
                   onClick={() => handleClick(predefinedValue)}
                 >
                   {label}
@@ -151,10 +149,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
         </Flex>
         <WrapInput>
           <Input
-            type="number"
-            step={0.1}
-            min={0.1}
-            max={50}
+            type="text"
             placeholder="0.5"
             value={value}
             onChange={handleChange}

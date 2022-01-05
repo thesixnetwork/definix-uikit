@@ -24,21 +24,25 @@ const Label = styled.div`
 
 const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadline }) => {
   // const { t } = useTranslation();
-  const [value, setValue] = useState(deadline / 60); // deadline in minutes
+  const [value, setValue] = useState((deadline / 60).toString()); // deadline in minutes
   const [error, setError] = useState<string | null>(null);
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { value: inputValue } = evt.target;
-    if (inputValue.length > 4) {
+
+    if (isNaN(+inputValue) || inputValue.length > 4) {
       return;
+    } else if (!inputValue || inputValue === '') {
+      setValue('20');
+    } else {
+      setValue(inputValue);
     }
-    setValue(parseInt(inputValue, 10));
   };
 
   // Updates local storage if value is valid
   useEffect(() => {
     try {
-      const rawValue = value * 60;
+      const rawValue = +value * 60;
       if (!Number.isNaN(rawValue) && rawValue > 0) {
         setDeadline(rawValue);
         setError(null);
@@ -60,10 +64,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
       </Label>
       <Flex width="184px" alignItems="center">
         <Input
-          type="number"
-          step="1"
-          min="1"
-          maxLength={4}
+          type="text"
           value={value}
           placeholder="20"
           onChange={handleChange}
