@@ -4,7 +4,7 @@ import { Text } from "../Text";
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { ColorStyles } from "../../theme";
-import { AlertIcon } from "../Icon";
+import { AlertIcon, NotiIcon } from "../Icon";
 
 export enum NotiType {
   ALERT = "alert",
@@ -25,7 +25,7 @@ const Noti: React.FC<NotiProps> = ({ type, children, ...props }) => {
   return (
     <StyledNoti {...props}>
       <Flex alignItems="center">
-        <AlertIcon />
+        {type === NotiType.ALERT ? <AlertIcon /> : <NotiIcon />}
         <Text
           ml="4px"
           textStyle={type === NotiType.ALERT ? "R_14R" : "R_12R"}
