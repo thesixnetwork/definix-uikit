@@ -23,10 +23,10 @@ const StyledButton = styled.div`
 
   &:hover {
     .icon {
-      opacity: .8;
+      opacity: 0.8;
     }
     .text {
-      opacity: .6;
+      opacity: 0.6;
     }
   }
 `;
