@@ -23,19 +23,23 @@ const HelpLink = styled.a`
 
 const ConnectModal: React.FC<Props> = ({ login, Trans, onDismiss = () => null }) => (
   <Modal title={<Trans i18nKey="Connect Wallet" />} onDismiss={onDismiss} noPadding={true}>
-    <ModalBody isBody>
-      {config.map((entry, index) => (
-        <WalletCard
-          key={entry.title}
-          login={login}
-          walletConfig={entry}
-          onDismiss={onDismiss}
-          mb={index < config.length - 1 ? "8px" : "0"}
-        />
-      ))}
-      <Flex textStyle={TextStyles.R_14R} alignItems="center" justifyContent="center" py="S_20">
+    <ModalBody isBody maxWidth="320px">
+      <Flex flexWrap="wrap">
+        {config.map((entry, index) => (
+          <WalletCard
+            key={entry.title}
+            login={login}
+            walletConfig={entry}
+            onDismiss={onDismiss}
+            mb={index < config.length - 1 ? "8px" : "0"}
+          />
+        ))}
+      </Flex>
+      <Flex alignItems="center" justifyContent="center" pt="S_20" pb="S_30">
         <HelpLink href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix">
-          <Trans i18nKey="Learn how to set up" />
+          <Text textStyle={TextStyles.R_14R} color="mediumgrey">
+            <Trans i18nKey="Learn how to set up" />
+          </Text>
         </HelpLink>
       </Flex>
     </ModalBody>

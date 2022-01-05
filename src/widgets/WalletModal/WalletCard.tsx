@@ -1,7 +1,7 @@
-import { TextStyles } from "../../theme";
 import React from "react";
 import styled from "styled-components";
 import Text from "../../components/Text/Text";
+import { Flex } from "../../components/Box";
 import { connectorLocalStorageKey, localStorageKey } from "./config";
 import { Login, Config } from "./types";
 
@@ -14,10 +14,21 @@ interface Props {
 
 const StyledButton = styled.div`
   cursor: pointer;
-  padding: 14px 24px;
+  padding: 26px;
   display: flex;
-  min-width: 320px;
-  justify-content: space-between;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    .icon {
+      opacity: .8;
+    }
+    .text {
+      opacity: .6;
+    }
+  }
 `;
 
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
@@ -32,10 +43,12 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Text textStyle={TextStyles.R_16R} color="black">
+      <Flex width="36px" height="36px" alignItems="center" className="icon">
+        <Icon width="36px" />
+      </Flex>
+      <Text mt="9px" textStyle="R_14R" color="black" className="text">
         {title}
       </Text>
-      <Icon width="32px" />
     </StyledButton>
   );
 };
