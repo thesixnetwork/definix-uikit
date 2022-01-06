@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.16](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.16) (2022-01-06)
+
+
+### Features
+
+* Change Noti icon ([83f817e](https://github.com/thesixnetwork/definix-uikit/commit/83f817e55416913f93fa6050ecb8d3614aca0672))
+* Edit connect modal design GZ2021-264 ([7538b05](https://github.com/thesixnetwork/definix-uikit/commit/7538b05f18dfc3f4005b416e97817586cbdd74e7))
+* Edit modal close GZ2021-578 ([f03a3c6](https://github.com/thesixnetwork/definix-uikit/commit/f03a3c6035bc1fcb440ea1fa7a5f3327f0b48137))
+* Edit slippage, deadline rule GZ2021-203 ([aada639](https://github.com/thesixnetwork/definix-uikit/commit/aada6394316b89bed037d6e9b3a61fbb4f611298))
+
+
+### Bug Fixes
+
+* Fix to submenu active GZ2021-559 ([6a32cbb](https://github.com/thesixnetwork/definix-uikit/commit/6a32cbb7303c496a639c31341e7fd4e3f647ab2a))
+
 ### [0.16.15](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.15) (2022-01-05)
 
 
