@@ -31,7 +31,7 @@ export const links = [
       },
       {
         label: "Pool",
-        href: "/pool",
+        href: "/farm/test",
       },
     ],
   },
