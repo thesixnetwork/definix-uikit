@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.17](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.17) (2022-01-07)
+
+
+### Features
+
+* Add finix repair icon ([7f190ea](https://github.com/thesixnetwork/definix-uikit/commit/7f190ea9aeb5111df093fe8d642459d5a9b9e513))
+* Change Noti icon ([83f817e](https://github.com/thesixnetwork/definix-uikit/commit/83f817e55416913f93fa6050ecb8d3614aca0672))
+* Edit bsc modal GZ2021-571 ([71e49cb](https://github.com/thesixnetwork/definix-uikit/commit/71e49cb341d6f89fa95ff8cecd698fd1d5e5fa70))
+* Edit connect modal design GZ2021-264 ([7538b05](https://github.com/thesixnetwork/definix-uikit/commit/7538b05f18dfc3f4005b416e97817586cbdd74e7))
+* Edit modal close GZ2021-578 ([f03a3c6](https://github.com/thesixnetwork/definix-uikit/commit/f03a3c6035bc1fcb440ea1fa7a5f3327f0b48137))
+* Edit slippage, deadline rule GZ2021-203 ([aada639](https://github.com/thesixnetwork/definix-uikit/commit/aada6394316b89bed037d6e9b3a61fbb4f611298))
+
+
+### Bug Fixes
+
+* Fix to submenu active GZ2021-559 ([6a32cbb](https://github.com/thesixnetwork/definix-uikit/commit/6a32cbb7303c496a639c31341e7fd4e3f647ab2a))
+
 ### [0.16.16](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.16) (2022-01-06)
 
 
