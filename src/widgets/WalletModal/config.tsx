@@ -54,11 +54,15 @@ const connectors: Config[] = [
   {
     title: "TokenPocket",
     icon: TokenPocket,
+    width: 52,
+    height: 52,
     connectorId: ConnectorNames.Injected,
   },
   {
     title: "Klip",
     icon: KlipConnect,
+    width: 48,
+    height: 24,
     connectorId: ConnectorNames.Klip,
   },
 ];

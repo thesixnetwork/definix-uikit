@@ -23,7 +23,7 @@ const HelpLink = styled.a`
 
 const ConnectModal: React.FC<Props> = ({ login, Trans, onDismiss = () => null }) => (
   <Modal title={<Trans i18nKey="Connect Wallet" />} onDismiss={onDismiss} noPadding={true}>
-    <ModalBody isBody maxWidth="320px">
+    <ModalBody isBody maxWidth="320px" px="24px">
       <Flex flexWrap="wrap">
         {config.map((entry, index) => (
           <WalletCard

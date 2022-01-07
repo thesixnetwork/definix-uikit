@@ -14,9 +14,10 @@ interface Props {
 
 const StyledButton = styled.div`
   cursor: pointer;
-  padding: 26px;
   display: flex;
-  width: 50%;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  width: 136px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -32,7 +33,7 @@ const StyledButton = styled.div`
 `;
 
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
-  const { title, icon: Icon } = walletConfig;
+  const { title, icon: Icon, width, height } = walletConfig;
   return (
     <StyledButton
       onClick={() => {
@@ -43,8 +44,8 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Flex width="36px" height="36px" alignItems="center" className="icon">
-        <Icon width="36px" />
+      <Flex width={width ? width + "px" : "36px"} height="36px" alignItems="center" className="icon">
+        <Icon width="100%" />
       </Flex>
       <Text mt="9px" textStyle="R_14R" color="black" className="text">
         {title}

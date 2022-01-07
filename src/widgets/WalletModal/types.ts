@@ -14,4 +14,6 @@ export interface Config {
   title: string;
   icon: FC<SvgProps>;
   connectorId: ConnectorNames;
+  width?: number;
+  height?: number;
 }
