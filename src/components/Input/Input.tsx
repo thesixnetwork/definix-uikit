@@ -36,7 +36,7 @@ const StyledFlex = styled(Flex)<{ isBorder: boolean }>`
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border: ${({ isBorder, theme }) => isBorder ? `1px solid ${theme.colors.lightgrey}` : 'none'};
+  border: ${({ isBorder, theme }) => (isBorder ? `1px solid ${theme.colors.lightgrey}` : "none")};
   border-radius: 8px;
   padding-right: 16px;
   ${layout}
