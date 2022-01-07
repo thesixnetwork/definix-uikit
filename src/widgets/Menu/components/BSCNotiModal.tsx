@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "../../../components/Text";
+import { Flex } from "../../../components/Box";
 import { Button } from "../../../components/Button";
 import { InjectedModalProps, Modal, ModalBody, ModalFooter } from "../../Modal";
 import { TranslateProps } from "../types";
@@ -15,14 +16,28 @@ const BSCNotiModal: React.FC<Props> = ({ Trans, onDismiss = () => null }) => {
         </Text>
       </ModalBody>
       <ModalFooter isFooter>
-        <Button
-          onClick={() => {
-            location.href = "https://bsc.definix.com";
-            onDismiss();
-          }}
-        >
-          <Trans i18nKey="Go to BSC" />
-        </Button>
+        <Flex>
+          <Button
+            width="50%"
+            mr="4px"
+            variant="lightbrown"
+            onClick={() => {
+              onDismiss();
+            }}
+          >
+            <Trans i18nKey="Cancel" />
+          </Button>
+          <Button
+            width="50%"
+            ml="4px"
+            onClick={() => {
+              location.href = "https://bsc.definix.com";
+              onDismiss();
+            }}
+          >
+            <Trans i18nKey="Go to BSC" />
+          </Button>
+        </Flex>
       </ModalFooter>
     </Modal>
   );

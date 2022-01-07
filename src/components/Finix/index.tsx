@@ -53,3 +53,7 @@ export { default as ImgGold3x } from "./images/img_myinvestment_gold@3x.png";
 export { default as ImgDiamond1x } from "./images/img_myinvestment_diamond.png";
 export { default as ImgDiamond2x } from "./images/img_myinvestment_diamond@2x.png";
 export { default as ImgDiamond3x } from "./images/img_myinvestment_diamond@3x.png";
+
+export { default as ImgLongtermRepair1x } from "./images/img_longterm_repair.png";
+export { default as ImgLongtermRepair2x } from "./images/img_longterm_repair@2x.png";
+export { default as ImgLongtermRepair3x } from "./images/img_longterm_repair@3x.png";
