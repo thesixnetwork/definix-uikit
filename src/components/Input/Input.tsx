@@ -1,42 +1,42 @@
 import React, { cloneElement, ElementType, isValidElement } from "react";
-import { textStyle, ColorStyles } from "../../theme";
-import styled, { css } from "styled-components";
+import { border, color, layout, space } from "styled-system";
+import { ColorStyles } from "../../theme";
+import styled from "styled-components";
 import { InputProps, BaseInputProps } from "./types";
 import { Flex } from "../Box";
-import { border, color, layout, position, space } from "styled-system";
+import { getVariantTextStyle } from "../../theme/text";
 
 const StyledInput = styled.input<BaseInputProps>`
   border: 0;
   display: block;
   height: 100%;
-  ${css(textStyle.R_14B)}
-  color: ${({ theme }) => theme.colors[ColorStyles.MEDIUMGREY]};
+  ${({ theme }) => theme.textStyle.R_14R}
+  color: ${({ theme }) => theme.colors.mediumgrey};
   outline: 0;
   padding: 10px 16px;
   width: 100%;
   background-color: transparent;
 
   &::placeholder {
+    color: ${({ theme }) => theme.colors.mediumgrey};
   }
 
   &:disabled {
     box-shadow: none;
     cursor: not-allowed;
   }
-
-  /* &:focus:not(:disabled) {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
-  } */
+  ${getVariantTextStyle()}
+  ${color}
 `;
 
-const StyledFlex = styled(Flex)`
+const StyledFlex = styled(Flex)<{ isBorder: boolean }>`
   position: relative;
   width: 100%;
-  height: 40px;
+  height: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border: 1px solid ${({ theme }) => theme.colors[ColorStyles.LIGHTGREY]};
+  border: ${({ isBorder, theme }) => isBorder ? `1px solid ${theme.colors.lightgrey}` : 'none'};
   border-radius: 8px;
   padding-right: 16px;
   ${layout}
@@ -49,9 +49,9 @@ StyledInput.defaultProps = {
 };
 
 const Input = <E extends ElementType = "input">(props: InputProps<E>): JSX.Element => {
-  const { endIcon, ...rest } = props;
+  const { endIcon, isBorder = true, ...rest } = props;
   return (
-    <StyledFlex>
+    <StyledFlex isBorder={isBorder}>
       <StyledInput {...rest} />
       {isValidElement(endIcon) &&
         cloneElement(endIcon, {

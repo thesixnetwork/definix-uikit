@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "../../../components/Button";
 import { Flex } from "../../../components/Box";
 import { Input } from "../../../components/Input";
+import { BalanceInput } from "../../../components/BalanceInput";
 import { AlertIcon } from "../../../components/Icon";
 import { Text } from "../../../components/Text";
 import { ColorStyles } from "../../../theme/colors";
@@ -147,6 +148,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
           })}
         </Flex>
         <WrapInput>
+          <BalanceInput value={value} placeholder="0.5" onChange={handleChange} />
           <Input
             type="text"
             placeholder="0.5"

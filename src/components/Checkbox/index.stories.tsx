@@ -9,7 +9,7 @@ const Row = styled.div`
 `;
 
 export default {
-  title: "Components/Checkbox[New]",
+  title: "Components/Checkbox",
   component: Checkbox,
   argTypes: {},
 };

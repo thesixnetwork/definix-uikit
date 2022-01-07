@@ -10,7 +10,7 @@ import Text from "../../components/Text/Text";
 import { ModalBody, ModalFooter } from "./Modal";
 
 export default {
-  title: "Widgets/Modal[Ing]",
+  title: "Widgets/Modal",
   component: Modal,
   argTypes: {},
 };
