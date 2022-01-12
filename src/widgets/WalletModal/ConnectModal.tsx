@@ -37,7 +37,7 @@ const ConnectModal: React.FC<Props> = ({ login, Trans, onDismiss = () => null })
       </Flex>
       <Flex alignItems="center" justifyContent="center" pt="S_20" pb="S_30">
         <HelpLink href="https://sixnetwork.gitbook.io/definix-on-klaytn-en/guides-and-faqs/how-to-use-kaikas-on-definix">
-          <Text textStyle={TextStyles.R_14R} color="mediumgrey">
+          <Text textStyle={TextStyles.R_14R} color="black">
             <Trans i18nKey="Learn how to set up" />
           </Text>
         </HelpLink>
