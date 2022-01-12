@@ -43,8 +43,8 @@ export enum ColorStyles {
   LIGHTBROWN_50 = "lightBrown50",
   BROWN_30 = "brown30",
   WHITE_30 = "white30",
-  LIGHTGREY_30 = 'lightGrey30',
-  YELLOW_20 = 'yellow20',
+  LIGHTGREY_30 = "lightGrey30",
+  YELLOW_20 = "yellow20",
 }
 
 const colorHex = {

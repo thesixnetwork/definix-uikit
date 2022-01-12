@@ -182,19 +182,15 @@ const GlobalStyle = createGlobalStyle`
   ${ResetCSSStyle}
 
   :root {
-    --default-font-family: Roboto;
+    --default-font-family: Roboto, Noto Sans KR, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   html {
     font-size: 16px;
-  }
-
-  html[lang="ko"] {
-    --default-font-family: Noto Sans KR;
+    font-family: Roboto, Noto Sans KR, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
 
   body {
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: ${({ theme }) => theme.colors[ColorStyles.WHITE]};
     -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif
     -webkit-font-smoothing: antialiased;
