@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.19](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.18...v0.16.19) (2022-01-12)
+
+
+### Bug Fixes
+
+* Fix to font style GZ2021-611 ([a7f6d8b](https://github.com/thesixnetwork/definix-uikit/commit/a7f6d8b561d99a79693f8724858c96cebe2a6d60))
+
 ### [0.16.18](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.17...v0.16.18) (2022-01-07)
 
 ### [0.16.17](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.17) (2022-01-07)
