@@ -4,10 +4,12 @@ import Flex from "../Box/Flex";
 import TabArea from "./TabArea";
 import Tab from "./Tab";
 
-const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, small, ...props }) => {
+const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, initTab = false, small, ...props }) => {
   useEffect(() => {
-    setCurTab(tabs[0]);
-  }, [tabs]);
+    if(initTab){
+      setCurTab(tabs[0]);
+    }
+  }, [tabs, initTab]);
 
   return (
     <TabArea isSelected>
