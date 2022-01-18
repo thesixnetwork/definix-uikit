@@ -27,4 +27,5 @@ export interface TabsProps extends Omit<TabProps, "onClick" | "isSelected"> {
   curTab: string;
   setCurTab: (tab: string) => void;
   equal?: boolean;
+  initTab?: boolean;
 }
