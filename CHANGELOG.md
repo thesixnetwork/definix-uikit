@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.24](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.23...v0.16.24) (2022-01-19)
+
+
+### Bug Fixes
+
+* Add finix price and Change klaytn token image ([cd6104c](https://github.com/thesixnetwork/definix-uikit/commit/cd6104c1272ec1a5e5e9ed55196e7701806adbf7))
+
 ### [0.16.23](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.22...v0.16.23) (2022-01-19)
 
 ### [0.16.21](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.18...v0.16.21) (2022-01-19)
