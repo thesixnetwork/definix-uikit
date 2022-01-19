@@ -72,7 +72,7 @@ const Menu: React.FC<MenuProps> = (props) => {
   return (
     <Wrapper>
       <TopBackground />
-      <Nav isPushed={isPushed} pushNav={setIsPushed} />
+      <Nav isPushed={isPushed} pushNav={setIsPushed} price={props?.finixPrice || '0.0000'} />
       <Panel isPushed={isPushed} pushNav={setIsPushed} />
       <Container>
         <Inner>{children}</Inner>
