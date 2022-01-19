@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.21](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.18...v0.16.21) (2022-01-19)
+
+
+### Bug Fixes
+
+* Change Tabs ([c94bcc1](https://github.com/thesixnetwork/definix-uikit/commit/c94bcc10561fd79819d121b87d15ae984ae2bf94))
+* Fix to font style GZ2021-611 ([a7f6d8b](https://github.com/thesixnetwork/definix-uikit/commit/a7f6d8b561d99a79693f8724858c96cebe2a6d60))
+* Fix to tab language bug GZ2021-659 ([ccd5c00](https://github.com/thesixnetwork/definix-uikit/commit/ccd5c00658fb5551530e83562dce3b7c52119846))
+
 ### [0.16.18](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.17...v0.16.18) (2022-01-07)
 
 ### [0.16.17](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.14...v0.16.17) (2022-01-07)
