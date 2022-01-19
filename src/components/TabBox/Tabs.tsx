@@ -6,20 +6,18 @@ import Tab from "./Tab";
 
 const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, initTab = false, small, ...props }) => {
   useEffect(() => {
-    if(initTab){
-      setCurTab(tabs[0]);
-    }
-  }, [tabs, initTab]);
+    setCurTab(tabs[0].id);
+  }, [tabs]);
 
   return (
     <TabArea isSelected>
       <Flex>
-        {tabs.map((name: string) => (
+        {tabs.map(({ id, name }) => (
           <Tab
-            key={`tab-${name}`}
+            key={`tab-${id}`}
             small={small}
-            isSelected={curTab === name}
-            onClick={() => setCurTab(name)}
+            isSelected={curTab === id}
+            onClick={() => setCurTab(id)}
             {...(equal && { style: { flex: "1 1 0px", paddingLeft: 0, paddingRight: 0 } })}
             {...props}
           >

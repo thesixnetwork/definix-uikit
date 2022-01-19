@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledContentArea, Wrap } from "./StyledTabBox";
 import { TabBoxProps } from "./types";
 import { isEqual } from "lodash";
@@ -6,26 +6,20 @@ import Tabs from "./Tabs";
 
 const TabBox: React.FC<TabBoxProps> = ({ tabs, small, equal, children, ...props }) => {
   const [curTab, setCurTab] = useState<string>(tabs[0]?.name);
-  const tabNames = useRef(tabs.map(({ name }) => name));
 
-  const onClickTab = (name: string) => {
-    setCurTab(name);
+  const onClickTab = (id: string) => {
+    setCurTab(id);
   };
 
   useEffect(() => {
-    const names = tabs.map(({ name }) => name);
-    if (isEqual(tabNames.current, names)) {
-      return;
-    }
-    tabNames.current = names;
-    setCurTab(tabs[0].name);
+    setCurTab(tabs[0].id);
   }, [tabs]);
 
   return (
     <Wrap>
-      <Tabs tabs={tabNames.current} curTab={curTab} setCurTab={onClickTab} small={small} equal={equal} />
+      <Tabs tabs={tabs} curTab={curTab} setCurTab={onClickTab} small={small} equal={equal} />
       <StyledContentArea {...props}>
-        {tabs.map(({ name, component }) => (curTab === name ? component : null))}
+        {tabs.map(({ id, component }) => (curTab === id ? component : null))}
       </StyledContentArea>
     </Wrap>
   );

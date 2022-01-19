@@ -2,6 +2,7 @@ import { SpaceProps } from "styled-system";
 
 export interface TabBoxProps {
   tabs: {
+    id: string;
     name: string;
     component: React.ReactNode;
   }[];
@@ -23,7 +24,10 @@ export interface TabProps {
 }
 
 export interface TabsProps extends Omit<TabProps, "onClick" | "isSelected"> {
-  tabs: string[];
+  tabs: {
+    id: string;
+    name: string;
+  }[];
   curTab: string;
   setCurTab: (tab: string) => void;
   equal?: boolean;

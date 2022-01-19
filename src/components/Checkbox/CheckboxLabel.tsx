@@ -9,6 +9,7 @@ const StyledCheckboxLabel = styled.label`
   ${position}
   ${space}
   display: flex;
+  align-items: center;
   > input {
     flex-shrink: 0;
     margin-right: 12px;
