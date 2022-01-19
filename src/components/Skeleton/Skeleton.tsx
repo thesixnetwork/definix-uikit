@@ -42,10 +42,12 @@ const Waves = styled(Root)`
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
-  &:before {
+  background: rgba(0, 0, 0, 0.05);
+  &:after {
     content: "";
     position: absolute;
-    background-image: linear-gradient(90deg, transparent, rgba(243, 243, 243, 0.5), transparent);
+    z-index: 1;
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
     top: 0;
     left: -150px;
     height: 100%;

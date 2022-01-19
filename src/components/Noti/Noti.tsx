@@ -18,13 +18,18 @@ export interface NotiProps extends SpaceProps {
 
 const StyledNoti = styled.div`
   width: 100%;
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
   ${space}
 `;
 
 const Noti: React.FC<NotiProps> = ({ type, children, ...props }) => {
   return (
     <StyledNoti {...props}>
-      <Flex alignItems="center">
+      <Flex alignItems="flex-start">
         {type === NotiType.ALERT ? <AlertIcon /> : <NotiIcon />}
         <Text
           ml="4px"
