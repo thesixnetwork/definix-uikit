@@ -45,9 +45,11 @@ const PanelFooter: React.FC = () => {
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
-      {!account && <IconButton onClick={() => onPresentSettingModal()}>
-        <SettingIcon />
-      </IconButton>}
+      {account && (
+        <IconButton onClick={() => onPresentSettingModal()}>
+          <SettingIcon />
+        </IconButton>
+      )}
     </Container>
   );
 };
