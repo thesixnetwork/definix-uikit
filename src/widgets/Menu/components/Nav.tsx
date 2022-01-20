@@ -100,7 +100,7 @@ const Nav: React.FC<NavProps> = (props) => {
         </Box>
 
         <Flex position="absolute" right={pxToRem(20)}>
-          <FinixPrice price={props?.price || '0.0000'}/>
+          <FinixPrice price={props?.price || "0.0000"} />
           {account && (
             <Box ml="10px">
               <IconButton ml="S_16" as={Link} to="/my">
@@ -116,10 +116,10 @@ const Nav: React.FC<NavProps> = (props) => {
     <StyledNav isTop={isTop}>
       <Chain />
       <Flex position="absolute" right={pxToRem(60)}>
-        <FinixPrice price={props?.price || '0.0000'}/>
-        <Box ml="20px">
+        <FinixPrice price={props?.price || "0.0000"} />
+        <Flex ml="20px">
           <UserBlock />
-        </Box>
+        </Flex>
       </Flex>
     </StyledNav>
   );
