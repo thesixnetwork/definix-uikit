@@ -80,8 +80,8 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
 
     if (isNaN(+inputValue) || inputValue.length > 10) {
       return;
-    } else if (!inputValue || inputValue === "") {
-      setValue("0.5");
+    // } else if (!inputValue || inputValue === "") {
+    //   setValue("0.5");
     } else if (+inputValue > 50) {
       return;
     } else if (+inputValue == 50) {
@@ -114,6 +114,7 @@ const SlippageToleranceSettings: React.FC<Props> = ({ Trans, userSlippageToleran
           setError(null);
         }
       } else {
+        setUserslippageTolerance(RISKY_SLIPPAGE_LOW);
         setError("Enter a valid slippage percentage");
       }
     } catch {

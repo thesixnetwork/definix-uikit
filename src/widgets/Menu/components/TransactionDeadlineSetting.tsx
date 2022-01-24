@@ -22,6 +22,8 @@ const Label = styled.div`
   margin: 16px 0;
 `;
 
+const MIN_DEADLINE = 1200;
+
 const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadline }) => {
   // const { t } = useTranslation();
   const [value, setValue] = useState((deadline / 60).toString()); // deadline in minutes
@@ -32,8 +34,8 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
 
     if (isNaN(+inputValue) || inputValue.length > 4) {
       return;
-    } else if (!inputValue || inputValue === "") {
-      setValue("20");
+    // } else if (!inputValue || inputValue === "") {
+    //   setValue("20");
     } else {
       setValue(inputValue);
     }
@@ -47,6 +49,7 @@ const TransactionDeadlineSetting: React.FC<Props> = ({ Trans, deadline, setDeadl
         setDeadline(rawValue);
         setError(null);
       } else {
+        setDeadline(MIN_DEADLINE);
         setError("Enter a valid number");
       }
     } catch {
