@@ -11,9 +11,9 @@ const TabBox: React.FC<TabBoxProps> = ({ tabs, small, equal, children, ...props 
     setCurTab(id);
   };
 
-  useEffect(() => {
-    setCurTab(tabs[0].id);
-  }, [tabs]);
+  // useEffect(() => {
+  //   setCurTab(tabs[0].id);
+  // }, [tabs]);
 
   return (
     <Wrap>
