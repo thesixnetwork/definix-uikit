@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.28](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.24...v0.16.28) (2022-01-24)
+
+
+### Bug Fixes
+
+* Change Menu layout ([e4de821](https://github.com/thesixnetwork/definix-uikit/commit/e4de821d1820ea8e9263625164d3d70968c500e1))
+* Change setting condition ([de48118](https://github.com/thesixnetwork/definix-uikit/commit/de48118fdab4ca947457034cc0be0cf5295c5525))
+
 ### [0.16.27](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.26...v0.16.27) (2022-01-20)
 
 ### [0.16.26](https://github.com/thesixnetwork/definix-uikit/compare/v0.16.25...v0.16.26) (2022-01-20)
