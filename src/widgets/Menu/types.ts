@@ -80,12 +80,7 @@ export interface NavProps extends PushedProps {
   price?: string | number;
 }
 
-export interface MenuProps
-  extends LangProps,
-    UserProps,
-    MenuEntryConfigProps,
-    TranslateProps,
-    LinkProps {
+export interface MenuProps extends LangProps, UserProps, MenuEntryConfigProps, TranslateProps, LinkProps {
   onPresentSettingModal: () => void;
   version: string;
   finixPrice?: string | number;

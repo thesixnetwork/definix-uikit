@@ -27,8 +27,7 @@ const Container = styled.div`
 
 const MobilePanelFooterFixed: React.FC = () => {
   const { currentLang, langs, setLang } = useMenu();
-  const { account, Trans, Link, links, onPresentSettingModal } =
-    useMenu();
+  const { account, Trans, Link, links, onPresentSettingModal } = useMenu();
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
