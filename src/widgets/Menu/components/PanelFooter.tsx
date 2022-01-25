@@ -28,8 +28,7 @@ const Container = styled.div`
 
 const PanelFooter: React.FC = () => {
   const { currentLang, langs, setLang } = useMenu();
-  const { Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } =
-    useMenu();
+  const { Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } = useMenu();
   const [onPresentSettingModal] = useModal(
     <SettingsModal
       {...{
