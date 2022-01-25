@@ -22,12 +22,9 @@ export const Context = createContext<MenuContext>({
   langs: [],
   setLang: () => null,
   currentLang: "en",
+  onPresentSettingModal: () => null,
   links,
-  setDeadline: () => null,
-  setUserslippageTolerance: () => null,
-  userSlippageTolerance: 0,
   setState: () => null,
-  deadline: 0,
   Link,
 });
 

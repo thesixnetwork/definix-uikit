@@ -74,20 +74,6 @@ export interface LinkProps {
   Link: typeof Link;
 }
 
-export interface SlippageToleranceProps {
-  userSlippageTolerance: number;
-  setUserslippageTolerance: (value: number) => void;
-}
-
-export interface TransactionDeadLineProps {
-  deadline: number;
-  setDeadline: (value: number) => void;
-}
-
-export interface SettingsModalProps extends TranslateProps, SlippageToleranceProps, TransactionDeadLineProps {
-  onDismiss?: () => void;
-}
-
 export interface PanelProps extends PushedProps {}
 
 export interface NavProps extends PushedProps {
@@ -99,9 +85,8 @@ export interface MenuProps
     UserProps,
     MenuEntryConfigProps,
     TranslateProps,
-    SlippageToleranceProps,
-    LinkProps,
-    TransactionDeadLineProps {
+    LinkProps {
+  onPresentSettingModal: () => void;
   version: string;
   finixPrice?: string | number;
 }

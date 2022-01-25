@@ -36,15 +36,9 @@ const Link = ({ to, children }) => {
 
 // This hook is used to simulate a props change, and force a re rendering
 const useProps = () => {
-  const [userSlippageTolerance, setUserslippageTolerance] = useState(0.5);
-  const [deadline, setDeadline] = useState(0.5);
   const [props, setProps] = useState({
-    userSlippageTolerance,
-    setUserslippageTolerance,
+    onPresentSettingModal: () => {},
     version: "v1.0.1",
-
-    deadline,
-    setDeadline,
 
     account: "0xbdda50183d817c3289f895a4472eb475967dc980",
     login: noop,

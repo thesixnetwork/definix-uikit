@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
 import { useMenu } from "../MenuContext";
 import LangSelector from "./LangSelector";
-import SettingsModal from "./SettingsModal";
 
 const Container = styled.div`
   position: fixed;
@@ -28,20 +27,8 @@ const Container = styled.div`
 
 const MobilePanelFooterFixed: React.FC = () => {
   const { currentLang, langs, setLang } = useMenu();
-  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } =
+  const { account, Trans, Link, links, onPresentSettingModal } =
     useMenu();
-  const [onPresentSettingModal] = useModal(
-    <SettingsModal
-      {...{
-        Trans,
-        setDeadline,
-        deadline,
-        setUserslippageTolerance,
-        userSlippageTolerance,
-      }}
-    />,
-    false
-  );
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />

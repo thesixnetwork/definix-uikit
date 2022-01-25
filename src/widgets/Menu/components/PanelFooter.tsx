@@ -3,9 +3,7 @@ import { IconButton, SettingIcon, useModal } from "src";
 import styled from "styled-components";
 import { SIDEBAR_WIDTH_FULL_PC, SIDEBAR_WIDTH_FULL_MOBILE } from "../config";
 import { useMenu } from "../MenuContext";
-import { PushedProps } from "../types";
 import LangSelector from "./LangSelector";
-import SettingsModal from "./SettingsModal";
 
 const Container = styled.div`
   position: fixed;
@@ -28,19 +26,7 @@ const Container = styled.div`
 
 const PanelFooter: React.FC = () => {
   const { currentLang, langs, setLang } = useMenu();
-  const { Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } = useMenu();
-  const [onPresentSettingModal] = useModal(
-    <SettingsModal
-      {...{
-        Trans,
-        setDeadline,
-        deadline,
-        setUserslippageTolerance,
-        userSlippageTolerance,
-      }}
-    />,
-    false
-  );
+  const { Trans, onPresentSettingModal, Link, links } = useMenu();
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
