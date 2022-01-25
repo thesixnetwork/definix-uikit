@@ -28,7 +28,7 @@ const Container = styled.div`
 
 const PanelFooter: React.FC = () => {
   const { currentLang, langs, setLang } = useMenu();
-  const { account, Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } =
+  const { Trans, setDeadline, deadline, setUserslippageTolerance, userSlippageTolerance, Link, links } =
     useMenu();
   const [onPresentSettingModal] = useModal(
     <SettingsModal
@@ -45,11 +45,9 @@ const PanelFooter: React.FC = () => {
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
-      {account && (
-        <IconButton onClick={() => onPresentSettingModal()}>
-          <SettingIcon />
-        </IconButton>
-      )}
+      <IconButton onClick={() => onPresentSettingModal()}>
+        <SettingIcon />
+      </IconButton>
     </Container>
   );
 };
