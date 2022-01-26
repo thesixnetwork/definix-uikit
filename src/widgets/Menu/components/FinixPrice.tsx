@@ -5,7 +5,7 @@ interface IProps {
   price?: string | number;
 }
 
-const FinixPrice: React.FC<IProps> = ({ price = "0.0000" }) => {
+const FinixPrice: React.FC<IProps> = ({ price }) => {
   return (
     <Flex alignItems="center">
       <Coin symbol="FINIX" size="18px" />

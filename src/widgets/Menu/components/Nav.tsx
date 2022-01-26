@@ -116,7 +116,7 @@ const Nav: React.FC<NavProps> = (props) => {
     <StyledNav isTop={isTop}>
       <Chain />
       <Flex position="absolute" right={pxToRem(60)}>
-        <FinixPrice price={props?.price || "0.0000"} />
+        <FinixPrice price={props?.price} />
         <Flex ml="20px">
           <UserBlock />
         </Flex>
