@@ -4,9 +4,11 @@ import Flex from "../Box/Flex";
 import TabArea from "./TabArea";
 import Tab from "./Tab";
 
-const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, initTab = false, small, ...props }) => {
+const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, initTab = true, small, ...props }) => {
   useEffect(() => {
-    setCurTab(tabs[0].id);
+    if (initTab) {
+      setCurTab(tabs[0].id);
+    }
   }, [tabs]);
 
   return (
