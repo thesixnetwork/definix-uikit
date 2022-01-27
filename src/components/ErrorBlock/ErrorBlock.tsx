@@ -70,7 +70,7 @@ const ErrorBlock: React.FC<ErrorBlockProps> = ({ message, label, onBack }) => {
         </LabelText>
         <BackButton
           lg
-          width="128px"
+          width="160px"
           variant="brown"
           onClick={(e: MouseEvent) => {
             e.preventDefault();
