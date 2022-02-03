@@ -102,7 +102,7 @@ const ChromeText = styled(CopyRightText)`
   ${({ theme }) => theme.mediaQueries.mobile} {
     display: none;
   }
-`
+`;
 
 const Divider = styled.div`
   width: 1px;
