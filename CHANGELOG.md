@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/thesixnetwork/definix-uikit/compare/v1.1.1...v1.1.4) (2022-02-03)
+
+
+### Bug Fixes
+
+* Change finix price ([7fc51c3](https://github.com/thesixnetwork/definix-uikit/commit/7fc51c39cfa44aa90696f9c301f6c67533a7ea88))
+
 ### [1.1.3](https://github.com/thesixnetwork/definix-uikit/compare/v1.1.2...v1.1.3) (2022-01-26)
 
 
