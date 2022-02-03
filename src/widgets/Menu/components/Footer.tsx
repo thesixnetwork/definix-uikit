@@ -45,6 +45,11 @@ const StyledFlex = styled(Flex)`
   ${({ theme }) => theme.mediaQueries.mobile} {
     margin-left: 0;
     margin-top: 9px;
+
+    > div {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 `;
 
@@ -67,8 +72,8 @@ const LeftFlex = styled(Flex)`
 `;
 
 const WrapIcon = styled.div`
-  width: 86px;
-  height: 48px;
+  width: 72px;
+  height: 40px;
   ${({ theme }) => theme.mediaQueries.mobile} {
     width: 48px;
     height: 27px;
@@ -84,9 +89,18 @@ const CopyRightText = styled(Text)`
 `;
 
 const AuditText = styled(CopyRightText)`
-  margin-top: 6px;
+  margin-left: 6px;
   ${({ theme }) => theme.mediaQueries.mobile} {
-    margin-top: 2px;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+`;
+
+const ChromeText = styled(CopyRightText)`
+  margin-top: 4px;
+  opacity: 0.6;
+  ${({ theme }) => theme.mediaQueries.mobile} {
+    display: none;
   }
 `;
 
@@ -94,8 +108,8 @@ const Divider = styled.div`
   width: 1px;
   height: 40px;
   background-color: ${({ theme }) => theme.colors.lightGrey50};
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
 
   ${({ theme }) => theme.mediaQueries.mobile} {
     height: 27px;
@@ -121,20 +135,25 @@ const Footer: React.FC = () => {
           </StyledLogoWrap>
 
           <StyledFlex>
-            <CopyRightText>
-              <Trans i18nKey="copyright" components={{ 0: <strong /> }}></Trans>
-            </CopyRightText>
-            <AuditText>
-              <Trans i18nKey="audit" components={{ 0: <strong /> }}></Trans>
-              <span
-                style={{
-                  color: "#ffffff",
-                  marginLeft: "5px",
-                }}
-              >
-                {version}
-              </span>
-            </AuditText>
+            <Flex alignItems="center">
+              <CopyRightText>
+                <Trans i18nKey="copyright" components={{ 0: <strong /> }}></Trans>
+              </CopyRightText>
+              <AuditText>
+                <Trans i18nKey="audit" components={{ 0: <strong /> }}></Trans>
+                <span
+                  style={{
+                    color: "#ffffff",
+                    marginLeft: "5px",
+                  }}
+                >
+                  {version}
+                </span>
+              </AuditText>
+            </Flex>
+            <ChromeText>
+              <Trans i18nKey="This site is optimized for"></Trans>
+            </ChromeText>
           </StyledFlex>
         </LeftFlex>
         <SocialLinks />
