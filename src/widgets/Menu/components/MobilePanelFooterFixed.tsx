@@ -31,11 +31,9 @@ const MobilePanelFooterFixed: React.FC = () => {
   return (
     <Container>
       <LangSelector currentLang={currentLang} langs={langs} setLang={setLang} />
-      {account && (
-        <IconButton onClick={() => onPresentSettingModal()}>
-          <SettingIcon />
-        </IconButton>
-      )}
+      <IconButton onClick={() => onPresentSettingModal()}>
+        <SettingIcon />
+      </IconButton>
     </Container>
   );
 };
