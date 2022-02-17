@@ -103,7 +103,7 @@ const Nav: React.FC<NavProps> = (props) => {
           <FinixPrice price={props?.price || "0.0000"} />
           {account && (
             <Box ml="10px">
-              <IconButton ml="S_16" as={Link} to="/my">
+              <IconButton as={Link} to="/my">
                 <GnbMyMobileIcon />
               </IconButton>
             </Box>
