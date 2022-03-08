@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/thesixnetwork/definix-uikit/compare/v1.1.6...v1.2.0) (2022-03-08)
+
+
+### Features
+
+* Add wrong network GZ2021-831 ([54eda1f](https://github.com/thesixnetwork/definix-uikit/commit/54eda1fa166c6309d563995259bbbcb42a8dd037))
+
 ### [1.1.6](https://github.com/thesixnetwork/definix-uikit/compare/v1.1.5...v1.1.6) (2022-02-17)
 
 ### [1.1.5](https://github.com/thesixnetwork/definix-uikit/compare/v1.1.4...v1.1.5) (2022-02-04)
