@@ -84,4 +84,5 @@ export interface MenuProps extends LangProps, UserProps, MenuEntryConfigProps, T
   onPresentSettingModal: () => void;
   version: string;
   finixPrice?: string | number;
+  isWrongNetwork: boolean;
 }

@@ -84,6 +84,7 @@ const zIndices = {
   nav: 90,
   inner: 85,
   sidebar: 95,
+  wrongNetwork: 90
 };
 
 export default {
