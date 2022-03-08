@@ -54,6 +54,7 @@ const useProps = () => {
     Link,
 
     links,
+    isWrongNetwork: true,
     // profile: null,
   });
 

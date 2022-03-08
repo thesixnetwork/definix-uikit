@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import MenuProvider, { useMenu } from "./MenuContext";
 import { Overlay } from "src/components/Overlay";
+import WrongNetwork from "src/components/WrongNetwork";
 
 const Wrapper = styled.div`
   position: relative;
@@ -77,6 +78,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <Container>
         <Inner>{children}</Inner>
       </Container>
+      <WrongNetwork isShow={props.isWrongNetwork} />
       {isMobile && isPushed && <Overlay zIndex={theme.zIndices.sidebar - 1} show onClick={() => setIsPushed(false)} />}
       <Footer />
     </Wrapper>

@@ -26,6 +26,7 @@ export const Context = createContext<MenuContext>({
   links,
   setState: () => null,
   Link,
+  isWrongNetwork: false,
 });
 
 const MenuProvider: React.FC<MenuState> = ({ children, ...rest }) => {

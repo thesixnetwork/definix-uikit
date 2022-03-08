@@ -85,6 +85,7 @@ import { ReactComponent as GradeGoldIcon } from "./icons/ico_44_grade_gold.svg";
 import { ReactComponent as GradeSilverIcon } from "./icons/ico_44_grade_silver.svg";
 import { ReactComponent as CloseBIcon } from "./icons/ico_24_close_b.svg";
 import { ReactComponent as PlusBIcon } from "./icons/ico_42_plus_b.svg";
+import { ReactComponent as CheckErrorIcon } from "./icons/ico_24_check_error.svg";
 
 export {
   GnbMySIcon,
@@ -173,4 +174,5 @@ export {
   GradeSilverIcon,
   CloseBIcon,
   PlusBIcon,
+  CheckErrorIcon,
 };
