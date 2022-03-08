@@ -174,5 +174,5 @@ export {
   GradeSilverIcon,
   CloseBIcon,
   PlusBIcon,
-  CheckErrorIcon
+  CheckErrorIcon,
 };
