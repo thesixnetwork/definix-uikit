@@ -13,7 +13,7 @@ const NetworkChangeModal: React.FC<Props> = ({ Trans, onLogout, onDismiss = () =
   return (
     <Modal title={<Trans i18nKey="Network Change" />} onDismiss={onDismiss}>
       <ModalBody isBody maxWidth="298px" pt="6px" display="flex" justifyContent="center" alignItems="center">
-        <AlertIcon />
+        <AlertIcon width="40" height="40" viewBox="0 0 16 17" />
         <Text textStyle="R_14R" mt="16px" color="deepgrey" textAlign="center">
           <Trans i18nKey="Please change the wallet" />
         </Text>
