@@ -40,7 +40,7 @@ const StyledText = styled(Text)`
 `;
 
 const WrongNetwork: React.FC<Props> = ({ isShow }) => {
-  const { Trans, logout } = useMenu();
+  const { Trans, logout, account } = useMenu();
   const onLogout = () => {
     window.localStorage.removeItem(localStorageKey);
     window.localStorage.removeItem(connectorLocalStorageKey);
@@ -49,7 +49,7 @@ const WrongNetwork: React.FC<Props> = ({ isShow }) => {
 
   const [onPresentNetworkModal] = useModal(<NetworkChangeModal Trans={Trans} onLogout={onLogout} />);
 
-  return isShow ? (
+  return account && isShow ? (
     <Wrap
       onClick={() => {
         onPresentNetworkModal();
