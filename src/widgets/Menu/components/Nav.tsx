@@ -100,10 +100,14 @@ const Nav: React.FC<NavProps> = (props) => {
         </Box>
 
         <Flex position="absolute" right={pxToRem(20)}>
-          <a href="https://klaytn.loremboard.finance/chart/FINIX" target="_blank" style={{
-            display: 'flex',
-            alignItems: 'center'
-          }}>
+          <a
+            href="https://klaytn.loremboard.finance/chart/FINIX"
+            target="_blank"
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <FinixPrice price={props?.price || "0.0000"} />
           </a>
           {account && (
@@ -121,10 +125,14 @@ const Nav: React.FC<NavProps> = (props) => {
     <StyledNav isTop={isTop}>
       <Chain />
       <Flex position="absolute" right={pxToRem(60)}>
-        <a href="https://klaytn.loremboard.finance/chart/FINIX" target="_blank" style={{
-          display: 'flex',
-          alignItems: 'center'
-        }}>
+        <a
+          href="https://klaytn.loremboard.finance/chart/FINIX"
+          target="_blank"
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
           <FinixPrice price={props?.price || "0.0000"} />
         </a>
         <Flex ml="20px">
