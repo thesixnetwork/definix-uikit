@@ -34,6 +34,7 @@ const Wrap = styled(Flex)`
 `;
 
 const StyledText = styled(Text)`
+  white-space: pre-line;
   margin-left: 12px;
   color: ${({ theme }) => theme.colors.white};
   ${({ theme }) => theme.textStyle.R_14M}
