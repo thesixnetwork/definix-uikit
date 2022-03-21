@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/thesixnetwork/definix-uikit/compare/v1.2.3...v1.3.0) (2022-03-21)
+
+
+### Features
+
+* Add AlertModal ([967f779](https://github.com/thesixnetwork/definix-uikit/commit/967f779540f951a2f0b9f3754f496e80573eb510))
+
 ### [1.2.3](https://github.com/thesixnetwork/definix-uikit/compare/v1.2.2...v1.2.3) (2022-03-11)
 
 ### [1.2.2](https://github.com/thesixnetwork/definix-uikit/compare/v1.2.1...v1.2.2) (2022-03-10)
