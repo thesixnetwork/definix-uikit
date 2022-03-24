@@ -44,19 +44,19 @@ const connectors: Config[] = [
   {
     title: "Kaikas",
     icon: Kaikas,
-    connectorId: ConnectorNames.Injected,
+    connectorId: ConnectorNames.Kaikas,
   },
   {
     title: "D`CENT",
     icon: Dcent,
-    connectorId: ConnectorNames.Injected,
+    connectorId: ConnectorNames.Dcent,
   },
   {
     title: "TokenPocket",
     icon: TokenPocket,
     width: 52,
     height: 52,
-    connectorId: ConnectorNames.Injected,
+    connectorId: ConnectorNames.TokenPocket,
   },
   {
     title: "Klip",

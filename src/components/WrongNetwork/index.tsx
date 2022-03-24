@@ -43,8 +43,8 @@ const StyledText = styled(Text)`
 const WrongNetwork: React.FC<Props> = ({ isShow }) => {
   const { Trans, logout, account } = useMenu();
   const onLogout = () => {
-    window.localStorage.removeItem(localStorageKey);
-    window.localStorage.removeItem(connectorLocalStorageKey);
+    // window.localStorage.removeItem(localStorageKey);
+    // window.localStorage.removeItem(connectorLocalStorageKey);
     logout();
   };
 

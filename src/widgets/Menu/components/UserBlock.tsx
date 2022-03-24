@@ -41,8 +41,8 @@ const UserBlock: React.FC = () => {
   const link = links[0];
 
   const onLogout = () => {
-    window.localStorage.removeItem(localStorageKey);
-    window.localStorage.removeItem(connectorLocalStorageKey);
+    // window.localStorage.removeItem(localStorageKey);
+    // window.localStorage.removeItem(connectorLocalStorageKey);
     logout();
   };
 
