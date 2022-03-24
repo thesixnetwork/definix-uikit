@@ -38,8 +38,8 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
     <StyledButton
       onClick={() => {
         login(walletConfig.connectorId);
-        window.localStorage.setItem(localStorageKey, "1");
-        window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
+        // window.localStorage.setItem(localStorageKey, "1");
+        // window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
       }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
