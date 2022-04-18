@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/thesixnetwork/definix-uikit/compare/v1.3.1...v1.4.0) (2022-04-18)
+
+
+### Features
+
+* Add tab dark style ([007cd8b](https://github.com/thesixnetwork/definix-uikit/commit/007cd8b8ee4166ec9fa8fd091c1769809852613b))
+
 ### [1.3.1](https://github.com/thesixnetwork/definix-uikit/compare/v1.3.0...v1.3.1) (2022-03-24)
 
 ## [1.3.0](https://github.com/thesixnetwork/definix-uikit/compare/v1.2.3...v1.3.0) (2022-03-21)
