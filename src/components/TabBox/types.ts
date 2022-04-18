@@ -21,7 +21,7 @@ export interface TabProps {
   onClick: () => void;
   isSelected: boolean;
   small?: boolean;
-  theme?: 'white' | 'dark';
+  theme?: "white" | "dark";
   children?: React.ReactNode;
 }
 

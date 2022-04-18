@@ -47,7 +47,14 @@ export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; isDa
   text-align: center;
   cursor: pointer;
   word-break: keep-all;
-  color: ${({ isSelected, theme, isDark }) => (isSelected ? (isDark ? theme.colors.white : theme.colors.black) : (isDark ? theme.colors.mediumgrey : theme.colors.mediumgrey))};
+  color: ${({ isSelected, theme, isDark }) =>
+    isSelected
+      ? isDark
+        ? theme.colors.white
+        : theme.colors.black
+      : isDark
+      ? theme.colors.mediumgrey
+      : theme.colors.mediumgrey};
   padding: ${({ small }) => (small ? "18px 12px" : "20px 48px")};
   ${({ small }) => css(small ? textStyle.R_14B : textStyle.R_16B)}
   ${({ width }) => width && `width: ${width}`}

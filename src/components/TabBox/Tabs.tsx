@@ -11,7 +11,7 @@ const Tabs: React.FC<TabsProps> = ({ tabs, curTab, setCurTab, equal, initTab = t
     }
   }, [tabs]);
 
-  const isDark = useMemo(() => theme === 'dark', [theme])
+  const isDark = useMemo(() => theme === "dark", [theme]);
 
   return (
     <TabArea isSelected isDark={isDark}>

@@ -18,12 +18,12 @@ export default {
 
 const tabs = [
   {
-    id: 'add',
+    id: "add",
     name: "Add",
     component: <div>Add</div>,
   },
   {
-    id: 'remove',
+    id: "remove",
     name: "Remove",
     component: <div>Remove</div>,
   },
@@ -65,11 +65,13 @@ export const TabAndContent: React.FC = () => {
 
   return (
     <div>
-      <div style={{ padding: "32px", width: "700px", backgroundColor: 'black' }}>
-        <Row style={{
-          width: '100%',
-          backgroundColor: 'black'
-        }}>
+      <div style={{ padding: "32px", width: "700px", backgroundColor: "black" }}>
+        <Row
+          style={{
+            width: "100%",
+            backgroundColor: "black",
+          }}
+        >
           <Tabs tabs={tabs} curTab={curTab} setCurTab={setCurTab} theme="dark" />
         </Row>
       </div>
