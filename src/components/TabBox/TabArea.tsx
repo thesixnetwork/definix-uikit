@@ -1,11 +1,11 @@
 import React from "react";
-import { StyledBorderBottom, StyledTabArea } from "./StyledTabBox";
+import { StyledBorderBottomNormal, StyledTabArea } from "./StyledTabBox";
 import { TabAreaProps } from "./types";
 
-const TabArea: React.FC<TabAreaProps> = ({ children }) => {
+const TabArea: React.FC<TabAreaProps> = ({ isDark, children }) => {
   return (
     <StyledTabArea>
-      <StyledBorderBottom />
+      <StyledBorderBottomNormal isDark={isDark} />
       {children}
     </StyledTabArea>
   );

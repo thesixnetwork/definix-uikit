@@ -26,23 +26,35 @@ export const StyledTabArea = styled.div`
   ${space}
 `;
 
-export const StyledBorderBottom = styled.div<{ isSelected?: boolean }>`
+export const StyledBorderBottom = styled.div<{ isSelected?: boolean; isDark?: boolean }>`
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: ${({ isSelected, theme }) =>
-    isSelected ? theme.colors.black : hexToRGB(theme.colors.lightgrey, 0.4)};
+  background-color: ${({ isSelected, isDark, theme }) =>
+    isSelected && (isDark ? theme.colors.white : theme.colors.black)};
   ${space}
 `;
 
-export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; width?: string }>`
+export const StyledBorderBottomNormal = styled(StyledBorderBottom)<{ isDark: boolean }>`
+  background-color: ${({ theme, isDark }) => (isDark ? theme.colors.brown : hexToRGB(theme.colors.lightgrey, 0.4))};
+  ${space}
+`;
+
+export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; isDark?: boolean; width?: string }>`
   position: relative;
   text-align: center;
   cursor: pointer;
   word-break: keep-all;
-  color: ${({ isSelected, theme }) => (isSelected ? theme.colors.black : theme.colors.mediumgrey)};
+  color: ${({ isSelected, theme, isDark }) =>
+    isSelected
+      ? isDark
+        ? theme.colors.white
+        : theme.colors.black
+      : isDark
+      ? theme.colors.lightbrown
+      : theme.colors.mediumgrey};
   padding: ${({ small }) => (small ? "18px 12px" : "20px 48px")};
   ${({ small }) => css(small ? textStyle.R_14B : textStyle.R_16B)}
   ${({ width }) => width && `width: ${width}`}
