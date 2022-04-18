@@ -18,10 +18,12 @@ export default {
 
 const tabs = [
   {
+    id: 'add',
     name: "Add",
     component: <div>Add</div>,
   },
   {
+    id: 'remove',
     name: "Remove",
     component: <div>Remove</div>,
   },
@@ -62,14 +64,21 @@ export const TabAndContent: React.FC = () => {
   const Remove = tabs[1].component;
 
   return (
-    <div style={{ padding: "32px", width: "500px" }}>
-      <Row>
-        <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} />
-      </Row>
-      <Row>
-        <Tabs tabs={tabNames} curTab={curTab} setCurTab={setCurTab} small equal />
-      </Row>
-      <Row>{tabs.map(({ name, component }) => (curTab === name ? component : null))}</Row>
+    <div>
+      <div style={{ padding: "32px", width: "700px", backgroundColor: 'black' }}>
+        <Row style={{
+          width: '100%',
+          backgroundColor: 'black'
+        }}>
+          <Tabs tabs={tabs} curTab={curTab} setCurTab={setCurTab} theme="dark" />
+        </Row>
+      </div>
+      <div style={{ padding: "32px", width: "700px" }}>
+        <Row>
+          <Tabs tabs={tabs} curTab={curTab} setCurTab={setCurTab} small equal />
+        </Row>
+        <Row>{tabs.map(({ name, component }) => (curTab === name ? component : null))}</Row>
+      </div>
     </div>
   );
 };

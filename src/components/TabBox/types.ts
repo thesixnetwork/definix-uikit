@@ -13,6 +13,7 @@ export interface TabBoxProps {
 
 export interface TabAreaProps {
   isSelected: boolean;
+  isDark?: boolean;
   children?: React.ReactNode;
 }
 
@@ -20,6 +21,7 @@ export interface TabProps {
   onClick: () => void;
   isSelected: boolean;
   small?: boolean;
+  theme?: 'white' | 'dark';
   children?: React.ReactNode;
 }
 
