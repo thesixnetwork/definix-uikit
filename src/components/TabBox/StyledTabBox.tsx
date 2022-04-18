@@ -38,7 +38,7 @@ export const StyledBorderBottom = styled.div<{ isSelected?: boolean; isDark?: bo
 `;
 
 export const StyledBorderBottomNormal = styled(StyledBorderBottom)<{ isDark: boolean }>`
-  background-color: ${({ theme, isDark }) => isDark ? theme.colors.brown : hexToRGB(theme.colors.lightgrey, 0.4)};
+  background-color: ${({ theme, isDark }) => (isDark ? theme.colors.brown : hexToRGB(theme.colors.lightgrey, 0.4))};
   ${space}
 `;
 
