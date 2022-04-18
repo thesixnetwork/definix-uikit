@@ -13,7 +13,7 @@ export interface TabBoxProps {
 
 export interface TabAreaProps {
   isSelected: boolean;
-  isDark?: boolean;
+  isDark: boolean;
   children?: React.ReactNode;
 }
 

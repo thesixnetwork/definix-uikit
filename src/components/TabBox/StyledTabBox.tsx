@@ -37,8 +37,8 @@ export const StyledBorderBottom = styled.div<{ isSelected?: boolean; isDark?: bo
   ${space}
 `;
 
-export const StyledBorderBottomNormal = styled(StyledBorderBottom)`
-  background-color: ${({ theme }) => hexToRGB(theme.colors.lightgrey, 0.4)};
+export const StyledBorderBottomNormal = styled(StyledBorderBottom)<{ isDark: boolean }>`
+  background-color: ${({ theme, isDark }) => isDark ? theme.colors.brown : hexToRGB(theme.colors.lightgrey, 0.4)};
   ${space}
 `;
 
@@ -53,7 +53,7 @@ export const StyledTab = styled.div<{ small?: boolean; isSelected: boolean; isDa
         ? theme.colors.white
         : theme.colors.black
       : isDark
-      ? theme.colors.mediumgrey
+      ? theme.colors.lightbrown
       : theme.colors.mediumgrey};
   padding: ${({ small }) => (small ? "18px 12px" : "20px 48px")};
   ${({ small }) => css(small ? textStyle.R_14B : textStyle.R_16B)}
