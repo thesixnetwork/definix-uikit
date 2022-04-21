@@ -4,6 +4,7 @@ import {
   ImgTokenAda,
   ImgTokenBtcb,
   ImgTokenBusd,
+  ImgTokenFavor,
   ImgTokenFinix,
   ImgTokenKbnb,
   ImgTokenKdai,
@@ -35,6 +36,10 @@ export enum COIN_SYMBOL {
   UNSELECT = "UNSELECT",
   VFINIX = "VFINIX",
   KXRP = "KXRP",
+  /**
+   * @favor
+   */
+  FAVOR = "FAVOR"
 }
 
 export const COIN_SRCSET: Record<COIN_SYMBOL, string[]> = {
@@ -54,6 +59,7 @@ export const COIN_SRCSET: Record<COIN_SYMBOL, string[]> = {
   [COIN_SYMBOL.UNSELECT]: ImgTokenUnselect,
   [COIN_SYMBOL.VFINIX]: ImgTokenVfinix,
   [COIN_SYMBOL.KXRP]: ImgTokenXrp,
+  [COIN_SYMBOL.FAVOR]: ImgTokenFavor,
 };
 
 export interface CoinProps extends SpaceProps {

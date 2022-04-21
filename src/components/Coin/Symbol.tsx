@@ -87,3 +87,9 @@ import ImgTokenXrp2x from "./coins/img_token_xrp@2x.png";
 import ImgTokenXrp3x from "./coins/img_token_xrp@3x.png";
 
 export const ImgTokenXrp = [ImgTokenXrp1x, ImgTokenXrp2x, ImgTokenXrp3x];
+
+import ImgTokenFavor1x from "./coins/img-token-favor.png";
+import ImgTokenFavor2x from "./coins/img-token-favor@2x.png";
+import ImgTokenFavor3x from "./coins/img-token-favor@3x.png";
+
+export const ImgTokenFavor = [ImgTokenFavor1x, ImgTokenFavor2x, ImgTokenFavor3x];
