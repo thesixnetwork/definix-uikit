@@ -39,7 +39,7 @@ export enum COIN_SYMBOL {
   /**
    * @favor
    */
-  FAVOR = "FAVOR"
+  FAVOR = "FAVOR",
 }
 
 export const COIN_SRCSET: Record<COIN_SYMBOL, string[]> = {
