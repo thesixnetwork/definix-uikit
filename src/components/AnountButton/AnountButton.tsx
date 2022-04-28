@@ -6,7 +6,7 @@ import { space, color } from "styled-system";
 import { getVariantTextStyle } from "src";
 
 export interface AnountButtonProps extends SpaceProps, ExtendColorProps {
-  onClick: (() => void) | undefined;
+  onClick: ((e: any) => void) | undefined;
   children?: React.ReactNode;
   className?: string;
   isSelected?: boolean;
