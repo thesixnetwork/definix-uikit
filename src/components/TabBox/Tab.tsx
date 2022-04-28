@@ -8,7 +8,7 @@ interface ExtendTabProps extends TabProps {
 
 const Tab: React.FC<ExtendTabProps> = ({ onClick, isSelected, children, small, isDark, ...props }) => {
   return (
-    <StyledTab className="tab" isDark={isDark} small={small} onClick={onClick} isSelected={isSelected}>
+    <StyledTab className="tab" isDark={isDark} small={small} onClick={onClick} isSelected={isSelected} {...props}>
       {children}
       <StyledBorderBottom isSelected={isSelected} isDark={isDark} />
     </StyledTab>
