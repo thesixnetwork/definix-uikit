@@ -8,7 +8,7 @@ export const getTokenImageUrl = (tokenName: COIN_SYMBOL | string) => {
     return "";
   }
   try {
-    return COIN_SRCSET[tokenName as COIN_SYMBOL];
+    return COIN_SRCSET[tokenName.toUpperCase() as COIN_SYMBOL];
   } catch {
     return null;
   }
