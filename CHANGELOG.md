@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.7](https://github.com/thesixnetwork/definix-uikit/compare/v1.4.6...v1.4.7) (2022-05-02)
+
+
+### Bug Fixes
+
+* Fix to lp token symbol uppercase GZ2021-935 ([8666518](https://github.com/thesixnetwork/definix-uikit/commit/86665186043da905ac5384255f17df416fe52a01))
+
 ### [1.4.6](https://github.com/thesixnetwork/definix-uikit/compare/v1.4.5...v1.4.6) (2022-04-28)
 
 ### [1.4.5](https://github.com/thesixnetwork/definix-uikit/compare/v1.4.4...v1.4.5) (2022-04-28)
