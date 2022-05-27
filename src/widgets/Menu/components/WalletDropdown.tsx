@@ -22,7 +22,7 @@ const WalletDropdown: React.FC<Props> = ({ target, account, logout, Trans, ...pr
   const onItemClick = useCallback(
     (index: number) => {
       if (index === 0) {
-        window.open(`https://scope.klaytn.com/account/${account}?tabId=txList`, "_blank");
+        window.open(`https://www.klaytnfinder.io/account/${account}?tabId=txList`, "_blank");
       } else if (index === 1) {
         if (copy(account)) {
           setIsCopied(true);
