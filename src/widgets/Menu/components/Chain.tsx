@@ -16,7 +16,7 @@ const Chain: React.FC = () => {
     <div>
       <ChainToggle scale={isMobile ? "sm" : "md"} activeIndex={1}>
         <ChainToggleItem
-          startIcon={<Coin symbol="KBNB" size={isMobile ? "18px" : "16px"} />}
+          startIcon={<Coin symbol="oBNB" size={isMobile ? "18px" : "16px"} />}
           onClick={() => {
             onPresentAlertModal();
           }}
