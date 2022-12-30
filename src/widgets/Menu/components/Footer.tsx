@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Flex } from "../../../components/Box";
 import { Text } from "../../../components/Text";
-import { FingerLabsLogo, LogoFooterSixIcon } from "../../../components/Icon";
+import { LogoFooterSixIcon } from "../../../components/Icon";
 import SocialLinks from "./SocialLinks";
 import { SIDEBAR_WIDTH_FULL_PC } from "../config";
 import { useMenu } from "../MenuContext";
@@ -127,10 +127,6 @@ const Footer: React.FC = () => {
           <StyledLogoWrap>
             <WrapIcon>
               <LogoFooterSixIcon viewBox="0 0 86 48" width="100%" height="100%" />
-            </WrapIcon>
-            <Divider />
-            <WrapIcon>
-              <FingerLabsLogo viewBox="0 0 86 48" width="100%" height="100%" />
             </WrapIcon>
           </StyledLogoWrap>
 
