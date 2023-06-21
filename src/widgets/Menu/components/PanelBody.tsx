@@ -126,14 +126,14 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav }) => {
           </MenuEntry>
         );
       })}
-      <LineMenuEntry isActive={false}>
+      {/* <LineMenuEntry isActive={false}>
         <V1MenuLink href={"https://klaytn.definix.com/"} target="_blank">
           <Coin symbol="FINIX" size="16px" />
           <LinkLabel isPushed={isPushed} ml="8px">
             <Trans i18nKey="Switch to G1" />
           </LinkLabel>
         </V1MenuLink>
-      </LineMenuEntry>
+      </LineMenuEntry> */}
     </Container>
   );
 };
