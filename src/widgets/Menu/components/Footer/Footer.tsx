@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Flex } from "../../../components/Box";
-import { Text } from "../../../components/Text";
-import { LogoFooterSixIcon } from "../../../components/Icon";
-import SocialLinks from "./SocialLinks";
-import { SIDEBAR_WIDTH_FULL_PC } from "../config";
-import { useMenu } from "../MenuContext";
+import { Flex } from "../../../../components/Box";
+import { Text } from "../../../../components/Text";
+import { LogoFooterSixIcon } from "../../../../components/Icon";
+import SocialLinks from "../SocialLinks";
+import { SIDEBAR_WIDTH_FULL_PC } from "../../config";
+import { useMenu } from "../../MenuContext";
 
 const StyledFooter = styled.div`
   position: relative;
