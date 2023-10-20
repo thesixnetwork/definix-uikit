@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Flex } from "../../../../components/Box";
 import { Text } from "../../../../components/Text";
-import { LogoFooterSixIcon } from "../../../../components/Icon";
+// import { LogoFooterSixIcon } from "../../../../components/Icon";
+import { PoweredByBlack } from "./powered-by-black.png";
 import SocialLinks from "../SocialLinks";
 import { SIDEBAR_WIDTH_FULL_PC } from "../../config";
 import { useMenu } from "../../MenuContext";
@@ -72,11 +73,10 @@ const LeftFlex = styled(Flex)`
 `;
 
 const WrapIcon = styled.div`
-  width: 72px;
-  height: 40px;
+  width: 120px;
+
   ${({ theme }) => theme.mediaQueries.mobile} {
-    width: 48px;
-    height: 27px;
+    width: 92px;
   }
 `;
 
@@ -126,7 +126,8 @@ const Footer: React.FC = () => {
         <LeftFlex>
           <StyledLogoWrap>
             <WrapIcon>
-              <LogoFooterSixIcon viewBox="0 0 86 48" width="100%" height="100%" />
+              <PoweredByBlack></PoweredByBlack>
+              {/* <LogoFooterSixIcon viewBox="0 0 86 48" width="100%" height="100%" /> */}
             </WrapIcon>
           </StyledLogoWrap>
 
