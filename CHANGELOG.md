@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.16](https://github.com/thesixnetwork/definix-uikit/compare/v1.4.15...v1.4.16) (2023-10-20)
+
 ### [1.4.15](https://github.com/thesixnetwork/definix-uikit/compare/v1.4.14...v1.4.15) (2023-07-10)
 
 ### [1.4.14](https://github.com/thesixnetwork/definix-uikit/compare/v1.4.11...v1.4.14) (2023-06-21)
