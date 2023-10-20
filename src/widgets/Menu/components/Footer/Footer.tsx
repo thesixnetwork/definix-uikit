@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Flex } from "../../../../components/Box";
 import { Text } from "../../../../components/Text";
 // import { LogoFooterSixIcon } from "../../../../components/Icon";
-import { PoweredByBlack } from "./powered-by-black.png";
+import PoweredByBlack from "./powered-by-black.png";
 import SocialLinks from "../SocialLinks";
 import { SIDEBAR_WIDTH_FULL_PC } from "../../config";
 import { useMenu } from "../../MenuContext";
