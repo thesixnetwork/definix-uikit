@@ -1,0 +1,16 @@
+export declare const ImgTokenAda: any[];
+export declare const ImgTokenBtcb: any[];
+export declare const ImgTokenBusd: any[];
+export declare const ImgTokenFinix: any[];
+export declare const ImgTokenKbnb: any[];
+export declare const ImgTokenKdai: any[];
+export declare const ImgTokenKeth: any[];
+export declare const ImgTokenKlay: any[];
+export declare const ImgTokenKsp: any[];
+export declare const ImgTokenKusdt: any[];
+export declare const ImgTokenKwbtc: any[];
+export declare const ImgTokenSix: any[];
+export declare const ImgTokenUnselect: any[];
+export declare const ImgTokenVfinix: any[];
+export declare const ImgTokenXrp: any[];
+export declare const ImgTokenFavor: any[];
