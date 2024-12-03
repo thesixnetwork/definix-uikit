@@ -25,7 +25,7 @@ const Chain: React.FC = () => {
           <Trans i18nKey={isMobile ? "BSC" : "Binance Smart Chain"} />
         </ChainToggleItem>
         <ChainToggleItem startIcon={<Coin symbol="KLAY" size={isMobile ? "18px" : "16px"} />}>
-          <Trans i18nKey="Klaytn Chain" />
+          <Trans i18nKey="Kaia Chain" />
         </ChainToggleItem>
       </ChainToggle>
     </div>
