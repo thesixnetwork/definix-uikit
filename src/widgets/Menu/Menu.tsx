@@ -59,7 +59,7 @@ const Inner = styled.div`
   }
 `;
 
-const Menu: React.FC<MenuProps> = (props) => {
+const MenuItem: React.FC<MenuProps> = (props) => {
   const { children } = props;
   const { isMaxLg } = useMatchBreakpoints();
   const isMobile = isMaxLg;
@@ -85,12 +85,12 @@ const Menu: React.FC<MenuProps> = (props) => {
   );
 };
 
-const WrapMenu: React.FC<MenuProps> = (props) => {
+const Menu: React.FC<MenuProps> = (props) => {
   return (
     <MenuProvider {...props}>
-      <Menu {...props} />
+      <MenuItem {...props} />
     </MenuProvider>
   );
 };
 
-export default WrapMenu;
+export default Menu;

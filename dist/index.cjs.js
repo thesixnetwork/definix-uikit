@@ -9223,7 +9223,7 @@ var Inner$1 = styled__default['default'].div(templateObject_4$a || (templateObje
     var theme = _a.theme;
     return theme.mediaQueries.mobileXl;
 }, NAV_HEIGHT_MOBILE + 28, pxToRem(INNER_MARGIN_MOBILE));
-var Menu = function (props) {
+var MenuItem = function (props) {
     var children = props.children;
     var isMaxLg = useMatchBreakpoints().isMaxLg;
     var isMobile = isMaxLg;
@@ -9242,9 +9242,9 @@ var Menu = function (props) {
         isMobile && isPushed && React__default['default'].createElement(Overlay, { zIndex: theme.zIndices.sidebar - 1, show: true, onClick: function () { return setIsPushed(false); } }),
         React__default['default'].createElement(Footer, null)));
 };
-var WrapMenu = function (props) {
+var Menu = function (props) {
     return (React__default['default'].createElement(MenuProvider, __assign({}, props),
-        React__default['default'].createElement(Menu, __assign({}, props))));
+        React__default['default'].createElement(MenuItem, __assign({}, props))));
 };
 var templateObject_1$16, templateObject_2$v, templateObject_3$f, templateObject_4$a;
 
@@ -9645,7 +9645,7 @@ exports.LogoWalletKlipIcon = SvgLogoWalletKlip;
 exports.Lp = Lp;
 exports.MainDefinixImgTextIcon = SvgLogoMainDefinixImgText;
 exports.MainDefinixTextIcon = SvgLogoMainDefinixText;
-exports.Menu = WrapMenu;
+exports.Menu = Menu;
 exports.MenuIcon = SvgIco24Menu;
 exports.MinusIcon = SvgIco16Minus;
 exports.Modal = Modal;
