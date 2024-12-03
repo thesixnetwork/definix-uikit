@@ -36,6 +36,7 @@ export enum COIN_SYMBOL {
   UNSELECT = "UNSELECT",
   VFINIX = "VFINIX",
   OXRP = "OXRP",
+  KAIA = "KAIA",
   /**
    * @favor
    */
@@ -59,6 +60,7 @@ export const COIN_SRCSET: Record<COIN_SYMBOL, string[]> = {
   [COIN_SYMBOL.UNSELECT]: ImgTokenUnselect,
   [COIN_SYMBOL.VFINIX]: ImgTokenVfinix,
   [COIN_SYMBOL.OXRP]: ImgTokenXrp,
+  [COIN_SYMBOL.KAIA]: ImgTokenKlay,
   [COIN_SYMBOL.FAVOR]: ImgTokenFavor,
 };
 

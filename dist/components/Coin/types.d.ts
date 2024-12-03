@@ -16,6 +16,7 @@ export declare enum COIN_SYMBOL {
     UNSELECT = "UNSELECT",
     VFINIX = "VFINIX",
     OXRP = "OXRP",
+    KAIA = "KAIA",
     /**
      * @favor
      */
