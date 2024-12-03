@@ -81,7 +81,7 @@ function SvgIco24GnbMyS(props) {
   })));
 }
 
-var _g;
+var _path$1, _defs;
 
 function _extends$1() { _extends$1 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1.apply(this, arguments); }
 
@@ -89,24 +89,29 @@ function SvgIco24ChainKlaytn(props) {
   return /*#__PURE__*/React.createElement("svg", _extends$1({
     width: 22,
     height: 22,
-    xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g || (_g = /*#__PURE__*/React.createElement("g", {
     fill: "none",
-    fillRule: "evenodd"
-  }, /*#__PURE__*/React.createElement("circle", {
-    strokeOpacity: 0.505,
-    stroke: "#E0E0E0",
-    fill: "#FFF",
-    cx: 11,
-    cy: 11,
-    r: 9.583
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M11.075 11.305c1.197 1.217 2.398 2.428 3.597 3.641.013.012.024.027.041.046-.047.055-.115.069-.174.093l-2.145.9c-.046.019-.088.045-.131.068-.046.027-.096.038-.144.055-.05.003-.088.032-.127.058-.044.025-.098.028-.136.067a1.784 1.784 0 01-.272.098c-.127.051-.26.092-.38.158a.419.419 0 01-.43-.005c-.119-.062-.248-.103-.373-.153a1.624 1.624 0 01-.404-.168v.001l-.095-.028-.179-.083a.278.278 0 01-.125-.057c-.084-.014-.166-.03-.227-.1l-.328-.142-1.658-.695c-.037-.017-.072-.036-.116-.059.03-.033.051-.06.076-.085 1.184-1.197 2.368-2.393 3.55-3.59.06-.06.095-.106.18-.02zm4.203-3.901c.57.704.952 1.502 1.143 2.395.006.031.017.061.026.092.06.23.083.466.093.701.01.244.005.488 0 .73a2.7 2.7 0 01-.043.393l.002-.003c-.017.111-.018.226-.054.335-.033.037.018.1-.035.135l-.187.664c.005.054-.02.098-.049.14-.212.5-.459.978-.794 1.404-.082.104-.17.202-.25.308-.058.079-.098.092-.176.012-.741-.757-1.488-1.51-2.233-2.265-.457-.463-.913-.927-1.373-1.387-.074-.074-.08-.112-.002-.19 1.15-1.16 2.298-2.322 3.447-3.485l.01-.009c.247-.251.247-.251.475.03zm-4.681-1.647c.002.129-.076.228-.098.345a.15.15 0 01-.052.11.273.273 0 00-.05.136c-.022.046-.024.1-.06.14l.003-.003c-.048.133-.087.27-.16.392-.19.46-.383.92-.573 1.382-.87 2.123-1.74 4.246-2.612 6.369-.02.046-.01.129-.098.125-.049-.054-.107-.098-.142-.164-.045-.02-.07-.058-.084-.105a6.478 6.478 0 01-.858-1.499.37.37 0 01-.084-.224.02.02 0 00-.005-.022.696.696 0 01-.102-.333c-.06-.32-.116-.641-.157-.965-.04-.313.024-.54.26-.775 1.598-1.59 3.178-3.2 4.764-4.803.034-.035.065-.076.108-.106zm.714-.276c1.133.48 2.268.952 3.403 1.426.022.06-.018.083-.06.104-.35.317-.67.666-1.003 1.001-1.017 1.023-2.028 2.05-3.042 3.075L8.25 13.473c-.025.025-.046.055-.07.083-.076.089-.165.162-.252.24-.025.011-.054.019-.061.054a.07.07 0 01-.04.035c-.06 0-.116.001-.066-.087.025-.046.025-.102.043-.151.152-.377.302-.755.456-1.132.651-1.591 1.304-3.181 1.953-4.774.064-.156.112-.32.188-.472.045-.143.102-.282.167-.415.178-.427.36-.852.531-1.282.048-.121.09-.144.212-.091z",
-    fill: "#4F473C"
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _path$1 || (_path$1 = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#ico_24_chain_klaytn_svg__pattern0_722_12)",
+    d: "M0 0h22v22H0z"
+  })), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("pattern", {
+    id: "ico_24_chain_klaytn_svg__pattern0_722_12",
+    patternContentUnits: "objectBoundingBox",
+    width: 1,
+    height: 1
+  }, /*#__PURE__*/React.createElement("use", {
+    xlinkHref: "#ico_24_chain_klaytn_svg__image0_722_12",
+    transform: "matrix(.00233 0 0 .00233 -.012 0)"
+  })), /*#__PURE__*/React.createElement("image", {
+    id: "ico_24_chain_klaytn_svg__image0_722_12",
+    width: 440,
+    height: 430,
+    xlinkHref: "data:image/png;base64,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"
   }))));
 }
 
-var _path$1;
+var _path$2;
 
 function _extends$2() { _extends$2 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$2.apply(this, arguments); }
 
@@ -115,13 +120,13 @@ function SvgIco24Setting(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$1 || (_path$1 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$2 || (_path$2 = /*#__PURE__*/React.createElement("path", {
     d: "M19.963 13.168l-.363-.212a1.38 1.38 0 01-.691-1.206c0-.504.258-.955.69-1.206l.364-.212a2.097 2.097 0 00.759-2.854l-.691-1.206a2.066 2.066 0 00-2.831-.765l-.364.211c-.432.252-.95.252-1.381 0a1.381 1.381 0 01-.691-1.206v-.423c0-1.152-.93-2.089-2.073-2.089H11.31a2.084 2.084 0 00-2.072 2.09v.423c0 .503-.258.954-.69 1.206-.433.251-.95.252-1.383 0l-.363-.212a2.067 2.067 0 00-2.832.765l-.69 1.206c-.573 1-.234 2.277.758 2.854l.364.212c.432.251.69.702.69 1.206s-.258.955-.69 1.206l-.363.212a2.097 2.097 0 00-.759 2.854l.69 1.206a2.066 2.066 0 002.832.765l.363-.211c.433-.253.95-.252 1.382 0 .433.252.69.702.69 1.206v.423c0 1.152.93 2.089 2.073 2.089h1.382a2.084 2.084 0 002.073-2.09v-.423c0-.503.258-.954.69-1.206a1.36 1.36 0 011.382 0l.364.212c.989.575 2.26.232 2.83-.765l.692-1.206c.572-1 .233-2.277-.759-2.854zM12 15.295c-1.985 0-3.6-1.59-3.6-3.545 0-1.955 1.615-3.545 3.6-3.545s3.6 1.59 3.6 3.545c0 1.955-1.615 3.545-3.6 3.545z",
     fill: "#5E515F"
   })));
 }
 
-var _g$1;
+var _g;
 
 function _extends$3() { _extends$3 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$3.apply(this, arguments); }
 
@@ -130,7 +135,7 @@ function SvgIco24ChainBsc(props) {
     width: 32,
     height: 32,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$1 || (_g$1 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g || (_g = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -144,7 +149,7 @@ function SvgIco24ChainBsc(props) {
   }))));
 }
 
-var _path$2;
+var _path$3;
 
 function _extends$4() { _extends$4 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$4.apply(this, arguments); }
 
@@ -153,13 +158,13 @@ function SvgIco16ArrowTopG(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$2 || (_path$2 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$3 || (_path$3 = /*#__PURE__*/React.createElement("path", {
     d: "M11.889 11L13 9.91 8 5 3 9.91 4.111 11 8 7.182z",
     fill: "#999"
   })));
 }
 
-var _defs, _g$2;
+var _defs$1, _g$1;
 
 function _extends$5() { _extends$5 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$5.apply(this, arguments); }
 
@@ -169,7 +174,7 @@ function SvgLogoMainFinix(props) {
     height: 21,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
+  }, props), _defs$1 || (_defs$1 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
     id: "logo_main_finix_svg__a",
     d: "M0 0h12.532v14.552H0z"
   }), /*#__PURE__*/React.createElement("path", {
@@ -277,7 +282,7 @@ function SvgLogoMainFinix(props) {
   }), /*#__PURE__*/React.createElement("stop", {
     stopColor: "#5BBF95",
     offset: "100%"
-  })))), _g$2 || (_g$2 = /*#__PURE__*/React.createElement("g", {
+  })))), _g$1 || (_g$1 = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -378,7 +383,7 @@ function SvgLogoMainFinix(props) {
   })))));
 }
 
-var _g$3;
+var _g$2;
 
 function _extends$6() { _extends$6 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$6.apply(this, arguments); }
 
@@ -387,7 +392,7 @@ function SvgIco24GnbRebalancingN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$3 || (_g$3 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$2 || (_g$2 = /*#__PURE__*/React.createElement("g", {
     transform: "translate(5.5 5)",
     fill: "none",
     fillRule: "evenodd"
@@ -403,7 +408,7 @@ function SvgIco24GnbRebalancingN(props) {
   }))));
 }
 
-var _path$3;
+var _path$4;
 
 function _extends$7() { _extends$7 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$7.apply(this, arguments); }
 
@@ -412,14 +417,14 @@ function SvgIco24GnbRebalancingS(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$3 || (_path$3 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$4 || (_path$4 = /*#__PURE__*/React.createElement("path", {
     d: "M17.5 5a1 1 0 011 1v12a1 1 0 01-1 1h-1a1 1 0 01-1-1V6a1 1 0 011-1h1zm-5 4a1 1 0 011 1v8a1 1 0 01-1 1h-1a1 1 0 01-1-1v-8a1 1 0 011-1h1zm-5 4a1 1 0 011 1v4a1 1 0 01-1 1h-1a1 1 0 01-1-1v-4a1 1 0 011-1h1z",
     fill: "#FFF",
     fillRule: "evenodd"
   })));
 }
 
-var _path$4;
+var _path$5;
 
 function _extends$8() { _extends$8 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$8.apply(this, arguments); }
 
@@ -428,14 +433,14 @@ function SvgIco24GnbHomeN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$4 || (_path$4 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$5 || (_path$5 = /*#__PURE__*/React.createElement("path", {
     d: "M17.447 17.6c0 .726-.54 1.326-1.23 1.394l-.131.006h-1.362c-.707 0-1.29-.556-1.356-1.266l-.006-.134v-3.4a.695.695 0 00-.58-.693l-.101-.008h-1.362a.688.688 0 00-.674.597l-.007.103v3.4c0 .727-.541 1.327-1.23 1.395L9.275 19H7.914c-.706 0-1.29-.556-1.355-1.266l-.007-.134v-4.876a1 1 0 01-1.11-.068l-.093-.08-.05-.05-.017-.017a1 1 0 01-.068-1.32l.084-.094 5.977-5.838a.996.996 0 01.64-.283h.17a.996.996 0 01.64.283l5.977 5.838a1 1 0 010 1.431l-.05.05a1 1 0 01-1.204.148V17.6z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _g$4;
+var _g$3;
 
 function _extends$9() { _extends$9 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$9.apply(this, arguments); }
 
@@ -444,7 +449,7 @@ function SvgIco24GnbFarmingN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$4 || (_g$4 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$3 || (_g$3 = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -457,7 +462,7 @@ function SvgIco24GnbFarmingN(props) {
   }))));
 }
 
-var _g$5;
+var _g$4;
 
 function _extends$a() { _extends$a = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$a.apply(this, arguments); }
 
@@ -466,7 +471,7 @@ function SvgIco24GnbFarmingS(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$5 || (_g$5 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$4 || (_g$4 = /*#__PURE__*/React.createElement("g", {
     fill: "#FFF",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -477,7 +482,7 @@ function SvgIco24GnbFarmingS(props) {
   }))));
 }
 
-var _g$6;
+var _g$5;
 
 function _extends$b() { _extends$b = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$b.apply(this, arguments); }
 
@@ -486,7 +491,7 @@ function SvgIco24GnbExchangeN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$6 || (_g$6 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$5 || (_g$5 = /*#__PURE__*/React.createElement("g", {
     fill: "none"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M4.282 12.71a6.013 6.013 0 001.689.938l.032.117a6.266 6.266 0 002.996 3.719v.016l1.001-1v3H7l.914-.913a7.749 7.749 0 01-3.632-5.876zM8 3a5 5 0 110 10A5 5 0 018 3zm9 1.5l-.914.914a7.749 7.749 0 013.632 5.876 6.004 6.004 0 00-1.688-.938A6.26 6.26 0 0015 6.516V6.5l-1 1v-3h3zM5.854 5.854a.5.5 0 00-.058.637l.058.07.398.398a1.99 1.99 0 00-.277 1.016c0 .309.07.601.195.863l.081.152-.397.4a.5.5 0 00.637.764l.07-.058.398-.398a1.99 1.99 0 001.016.277c.309 0 .601-.07.863-.195l.152-.082.4.398a.5.5 0 00.764-.638l-.058-.069-.398-.399a1.99 1.99 0 00.277-1.015c0-.31-.07-.602-.195-.863l-.082-.153.398-.398a.5.5 0 00-.638-.765l-.069.058-.399.397a1.99 1.99 0 00-1.015-.276c-.31 0-.602.07-.863.195l-.153.082-.398-.398a.5.5 0 00-.707 0zm2.12 1.12a1 1 0 110 2 1 1 0 010-2z",
@@ -497,7 +502,7 @@ function SvgIco24GnbExchangeN(props) {
   }))));
 }
 
-var _g$7;
+var _g$6;
 
 function _extends$c() { _extends$c = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$c.apply(this, arguments); }
 
@@ -506,7 +511,7 @@ function SvgIco24GnbBridgeN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$7 || (_g$7 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$6 || (_g$6 = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -518,7 +523,7 @@ function SvgIco24GnbBridgeN(props) {
   }))));
 }
 
-var _path$5;
+var _path$6;
 
 function _extends$d() { _extends$d = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$d.apply(this, arguments); }
 
@@ -527,14 +532,14 @@ function SvgIco24GnbBridgeS(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$5 || (_path$5 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$6 || (_path$6 = /*#__PURE__*/React.createElement("path", {
     d: "M9 6c.67 0 1.316.11 1.918.313A6.99 6.99 0 008 12a6.99 6.99 0 002.918 5.687A6 6 0 119 6zm6 0a6 6 0 11-5.895 7.121h4.516v2.036l2.829-2.829L13.62 9.5v2.121H9.01A6 6 0 0115 6z",
     fill: "#FFF",
     fillRule: "evenodd"
   })));
 }
 
-var _path$6;
+var _path$7;
 
 function _extends$e() { _extends$e = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$e.apply(this, arguments); }
 
@@ -543,13 +548,13 @@ function SvgIco16ArrowBottomG(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$6 || (_path$6 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$7 || (_path$7 = /*#__PURE__*/React.createElement("path", {
     d: "M11.889 5L13 6.09 8 11 3 6.09 4.111 5 8 8.818z",
     fill: "#999"
   })));
 }
 
-var _path$7;
+var _path$8;
 
 function _extends$f() { _extends$f = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$f.apply(this, arguments); }
 
@@ -558,14 +563,14 @@ function SvgIco24GnbMoreN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$7 || (_path$7 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$8 || (_path$8 = /*#__PURE__*/React.createElement("path", {
     d: "M7.5 11a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _g$8;
+var _g$7;
 
 function _extends$g() { _extends$g = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$g.apply(this, arguments); }
 
@@ -577,7 +582,7 @@ function SvgIco24GnbMoreS(props) {
     style: {
       background: "#000"
     }
-  }, props), _g$8 || (_g$8 = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$7 || (_g$7 = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -589,7 +594,7 @@ function SvgIco24GnbMoreS(props) {
   }))));
 }
 
-var _path$8;
+var _path$9;
 
 function _extends$h() { _extends$h = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$h.apply(this, arguments); }
 
@@ -598,14 +603,14 @@ function SvgIco24GnbHomeS(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$8 || (_path$8 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$9 || (_path$9 = /*#__PURE__*/React.createElement("path", {
     d: "M17.447 17.6c0 .726-.54 1.326-1.23 1.394l-.131.006h-1.362c-.707 0-1.29-.556-1.356-1.266l-.006-.134v-3.4a.695.695 0 00-.58-.693l-.101-.008h-1.362a.688.688 0 00-.674.597l-.007.103v3.4c0 .727-.541 1.327-1.23 1.395L9.275 19H7.914c-.706 0-1.29-.556-1.355-1.266l-.007-.134v-4.876a1 1 0 01-1.11-.068l-.093-.08-.05-.05-.017-.017a1 1 0 01-.068-1.32l.084-.094 5.977-5.838a.996.996 0 01.64-.283h.17a.996.996 0 01.64.283l5.977 5.838a1 1 0 010 1.431l-.05.05a1 1 0 01-1.204.148V17.6z",
     fill: "#FFF",
     fillRule: "evenodd"
   })));
 }
 
-var _path$9;
+var _path$a;
 
 function _extends$i() { _extends$i = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$i.apply(this, arguments); }
 
@@ -614,13 +619,13 @@ function SvgIco24GnbExchangeS(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$9 || (_path$9 = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$a || (_path$a = /*#__PURE__*/React.createElement("path", {
     d: "M16 11a5 5 0 110 10 5 5 0 010-10zM4.282 12.71a6.013 6.013 0 001.689.938l.032.117a6.266 6.266 0 002.996 3.719v.016l1.001-1v3H7l.914-.913a7.749 7.749 0 01-3.632-5.876zm9.572 1.144a.5.5 0 00-.058.637l.058.07.398.398a1.99 1.99 0 00-.277 1.016c0 .309.07.601.195.863l.081.152-.397.4a.5.5 0 00.637.764l.07-.058.398-.398a1.99 1.99 0 001.016.277c.309 0 .601-.07.863-.195l.152-.082.4.398a.5.5 0 00.764-.638l-.058-.069-.398-.399a1.99 1.99 0 00.277-1.015c0-.31-.07-.602-.195-.863l-.082-.153.398-.398a.5.5 0 00-.638-.765l-.069.058-.399.397a1.99 1.99 0 00-1.015-.276c-.31 0-.602.07-.863.195l-.153.082-.398-.398a.5.5 0 00-.707 0zm2.12 1.12a1 1 0 110 2 1 1 0 010-2zM8 3a5 5 0 110 10A5 5 0 018 3zm9 1.5l-.914.914a7.749 7.749 0 013.632 5.876 6.004 6.004 0 00-1.688-.938A6.26 6.26 0 0015 6.516V6.5l-1 1v-3h3zM5.854 5.854a.5.5 0 00-.058.637l.058.07.398.398a1.99 1.99 0 00-.277 1.016c0 .309.07.601.195.863l.081.152-.397.4a.5.5 0 00.637.764l.07-.058.398-.398a1.99 1.99 0 001.016.277c.309 0 .601-.07.863-.195l.152-.082.4.398a.5.5 0 00.764-.638l-.058-.069-.398-.399a1.99 1.99 0 00.277-1.015c0-.31-.07-.602-.195-.863l-.082-.153.398-.398a.5.5 0 00-.638-.765l-.069.058-.399.397a1.99 1.99 0 00-1.015-.276c-.31 0-.602.07-.863.195l-.153.082-.398-.398a.5.5 0 00-.707 0zm2.12 1.12a1 1 0 110 2 1 1 0 010-2z",
     fill: "#FFF"
   })));
 }
 
-var _path$a;
+var _path$b;
 
 function _extends$j() { _extends$j = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$j.apply(this, arguments); }
 
@@ -629,13 +634,13 @@ function SvgIco16ArrowTopW(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$a || (_path$a = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$b || (_path$b = /*#__PURE__*/React.createElement("path", {
     d: "M11.889 11L13 9.91 8 5 3 9.91 4.111 11 8 7.182z",
     fill: "#FFF"
   })));
 }
 
-var _defs$1, _g$9;
+var _defs$2, _g$8;
 
 function _extends$k() { _extends$k = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$k.apply(this, arguments); }
 
@@ -645,7 +650,7 @@ function SvgImgHomeTopFinix(props) {
     height: 200,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$1 || (_defs$1 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$2 || (_defs$2 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "50%",
     y1: "0%",
     x2: "50%",
@@ -864,7 +869,7 @@ function SvgImgHomeTopFinix(props) {
   }), /*#__PURE__*/React.createElement("feColorMatrix", {
     values: "0 0 0 0 1 0 0 0 0 0.638514404 0 0 0 0 0.294117647 0 0 0 1 0",
     "in": "shadowInnerInner1"
-  })))), _g$9 || (_g$9 = /*#__PURE__*/React.createElement("g", {
+  })))), _g$8 || (_g$8 = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("mask", {
@@ -938,7 +943,7 @@ function SvgImgHomeTopFinix(props) {
   })))));
 }
 
-var _path$b;
+var _path$c;
 
 function _extends$l() { _extends$l = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$l.apply(this, arguments); }
 
@@ -947,14 +952,14 @@ function SvgIco24FooterTwitter(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$b || (_path$b = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$c || (_path$c = /*#__PURE__*/React.createElement("path", {
     d: "M11.769 9.458l.035.562-.578-.068c-2.105-.264-3.943-1.16-5.503-2.663l-.763-.746-.197.551c-.416 1.228-.15 2.525.717 3.397.462.482.358.55-.44.264-.277-.092-.52-.16-.543-.126-.08.08.197 1.124.416 1.537.3.574.914 1.136 1.584 1.47l.567.263-.67.012c-.648 0-.671.011-.602.252.231.746 1.144 1.538 2.162 1.882l.717.241-.625.367a6.593 6.593 0 01-3.098.85c-.52.01-.948.057-.948.091 0 .115 1.41.758 2.231 1.01 2.463.746 5.388.425 7.584-.85 1.56-.906 3.122-2.707 3.85-4.452.393-.93.786-2.627.786-3.442 0-.528.035-.597.682-1.228.382-.367.74-.769.81-.884.115-.218.104-.218-.486-.023-.983.345-1.122.299-.636-.218.358-.367.786-1.032.786-1.227 0-.035-.173.023-.37.126-.208.115-.67.287-1.017.39l-.624.195-.567-.379c-.312-.206-.751-.436-.983-.505-.59-.16-1.49-.137-2.023.046-1.445.517-2.358 1.848-2.254 3.305z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _path$c;
+var _path$d;
 
 function _extends$m() { _extends$m = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$m.apply(this, arguments); }
 
@@ -963,14 +968,14 @@ function SvgIco24FooterTelegram(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$c || (_path$c = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$d || (_path$d = /*#__PURE__*/React.createElement("path", {
     d: "M19.852 5.093c.688-.307 1.352.162 1.09 1.195l-2.565 11.866c-.18.843-.698 1.045-1.417.655l-3.907-2.833-1.877 1.792c-.191.182-.347.34-.645.376l-.137.008.266-3.912 7.249-6.424c.318-.277-.07-.412-.492-.161l-8.946 5.542-3.865-1.184c-.834-.251-.84-.814.188-1.22z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _path$d;
+var _path$e;
 
 function _extends$n() { _extends$n = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$n.apply(this, arguments); }
 
@@ -979,13 +984,13 @@ function SvgIco24FooterReddit(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$d || (_path$d = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$e || (_path$e = /*#__PURE__*/React.createElement("path", {
     d: "M12 3.5a8.5 8.5 0 110 17 8.5 8.5 0 010-17zm3.55 3.36a.86.86 0 00-.786.497l-2.058-.437a.25.25 0 00-.17.03.247.247 0 00-.099.139l-.626 2.962c-1.322.04-2.505.428-3.36 1.054a1.254 1.254 0 00-.855-.348 1.243 1.243 0 00-.507 2.376c-.02.12-.03.249-.03.378 0 1.909 2.217 3.45 4.96 3.45 2.745 0 4.962-1.541 4.962-3.45 0-.13-.01-.248-.03-.368.407-.199.716-.636.716-1.143 0-.686-.557-1.243-1.243-1.243-.338 0-.636.13-.855.348-.845-.606-2.018-1.004-3.31-1.054l.566-2.654 1.84.388a.886.886 0 001.769-.04.887.887 0 00-.885-.885zm-1.423 8.033c.07.1.07.239-.02.328-.606.606-1.759.646-2.097.646-.338 0-1.501-.05-2.098-.646a.234.234 0 010-.328c.09-.09.239-.09.328 0 .378.378 1.193.517 1.78.517.586 0 1.392-.14 1.78-.517a.232.232 0 01.327 0zM10.051 12c.488 0 .885.398.885.885a.887.887 0 01-.885.885.887.887 0 01-.884-.885c0-.487.397-.885.884-.885zm3.898 0c.487 0 .884.398.884.885a.887.887 0 01-.884.885.887.887 0 01-.885-.885c0-.487.397-.885.885-.885z",
     fill: "#999"
   })));
 }
 
-var _path$e;
+var _path$f;
 
 function _extends$o() { _extends$o = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$o.apply(this, arguments); }
 
@@ -994,14 +999,14 @@ function SvgIco24FooterKakaotalk(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$e || (_path$e = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$f || (_path$f = /*#__PURE__*/React.createElement("path", {
     d: "M12 3c5.247 0 9.5 3.467 9.5 7.745 0 4.277-4.253 7.745-9.5 7.745a11.7 11.7 0 01-1.763-.134c-1.053.738-3.493 2.449-3.656 2.56-.209.144-.527.151-.398-.381.104-.43.625-2.436.824-3.201-2.705-1.365-4.507-3.805-4.507-6.59C2.5 6.468 6.753 3 12 3zm-1.885 5.395c-.338 0-.617.213-.673.492a.67.67 0 00-.026.064l-1.362 3.765a.478.478 0 00.28.604.456.456 0 00.587-.29l.235-.693h1.895l.235.693a.456.456 0 00.586.29.478.478 0 00.281-.604l-1.385-3.905-.004-.005c-.089-.238-.344-.411-.649-.411zm5.967 0a.52.52 0 00-.513.529v3.894c0 .293.23.529.513.529a.52.52 0 00.512-.529v-1.201l.293-.302 1.362 1.843c.151.209.44.251.641.094a.483.483 0 00.092-.662l-1.44-1.95 1.3-1.342a.476.476 0 000-.658.442.442 0 00-.637 0l-1.61 1.66V8.925a.52.52 0 00-.513-.529zm-7.905.069H5.4a.48.48 0 00-.473.487c0 .27.212.487.473.487h.903v3.432c0 .125.05.248.136.336a.454.454 0 00.325.14h.1c.122 0 .24-.051.325-.14a.485.485 0 00.136-.336V9.438h.853a.48.48 0 00.473-.487.48.48 0 00-.473-.487zm4.872-.069a.52.52 0 00-.512.529v3.778c0 .03.003.057.008.085a.435.435 0 00.42.527h1.888a.435.435 0 00.43-.443.435.435 0 00-.43-.442h-1.291V8.924a.52.52 0 00-.513-.529zm-2.956 1.183l.021.002.636 1.872H9.457l.636-1.874z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _path$f;
+var _path$g;
 
 function _extends$p() { _extends$p = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$p.apply(this, arguments); }
 
@@ -1010,14 +1015,14 @@ function SvgIco24FooterGithub(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$f || (_path$f = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$g || (_path$g = /*#__PURE__*/React.createElement("path", {
     d: "M12 3.5a8.5 8.5 0 018.5 8.501 8.502 8.502 0 01-5.808 8.066c-.43.083-.584-.182-.584-.408v-.145c.002-.295.007-.848.009-1.536v-.428l.001-.224c0-.793-.272-1.31-.576-1.574 1.892-.21 3.88-.93 3.88-4.195 0-.928-.329-1.686-.874-2.282.088-.214.38-1.079-.083-2.25 0 0-.713-.228-2.336.872A8.167 8.167 0 0012 7.61a8.146 8.146 0 00-2.127.286c-1.625-1.1-2.339-.872-2.339-.872-.461 1.171-.17 2.036-.082 2.25a3.29 3.29 0 00-.876 2.282c0 3.258 1.985 3.986 3.873 4.201-.243.213-.463.588-.54 1.137-.485.217-1.715.593-2.473-.706l-.024-.04c-.103-.165-.54-.785-1.28-.837H6.11c-.127.004-.73.042-.035.517l.022.012c.106.06.58.365.921 1.232 0 0 .5 1.517 2.864 1.003.003.592.01 1.156.011 1.445v.138c0 .224-.155.488-.58.409A8.503 8.503 0 0112 3.5z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _path$g;
+var _path$h;
 
 function _extends$q() { _extends$q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$q.apply(this, arguments); }
 
@@ -1026,14 +1031,14 @@ function SvgIco24FooterGitbook(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$g || (_path$g = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$h || (_path$h = /*#__PURE__*/React.createElement("path", {
     d: "M20.595 12.656a.62.62 0 00-.62-.586.583.583 0 00-.563.593.58.58 0 00.613.576.579.579 0 00.57-.583m-9.68 5.312c.32-.001.613-.297.6-.607-.012-.298-.295-.56-.607-.56a.578.578 0 00-.592.564.614.614 0 00.6.603m-7.898-6.095c.07.958.418 1.689 1.313 2.136 1.57.782 3.117 1.609 4.667 2.426.197.104.3.138.459-.087.652-.93 1.928-1.027 2.73-.21.19.193.304.179.514.066a703.538 703.538 0 015.29-2.81c.208-.11.31-.213.267-.474a1.746 1.746 0 011.22-1.951c.838-.25 1.779.15 2.135.91a1.801 1.801 0 01-.62 2.262c-.614.409-1.255.436-1.896.069-.171-.098-.296-.103-.466-.01a1543.68 1543.68 0 01-5.664 3.053c-.173.093-.268.2-.305.409-.144.828-.795 1.424-1.58 1.48-.858.064-1.598-.408-1.862-1.225a.692.692 0 00-.385-.442c-1.736-.886-3.47-1.778-5.204-2.673-1.345-.693-2.026-2.705-1.391-4.078.187-.404.484-.692.88-.89 2.029-1.008 4.055-2.02 6.084-3.026 1.09-.542 2.19-1.066 3.277-1.615.536-.271 1.04-.245 1.572.009 2.186 1.047 4.376 2.08 6.566 3.116.192.09.405.17.405.417 0 .239-.207.339-.394.436l-6.007 3.109c-1.092.565-2.195 1.114-3.276 1.702-.496.27-.925.29-1.44.013-1.928-1.042-3.881-2.043-5.823-3.064-.522-.274-.89-.118-1.017.459-.036.164-.035.337-.05.483",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _path$h;
+var _path$i;
 
 function _extends$r() { _extends$r = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$r.apply(this, arguments); }
 
@@ -1042,14 +1047,14 @@ function SvgIco24FooterFacebook(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$h || (_path$h = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$i || (_path$i = /*#__PURE__*/React.createElement("path", {
     d: "M13.32 20v-8h2.366L16 9.241h-2.68l.004-1.38c0-.72.073-1.105 1.18-1.105h1.48V4h-2.368c-2.843 0-3.844 1.338-3.844 3.587v1.655H8V12h1.772v8h3.548z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _defs$2, _g$a;
+var _defs$3, _g$9;
 
 function _extends$s() { _extends$s = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$s.apply(this, arguments); }
 
@@ -1059,7 +1064,7 @@ function SvgLogoFooterSixnetwork(props) {
     height: 48,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$2 || (_defs$2 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$3 || (_defs$3 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "-444.098%",
     y1: "402.459%",
     x2: "289.176%",
@@ -1116,7 +1121,7 @@ function SvgLogoFooterSixnetwork(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M7.392.217S1.381.158.07 6.844a6.772 6.772 0 00-.07.978v.009c0 .562.063 1.243.252 2.022v.001c.928 3.505 3.548 5.084 5.165 5.742a5.95 5.95 0 001.863.423h5.829s2.869.065 2.869 2.883c.064 2.32-2.46 2.602-2.46 2.602H1.483v5.245h12.12c1.372-.082 6.216-.758 7.483-6.192.073-.435.113-.899.113-1.395 0-7.435-6.666-8.475-6.666-8.475H7.09S5.192 9.95 5.192 7.934s2.092-2.688 2.092-2.688h12.879V0L7.393.217z",
     id: "logo_footer_sixnetwork_svg__h"
-  }))), _g$a || (_g$a = /*#__PURE__*/React.createElement("g", {
+  }))), _g$9 || (_g$9 = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -1172,7 +1177,7 @@ function SvgLogoFooterSixnetwork(props) {
   })))));
 }
 
-var _g$b;
+var _g$a;
 
 function _extends$t() { _extends$t = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$t.apply(this, arguments); }
 
@@ -1181,7 +1186,7 @@ function SvgIco24MoreN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$b || (_g$b = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$a || (_g$a = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -1195,7 +1200,7 @@ function SvgIco24MoreN(props) {
   }))));
 }
 
-var _path$i;
+var _path$j;
 
 function _extends$u() { _extends$u = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$u.apply(this, arguments); }
 
@@ -1205,13 +1210,13 @@ function SvgIco16ArrowRightG(props) {
     height: 16,
     fill: "#999",
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$i || (_path$i = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$j || (_path$j = /*#__PURE__*/React.createElement("path", {
     d: "M5 4.111L6.09 3 11 8l-4.91 5L5 11.889 8.818 8z",
     fill: "current"
   })));
 }
 
-var _g$c;
+var _g$b;
 
 function _extends$v() { _extends$v = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$v.apply(this, arguments); }
 
@@ -1220,7 +1225,7 @@ function SvgIco24Menu(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$c || (_g$c = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$b || (_g$b = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -1231,7 +1236,7 @@ function SvgIco24Menu(props) {
   }))));
 }
 
-var _path$j;
+var _path$k;
 
 function _extends$w() { _extends$w = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$w.apply(this, arguments); }
 
@@ -1240,13 +1245,13 @@ function SvgIco24Close(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$j || (_path$j = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$k || (_path$k = /*#__PURE__*/React.createElement("path", {
     d: "M18.364 7.05L13.414 12l4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95 4.95-4.95z",
     fill: "#222"
   })));
 }
 
-var _path$k;
+var _path$l;
 
 function _extends$x() { _extends$x = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$x.apply(this, arguments); }
 
@@ -1255,14 +1260,14 @@ function SvgIco16SmallDown(props) {
     width: 16,
     height: 17,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$k || (_path$k = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$l || (_path$l = /*#__PURE__*/React.createElement("path", {
     d: "M7.232 10.578L4.367 7.14a1 1 0 01.768-1.64h5.73a1 1 0 01.768 1.64l-2.865 3.438a1 1 0 01-1.536 0z",
     fill: "#B4A9A8",
     fillRule: "evenodd"
   })));
 }
 
-var _path$l;
+var _path$m;
 
 function _extends$y() { _extends$y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$y.apply(this, arguments); }
 
@@ -1271,14 +1276,14 @@ function SvgIco16Plus(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$l || (_path$l = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$m || (_path$m = /*#__PURE__*/React.createElement("path", {
     d: "M9 2v5h5v2H9v5H7V9H2V7h5V2h2z",
     fill: "#666",
     fillRule: "evenodd"
   })));
 }
 
-var _path$m;
+var _path$n;
 
 function _extends$z() { _extends$z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$z.apply(this, arguments); }
 
@@ -1287,14 +1292,14 @@ function SvgIco16Minus(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$m || (_path$m = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$n || (_path$n = /*#__PURE__*/React.createElement("path", {
     d: "M2 7h12v2H2z",
     fill: "#666",
     fillRule: "evenodd"
   })));
 }
 
-var _g$d;
+var _g$c;
 
 function _extends$A() { _extends$A = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$A.apply(this, arguments); }
 
@@ -1303,7 +1308,7 @@ function SvgIco16Calculator(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$d || (_g$d = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$c || (_g$c = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("rect", {
@@ -1319,7 +1324,7 @@ function SvgIco16Calculator(props) {
   }))));
 }
 
-var _path$n;
+var _path$o;
 
 function _extends$B() { _extends$B = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$B.apply(this, arguments); }
 
@@ -1328,13 +1333,13 @@ function SvgIco24Back(props) {
     width: 25,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$n || (_path$n = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$o || (_path$o = /*#__PURE__*/React.createElement("path", {
     d: "M11.662 4.543l1.454 1.414-4.594 4.468H20.04v2H8.771l4.345 4.226-1.454 1.414-6.949-6.76 6.95-6.762z",
     fill: "#999"
   })));
 }
 
-var _path$o;
+var _path$p;
 
 function _extends$C() { _extends$C = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$C.apply(this, arguments); }
 
@@ -1343,13 +1348,13 @@ function SvgIco16CheckB(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$o || (_path$o = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$p || (_path$p = /*#__PURE__*/React.createElement("path", {
     d: "M13.182 3.96l1.11 1.09-7.828 7.738-5-4.909 1.112-1.09 3.888 3.818z",
     fill: "#999"
   })));
 }
 
-var _g$e;
+var _g$d;
 
 function _extends$D() { _extends$D = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$D.apply(this, arguments); }
 
@@ -1358,7 +1363,7 @@ function SvgIco24CheckComplete(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$e || (_g$e = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$d || (_g$d = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -1373,7 +1378,7 @@ function SvgIco24CheckComplete(props) {
   }))));
 }
 
-var _g$f;
+var _g$e;
 
 function _extends$E() { _extends$E = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$E.apply(this, arguments); }
 
@@ -1382,7 +1387,7 @@ function SvgIco24CheckFailed(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$f || (_g$f = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$e || (_g$e = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -1398,7 +1403,7 @@ function SvgIco24CheckFailed(props) {
   }))));
 }
 
-var _g$g;
+var _g$f;
 
 function _extends$F() { _extends$F = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$F.apply(this, arguments); }
 
@@ -1407,7 +1412,7 @@ function SvgIco16ClosedG(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$g || (_g$g = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$f || (_g$f = /*#__PURE__*/React.createElement("g", {
     fill: "#999"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M3.9 4.889L4.81 4 8.9 8l-4.09 4-.91-.889L7.082 8z"
@@ -1416,7 +1421,7 @@ function SvgIco16ClosedG(props) {
   }))));
 }
 
-var _path$p;
+var _path$q;
 
 function _extends$G() { _extends$G = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$G.apply(this, arguments); }
 
@@ -1425,7 +1430,7 @@ function SvgIco42Change(props) {
     width: 42,
     height: 42,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$p || (_path$p = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$q || (_path$q = /*#__PURE__*/React.createElement("path", {
     d: "M11.386 19.261l4-4 4 4m-4-2.522v10m15.228-4l-4 4-4-4m4 2.522v-10",
     stroke: "#222",
     strokeWidth: 2,
@@ -1434,7 +1439,7 @@ function SvgIco42Change(props) {
   })));
 }
 
-var _defs$3, _g$h;
+var _defs$4, _g$g;
 
 function _extends$H() { _extends$H = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$H.apply(this, arguments); }
 
@@ -1444,7 +1449,7 @@ function SvgIco24TokenFinix(props) {
     height: 24,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$3 || (_defs$3 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$4 || (_defs$4 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "0%",
     y1: "50%",
     x2: "100%",
@@ -1549,7 +1554,7 @@ function SvgIco24TokenFinix(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M6.654 0c-.086.127-.403.58-1.43 2.02-2.271 3.441-.362 6.027-.25 6.217 1.729 2.94.963 6.735-1.763 8.744 0 0-.339.229-.794.593-.761.609-1.848 1.596-2.216 2.521l-.004.01c-.442 1.219-.012 1.953.056 2.057l.006.017.003-.004a1.61 1.61 0 01.571-1.007 1.45 1.45 0 01.817-.323 24.444 24.444 0 012.534-2.379l-.001-.003a7.02 7.02 0 00.226-.17c3.616-2.808 4.31-8.068 1.549-11.748-.7-1.452.223-3.075.223-3.075.12.857 1.332 1.809 1.332 1.809.142.188.278.38.408.578 3.134 4.784 1.863 11.247-2.838 14.436l-.005.004a2.1 2.1 0 00-.064.05l-.019.016a1.9 1.9 0 00-.714 1.226c-.02.202-.009.406.033.605.055.192.195.632.362.806l.005-.014a1.533 1.533 0 011.325-1.184 2.31 2.31 0 00.04-.021l.012-.007.009-.007a11.9 11.9 0 00.681-.5c5.23-4.123 6.185-11.78 2.134-17.1l-.001-.002-.006-.003s-1.02-1.057-1.346-1.63C6.827 1.297 6.655.065 6.654 0z",
     id: "ico_24_token_finix_svg__s"
-  }))), _g$h || (_g$h = /*#__PURE__*/React.createElement("g", {
+  }))), _g$g || (_g$g = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("g", {
@@ -1635,7 +1640,7 @@ function SvgIco24TokenFinix(props) {
   })))));
 }
 
-var _defs$4, _g$i;
+var _defs$5, _g$h;
 
 function _extends$I() { _extends$I = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$I.apply(this, arguments); }
 
@@ -1645,7 +1650,7 @@ function SvgImgHomeFarmFinix(props) {
     height: 100,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$4 || (_defs$4 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
+  }, props), _defs$5 || (_defs$5 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
     id: "img_home_farm_finix_svg__a",
     d: "M0 0h184v100H0z"
   }), /*#__PURE__*/React.createElement("path", {
@@ -1742,7 +1747,7 @@ function SvgImgHomeFarmFinix(props) {
     cy: 51.372,
     rx: 44.935,
     ry: 41.125
-  }))), _g$i || (_g$i = /*#__PURE__*/React.createElement("g", {
+  }))), _g$h || (_g$h = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("mask", {
@@ -1828,7 +1833,7 @@ function SvgImgHomeFarmFinix(props) {
   }))))));
 }
 
-var _defs$5, _g$j;
+var _defs$6, _g$i;
 
 function _extends$J() { _extends$J = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$J.apply(this, arguments); }
 
@@ -1838,7 +1843,7 @@ function SvgImgHomeProtectionFinix(props) {
     height: 154,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$5 || (_defs$5 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$6 || (_defs$6 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "36.222%",
     y1: "50%",
     x2: "100%",
@@ -1970,7 +1975,7 @@ function SvgImgHomeProtectionFinix(props) {
   }), /*#__PURE__*/React.createElement("feColorMatrix", {
     values: "0 0 0 0 0.105882353 0 0 0 0 0.752941176 0 0 0 0 0.752941176 0 0 0 1 0",
     "in": "shadowInnerInner1"
-  })))), _g$j || (_g$j = /*#__PURE__*/React.createElement("g", {
+  })))), _g$i || (_g$i = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("mask", {
@@ -2066,7 +2071,7 @@ function SvgImgHomeProtectionFinix(props) {
   }))))))));
 }
 
-var _path$q;
+var _path$r;
 
 function _extends$K() { _extends$K = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$K.apply(this, arguments); }
 
@@ -2075,7 +2080,7 @@ function SvgIco16Link(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$q || (_path$q = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$r || (_path$r = /*#__PURE__*/React.createElement("path", {
     d: "M8 3H3v10h10V8M6.976 9.08L13 3.057M9.833 3H13v2.993",
     stroke: "#5E515F",
     fill: "none",
@@ -2083,7 +2088,7 @@ function SvgIco16Link(props) {
   })));
 }
 
-var _g$k;
+var _g$j;
 
 function _extends$L() { _extends$L = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$L.apply(this, arguments); }
 
@@ -2092,7 +2097,7 @@ function SvgIco44Fire(props) {
     width: 44,
     height: 44,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$k || (_g$k = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$j || (_g$j = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -2104,7 +2109,7 @@ function SvgIco44Fire(props) {
   }))));
 }
 
-var _g$l;
+var _g$k;
 
 function _extends$M() { _extends$M = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$M.apply(this, arguments); }
 
@@ -2113,7 +2118,7 @@ function SvgImgTokenKbnb(props) {
     width: 200,
     height: 200,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$l || (_g$l = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$k || (_g$k = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("rect", {
@@ -2127,7 +2132,7 @@ function SvgImgTokenKbnb(props) {
   }))));
 }
 
-var _g$m;
+var _path$s, _defs$7;
 
 function _extends$N() { _extends$N = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$N.apply(this, arguments); }
 
@@ -2135,26 +2140,29 @@ function SvgImgTokenKlay(props) {
   return /*#__PURE__*/React.createElement("svg", _extends$N({
     width: 200,
     height: 200,
-    xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$m || (_g$m = /*#__PURE__*/React.createElement("g", {
     fill: "none",
-    fillRule: "evenodd"
-  }, /*#__PURE__*/React.createElement("circle", {
-    fill: "#FFF",
-    cx: 100,
-    cy: 100,
-    r: 100
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M100 0c55.228 0 100 44.772 100 100s-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0zm0 4C46.98 4 4 46.98 4 100s42.98 96 96 96 96-42.98 96-96-42.98-96-96-96z",
-    fill: "#E0E0E0",
-    fillRule: "nonzero"
-  }), /*#__PURE__*/React.createElement("path", {
-    d: "M100.867 103.522c13.814 14.037 27.667 28.017 41.513 42.02.15.138.276.308.474.527-.553.63-1.336.792-2.015 1.076-8.25 3.47-16.501 6.917-24.751 10.38-.53.218-1.012.525-1.518.792-.521.308-1.098.437-1.651.631-.577.033-1.02.364-1.47.672-.506.283-1.13.323-1.565.768-1.027.437-2.055.866-3.145 1.133-1.462.59-2.995 1.06-4.386 1.82-1.723.939-3.272.834-4.963-.056-1.367-.712-2.86-1.19-4.307-1.764-1.66-.38-3.177-1.133-4.663-1.934v.009c-.632-.108-1.21-.361-1.78-.636l-.682-.334c-.228-.11-.457-.215-.69-.309-.53-.121-1.028-.3-1.447-.663-.964-.162-1.92-.356-2.616-1.157-1.264-.542-2.513-1.108-3.785-1.634-6.378-2.678-12.763-5.348-19.14-8.026-.427-.186-.83-.412-1.336-.671.34-.389.593-.704.877-.987 13.664-13.81 27.328-27.62 40.976-41.439.68-.68 1.09-1.213 2.07-.218zM149.373 58.5c6.583 8.123 10.977 17.33 13.182 27.645.079.356.205.704.308 1.052.68 2.661.956 5.38 1.067 8.098.118 2.807.063 5.623.008 8.43-.032 1.521-.245 3.018-.498 4.522l.016-.032c-.176 1.144-.202 2.313-.5 3.445l-.124.419-.05.073c-.25.456.221 1.122-.354 1.492-.719 2.548-1.438 5.105-2.15 7.661.056.623-.229 1.133-.568 1.61-2.442 5.768-5.295 11.294-9.16 16.205-.948 1.205-1.967 2.338-2.884 3.56-.672.906-1.138 1.06-2.031.137-8.559-8.737-17.173-17.434-25.77-26.14-5.28-5.34-10.535-10.703-15.854-16.01-.853-.85-.924-1.295-.023-2.2 13.284-13.374 26.53-26.788 39.782-40.21.04-.032.071-.064.11-.096.18-.182.347-.352.505-.51l.303-.303c2.082-2.057 2.327-1.754 4.685 1.152zM95.345 39.493c.023 1.489-.87 2.638-1.13 3.98-.016.51-.222.939-.601 1.279-.34.461-.514.987-.577 1.561-.225.475-.262 1.02-.556 1.459l-.101.129-.18.511c-.477 1.371-.916 2.75-1.66 4.01-2.205 5.315-4.426 10.614-6.615 15.945-10.044 24.498-20.08 49.003-30.149 73.5-.22.534-.11 1.489-1.122 1.44-.569-.614-1.233-1.132-1.643-1.893h.007c-.53-.226-.821-.663-.98-1.213-4.093-5.291-7.333-11.084-9.902-17.29-.671-.727-.861-1.633-.964-2.588.04-.097.016-.186-.055-.259-.798-1.149-1.027-2.484-1.178-3.843-.687-3.697-1.335-7.394-1.81-11.132-.466-3.608.277-6.238 3.004-8.948C57.57 77.792 75.8 59.225 94.103 40.723c.396-.413.752-.882 1.242-1.23zm8.248-3.185a5142.229 5142.229 0 0019.625 8.253l19.643 8.21c.253.696-.213.955-.703 1.198-4.038 3.657-7.73 7.678-11.57 11.553-11.727 11.804-23.4 23.656-35.096 35.484a44189.94 44189.94 0 00-27.224 27.531c-.293.291-.538.64-.806.955-.878 1.027-1.913 1.877-2.909 2.767-.292.137-.632.226-.71.63a.8.8 0 01-.467.405l-.086.001h-.167c-.576-.007-1.004-.112-.506-1.004.293-.534.293-1.181.506-1.748 1.746-4.352 3.477-8.713 5.255-13.057C75.894 99.12 83.425 80.772 90.917 62.39c.185-.451.359-.908.528-1.366l.504-1.379c.339-.918.694-1.83 1.133-2.708a36.42 36.42 0 011.936-4.79c2.055-4.926 4.157-9.829 6.125-14.788.553-1.4 1.043-1.659 2.45-1.052z",
-    fill: "#4F473C"
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _path$s || (_path$s = /*#__PURE__*/React.createElement("path", {
+    fill: "url(#img_token_klay_svg__pattern0_714_6)",
+    d: "M0 0h200v200H0z"
+  })), _defs$7 || (_defs$7 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("pattern", {
+    id: "img_token_klay_svg__pattern0_714_6",
+    patternContentUnits: "objectBoundingBox",
+    width: 1,
+    height: 1
+  }, /*#__PURE__*/React.createElement("use", {
+    xlinkHref: "#img_token_klay_svg__image0_714_6",
+    transform: "matrix(.00233 0 0 .00233 -.012 0)"
+  })), /*#__PURE__*/React.createElement("image", {
+    id: "img_token_klay_svg__image0_714_6",
+    width: 440,
+    height: 430,
+    xlinkHref: "data:image/png;base64,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"
   }))));
 }
 
-var _path$r;
+var _path$t;
 
 function _extends$O() { _extends$O = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$O.apply(this, arguments); }
 
@@ -2163,14 +2171,14 @@ function SvgIco24GnbMyMobile(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$r || (_path$r = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$t || (_path$t = /*#__PURE__*/React.createElement("path", {
     d: "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 10.915a5.49 5.49 0 00-5.484 5.227A8.197 8.197 0 0012 20.235a8.213 8.213 0 005.484-2.091A5.49 5.49 0 0012 12.915zm0-6.405A2.745 2.745 0 1012 12a2.745 2.745 0 000-5.49z",
     fill: "#413343",
     fillRule: "evenodd"
   })));
 }
 
-var _defs$6, _g$n;
+var _defs$8, _g$l;
 
 function _extends$P() { _extends$P = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$P.apply(this, arguments); }
 
@@ -2180,7 +2188,7 @@ function SvgImgBridgeTopFinix(props) {
     height: 118,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$6 || (_defs$6 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
+  }, props), _defs$8 || (_defs$8 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
     id: "img_bridge_top_finix_svg__a",
     d: "M0 0h193.389v118H0z"
   }), /*#__PURE__*/React.createElement("path", {
@@ -2437,7 +2445,7 @@ function SvgImgBridgeTopFinix(props) {
   }), /*#__PURE__*/React.createElement("feColorMatrix", {
     values: "0 0 0 0 1 0 0 0 0 0.629205528 0 0 0 0 0.396722561 0 0 0 0.22 0",
     "in": "shadowInnerInner1"
-  })))), _g$n || (_g$n = /*#__PURE__*/React.createElement("g", {
+  })))), _g$l || (_g$l = /*#__PURE__*/React.createElement("g", {
     transform: "translate(.611)",
     fill: "none",
     fillRule: "evenodd"
@@ -2533,7 +2541,7 @@ function SvgImgBridgeTopFinix(props) {
   }))))));
 }
 
-var _defs$7, _g$o;
+var _defs$9, _g$m;
 
 function _extends$Q() { _extends$Q = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Q.apply(this, arguments); }
 
@@ -2543,7 +2551,7 @@ function SvgImgTokenSix(props) {
     height: 48,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$7 || (_defs$7 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$9 || (_defs$9 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "50%",
     y1: "3.035%",
     x2: "50%",
@@ -2575,7 +2583,7 @@ function SvgImgTokenSix(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M24 0C10.745 0 0 10.745 0 24s10.745 24 24 24 24-10.745 24-24S37.255 0 24 0z",
     id: "img_token_six_svg__c"
-  }))), _g$o || (_g$o = /*#__PURE__*/React.createElement("g", {
+  }))), _g$m || (_g$m = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("mask", {
@@ -2607,7 +2615,7 @@ function SvgImgTokenSix(props) {
   })))));
 }
 
-var _defs$8, _g$p;
+var _defs$a, _g$n;
 
 function _extends$R() { _extends$R = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$R.apply(this, arguments); }
 
@@ -2617,7 +2625,7 @@ function SvgImgTokenFinix(props) {
     height: 48,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$8 || (_defs$8 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$a || (_defs$a = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "0%",
     y1: "50%",
     x2: "100%",
@@ -2722,7 +2730,7 @@ function SvgImgTokenFinix(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M8.783 0C8.67.167 8.25.762 6.896 2.655c-2.999 4.525-.479 7.925-.33 8.175 2.282 3.864 1.271 8.856-2.328 11.497v-.001s-.447.301-1.047.78c-1.005.8-2.44 2.099-2.926 3.315l-.005.013c-.584 1.602-.015 2.568.073 2.704l.01.022.003-.005c.079-.52.348-.993.754-1.323.308-.25.684-.399 1.078-.426a32.215 32.215 0 013.345-3.127l-.002-.004c.1-.072.2-.146.299-.222 4.773-3.694 5.688-10.61 2.044-15.448-.923-1.908.296-4.042.296-4.042C8.318 5.69 9.917 6.94 9.917 6.94c.188.248.368.501.539.761 4.136 6.29 2.46 14.787-3.746 18.98l-.007.005a2.77 2.77 0 00-.085.066l-.024.02c-.51.393-.848.971-.943 1.612-.026.266-.012.535.044.796.072.253.257.831.477 1.06l.007-.019c.198-.842.9-1.466 1.75-1.556l.051-.028.017-.009h-.001l.012-.01c.307-.208.608-.427.9-.656 6.903-5.421 8.164-15.488 2.816-22.485h-.001l-.008-.005S10.37 4.082 9.94 3.328C9.012 1.707 8.784.086 8.783 0z",
     id: "img_token_finix_svg__s"
-  }))), _g$p || (_g$p = /*#__PURE__*/React.createElement("g", {
+  }))), _g$n || (_g$n = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -2817,7 +2825,7 @@ function SvgImgTokenFinix(props) {
   })))));
 }
 
-var _path$s;
+var _path$u;
 
 function _extends$S() { _extends$S = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$S.apply(this, arguments); }
 
@@ -2827,13 +2835,13 @@ function SvgIco16ArrowLeftG(props) {
     height: 16,
     fill: "#999",
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$s || (_path$s = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$u || (_path$u = /*#__PURE__*/React.createElement("path", {
     d: "M11 4.111L9.91 3 5 8l4.91 5L11 11.889 7.182 8z",
     fill: "current"
   })));
 }
 
-var _path$t;
+var _path$v;
 
 function _extends$T() { _extends$T = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$T.apply(this, arguments); }
 
@@ -2842,13 +2850,13 @@ function SvgIco16ArrowLeftW(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$t || (_path$t = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$v || (_path$v = /*#__PURE__*/React.createElement("path", {
     d: "M11 4.111L9.91 3 5 8l4.91 5L11 11.889 7.182 8z",
     fill: "#FFF"
   })));
 }
 
-var _path$u;
+var _path$w;
 
 function _extends$U() { _extends$U = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$U.apply(this, arguments); }
 
@@ -2857,13 +2865,13 @@ function SvgIco16ArrowRightW(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$u || (_path$u = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$w || (_path$w = /*#__PURE__*/React.createElement("path", {
     d: "M5 4.111L6.09 3 11 8l-4.91 5L5 11.889 8.818 8z",
     fill: "#FFF"
   })));
 }
 
-var _g$q;
+var _g$o;
 
 function _extends$V() { _extends$V = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$V.apply(this, arguments); }
 
@@ -2872,7 +2880,7 @@ function SvgIco16Alert(props) {
     width: 16,
     height: 17,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$q || (_g$q = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$o || (_g$o = /*#__PURE__*/React.createElement("g", {
     transform: "translate(0 .5)",
     fill: "none",
     fillRule: "evenodd"
@@ -2888,7 +2896,7 @@ function SvgIco16Alert(props) {
   }))));
 }
 
-var _defs$9, _g$r;
+var _defs$b, _g$p;
 
 function _extends$W() { _extends$W = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$W.apply(this, arguments); }
 
@@ -2898,10 +2906,10 @@ function SvgLogoMainDefinixText(props) {
     height: 24,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$9 || (_defs$9 = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
+  }, props), _defs$b || (_defs$b = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
     id: "logo_main_definix_text_svg__a",
     d: "M0 0h9.399v10.914H0z"
-  }))), _g$r || (_g$r = /*#__PURE__*/React.createElement("g", {
+  }))), _g$p || (_g$p = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -2924,7 +2932,7 @@ function SvgLogoMainDefinixText(props) {
   }))));
 }
 
-var _defs$a, _g$s;
+var _defs$c, _g$q;
 
 function _extends$X() { _extends$X = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$X.apply(this, arguments); }
 
@@ -2934,7 +2942,7 @@ function SvgImgMyinvestmentDefault(props) {
     height: 118,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$a || (_defs$a = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$c || (_defs$c = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "4.491%",
     y1: "17.921%",
     x2: "45.149%",
@@ -3074,7 +3082,7 @@ function SvgImgMyinvestmentDefault(props) {
   }), /*#__PURE__*/React.createElement("feColorMatrix", {
     values: "0 0 0 0 1 0 0 0 0 0.638514404 0 0 0 0 0.294117647 0 0 0 1 0",
     "in": "shadowInnerInner1"
-  })))), _g$s || (_g$s = /*#__PURE__*/React.createElement("g", {
+  })))), _g$q || (_g$q = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("mask", {
@@ -3133,7 +3141,7 @@ function SvgImgMyinvestmentDefault(props) {
   }))))));
 }
 
-var _defs$b, _g$t;
+var _defs$d, _g$r;
 
 function _extends$Y() { _extends$Y = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Y.apply(this, arguments); }
 
@@ -3143,7 +3151,7 @@ function SvgGroup(props) {
     height: 102,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$b || (_defs$b = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$d || (_defs$d = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "50%",
     y1: "44.994%",
     x2: "100%",
@@ -3269,7 +3277,7 @@ function SvgGroup(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M103.83 0c-8.32.011-13.092 10.423-13.774 11.626-1.482 2.614-4.354 4.936-6.547 2.334-1.005-1.193-.112-3.4.669-4.66 1.317-2.13-.437-4.798-2.915-4.466C69.141 6.457 55.265 19.196 58.085 35.44c1.479 8.515 11.739 19.19 28.75 11.186 11.35-5.896 12.841-17.154 15.12-30.337 1.025-5.933 3.749-8.68 6.435-9.909 2.316-1.059 2.383-4.345.048-5.362C106.813.31 105.288.003 103.867 0h-.037z",
     id: "group_svg__g"
-  }))), _g$t || (_g$t = /*#__PURE__*/React.createElement("g", {
+  }))), _g$r || (_g$r = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("ellipse", {
@@ -3321,7 +3329,7 @@ function SvgGroup(props) {
   }))));
 }
 
-var _defs$c, _g$u;
+var _defs$e, _g$s;
 
 function _extends$Z() { _extends$Z = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$Z.apply(this, arguments); }
 
@@ -3331,7 +3339,7 @@ function SvgLogoMainDefinixImgText(props) {
     height: 32,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$c || (_defs$c = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$e || (_defs$e = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "50%",
     y1: "40.729%",
     x2: "109.431%",
@@ -3489,7 +3497,7 @@ function SvgLogoMainDefinixImgText(props) {
     cx: 14,
     cy: 14,
     r: 14
-  }))), _g$u || (_g$u = /*#__PURE__*/React.createElement("g", {
+  }))), _g$s || (_g$s = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -3563,7 +3571,7 @@ function SvgLogoMainDefinixImgText(props) {
   }))))));
 }
 
-var _g$v;
+var _g$t;
 
 function _extends$_() { _extends$_ = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$_.apply(this, arguments); }
 
@@ -3572,7 +3580,7 @@ function SvgIco16HelpOn(props) {
     width: 16,
     height: 17,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$v || (_g$v = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$t || (_g$t = /*#__PURE__*/React.createElement("g", {
     transform: "translate(0 .5)",
     fill: "none",
     fillRule: "evenodd"
@@ -3599,7 +3607,7 @@ function SvgIco16HelpOn(props) {
   })))));
 }
 
-var _g$w;
+var _g$u;
 
 function _extends$$() { _extends$$ = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$$.apply(this, arguments); }
 
@@ -3608,7 +3616,7 @@ function SvgIco16Copy(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$w || (_g$w = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$u || (_g$u = /*#__PURE__*/React.createElement("g", {
     fill: "currentColor"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M11 2.5v1H4v8H3v-9h8z"
@@ -3617,7 +3625,7 @@ function SvgIco16Copy(props) {
   }))));
 }
 
-var _g$x;
+var _g$v;
 
 function _extends$10() { _extends$10 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$10.apply(this, arguments); }
 
@@ -3626,7 +3634,7 @@ function SvgIco16Closed(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$x || (_g$x = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$v || (_g$v = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -3644,7 +3652,7 @@ function SvgIco16Closed(props) {
   })))));
 }
 
-var _defs$d, _g$y;
+var _defs$f, _g$w;
 
 function _extends$11() { _extends$11 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$11.apply(this, arguments); }
 
@@ -3654,7 +3662,7 @@ function SvgImgError(props) {
     height: 132,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$d || (_defs$d = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$f || (_defs$f = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "36.222%",
     y1: "50%",
     x2: "100%",
@@ -3778,7 +3786,7 @@ function SvgImgError(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M58.55 0c-7.465.01-11.748 9.362-12.36 10.443-1.33 2.348-3.907 4.433-5.875 2.096-.903-1.072-.1-3.053.6-4.186 1.182-1.913-.392-4.31-2.616-4.011C27.421 5.8 14.97 17.242 17.5 31.833c1.327 7.648 10.533 17.238 25.8 10.048 10.184-5.296 11.523-15.408 13.567-27.25.92-5.329 3.365-7.797 5.775-8.9 2.078-.951 2.138-3.903.044-4.816C61.227.278 59.859.003 58.583 0h-.033z",
     id: "img_error_svg__g"
-  }))), _g$y || (_g$y = /*#__PURE__*/React.createElement("g", {
+  }))), _g$w || (_g$w = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("g", {
@@ -3844,7 +3852,7 @@ function SvgImgError(props) {
   })))));
 }
 
-var _g$z;
+var _g$x;
 
 function _extends$12() { _extends$12 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$12.apply(this, arguments); }
 
@@ -3853,7 +3861,7 @@ function SvgImgTokenUnselect(props) {
     width: 40,
     height: 40,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$z || (_g$z = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$x || (_g$x = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -3866,7 +3874,7 @@ function SvgImgTokenUnselect(props) {
   }))));
 }
 
-var _g$A;
+var _g$y;
 
 function _extends$13() { _extends$13 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$13.apply(this, arguments); }
 
@@ -3875,7 +3883,7 @@ function SvgIco16Search(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$A || (_g$A = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$y || (_g$y = /*#__PURE__*/React.createElement("g", {
     transform: "translate(1.5 1.5)",
     stroke: "#999",
     strokeWidth: 1.6,
@@ -3891,7 +3899,7 @@ function SvgIco16Search(props) {
   }))));
 }
 
-var _defs$e, _g$B;
+var _defs$g, _g$z;
 
 function _extends$14() { _extends$14 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$14.apply(this, arguments); }
 
@@ -3901,7 +3909,7 @@ function SvgImgFarm(props) {
     height: 122,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$e || (_defs$e = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$g || (_defs$g = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "36.222%",
     y1: "50%",
     x2: "100%",
@@ -4015,7 +4023,7 @@ function SvgImgFarm(props) {
   }), /*#__PURE__*/React.createElement("feColorMatrix", {
     values: "0 0 0 0 1 0 0 0 0 0.638514404 0 0 0 0 0.294117647 0 0 0 1 0",
     "in": "shadowInnerInner1"
-  })))), _g$B || (_g$B = /*#__PURE__*/React.createElement("g", {
+  })))), _g$z || (_g$z = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("mask", {
@@ -4079,7 +4087,7 @@ function SvgImgFarm(props) {
   })))));
 }
 
-var _defs$f, _g$C;
+var _defs$h, _g$A;
 
 function _extends$15() { _extends$15 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$15.apply(this, arguments); }
 
@@ -4089,7 +4097,7 @@ function SvgImgPool(props) {
     height: 122,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$f || (_defs$f = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$h || (_defs$h = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "36.222%",
     y1: "50%",
     x2: "100%",
@@ -4222,7 +4230,7 @@ function SvgImgPool(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M125.459 8.865c-7.05.008-11.095 7.397-11.673 8.25-1.256 1.856-3.69 3.504-5.548 1.657-.852-.847-.095-2.412.566-3.307 1.117-1.512-.37-3.405-2.47-3.17-10.272 1.152-22.031 10.193-19.642 21.721 1.253 6.042 9.948 13.619 24.365 7.938 9.618-4.184 10.882-12.173 12.813-21.53.868-4.21 3.177-6.16 5.453-7.031 1.963-.751 2.02-3.083.041-3.805-1.377-.503-2.67-.72-3.874-.723h-.031z",
     id: "img_pool_svg__h"
-  }))), _g$C || (_g$C = /*#__PURE__*/React.createElement("g", {
+  }))), _g$A || (_g$A = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("g", {
@@ -4299,7 +4307,7 @@ function SvgImgPool(props) {
   }))));
 }
 
-var _defs$g, _g$D;
+var _defs$i, _g$B;
 
 function _extends$16() { _extends$16 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$16.apply(this, arguments); }
 
@@ -4309,7 +4317,7 @@ function SvgImgEmptyStateWallet(props) {
     height: 100,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$g || (_defs$g = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$i || (_defs$i = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "63.044%",
     y1: "50%",
     x2: "-41.155%",
@@ -4381,7 +4389,7 @@ function SvgImgEmptyStateWallet(props) {
     cx: 23.5,
     cy: 23.5,
     r: 17.203
-  }))), _g$D || (_g$D = /*#__PURE__*/React.createElement("g", {
+  }))), _g$B || (_g$B = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -4463,7 +4471,7 @@ function SvgImgEmptyStateWallet(props) {
   })))));
 }
 
-var _defs$h, _g$E;
+var _defs$j, _g$C;
 
 function _extends$17() { _extends$17 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$17.apply(this, arguments); }
 
@@ -4472,7 +4480,7 @@ function SvgImgEmptyStateLiquidity(props) {
     width: 101,
     height: 100,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _defs$h || (_defs$h = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$j || (_defs$j = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "62.146%",
     y1: "66.092%",
     x2: "109.535%",
@@ -4559,7 +4567,7 @@ function SvgImgEmptyStateLiquidity(props) {
   }), /*#__PURE__*/React.createElement("stop", {
     stopColor: "#FFAE86",
     offset: "100%"
-  })))), _g$E || (_g$E = /*#__PURE__*/React.createElement("g", {
+  })))), _g$C || (_g$C = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -4615,7 +4623,7 @@ function SvgImgEmptyStateLiquidity(props) {
   }))))));
 }
 
-var _g$F;
+var _g$D;
 
 function _extends$18() { _extends$18 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$18.apply(this, arguments); }
 
@@ -4624,7 +4632,7 @@ function SvgIco16ArrowDoubleArrow(props) {
     width: 17,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$F || (_g$F = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$D || (_g$D = /*#__PURE__*/React.createElement("g", {
     fill: "#666"
   }, /*#__PURE__*/React.createElement("path", {
     d: "M2.967 4.111L4.058 3l4.91 5-4.91 5-1.09-1.111L6.784 8z"
@@ -4633,7 +4641,7 @@ function SvgIco16ArrowDoubleArrow(props) {
   }))));
 }
 
-var _path$v;
+var _path$x;
 
 function _extends$19() { _extends$19 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$19.apply(this, arguments); }
 
@@ -4642,7 +4650,7 @@ function SvgIco42ChangeBottom(props) {
     width: 42,
     height: 42,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$v || (_path$v = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$x || (_path$x = /*#__PURE__*/React.createElement("path", {
     d: "M25 22.739l-4 4-4-4m4 2.522v-10",
     stroke: "#222",
     strokeWidth: 2,
@@ -4651,7 +4659,7 @@ function SvgIco42ChangeBottom(props) {
   })));
 }
 
-var _path$w;
+var _path$y;
 
 function _extends$1a() { _extends$1a = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1a.apply(this, arguments); }
 
@@ -4660,14 +4668,14 @@ function SvgIco16ArrowChange(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$w || (_path$w = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$y || (_path$y = /*#__PURE__*/React.createElement("path", {
     d: "M10.518 1.429l3.535 3.535L10.518 8.5l-1.06-1.06 1.723-1.726H2.982v-1.5h8.2L9.456 2.49l1.06-1.061zM5.482 7.5l-3.535 3.536 3.535 3.535 1.06-1.06-1.723-1.726h8.199v-1.5h-8.2l1.725-1.724L5.483 7.5z",
     fill: "#999",
     fillRule: "evenodd"
   })));
 }
 
-var _g$G;
+var _g$E;
 
 function _extends$1b() { _extends$1b = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1b.apply(this, arguments); }
 
@@ -4676,7 +4684,7 @@ function SvgIco16Noti(props) {
     width: 16,
     height: 16,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$G || (_g$G = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$E || (_g$E = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -4690,7 +4698,7 @@ function SvgIco16Noti(props) {
   }))));
 }
 
-var _defs$i, _g$H;
+var _defs$k, _g$F;
 
 function _extends$1c() { _extends$1c = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1c.apply(this, arguments); }
 
@@ -4700,7 +4708,7 @@ function SvgImgRebalancing(props) {
     height: 144,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$i || (_defs$i = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$k || (_defs$k = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "36.222%",
     y1: "50%",
     x2: "100%",
@@ -4825,7 +4833,7 @@ function SvgImgRebalancing(props) {
   }), /*#__PURE__*/React.createElement("path", {
     d: "M69.045 0C60.726.011 55.953 10.423 55.27 11.626c-1.482 2.614-4.354 4.936-6.547 2.334-1.005-1.193-.111-3.4.669-4.66 1.317-2.13-.437-4.798-2.914-4.466C34.356 6.457 20.48 19.196 23.3 35.44c1.478 8.515 11.738 19.19 28.75 11.186C63.4 40.73 64.89 29.472 67.17 16.29c1.025-5.933 3.75-8.68 6.435-9.909 2.316-1.059 2.383-4.345.049-5.362C72.028.31 70.503.003 69.082 0h-.037z",
     id: "img_rebalancing_svg__g"
-  }))), _g$H || (_g$H = /*#__PURE__*/React.createElement("g", {
+  }))), _g$F || (_g$F = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -4908,7 +4916,7 @@ function SvgImgRebalancing(props) {
   }))));
 }
 
-var _path$x;
+var _path$z;
 
 function _extends$1d() { _extends$1d = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1d.apply(this, arguments); }
 
@@ -4917,7 +4925,7 @@ function SvgIco42ChangePlus(props) {
     width: 42,
     height: 42,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$x || (_path$x = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$z || (_path$z = /*#__PURE__*/React.createElement("path", {
     d: "M21 14v14m7-7H14",
     stroke: "#222",
     strokeWidth: 2,
@@ -4925,7 +4933,7 @@ function SvgIco42ChangePlus(props) {
   })));
 }
 
-var _g$I;
+var _g$G;
 
 function _extends$1e() { _extends$1e = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1e.apply(this, arguments); }
 
@@ -4934,7 +4942,7 @@ function SvgIco24GnbFinixS(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$I || (_g$I = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$G || (_g$G = /*#__PURE__*/React.createElement("g", {
     fill: "#FFF",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -4945,7 +4953,7 @@ function SvgIco24GnbFinixS(props) {
   }))));
 }
 
-var _g$J;
+var _g$H;
 
 function _extends$1f() { _extends$1f = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1f.apply(this, arguments); }
 
@@ -4954,7 +4962,7 @@ function SvgIco24GnbFinixN(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$J || (_g$J = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$H || (_g$H = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -4967,7 +4975,7 @@ function SvgIco24GnbFinixN(props) {
   }))));
 }
 
-var _defs$j, _g$K;
+var _defs$l, _g$I;
 
 function _extends$1g() { _extends$1g = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1g.apply(this, arguments); }
 
@@ -4977,13 +4985,13 @@ function SvgLogoFooterFingerlabs(props) {
     height: 48,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$j || (_defs$j = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
+  }, props), _defs$l || (_defs$l = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("path", {
     id: "logo_footer_fingerlabs_svg__a",
     d: "M0 0h9.092v13.694H0z"
   }), /*#__PURE__*/React.createElement("path", {
     id: "logo_footer_fingerlabs_svg__c",
     d: "M0 0h17.101v19.155H0z"
-  }))), _g$K || (_g$K = /*#__PURE__*/React.createElement("g", {
+  }))), _g$I || (_g$I = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("path", {
@@ -5017,7 +5025,7 @@ function SvgLogoFooterFingerlabs(props) {
   }))));
 }
 
-var _defs$k, _g$L;
+var _defs$m, _g$J;
 
 function _extends$1h() { _extends$1h = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1h.apply(this, arguments); }
 
@@ -5027,7 +5035,7 @@ function SvgIco44GradeDiamond(props) {
     height: 44,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$k || (_defs$k = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$m || (_defs$m = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "72.31%",
     y1: "37.581%",
     x2: "25.917%",
@@ -5151,7 +5159,7 @@ function SvgIco44GradeDiamond(props) {
     cx: 20,
     cy: 20,
     r: 20
-  }))), _g$L || (_g$L = /*#__PURE__*/React.createElement("g", {
+  }))), _g$J || (_g$J = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("g", {
@@ -5194,7 +5202,7 @@ function SvgIco44GradeDiamond(props) {
   })))));
 }
 
-var _defs$l, _g$M;
+var _defs$n, _g$K;
 
 function _extends$1i() { _extends$1i = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1i.apply(this, arguments); }
 
@@ -5204,7 +5212,7 @@ function SvgIco44GradeGold(props) {
     height: 44,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$l || (_defs$l = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$n || (_defs$n = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "83.658%",
     y1: "33.989%",
     x2: "19.265%",
@@ -5328,7 +5336,7 @@ function SvgIco44GradeGold(props) {
     cx: 20,
     cy: 20,
     r: 20
-  }))), _g$M || (_g$M = /*#__PURE__*/React.createElement("g", {
+  }))), _g$K || (_g$K = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("g", {
@@ -5371,7 +5379,7 @@ function SvgIco44GradeGold(props) {
   })))));
 }
 
-var _defs$m, _g$N;
+var _defs$o, _g$L;
 
 function _extends$1j() { _extends$1j = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1j.apply(this, arguments); }
 
@@ -5381,7 +5389,7 @@ function SvgIco44GradeSilver(props) {
     height: 44,
     xmlns: "http://www.w3.org/2000/svg",
     xmlnsXlink: "http://www.w3.org/1999/xlink"
-  }, props), _defs$m || (_defs$m = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
+  }, props), _defs$o || (_defs$o = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("linearGradient", {
     x1: "81.119%",
     y1: "22.827%",
     x2: "24.824%",
@@ -5523,7 +5531,7 @@ function SvgIco44GradeSilver(props) {
     cx: 20,
     cy: 20,
     r: 20
-  }))), _g$N || (_g$N = /*#__PURE__*/React.createElement("g", {
+  }))), _g$L || (_g$L = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("g", {
@@ -5566,7 +5574,7 @@ function SvgIco44GradeSilver(props) {
   })))));
 }
 
-var _path$y;
+var _path$A;
 
 function _extends$1k() { _extends$1k = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1k.apply(this, arguments); }
 
@@ -5575,13 +5583,13 @@ function SvgIco24CloseB(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$y || (_path$y = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$A || (_path$A = /*#__PURE__*/React.createElement("path", {
     d: "M18.364 7.05L13.414 12l4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95 4.95-4.95z",
     fill: "#222"
   })));
 }
 
-var _path$z;
+var _path$B;
 
 function _extends$1l() { _extends$1l = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1l.apply(this, arguments); }
 
@@ -5590,7 +5598,7 @@ function SvgIco42PlusB(props) {
     width: 43,
     height: 42,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$z || (_path$z = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$B || (_path$B = /*#__PURE__*/React.createElement("path", {
     d: "M21.5 14v14m7-7h-14",
     stroke: "#222",
     strokeWidth: 2,
@@ -5598,7 +5606,7 @@ function SvgIco42PlusB(props) {
   })));
 }
 
-var _g$O;
+var _g$M;
 
 function _extends$1m() { _extends$1m = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1m.apply(this, arguments); }
 
@@ -5607,7 +5615,7 @@ function SvgIco24CheckError(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _g$O || (_g$O = /*#__PURE__*/React.createElement("g", {
+  }, props), _g$M || (_g$M = /*#__PURE__*/React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, /*#__PURE__*/React.createElement("circle", {
@@ -5626,7 +5634,7 @@ function SvgIco24CheckError(props) {
   }))));
 }
 
-var _path$A;
+var _path$C;
 
 function _extends$1n() { _extends$1n = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1n.apply(this, arguments); }
 
@@ -5635,13 +5643,13 @@ function SvgLogoWalletKlip(props) {
     width: 40,
     height: 20,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$A || (_path$A = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$C || (_path$C = /*#__PURE__*/React.createElement("path", {
     d: "M25.158 20H6.094C2.699 20 .435 18.217.087 15.217v-.043C.044 14.652 0 14.13 0 13.609V6.304c0-.608.044-1.217.13-1.826l.044-.26C.74 1.607 3.004 0 6.094 0H33.95c3.09 0 5.354 1.609 5.876 4.217l.043.261A12.9 12.9 0 0140 6.304v7.305c0 .521-.044 1.043-.087 1.565v.043C39.565 18.174 37.345 20 33.95 20h-2.176a.297.297 0 01-.305-.304v-1.13c0-.175.13-.305.305-.305h1.698c3.002 0 4.743-1.826 4.743-4.565V6.304c0-2.739-1.697-4.478-4.744-4.478H6.572c-3.046-.043-4.744 1.74-4.744 4.478v7.392c0 2.695 1.741 4.565 4.744 4.565h18.194V7.87c0-.174.13-.305.305-.305h1.175c.174 0 .305.13.305.305v11.826a.297.297 0 01-.305.304h-1.088zm-6.616-5.043c-1.132 0-1.872-.827-1.872-2V5.304c0-.174.13-.304.305-.304h1.175c.174 0 .305.13.305.304v8h.566c.087 0 .174.044.217.087a.33.33 0 01.087.218v1c0 .174-.13.304-.304.304l-.48.044zm4.048 0c-1.132 0-1.872-.783-1.872-2V8.478c0-.174.13-.304.305-.304h1.175c.174 0 .305.13.305.304v4.826h.566c.087 0 .174.044.217.087l.087.087c0 .044.044.087.044.13v1c0 .175-.13.305-.305.305l-.522.044zm-7.574-.044h-1.349c-.043 0-.087 0-.13-.043-.044 0-.044-.044-.088-.044l-4.135-4.565a1.257 1.257 0 01.088-1.652l4.09-3.479.088-.087h1.654s.043 0 .043.044l.044.043v.044c0 .043.044.087.044.087v.174c0 .043-.044.087-.044.087l-4.353 3.87 4.397 5a.33.33 0 01.087.173v.174c0 .044-.044.044-.044.087l-.043.044-.044.043h-.304zm-8.661-.174c0-.043-.044-.087-.044-.13V5.304c0-.043 0-.087.044-.13 0-.044.043-.044.043-.087l.044-.044S6.485 5 6.529 5h.043c.044 0 .087 0 .13-.043h1.176c.174 0 .305.13.305.304v9.304c0 .174-.13.305-.305.305H6.703c-.174.043-.305-.044-.348-.13zm23.286-.782h-1.915a.297.297 0 01-.305-.305v-1.261c0-.043.044-.043.044-.087.043-.043.043-.043.087-.043h2.828c1.088 0 1.61-.478 1.61-1.435v-.043c0-.913-.522-1.392-1.61-1.392h-2.699c-.043 0-.087 0-.13-.043a.34.34 0 01-.174-.174c0-.044-.044-.087-.044-.13V7.912c0-.087.044-.174.087-.217a.333.333 0 01.218-.087h2.872c1.698 0 2.873.956 3.047 2.478.087.565.044 1.087-.043 1.652v.087C33.254 13.174 32.122 14 30.555 14l-.914-.043zm-7.443-7.218h-1.175a.327.327 0 01-.305-.217c0-.044 0-.087-.043-.087v-1.13c0-.175.13-.305.304-.305h1.219c.13 0 .261.087.305.174 0 .043.043.087.043.13v1.13c0 .044 0 .088-.043.131-.087.13-.174.174-.305.174z",
     fill: "#FFF"
   })));
 }
 
-var _path$B;
+var _path$D;
 
 function _extends$1o() { _extends$1o = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$1o.apply(this, arguments); }
 
@@ -5650,7 +5658,7 @@ function SvgIco24CloseW(props) {
     width: 24,
     height: 24,
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), _path$B || (_path$B = /*#__PURE__*/React.createElement("path", {
+  }, props), _path$D || (_path$D = /*#__PURE__*/React.createElement("path", {
     d: "M18.364 7.05L13.414 12l4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636l4.95 4.95 4.95-4.95z",
     fill: "#FFF",
     opacity: 0.8
@@ -8890,7 +8898,7 @@ var Chain = function () {
                 } },
                 React__default['default'].createElement(Trans, { i18nKey: isMobile ? "BSC" : "Binance Smart Chain" })),
             React__default['default'].createElement(ChainToggleItem, { startIcon: React__default['default'].createElement(Coin, { symbol: "KLAY", size: isMobile ? "18px" : "16px" }) },
-                React__default['default'].createElement(Trans, { i18nKey: "Klaytn Chain" })))));
+                React__default['default'].createElement(Trans, { i18nKey: "Kaia Chain" })))));
 };
 var Chain$1 = React__default['default'].memo(Chain);
 
