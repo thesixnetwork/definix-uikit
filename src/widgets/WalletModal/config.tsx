@@ -6,6 +6,7 @@ import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
 import SafePalWallet from "./icons/SafePalWallet";
 import Kaikas from "./icons/Kaikas";
+import Kaia from "./icons/Kaia";
 import Dcent from "./icons/Dcent";
 import KlipConnect from "./icons/KlipConnect";
 import { Config, ConnectorNames } from "./types";
@@ -42,10 +43,15 @@ const connectors: Config[] = [
   //   connectorId: ConnectorNames.Injected,
   // },
   {
-    title: "Kaikas",
-    icon: Kaikas,
-    connectorId: ConnectorNames.Kaikas,
+    title: "Kaia",
+    icon: Kaia,
+    connectorId: ConnectorNames.Kaia,
   },
+  // {
+  //   title: "Kaikas",
+  //   icon: Kaikas,
+  //   connectorId: ConnectorNames.Kaikas,
+  // },
   {
     title: "D`CENT",
     icon: Dcent,
