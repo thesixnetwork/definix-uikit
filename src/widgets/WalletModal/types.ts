@@ -2,8 +2,7 @@ import { FC } from "react";
 import { SvgProps } from "../../components/Svg/types";
 
 export enum ConnectorNames {
-  // Kaikas = "kaikas",
-  Kaia = "kaia",
+  Kaikas = "kaikas",
   Dcent = "dcent",
   Klip = "klip",
   TokenPocket = "tokenpocket",
