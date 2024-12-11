@@ -7,7 +7,7 @@ export enum ConnectorNames {
   Klip = "klip",
   TokenPocket = "tokenpocket",
   WalletConnect = "walletconnect",
-  BSC = "bsc",
+  BSC = "bsc"
 }
 
 export type Login = (connectorId: ConnectorNames) => void;
